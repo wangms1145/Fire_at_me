@@ -642,8 +642,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0.08
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 6837d44b3ab589f4bbcf0699b1fe7296, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -736,8 +736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 1750998417}
   spd: 10
-  acc: 0.05
-  aacc: 0.1
+  acc: 0.01
+  aacc: 0.05
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
