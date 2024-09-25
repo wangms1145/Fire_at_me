@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public float spd;
     public float acc;
     public float aacc;
+    public float jumpStrength;
     private float spdx,spdy;
     private float tspd;
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     {
         spdx = myRigidbody.velocity.x;
         spdy = myRigidbody.velocity.y;
-        if(Input.GetKeyDown(KeyCode.Space))myRigidbody.velocity += Vector2.up * 10;
+        if(Input.GetKeyDown(KeyCode.Space))myRigidbody.velocity += Vector2.up * jumpStrength;
         tspd = 0;
         if(Input.GetKey(KeyCode.A))tspd += spd;
         if(Input.GetKey(KeyCode.D))tspd -= spd;
