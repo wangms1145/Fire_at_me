@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 88
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 37
+  controlID: 49
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -245,15 +245,15 @@ MonoBehaviour:
     y: 461.14285
     width: 1117.1428
     height: 221.42856
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -558,18 +558,60 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-09-25T19:35:54.018-07:00
+      updatedTimeString: 2024-09-26T00:01:50.848-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-25T19:47:06.872-07:00
+      updatedTimeString: 2024-09-26T00:16:45.861-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-25T19:35:55.248-07:00
+      updatedTimeString: 2024-09-26T00:16:18.494-07:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: d3b1c3a70c4488984c890b8ac0ffdc060e5d6cdc
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: exiting recoils guys
+      description: EZ recoil done!!!!!!!
+      timeString: 2024-09-26T00:16:43.000-07:00
+      commitTimeString: 2024-09-26T00:16:43.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Cam_script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs.meta
+        projectPath: Assets\Cam_script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: a48f26cfc693e0ca72a949e0cb3707efdc11f3a2
       mergeA: 
       mergeB: 
@@ -1094,14 +1136,56 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2024-09-25T19:50:13.367-07:00
+      updatedTimeString: 2024-09-26T00:17:03.640-07:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2024-09-25T19:50:13.138-07:00
+      updatedTimeString: 2024-09-26T00:17:03.625-07:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: d3b1c3a70c4488984c890b8ac0ffdc060e5d6cdc
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: exiting recoils guys
+        description: EZ recoil done!!!!!!!
+        timeString: 2024-09-26T00:16:43.000-07:00
+        commitTimeString: 2024-09-26T00:16:43.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Cam_script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs.meta
+          projectPath: Assets\Cam_script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: a48f26cfc693e0ca72a949e0cb3707efdc11f3a2
         mergeA: 
         mergeB: 
@@ -1733,13 +1817,13 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: "1 1\u6708 0001, 00:00"
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-25T19:35:54.018-07:00
+      updatedTimeString: 2024-09-26T00:01:50.848-07:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-25T19:47:06.796-07:00
+      updatedTimeString: 2024-09-26T00:16:18.494-07:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-25T19:47:06.872-07:00
+      updatedTimeString: 2024-09-26T00:16:45.861-07:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
@@ -1769,13 +1853,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-09-25T19:50:13.366-07:00
+    updatedTimeString: 2024-09-26T00:01:50.848-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-09-25T19:50:13.138-07:00
+    updatedTimeString: 2024-09-26T00:17:03.625-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-09-25T19:47:06.872-07:00
+    updatedTimeString: 2024-09-26T00:16:45.861-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2480,9 +2564,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 40710000
-    m_LastClickedID: 28992
-    m_ExpandedIDs: 0000000040710000427100004471000000ca9a3b
+    m_SelectedIDs: be720000
+    m_LastClickedID: 29374
+    m_ExpandedIDs: 00000000be72000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2510,7 +2594,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000407100004271000044710000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2535,8 +2619,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 40450000
+    m_LastClickedInstanceID: 17728
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -2676,7 +2760,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 352
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
