@@ -716,7 +716,7 @@ Transform:
   m_GameObject: {fileID: 1750998415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.27, y: -2.68, z: 0.025976587}
+  m_LocalPosition: {x: 6.27, y: -2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -736,8 +736,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 1750998417}
   spd: 10
-  acc: 0.01
-  aacc: 0.05
+  acc: 0.003
+  aacc: 0.1
+  jumpStrength: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
