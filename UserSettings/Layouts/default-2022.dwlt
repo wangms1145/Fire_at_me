@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1462.8572
     height: 732.5715
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 37
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,14 +273,14 @@ MonoBehaviour:
     y: 0
     width: 345.71436
     height: 682.5714
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 19}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,13 +318,13 @@ MonoBehaviour:
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
-  changeTab: 3
-  activeTab: 3
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
+  changeTab: 2
+  activeTab: 2
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -471,10 +471,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2024-09-24T18:37:55.197-07:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2024-09-24T18:39:32.896-07:00
+      updatedTimeString: 2024-09-25T19:47:20.199-07:00
       cacheType: 1
     currentBranch:
       name: master
@@ -494,153 +494,20 @@ MonoBehaviour:
     - name: origin/master
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 6fbaef45f03499b42b8558c91eed5c91
-        - 0e8713c2b151c0b44a5bb8d4f801fd2b
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Game.unity
-          label: Game.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Game.unity
-            fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-            projectPath: Assets\Scenes\Game.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Scenes
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -669,114 +536,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Game.unity
-        label: Game.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Game.unity
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-          projectPath: Assets\Scenes\Game.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -796,33 +555,513 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Scenes\Game.unity
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-      projectPath: Assets\Scenes\Game.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 2 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-09-25T15:27:02.542-07:00
+      updatedTimeString: 2024-09-25T19:35:54.018-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-25T15:28:29.149-07:00
+      updatedTimeString: 2024-09-25T19:47:06.872-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-25T15:27:04.104-07:00
+      updatedTimeString: 2024-09-25T19:35:55.248-07:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: a48f26cfc693e0ca72a949e0cb3707efdc11f3a2
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: new script
+      description: 
+      timeString: 2024-09-25T19:47:02.000-07:00
+      commitTimeString: 2024-09-25T19:47:02.000-07:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: e80533478a3fa1aaf578252b460d077b3e112809
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: jump
+      description: jump
+      timeString: 2024-09-25T12:49:09.000-07:00
+      commitTimeString: 2024-09-25T12:49:09.000-07:00
+      changes:
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: df6e677140824486c983f7cb15651dc753b5a43a
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: moving
+      description: moving
+      timeString: 2024-09-25T12:38:04.000-07:00
+      commitTimeString: 2024-09-25T12:38:04.000-07:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 07b647c9dd837db6d1ac9ef425debfd2fd5a5cec
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: moving and dev map
+      description: moving and dev map
+      timeString: 2024-09-24T22:02:38.000-07:00
+      commitTimeString: 2024-09-24T22:02:38.000-07:00
+      changes:
+      - path: .vscode\extensions.json
+        fullPath: C:\Users\ROG\My project\.vscode\extensions.json
+        projectPath: .vscode\extensions.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .vscode\launch.json
+        fullPath: C:\Users\ROG\My project\.vscode\launch.json
+        projectPath: .vscode\launch.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .vscode\settings.json
+        fullPath: C:\Users\ROG\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Player.physicsMaterial2D
+        fullPath: C:\Users\ROG\My project\Assets\Player.physicsMaterial2D
+        projectPath: Assets\Player.physicsMaterial2D
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Player.physicsMaterial2D.meta
+        fullPath: C:\Users\ROG\My project\Assets\Player.physicsMaterial2D.meta
+        projectPath: Assets\Player.physicsMaterial2D.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+        projectPath: Assets\PlayerScript.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\Renderer2D.asset
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset
+        projectPath: Assets\Settings\Renderer2D.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u5730\u56FE.png"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u5730\u56FE.png"
+        projectPath: "Assets\\\u5730\u56FE.png"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u5730\u56FE.png.meta"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u5730\u56FE.png.meta"
+        projectPath: "Assets\\\u5730\u56FE.png.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u73A9\u5BB6.png"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u73A9\u5BB6.png"
+        projectPath: "Assets\\\u73A9\u5BB6.png"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u73A9\u5BB6.png.meta"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u73A9\u5BB6.png.meta"
+        projectPath: "Assets\\\u73A9\u5BB6.png.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\ShaderGraphSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\ShaderGraphSettings.asset
+        projectPath: ProjectSettings\ShaderGraphSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: fb8fad046b740cf49473f9cd500c18bab64ac15d
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Init
+      description: Init
+      timeString: 2024-09-24T18:41:29.000-07:00
+      commitTimeString: 2024-09-24T18:41:29.000-07:00
+      changes:
+      - path: .vsconfig
+        fullPath: C:\Users\ROG\My project\.vsconfig
+        projectPath: .vsconfig
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Plugins.meta
+        fullPath: C:\Users\ROG\My project\Assets\Plugins.meta
+        projectPath: Assets\Plugins.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scenes.meta
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity.meta
+        projectPath: Assets\Scenes\Game.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Start.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+        projectPath: Assets\Scenes\Start.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Start.unity.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity.meta
+        projectPath: Assets\Scenes\Start.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings.meta
+        projectPath: Assets\Settings.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Renderer2D.asset
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset
+        projectPath: Assets\Settings\Renderer2D.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Renderer2D.asset.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset.meta
+        projectPath: Assets\Settings\Renderer2D.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes.meta
+        projectPath: Assets\Settings\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRP.asset
+        fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset
+        projectPath: Assets\Settings\UniversalRP.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRP.asset.meta
+        fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset.meta
+        projectPath: Assets\Settings\UniversalRP.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UniversalRenderPipelineGlobalSettings.asset
+        fullPath: C:\Users\ROG\My project\Assets\UniversalRenderPipelineGlobalSettings.asset
+        projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        fullPath: C:\Users\ROG\My project\Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\ROG\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\AudioManager.asset
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\ClusterInputManager.asset
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\DynamicsManager.asset
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\EditorSettings.asset
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\GraphicsSettings.asset
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\InputManager.asset
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\MemorySettings.asset
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NetworkManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\NetworkManager.asset
+        projectPath: ProjectSettings\NetworkManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\PackageManagerSettings.asset
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\PresetManager.asset
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: C:\Users\ROG\My project\ProjectSettings\ProjectVersion.txt
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\QualitySettings.asset
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\SceneTemplateSettings.json
+        fullPath: C:\Users\ROG\My project\ProjectSettings\SceneTemplateSettings.json
+        projectPath: ProjectSettings\SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\TimeManager.asset
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\URPProjectSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\URPProjectSettings.asset
+        projectPath: ProjectSettings\URPProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\UnityConnectSettings.asset
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\VFXManager.asset
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\VersionControlSettings.asset
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\XRSettings.asset
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: C:\Users\ROG\My project\UserSettings\Search.index
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: e8c1062f11e5a8586ee414d5c7636cdacf024ef6
       mergeA: 
       mergeB: 
@@ -855,14 +1094,506 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2024-09-24T18:41:01.226-07:00
+      updatedTimeString: 2024-09-25T19:50:13.367-07:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2024-09-24T18:40:30.380-07:00
+      updatedTimeString: 2024-09-25T19:50:13.138-07:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: a48f26cfc693e0ca72a949e0cb3707efdc11f3a2
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: new script
+        description: 
+        timeString: 2024-09-25T19:47:02.000-07:00
+        commitTimeString: 2024-09-25T19:47:02.000-07:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: e80533478a3fa1aaf578252b460d077b3e112809
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: jump
+        description: jump
+        timeString: 2024-09-25T12:49:09.000-07:00
+        commitTimeString: 2024-09-25T12:49:09.000-07:00
+        changes:
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: df6e677140824486c983f7cb15651dc753b5a43a
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: moving
+        description: moving
+        timeString: 2024-09-25T12:38:04.000-07:00
+        commitTimeString: 2024-09-25T12:38:04.000-07:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 07b647c9dd837db6d1ac9ef425debfd2fd5a5cec
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: moving and dev map
+        description: moving and dev map
+        timeString: 2024-09-24T22:02:38.000-07:00
+        commitTimeString: 2024-09-24T22:02:38.000-07:00
+        changes:
+        - path: .vscode\extensions.json
+          fullPath: C:\Users\ROG\My project\.vscode\extensions.json
+          projectPath: .vscode\extensions.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .vscode\launch.json
+          fullPath: C:\Users\ROG\My project\.vscode\launch.json
+          projectPath: .vscode\launch.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .vscode\settings.json
+          fullPath: C:\Users\ROG\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Player.physicsMaterial2D
+          fullPath: C:\Users\ROG\My project\Assets\Player.physicsMaterial2D
+          projectPath: Assets\Player.physicsMaterial2D
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Player.physicsMaterial2D.meta
+          fullPath: C:\Users\ROG\My project\Assets\Player.physicsMaterial2D.meta
+          projectPath: Assets\Player.physicsMaterial2D.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+          projectPath: Assets\PlayerScript.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\Renderer2D.asset
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset
+          projectPath: Assets\Settings\Renderer2D.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u5730\u56FE.png"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u5730\u56FE.png"
+          projectPath: "Assets\\\u5730\u56FE.png"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u5730\u56FE.png.meta"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u5730\u56FE.png.meta"
+          projectPath: "Assets\\\u5730\u56FE.png.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u73A9\u5BB6.png"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u73A9\u5BB6.png"
+          projectPath: "Assets\\\u73A9\u5BB6.png"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u73A9\u5BB6.png.meta"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\\u73A9\u5BB6.png.meta"
+          projectPath: "Assets\\\u73A9\u5BB6.png.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\ShaderGraphSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\ShaderGraphSettings.asset
+          projectPath: ProjectSettings\ShaderGraphSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: fb8fad046b740cf49473f9cd500c18bab64ac15d
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Init
+        description: Init
+        timeString: 2024-09-24T18:41:29.000-07:00
+        commitTimeString: 2024-09-24T18:41:29.000-07:00
+        changes:
+        - path: .vsconfig
+          fullPath: C:\Users\ROG\My project\.vsconfig
+          projectPath: .vsconfig
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Plugins.meta
+          fullPath: C:\Users\ROG\My project\Assets\Plugins.meta
+          projectPath: Assets\Plugins.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scenes.meta
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity.meta
+          projectPath: Assets\Scenes\Game.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Start.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+          projectPath: Assets\Scenes\Start.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Start.unity.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity.meta
+          projectPath: Assets\Scenes\Start.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings.meta
+          projectPath: Assets\Settings.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Renderer2D.asset
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset
+          projectPath: Assets\Settings\Renderer2D.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Renderer2D.asset.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Renderer2D.asset.meta
+          projectPath: Assets\Settings\Renderer2D.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes.meta
+          projectPath: Assets\Settings\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRP.asset
+          fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset
+          projectPath: Assets\Settings\UniversalRP.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRP.asset.meta
+          fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset.meta
+          projectPath: Assets\Settings\UniversalRP.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UniversalRenderPipelineGlobalSettings.asset
+          fullPath: C:\Users\ROG\My project\Assets\UniversalRenderPipelineGlobalSettings.asset
+          projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          fullPath: C:\Users\ROG\My project\Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\ROG\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\AudioManager.asset
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\ClusterInputManager.asset
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\DynamicsManager.asset
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\EditorSettings.asset
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\InputManager.asset
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\MemorySettings.asset
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NetworkManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\NetworkManager.asset
+          projectPath: ProjectSettings\NetworkManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\PackageManagerSettings.asset
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\PresetManager.asset
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: C:\Users\ROG\My project\ProjectSettings\ProjectVersion.txt
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\QualitySettings.asset
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\SceneTemplateSettings.json
+          fullPath: C:\Users\ROG\My project\ProjectSettings\SceneTemplateSettings.json
+          projectPath: ProjectSettings\SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\TimeManager.asset
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\URPProjectSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\URPProjectSettings.asset
+          projectPath: ProjectSettings\URPProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\UnityConnectSettings.asset
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\VFXManager.asset
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\VersionControlSettings.asset
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\XRSettings.asset
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: C:\Users\ROG\My project\UserSettings\Search.index
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: e8c1062f11e5a8586ee414d5c7636cdacf024ef6
         mergeA: 
         mergeB: 
@@ -956,7 +1687,7 @@ MonoBehaviour:
       installSettingsHidden: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-24T18:39:32.896-07:00
+      updatedTimeString: 2024-09-25T16:28:53.255-07:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
     repositoryRemoteName: origin
@@ -969,7 +1700,7 @@ MonoBehaviour:
       newGitEmail: wangms1145@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2024-09-24T18:39:33.164-07:00
+        updatedTimeString: 2024-09-25T16:30:48.821-07:00
         cacheType: 8
       configSettingsHidden: 0
     repositorySettingsHidden: 0
@@ -1002,22 +1733,16 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: "1 1\u6708 0001, 00:00"
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-24T18:41:49.154-07:00
+      updatedTimeString: 2024-09-25T19:35:54.018-07:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-24T18:43:19.915-07:00
+      updatedTimeString: 2024-09-25T19:47:06.796-07:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-24T18:43:19.855-07:00
+      updatedTimeString: 2024-09-25T19:47:06.872-07:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries:
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+    gitStatusEntries: []
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -1031,9 +1756,9 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
-  statusAhead: 2
+  statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -1044,13 +1769,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-09-25T15:17:06.855-07:00
+    updatedTimeString: 2024-09-25T19:50:13.366-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-09-25T15:17:07.080-07:00
+    updatedTimeString: 2024-09-25T19:50:13.138-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-09-25T15:17:07.066-07:00
+    updatedTimeString: 2024-09-25T19:47:06.872-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1110,9 +1835,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 40450000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 18fbffff
+      m_ExpandedIDs: 16fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1951,7 +2676,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 352
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
