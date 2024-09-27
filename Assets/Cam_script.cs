@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Cam_script : MonoBehaviour
 {
+    [SerializeField]
     private Camera cam;
     public Vector2 mousePosition;
+    public int scr_x,scr_y;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class Cam_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //cam.fieldOfView = 1;
     }
     void OnGUI()
     {
@@ -32,6 +34,8 @@ public class Cam_script : MonoBehaviour
         point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.nearClipPlane));
         mousePosition.x = point.x;
         mousePosition.y = point.y;
+        scr_x = cam.pixelWidth;
+        scr_y = cam.pixelHeight;
         GUILayout.BeginArea(new Rect(20, 20, 250, 120));
         GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);
         GUILayout.Label("Mouse position: " + mousePos);

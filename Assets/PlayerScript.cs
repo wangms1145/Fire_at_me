@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using System.Collections;
 using System;
 
 public class PlayerScript : MonoBehaviour
@@ -15,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public float aacc;
     public float jumpStrength;
     public float recoil;
+    [SerializeField]
     public Cam_script cam_script;
     private float ang;
     private float spdx,spdy;
