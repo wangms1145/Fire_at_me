@@ -10,14 +10,30 @@ using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
+
+    //player max speed
     public float spd;
+
+    //player move acceleration
     public float acc;
+
+    //rotation lock acceleration
     public float aacc;
+
+    //
     public float jumpStrength;
+
+    
     public float recoil;
+
+    //for debug
     public float mouse_mult;
+
+   
     [SerializeField]
     public Cam_script cam_script;
+
+
     private float ang;
     private float spdx,spdy;
     private float tspd;
@@ -36,13 +52,19 @@ public class PlayerScript : MonoBehaviour
     {
         spdx = myRigidbody.velocity.x;
         spdy = myRigidbody.velocity.y;
+
+        //jump
         if(Input.GetKeyDown(KeyCode.Space))myRigidbody.velocity += Vector2.up * jumpStrength;
+
+        //debug
         mouX = cam_script.mousePosition.x;
         mouY = cam_script.mousePosition.y;
         sX = transform.position.x;
         sY = transform.position.y;
         disY = ((mouY - transform.position.y) * mouse_mult);
         disX = ((mouX - transform.position.x) * mouse_mult);
+
+        //recoil angle
         ang = Mathf.Atan(disY/disX);
         //Debug.LogWarning((mouY - transform.position.y) + " " + (mouX - transform.position.x));
         //ang/=Mathf.PI;
@@ -50,15 +72,21 @@ public class PlayerScript : MonoBehaviour
         if(mouX - transform.position.x > 0){
             ang+=Mathf.PI;
         }
+
+
+        //recoil
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             myRigidbody.velocity += Vector2.right * (Mathf.Cos(ang) * recoil);
             myRigidbody.velocity += Vector2.up * (Mathf.Sin(ang) * recoil);
         }
+
+        //move
         tspd = 0;
         if(Input.GetKey(KeyCode.A))tspd += spd;
         if(Input.GetKey(KeyCode.D))tspd -= spd;
         myRigidbody.velocity += Vector2.left * (tspd+spdx)*acc;
 
+        //rotation lock
         myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*aacc);
         
 
