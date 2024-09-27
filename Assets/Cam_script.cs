@@ -7,8 +7,10 @@ public class Cam_script : MonoBehaviour
 {
     [SerializeField]
     private Camera cam;
+    public VC_Script vc;
     public Vector2 mousePosition;
     public int scr_x,scr_y;
+    public float debug_mult;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class Cam_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //cam.fieldOfView = 1;
+        cam.fieldOfView = vc.FOV;
     }
     void OnGUI()
     {
@@ -32,8 +34,8 @@ public class Cam_script : MonoBehaviour
         mousePos.y = cam.pixelHeight - currentEvent.mousePosition.y;
 
         point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.nearClipPlane));
-        mousePosition.x = point.x;
-        mousePosition.y = point.y;
+        mousePosition.x = (point.x - transform.position.x)*debug_mult + transform.position.x;
+        mousePosition.y = (point.y - transform.position.y)*debug_mult + transform.position.y;
         scr_x = cam.pixelWidth;
         scr_y = cam.pixelHeight;
         GUILayout.BeginArea(new Rect(20, 20, 250, 120));

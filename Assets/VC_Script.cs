@@ -10,6 +10,7 @@ public class VC_Script : MonoBehaviour
     public Cam_script cam_script;
     public CinemachineVirtualCamera myVCam;
     public float mult,slw_rt;
+    public float FOV;
     //private double dis;
     private float ang,dis;
     private float mX,mY,sX,sY;
@@ -38,5 +39,6 @@ public class VC_Script : MonoBehaviour
             ang = 20;
         }
         myVCam.m_Lens.FieldOfView += (ang-myVCam.m_Lens.FieldOfView)*slw_rt;
+        FOV = myVCam.m_Lens.FieldOfView;
     }
 }

@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using System;
+using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -14,12 +15,15 @@ public class PlayerScript : MonoBehaviour
     public float aacc;
     public float jumpStrength;
     public float recoil;
+    public float mouse_mult;
     [SerializeField]
     public Cam_script cam_script;
     private float ang;
     private float spdx,spdy;
     private float tspd;
-    private float mouY,mouX;
+    public float mouY,mouX;
+    public float disY,disX;
+    public float sX,sY;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +39,11 @@ public class PlayerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))myRigidbody.velocity += Vector2.up * jumpStrength;
         mouX = cam_script.mousePosition.x;
         mouY = cam_script.mousePosition.y;
-        ang = Mathf.Atan((mouY - transform.position.y)/(mouX - transform.position.x));
+        sX = transform.position.x;
+        sY = transform.position.y;
+        disY = ((mouY - transform.position.y) * mouse_mult);
+        disX = ((mouX - transform.position.x) * mouse_mult);
+        ang = Mathf.Atan(disY/disX);
         //Debug.LogWarning((mouY - transform.position.y) + " " + (mouX - transform.position.x));
         //ang/=Mathf.PI;
         //ang*=180;
