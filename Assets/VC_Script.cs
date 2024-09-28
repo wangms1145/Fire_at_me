@@ -9,8 +9,13 @@ public class VC_Script : MonoBehaviour
     [SerializeField]
     public Cam_script cam_script;
     public CinemachineVirtualCamera myVCam;
-    public float mult,slw_rt;
+    //size of camera view
+    public float mult;
+    //angle acceleration of camera FOV
+    public float slw_rt;
     public float FOV;
+    //minimum FOV
+    public float min_FOV;
     //private double dis;
     private float ang,dis;
     private float mX,mY,sX,sY;
@@ -23,21 +28,28 @@ public class VC_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //getting positions
         mX = Input.mousePosition.x;
         mY = Input.mousePosition.y;
         sX = cam_script.scr_x/2;
         sY = cam_script.scr_y/2;
+
+        //calculating distance to center of screen
         dis = 0;
         dis += Mathf.Pow((mX-sX)/sX,2);
         dis += Mathf.Pow((mY-sY)/sY,2);
         dis = Mathf.Sqrt(dis);
         dis *= mult;
+
+        //claculating FOV
         ang = Mathf.Atan(dis/1);
         ang /= Mathf.PI;
         ang *= 180;
-        if(ang < 20){
-            ang = 20;
+        if(ang < min_FOV){
+            ang = min_FOV;
         }
+
+        //set FOV
         myVCam.m_Lens.FieldOfView += (ang-myVCam.m_Lens.FieldOfView)*slw_rt;
         FOV = myVCam.m_Lens.FieldOfView;
     }
