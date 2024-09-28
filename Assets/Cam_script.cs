@@ -43,10 +43,14 @@ public class Cam_script : MonoBehaviour
         mousePosition.y = (point.y - transform.position.y)*debug_mult + transform.position.y;
         scr_x = cam.pixelWidth;
         scr_y = cam.pixelHeight;
+        
+        //delete this if you don't want is to appear on screen.
+        //****************************************************************************************************************************************************************
         GUILayout.BeginArea(new Rect(20, 20, 250, 120));
         GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);
         GUILayout.Label("Mouse position: " + mousePos);
         GUILayout.Label("World position: " + point.ToString("F3"));
         GUILayout.EndArea();
+        //****************************************************************************************************************************************************************
     }
 }

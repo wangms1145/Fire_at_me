@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     
     public float recoil;
+    public float reloading_time;
 
     //for debug
     public float mouse_mult;
@@ -37,6 +38,7 @@ public class PlayerScript : MonoBehaviour
     private float ang;
     private float spdx,spdy;
     private float tspd;
+    private float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
     public float mouY,mouX;
     public float disY,disX;
     public float sX,sY;
@@ -61,8 +63,8 @@ public class PlayerScript : MonoBehaviour
         mouY = cam_script.mousePosition.y;
         sX = transform.position.x;
         sY = transform.position.y;
-        disY = ((mouY - transform.position.y) * mouse_mult);
-        disX = ((mouX - transform.position.x) * mouse_mult);
+        disY = (mouY - transform.position.y) * mouse_mult;
+        disX = (mouX - transform.position.x) * mouse_mult;
 
         //recoil angle
         ang = Mathf.Atan(disY/disX);
@@ -75,10 +77,12 @@ public class PlayerScript : MonoBehaviour
 
 
         //recoil
-        if(Input.GetKeyDown(KeyCode.Mouse0)){
+        if(Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= (time_last_shoot + reloading_time)){
             myRigidbody.velocity += Vector2.right * (Mathf.Cos(ang) * recoil);
             myRigidbody.velocity += Vector2.up * (Mathf.Sin(ang) * recoil);
+            time_last_shoot = Time.time;
         }
+        //Debug.LogWarning(""+ time_last_shoot + " " + reloading_time + " " + Time.time);
 
         //move
         tspd = 0;
@@ -88,8 +92,5 @@ public class PlayerScript : MonoBehaviour
 
         //rotation lock
         myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*aacc);
-        
-
-        
     }
 }
