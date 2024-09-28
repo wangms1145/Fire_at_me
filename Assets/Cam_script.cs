@@ -11,6 +11,7 @@ public class Cam_script : MonoBehaviour
     public Vector2 mousePosition;
     public int scr_x,scr_y;
     public float debug_mult;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,12 @@ public class Cam_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cam.fieldOfView = vc.FOV;
+
     }
+
+
+
+    // change the mouse position relative to the world. Provided by the Unity. - Luke
     void OnGUI()
     {
         Vector3 point = new Vector3();

@@ -15,11 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 1706.6667
-    height: 976
+    y: 42.285717
+    width: 1462.8572
+    height: 732.5715
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6666
-    height: 976
+    width: 1462.8572
+    height: 732.5714
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6666
+    width: 1462.8572
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 956
-    width: 1706.6666
+    y: 712.5714
+    width: 1462.8572
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1706.6666
-    height: 926
+    width: 1462.8572
+    height: 682.5714
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1431
+  controlID: 91
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,16 +140,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1282
-    height: 926
+    width: 1098.8572
+    height: 682.5714
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 37
-=======
-  controlID: 1432
->>>>>>> 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+  controlID: 38
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -170,12 +166,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1282
-    height: 626.6667
+    width: 1098.8572
+    height: 461.7143
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1433
+  controlID: 39
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -194,8 +190,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 313.33334
-    height: 626.6667
+    width: 268.57144
+    height: 461.7143
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
@@ -213,23 +209,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 313.33334
+    x: 268.57144
     y: 0
-    width: 968.6666
-    height: 626.6667
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+    width: 830.28577
+    height: 461.7143
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,18 +242,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 626.6667
-    width: 1282
-    height: 299.3333
+    y: 461.7143
+    width: 1098.8572
+    height: 220.85712
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 12}
   - {fileID: 16}
   - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,908 +264,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1282
+    x: 1098.8572
     y: 0
-    width: 424.66663
-    height: 926
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+    width: 364
+    height: 682.5714
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 699.3334
-    width: 1281
-    height: 278.3333
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets
-    m_Globs: []
-    m_OriginalText: 
-    m_ImportLogFlags: 0
-    m_FilterByTypeIntersection: 0
-  m_ViewMode: 1
-  m_StartGridSize: 49
-  m_LastFolders:
-  - Assets
-  m_LastFoldersGridSize: 49
-  m_LastProjectPath: C:\Unity collections\projects\Fire_at_me
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da760000
-    m_LastClickedID: 30426
-    m_ExpandedIDs: 0000000000ca9a3bffffff7f
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 49
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 207
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 72.66667
-    width: 312.33334
-    height: 605.6667
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2eefffff
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
-      m_SearchString: 
-    m_ExpandedScenes: []
-    m_CurrenRootInstanceID: 0
-    m_LockTracker:
-      m_IsLocked: 0
-    m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 313.33334
-    y: 72.66667
-    width: 966.6666
-    height: 605.6667
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData:
-    - dockPosition: 0
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: -174, y: -26}
-      snapOffsetDelta: {x: 0, y: -0.666687}
-      snapCorner: 3
-      id: Tool Settings
-      index: 0
-      layout: 1
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 0
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
-      id: unity-grid-and-snap-toolbar
-      index: 1
-      layout: 1
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-scene-view-toolbar
-      index: 0
-      layout: 1
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
-      id: unity-search-toolbar
-      index: 1
-      layout: 1
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 0
-      containerId: overlay-container--left
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-transform-toolbar
-      index: 0
-      layout: 2
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 0
-      containerId: overlay-container--left
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 197}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-component-tools
-      index: 1
-      layout: 2
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 0
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 67.5, y: 86}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Orientation
-      index: 0
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Light Settings
-      index: 2
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Camera
-      index: 1
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Cloth Constraints
-      index: 3
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Cloth Collisions
-      index: 4
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Navmesh Display
-      index: 4
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Agent Display
-      index: 5
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Obstacle Display
-      index: 6
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Occlusion Culling
-      index: 5
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Physics Debugger
-      index: 6
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Scene Visibility
-      index: 7
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Particles
-      index: 8
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Tilemap
-      index: 11
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Tilemap Palette Helper
-      index: 12
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 48, y: 9.714264}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: UnityEditor.SceneViewCameraOverlay
-      index: 12
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Open Tile Palette
-      index: 0
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Tilemap Focus
-      index: 1
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Path
-      index: 9
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: APV Overlay
-      index: 10
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/TrailRenderer
-      index: 11
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    m_OverlaysVisible: 1
-  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
-  m_SceneLighting: 1
-  m_2DMode: 1
-  m_isRotationLocked: 0
-  m_PlayAudio: 0
-  m_AudioPlay: 0
-  m_Position:
-    m_Target: {x: 11.270222, y: 0.96886, z: -0.2378671}
-    speed: 2
-    m_Value: {x: 11.270222, y: 0.96886, z: -0.2378671}
-  m_RenderMode: 0
-  m_CameraMode:
-    drawMode: 0
-    name: Shaded
-    section: Shading Mode
-  m_ValidateTrueMetals: 0
-  m_DoValidateTrueMetals: 0
-  m_SceneViewState:
-    m_AlwaysRefresh: 0
-    showFog: 1
-    showSkybox: 1
-    showFlares: 1
-    showImageEffects: 1
-    showParticleSystems: 1
-    showVisualEffectGraphs: 1
-    m_FxEnabled: 1
-  m_Grid:
-    xGrid:
-      m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
-    yGrid:
-      m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
-    zGrid:
-      m_Fade:
-        m_Target: 1
-        speed: 2
-        m_Value: 1
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
-    m_GridAxis: 1
-    m_gridOpacity: 0.5
-  m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
-  m_Size:
-    m_Target: 33.77184
-    speed: 2
-    m_Value: 33.77184
-  m_Ortho:
-    m_Target: 1
-    speed: 2
-    m_Value: 1
-  m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
-    m_SpeedMin: 0.001
-    m_SpeedMax: 2
-    m_EasingEnabled: 1
-    m_EasingDuration: 0.4
-    m_AccelerationEnabled: 1
-    m_FieldOfViewHorizontalOrVertical: 60
-    m_NearClip: 0.03
-    m_FarClip: 10000
-    m_DynamicClip: 1
-    m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-  m_LastSceneViewOrtho: 0
-  m_ReplacementShader: {fileID: 0}
-  m_ReplacementString: 
-  m_SceneVisActive: 1
-  m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 313.33334
-    y: 72.66667
-    width: 966.6666
-    height: 605.6667
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 966.6666, y: 544}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -322.22223
-    m_HBaseRangeMax: 322.22223
-    m_VBaseRangeMin: -181.33334
-    m_VBaseRangeMax: 181.33334
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 966.6666
-      height: 584.6667
-    m_Scale: {x: 1.75, y: 1.7500002}
-    m_Translation: {x: 483.3333, y: 292.33334}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -276.19046
-      y: -167.0476
-      width: 552.3809
-      height: 334.0952
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1450, y: 908.5}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 533.7143
-    width: 1116.1428
-    height: 200.42856
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6629f1bb292b749a18b5fff7994c8b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 350}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Unity Version Control
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 533.7143
-    width: 1116.1428
-    height: 200.42856
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  mForceToReOpen: 0
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1282
-    y: 72.66667
-    width: 423.66663
-    height: 905
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1203,16 +315,16 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: -1
+  progressMessageClearTime: 4867.954620099999
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 0
-  changeTab: 4
-  activeTab: 4
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -1359,10 +471,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2024-09-27T13:34:24.664-07:00
+      updatedTimeString: 2024-09-27T15:37:01.352-07:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2024-09-27T13:34:23.078-07:00
+      updatedTimeString: 2024-09-27T15:36:59.138-07:00
       cacheType: 1
     currentBranch:
       name: master
@@ -1391,11 +503,125 @@ MonoBehaviour:
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - 82b027d73556d034bbdb8b14b61b1750
+        - 706cf95bd55349841b87c57d2c89f42a
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Cam_script.cs
+          label: Cam_script.cs
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Cam_script.cs
+            fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+            projectPath: Assets\Cam_script.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\PlayerScript.cs
+          label: PlayerScript.cs
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\PlayerScript.cs
+            fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+            projectPath: Assets\PlayerScript.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
-        keys: []
-        values: []
+        keys:
+        - Assets
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -1424,16 +650,15 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      selectedNode:
-        path: 
-        label: 
+      - path: Assets
+        label: Assets
         level: 0
-        isFolder: 0
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
-        treeIsCheckable: 0
+        treeIsCheckable: 1
         checkState: 0
         isLocked: 0
         gitStatusEntry:
@@ -1443,23 +668,143 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+      - path: Assets\Cam_script.cs
+        label: Cam_script.cs
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\PlayerScript.cs
+        label: PlayerScript.cs
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        label: CurrentMaximizeLayout.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      selectedNode:
+        path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    gitStatusEntries:
+    - path: Assets\Cam_script.cs
+      fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+      projectPath: Assets\Cam_script.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\PlayerScript.cs
+      fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+      projectPath: Assets\PlayerScript.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 3 changed files
     lastCurrentBranchChangedEvent:
-<<<<<<< HEAD
-      updatedTimeString: 2024-09-27T13:34:23.078-07:00
+      updatedTimeString: 2024-09-27T16:57:42.444-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-27T13:37:25.177-07:00
-=======
-      updatedTimeString: 2024-09-27T15:37:51.326-07:00
-      cacheType: 1
-    lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-27T16:09:03.159-07:00
->>>>>>> 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+      updatedTimeString: 2024-09-27T16:57:43.975-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-27T13:37:27.163-07:00
+      updatedTimeString: 2024-09-27T16:57:43.180-07:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -2748,16 +2093,34 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: "1 1\u6708 0001, 00:00"
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-26T00:01:50.848-07:00
+      updatedTimeString: 2024-09-27T16:57:42.444-07:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-26T00:16:18.494-07:00
+      updatedTimeString: 2024-09-27T16:57:42.475-07:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-26T00:16:45.861-07:00
+      updatedTimeString: 2024-09-27T16:57:41.355-07:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries: []
+    gitStatusEntries:
+    - path: Assets\Cam_script.cs
+      fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+      projectPath: Assets\Cam_script.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\PlayerScript.cs
+      fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+      projectPath: Assets\PlayerScript.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -2773,7 +2136,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -2784,13 +2147,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-09-27T13:34:23.078-07:00
+    updatedTimeString: 2024-09-27T16:57:42.444-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-09-27T13:34:24.611-07:00
+    updatedTimeString: 2024-09-27T16:57:43.993-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-09-27T13:50:07.546-07:00
+    updatedTimeString: 2024-09-27T16:57:43.975-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2808,12 +2171,11 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
-  repositoryProgressMessage: 
+  repositoryProgressValue: 0.9998959
+  repositoryProgressMessage: Pushed
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
-<<<<<<< HEAD
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2851,9 +2213,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 721bffff
-      m_LastClickedID: -58510
-      m_ExpandedIDs: 561effff1a20fffffafaffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: aef8fffffafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3291,7 +2653,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -3309,7 +2671,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.000000013314254, y: 0.0000001373989, z: -0.000000032143454, w: -1}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
     m_Target: 6.642053
     speed: 2
@@ -3496,9 +2858,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0.1428833}
-    m_SelectedIDs: d2720000
-    m_LastClickedID: 29394
-    m_ExpandedIDs: 00000000d272000000ca9a3b
+    m_SelectedIDs: ba720000
+    m_LastClickedID: 29370
+    m_ExpandedIDs: 00000000ba72000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3526,7 +2888,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2720000
+    m_ExpandedIDs: 00000000ba720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3553,7 +2915,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -3691,12 +3053,10 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 16896
+  m_LastVerticalScrollValue: 40
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
-=======
->>>>>>> 860db4742c7076ad7eb6f9ca4c2843300721f9a3
