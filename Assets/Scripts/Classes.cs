@@ -18,17 +18,12 @@ public class Classes : ParentClass
 public class WeaponClass
 {
     Sprite spr;
-    string name;
     float recoil;
     float bulletSpd;
     float maxDistance;
     int type;
     Vector2 firePos;
     Sprite fireEff;
-    int damageType;
-    float damage;
-    float firing_time;
-    float reload_time;
 }
 public class Bullets
 {
@@ -38,7 +33,5 @@ public class Bullets
     float maxDistance;
     float trigDistance;
     int type;
-    int damageType;
-    float damage;
 }
 
