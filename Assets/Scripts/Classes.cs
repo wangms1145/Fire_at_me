@@ -8,10 +8,7 @@ public class ParentClass : MonoBehaviour
 }
 public class Classes : ParentClass
 {
-    WeaponClass[] weapon;
-    private void start(){
-        
-    }
+
 }
 
 [System.Serializable]
@@ -24,14 +21,20 @@ public class WeaponClass
     int type;
     Vector2 firePos;
     Sprite fireEff;
+    float damage;
+    int damageType;
 }
-public class Bullets
-{
+public class Bullets // I guess it is a better idea to change this stuff to a gam object but idk how to do it yet
+{                    // So just don't use it
     Sprite bullet;
     Vector2 launchPos;
     float bulletSpd;
     float maxDistance;
     float trigDistance;
     int type;
+    float damage;
+    int damageType;
+    
 }
+//What ever classes goes after this thing
 
