@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using System;
 using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
+using System.Text.RegularExpressions;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -22,10 +23,18 @@ public class PlayerScript : MonoBehaviour
 
     //
     public float jumpStrength;
+    public bool DoBunnyHop;
 
     
     public float recoil;
     public float reloading_time;
+    
+    //ray casting box size
+    public Vector2 boxSize;
+    //ray casting distance
+    public float castDistance;
+    //ray casting layermark
+    public LayerMask groundLayer;
 
     //for debug
     public float mouse_mult;
@@ -56,7 +65,9 @@ public class PlayerScript : MonoBehaviour
         spdy = myRigidbody.velocity.y;
 
         //jump
-        if(Input.GetKeyDown(KeyCode.Space))myRigidbody.velocity += Vector2.up * jumpStrength;
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+            myRigidbody.velocity += Vector2.up * jumpStrength;
+        }
 
         //debug
         mouX = cam_script.mousePosition.x;
@@ -92,5 +103,18 @@ public class PlayerScript : MonoBehaviour
 
         //rotation lock
         myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*aacc);
+    }
+
+    //ground detect using ray casting
+    public bool isGrounded(){
+        if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    private void OnDrawGizmos(){
+        Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
     }
 }
