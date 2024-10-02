@@ -24,9 +24,9 @@ public class debug : MonoBehaviour
     void Update()
     {
         //displaying mouse pos using the player as an origin
-        pos.x = ply.sX+ply.disX;
-        pos.y = ply.sY+ply.disY;
+        pos.x = ply.disX;
+        pos.y = ply.disY;
         pos.z = 0;
-        transform.position = pos;
+        transform.localPosition = pos;
     }
 }
