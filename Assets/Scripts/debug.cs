@@ -23,10 +23,15 @@ public class debug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //displaying mouse pos using the player as an origin
-        pos.x = ply.disX;
-        pos.y = ply.disY;
-        pos.z = 0;
-        transform.localPosition = pos;
+        if(ply.isAlive){
+            //displaying mouse pos using the player as an origin
+            pos.x = ply.disX;
+            pos.y = ply.disY;
+            pos.z = 0;
+            transform.localPosition = pos;
+        }
+        else{
+            //died
+        }
     }
 }

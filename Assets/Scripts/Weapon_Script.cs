@@ -17,10 +17,12 @@ public class Weapon_Script : MonoBehaviour
     private Vector2 pos;
     private Vector3 scale;
     private float ang;
+    public Rigidbody2D myRigidbody;
     // Start is called before the first frame update
     void Start()
     {
         Change(14,(float)0.7);
+        myRigidbody.simulated = false;
     }
 
     // Call This method when ever you need to change the attibutes.
@@ -31,23 +33,28 @@ public class Weapon_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        pos.x = ply.sX;
-        pos.y = ply.sY;
-        transform.position = pos;
-        */
+        if(ply.isAlive){
+            /*
+            pos.x = ply.sX;
+            pos.y = ply.sY;
+            transform.position = pos;
+            */
 
-        ang = Mathf.Atan(ply.disY/ply.disX);
-        scale.x = (float)-0.3;
-        scale.z = (float)1;
-        if(ply.disX<0){
-            ang += Mathf.PI;
-            scale.y = (float)-0.3;
+            ang = Mathf.Atan(ply.disY/ply.disX);
+            scale.x = (float)-0.3;
+            scale.z = (float)1;
+            if(ply.disX<0){
+                ang += Mathf.PI;
+                scale.y = (float)-0.3;
+            }
+            else{
+                scale.y = (float)0.3;
+            }
+            transform.localScale = scale;
+            transform.rotation = quaternion.RotateZ(ang);
         }
         else{
-            scale.y = (float)0.3;
+            myRigidbody.simulated = true;
         }
-        transform.localScale = scale;
-        transform.rotation = quaternion.RotateZ(ang);
     }
 }
