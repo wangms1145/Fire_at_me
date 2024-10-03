@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,8 @@ public class CamPos_scr : MonoBehaviour
             if(Input.GetKey(KeyCode.D))pos.x += spd*Time.deltaTime;
             if(Input.GetKey(KeyCode.W))pos.y += spd*Time.deltaTime;
             if(Input.GetKey(KeyCode.S))pos.y -= spd*Time.deltaTime;
+            pos.x = Math.Clamp(pos.x,-20,20);
+            pos.y = Math.Clamp(pos.y,ply.diedYpos,20);
             transform.position = pos;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -17,6 +18,7 @@ public class Weapon_Script : MonoBehaviour
     private Vector2 pos;
     private Vector3 scale;
     private float ang;
+    private bool flag;
     public Rigidbody2D myRigidbody;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class Weapon_Script : MonoBehaviour
     void Update()
     {
         if(ply.isAlive){
+            flag = true;
             /*
             pos.x = ply.sX;
             pos.y = ply.sY;
@@ -54,7 +57,16 @@ public class Weapon_Script : MonoBehaviour
             transform.rotation = quaternion.RotateZ(ang);
         }
         else{
-            myRigidbody.simulated = true;
+            if(flag){
+                flag = false;
+                myRigidbody.simulated = true;
+                float ang = UnityEngine.Random.Range(-180, 180);
+                myRigidbody.velocity = Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
+                myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
+            }
+            if(transform.position.y < ply.diedYpos-30){
+                myRigidbody.simulated = false;
+            }
         }
     }
 }

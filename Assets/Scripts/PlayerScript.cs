@@ -111,13 +111,13 @@ public class PlayerScript : MonoBehaviour
             //rotation lock
             myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*aacc*Time.deltaTime*100);
 
-            if(transform.position.y < diedYpos){
+            if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G)){
                 isAlive = false;
 
                 //transform.position = Vector2.zero;
                 float ang = UnityEngine.Random.Range(-180, 180);
-                myRigidbody.velocity = Vector2.up * (float)Math.Sin(ang)*3 + Vector2.right * (float)Math.Cos(ang)*3;
-                myRigidbody.rotation = UnityEngine.Random.Range(-45, 45);
+                myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
+                myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
                 myRigidbody.sharedMaterial = died_material;
             }
         }
@@ -129,8 +129,8 @@ public class PlayerScript : MonoBehaviour
             sY = transform.position.y;
             disY = (mouY - transform.position.y) * mouse_mult;
             disX = (mouX - transform.position.x) * mouse_mult;
-            if(transform.position.y < diedYpos-10){
-                Destroy(this);
+            if(transform.position.y < diedYpos-30){
+                myRigidbody.simulated = false;
             }
         }
     }
