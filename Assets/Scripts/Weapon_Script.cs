@@ -36,6 +36,8 @@ public class Weapon_Script : MonoBehaviour
     void Update()
     {
         if(ply.isAlive){
+            myRigidbody.simulated = false;
+            transform.localPosition = Vector3.zero;
             flag = true;
             /*
             pos.x = ply.sX;

@@ -68,6 +68,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if (isAlive) {
+            myRigidbody.sharedMaterial = inGame_material;
             spdx = myRigidbody.velocity.x;
             spdy = myRigidbody.velocity.y;
 
@@ -131,6 +132,13 @@ public class PlayerScript : MonoBehaviour
             disX = (mouX - transform.position.x) * mouse_mult;
             if(transform.position.y < diedYpos-30){
                 myRigidbody.simulated = false;
+            }
+            if(Input.GetKey(KeyCode.R)){
+                myRigidbody.simulated = true;
+                myRigidbody.position = Vector2.zero;
+                myRigidbody.rotation = 0;
+                isAlive = true;
+                myRigidbody.velocity = Vector2.zero;
             }
         }
     }
