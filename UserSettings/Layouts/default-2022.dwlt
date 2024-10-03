@@ -19,8 +19,8 @@ MonoBehaviour:
     width: 1462.8572
     height: 732.5715
   m_ShowMode: 4
-  m_Title: Git for Unity
-  m_RootView: {fileID: 2}
+  m_Title: Scene
+  m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -33,13 +33,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1462.8572
+    height: 682.5714
+  m_MinSize: {x: 503, y: 271}
+  m_MaxSize: {x: 16192, y: 12117}
+  vertical: 0
+  controlID: 1524
+  draggingID: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1117.1428
+    y: 0
+    width: 345.71436
+    height: 682.5714
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 276.57144
+    height: 486.85715
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 486.85715
+    width: 1117.1428
+    height: 195.71426
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -52,7 +158,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,8 +179,8 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 
---- !u!114 &4
+  m_LastLoadedLayoutName: Default
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +201,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,98 +214,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
+  - {fileID: 10}
+  - {fileID: 5}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1117.1428
+    height: 682.5714
+  m_MinSize: {x: 403, y: 271}
+  m_MaxSize: {x: 8096, y: 12117}
+  vertical: 1
+  controlID: 1525
+  draggingID: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
-    width: 1462.8572
-    height: 682.5714
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 16192}
+    y: 0
+    width: 1117.1428
+    height: 486.85715
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 91
+  controlID: 1526
   draggingID: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 7}
-  - {fileID: 10}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1098.8572
-    height: 682.5714
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 38
-  draggingID: 0
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 8}
-  - {fileID: 9}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1098.8572
-    height: 461.7143
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 39
-  draggingID: 0
---- !u!114 &8
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 268.57144
-    height: 461.7143
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,73 +268,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 268.57144
+    x: 276.57144
     y: 0
-    width: 830.28577
-    height: 461.7143
+    width: 840.5714
+    height: 486.85715
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 461.7143
-    width: 1098.8572
-    height: 220.85712
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &11
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1098.8572
-    y: 0
-    width: 364
-    height: 682.5714
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
-  m_Panes:
-  - {fileID: 19}
-  - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,9 +300,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1098.8572
+    x: 1117.143
     y: 72.571434
-    width: 363
+    width: 344.71436
     height: 661.5714
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -315,14 +314,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 4867.954620099999
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -335,19 +334,8 @@ MonoBehaviour:
     treeLocals:
       IsRemote: 0
       folders:
-        keys:
-        - Local branches
-        values:
-        - path: Local branches
-          label: Local branches
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -356,65 +344,23 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes:
-      - path: Local branches
-        label: Local branches
+      nodes: []
+      selectedNode:
+        path: 
+        label: 
         level: 0
-        isFolder: 1
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
-      - path: master
-        label: master
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 1
-        treeIsCheckable: 0
-        checkState: 0
-      selectedNode:
-        path: master
-        label: master
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 1
-        treeIsCheckable: 0
-        checkState: 0
     treeRemotes:
       IsRemote: 1
       folders:
-        keys:
-        - Remote branches
-        - origin
-        values:
-        - path: Remote branches
-          label: Remote branches
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-        - path: origin
-          label: origin
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -423,37 +369,7 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes:
-      - path: Remote branches
-        label: Remote branches
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-      - path: origin
-        label: origin
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-      - path: origin/master
-        label: master
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
+      nodes: []
       selectedNode:
         path: 
         label: 
@@ -468,35 +384,31 @@ MonoBehaviour:
     mode: 0
     newBranchName: 
     scroll: {x: 0, y: 0}
-    disableDelete: 1
+    disableDelete: 0
     disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2024-09-27T15:37:01.352-07:00
-      cacheType: 2
+      updatedTimeString: 
+      cacheType: 0
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2024-09-27T15:36:59.138-07:00
-      cacheType: 1
+      updatedTimeString: 
+      cacheType: 0
     currentBranch:
-      name: master
-      tracking: origin/master
+      name: 
+      tracking: 
     currentRemote:
-      name: origin
-      url: https://github.com/wangms1145/Unity_2d_Proj.git
+      name: 
+      url: 
       login: 
       user: 
       host: 
       function: 0
       token: 
-    localBranches:
-    - name: master
-      tracking: origin/master
-    remoteBranches:
-    - name: origin/master
-      tracking: '[None]'
+    localBranches: []
+    remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -505,7 +417,7 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 82b027d73556d034bbdb8b14b61b1750
+        - 1b0e7ac1078adbb40aa5aded95883b4e
         - 706cf95bd55349841b87c57d2c89f42a
         values:
         - path: Assets
@@ -526,10 +438,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Cam_script.cs
-          label: Cam_script.cs
+        - path: Assets\Scripts
+          label: Scripts
           level: 1
-          isFolder: 0
+          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -538,15 +450,15 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Cam_script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
-            projectPath: Assets\Cam_script.cs
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
             indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\PlayerScript.cs
+            workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs
           label: PlayerScript.cs
-          level: 1
+          level: 2
           isFolder: 0
           isContainer: 0
           isCollapsed: 0
@@ -556,17 +468,16 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\PlayerScript.cs
-            fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
-            projectPath: Assets\PlayerScript.cs
+            path: Assets\Scripts\PlayerScript.cs
+            fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+            projectPath: Assets\Scripts\PlayerScript.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
       folders:
         keys:
         - Assets
-        - UserSettings
-        - UserSettings\Layouts
+        - Assets\Scripts
         values:
         - path: Assets
           label: Assets
@@ -586,26 +497,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
+        - path: Assets\Scripts
+          label: Scripts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -668,10 +561,10 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Cam_script.cs
-        label: Cam_script.cs
+      - path: Assets\Scripts
+        label: Scripts
         level: 1
-        isFolder: 0
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -680,68 +573,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Cam_script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
-          projectPath: Assets\Cam_script.cs
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\PlayerScript.cs
+          workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs
         label: PlayerScript.cs
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\PlayerScript.cs
-          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
-          projectPath: Assets\PlayerScript.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-        label: CurrentMaximizeLayout.dwlt
         level: 2
         isFolder: 0
         isContainer: 0
@@ -752,22 +591,22 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          path: Assets\Scripts\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+          projectPath: Assets\Scripts\PlayerScript.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
       selectedNode:
-        path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
-        treeIsCheckable: 1
+        treeIsCheckable: 0
         checkState: 0
         isLocked: 0
         gitStatusEntry:
@@ -778,38 +617,834 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Cam_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
-      projectPath: Assets\Cam_script.cs
+    - path: Assets\Scripts\PlayerScript.cs
+      fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+      projectPath: Assets\Scripts\PlayerScript.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\PlayerScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
-      projectPath: Assets\PlayerScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 3 changed files
+    changedFilesText: 1 changed file
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:42.444-07:00
+      updatedTimeString: 2024-10-01T23:03:00.838-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:43.975-07:00
+      updatedTimeString: 2024-10-01T23:03:04.785-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:43.180-07:00
+      updatedTimeString: 2024-10-01T21:41:54.161-07:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: a413f3c9e47986200609a7c5b2a423bb025be11e
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Revert "wired bug"
+      description: This reverts commit 28bb43bdc396e382447c6bb60ff8cb14336a7e9a.
+      timeString: 2024-10-01T21:14:29.000-07:00
+      commitTimeString: 2024-10-01T21:14:29.000-07:00
+      changes:
+      - path: Assets\Scripts\Classes.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+        projectPath: Assets\Scripts\Classes.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 46a63a6bd1b0eb44e5d8b39c4d7c7b8874229115
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Revert "test"
+      description: This reverts commit 02972d948645884f4917bb2123300e6b21ca5fe8.
+      timeString: 2024-10-01T21:14:23.000-07:00
+      commitTimeString: 2024-10-01T21:14:23.000-07:00
+      changes:
+      - path: Packages\manifest.json
+        fullPath: C:\Users\ROG\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 02972d948645884f4917bb2123300e6b21ca5fe8
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: test
+      description: test
+      timeString: 2024-10-01T21:14:04.000-07:00
+      commitTimeString: 2024-10-01T21:14:04.000-07:00
+      changes:
+      - path: Packages\manifest.json
+        fullPath: C:\Users\ROG\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 28bb43bdc396e382447c6bb60ff8cb14336a7e9a
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: wired bug
+      description: wired bug
+      timeString: 2024-10-01T21:13:49.000-07:00
+      commitTimeString: 2024-10-01T21:13:49.000-07:00
+      changes:
+      - path: Assets\Scripts\Classes.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+        projectPath: Assets\Scripts\Classes.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: c3b11dceb54831ca6cb91ba972abffd8ace8ba49
+      mergeA: 5ab3993480835fb002974186fb82eb5326fba74a
+      mergeB: 51f4c96539350dd31a60d5e4214f7f412c0645f9
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: small fix
+      description: small fix
+      timeString: 2024-10-01T18:34:14.000-07:00
+      commitTimeString: 2024-10-01T18:34:14.000-07:00
+      changes: []
+    - commitID: 5ab3993480835fb002974186fb82eb5326fba74a
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: New Folders & ground check
+      description: 'New folders to make it more clear and easier to read.
+
+        Ground
+        Check'
+      timeString: 2024-10-01T18:33:32.000-07:00
+      commitTimeString: 2024-10-01T18:33:32.000-07:00
+      changes:
+      - path: Assets\PhysicsMaterials.meta
+        fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials.meta
+        projectPath: Assets\PhysicsMaterials.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PhysicsMaterials\Player.physicsMaterial2D
+        fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Player.physicsMaterial2D
+        projectPath: Assets\PhysicsMaterials\Player.physicsMaterial2D
+        originalPath: Assets\Player.physicsMaterial2D
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+        fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+        projectPath: Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+        originalPath: Assets\Player.physicsMaterial2D.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts.meta
+        projectPath: Assets\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\CamPos_scr.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\CamPos_scr.cs
+        projectPath: Assets\Scripts\CamPos_scr.cs
+        originalPath: Assets\CamPos_scr.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\CamPos_scr.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\CamPos_scr.cs.meta
+        projectPath: Assets\Scripts\CamPos_scr.cs.meta
+        originalPath: Assets\CamPos_scr.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
+        projectPath: Assets\Scripts\Cam_script.cs
+        originalPath: Assets\Cam_script.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Cam_script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs.meta
+        projectPath: Assets\Scripts\Cam_script.cs.meta
+        originalPath: Assets\Cam_script.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Classes.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+        projectPath: Assets\Scripts\Classes.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Classes.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs.meta
+        projectPath: Assets\Scripts\Classes.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+        projectPath: Assets\Scripts\PlayerScript.cs
+        originalPath: Assets\PlayerScript.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs.meta
+        projectPath: Assets\Scripts\PlayerScript.cs.meta
+        originalPath: Assets\PlayerScript.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\VC_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\VC_Script.cs
+        projectPath: Assets\Scripts\VC_Script.cs
+        originalPath: Assets\VC_Script.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\VC_Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\VC_Script.cs.meta
+        projectPath: Assets\Scripts\VC_Script.cs.meta
+        originalPath: Assets\VC_Script.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+        projectPath: Assets\Scripts\Weapon_Script.cs
+        originalPath: Assets\Weapon_Script.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs.meta
+        projectPath: Assets\Scripts\Weapon_Script.cs.meta
+        originalPath: Assets\Weapon_Script.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\debug.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
+        projectPath: Assets\Scripts\debug.cs
+        originalPath: Assets\debug.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\debug.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs.meta
+        projectPath: Assets\Scripts\debug.cs.meta
+        originalPath: Assets\debug.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Sprites.meta
+        fullPath: C:\Users\ROG\My project\Assets\Sprites.meta
+        projectPath: Assets\Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\NOVA.png
+        fullPath: C:\Users\ROG\My project\Assets\Sprites\NOVA.png
+        projectPath: Assets\Sprites\NOVA.png
+        originalPath: Assets\NOVA.png
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Sprites\NOVA.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\Sprites\NOVA.png.meta
+        projectPath: Assets\Sprites\NOVA.png.meta
+        originalPath: Assets\NOVA.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: "Assets\\Sprites\\\u5730\u56FE.png"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u5730\u56FE.png"
+        projectPath: "Assets\\Sprites\\\u5730\u56FE.png"
+        originalPath: "Assets\\\u5730\u56FE.png"
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: "Assets\\Sprites\\\u5730\u56FE.png.meta"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u5730\u56FE.png.meta"
+        projectPath: "Assets\\Sprites\\\u5730\u56FE.png.meta"
+        originalPath: "Assets\\\u5730\u56FE.png.meta"
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: "Assets\\Sprites\\\u73A9\u5BB6.png"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u73A9\u5BB6.png"
+        projectPath: "Assets\\Sprites\\\u73A9\u5BB6.png"
+        originalPath: "Assets\\\u73A9\u5BB6.png"
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: "Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+        fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+        projectPath: "Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+        originalPath: "Assets\\\u73A9\u5BB6.png.meta"
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 51f4c96539350dd31a60d5e4214f7f412c0645f9
+      mergeA: c162becebdfe1be4d76e9ca181ce16709ca54cf8
+      mergeB: d979c84c692823d3aabffccc078ee57803989151
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+      description: 
+      timeString: 2024-10-01T10:28:38.000-07:00
+      commitTimeString: 2024-10-01T10:28:38.000-07:00
+      changes: []
+    - commitID: c162becebdfe1be4d76e9ca181ce16709ca54cf8
+      mergeA: 
+      mergeB: 
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: asdf
+      description: asdf
+      timeString: 2024-10-01T10:28:34.000-07:00
+      commitTimeString: 2024-10-01T10:28:34.000-07:00
+      changes:
+      - path: Packages\manifest.json
+        fullPath: C:\Users\ROG\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: d979c84c692823d3aabffccc078ee57803989151
+      mergeA: 9f0113b95be83eb91e1caf4037d3076a02d7c5de
+      mergeB: 90aeb9a72bdc21d36c5feba1b4adcac676dd9165
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Merge branch 'master' of https://github.com/wangms1145/Unity_2d_Proj
+      description: 
+      timeString: 2024-09-29T22:59:18.000-07:00
+      commitTimeString: 2024-09-29T22:59:18.000-07:00
+      changes: []
+    - commitID: 9f0113b95be83eb91e1caf4037d3076a02d7c5de
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Camera follow mouse
+      description: Just Camera follow mouse.
+      timeString: 2024-09-29T22:58:40.000-07:00
+      commitTimeString: 2024-09-29T22:58:40.000-07:00
+      changes:
+      - path: Assets\CamPos_scr.cs
+        fullPath: C:\Users\ROG\My project\Assets\CamPos_scr.cs
+        projectPath: Assets\CamPos_scr.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\CamPos_scr.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\CamPos_scr.cs.meta
+        projectPath: Assets\CamPos_scr.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 90aeb9a72bdc21d36c5feba1b4adcac676dd9165
+      mergeA: 2fc7de77cbeac421401587645449854d36c94d35
+      mergeB: ca5239adf9aad2f9713b82d9b1269c8f3b5f1ba6
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+      description: 
+      timeString: 2024-09-28T16:20:20.000-07:00
+      commitTimeString: 2024-09-28T16:20:20.000-07:00
+      changes: []
+    - commitID: 2fc7de77cbeac421401587645449854d36c94d35
+      mergeA: 
+      mergeB: 
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Update default-2022.dwlt
+      description: 
+      timeString: 2024-09-28T16:19:21.000-07:00
+      commitTimeString: 2024-09-28T16:19:21.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\NOVA.png
+        fullPath: C:\Users\ROG\My project\Assets\NOVA.png
+        projectPath: Assets\NOVA.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NOVA.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\NOVA.png.meta
+        projectPath: Assets\NOVA.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Start.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+        projectPath: Assets\Scenes\Start.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\VC_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+        projectPath: Assets\VC_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs
+        projectPath: Assets\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Weapon_Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs.meta
+        projectPath: Assets\Weapon_Script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\debug.cs
+        fullPath: C:\Users\ROG\My project\Assets\debug.cs
+        projectPath: Assets\debug.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: ca5239adf9aad2f9713b82d9b1269c8f3b5f1ba6
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Our first weapon
+      description: I made our first weapon. It is a regular NOVA shotgun is CS.
+      timeString: 2024-09-28T13:19:22.000-07:00
+      commitTimeString: 2024-09-28T13:19:22.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\NOVA.png
+        fullPath: C:\Users\ROG\My project\Assets\NOVA.png
+        projectPath: Assets\NOVA.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NOVA.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\NOVA.png.meta
+        projectPath: Assets\NOVA.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs
+        projectPath: Assets\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Weapon_Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs.meta
+        projectPath: Assets\Weapon_Script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 31084a9fbf4d3a5d993347e6f42ef4454cdb3765
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: More Discriptions
+      description: Discritptions on other variables about what they do and how does
+        the code work.
+      timeString: 2024-09-28T00:23:16.000-07:00
+      commitTimeString: 2024-09-28T00:23:16.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\VC_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+        projectPath: Assets\VC_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\debug.cs
+        fullPath: C:\Users\ROG\My project\Assets\debug.cs
+        projectPath: Assets\debug.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f7104bd94ddb11011bedc3f387ba136ae1b39414
+      mergeA: ef554b896a3d8e3e9518b1bcbb3b484d20556f40
+      mergeB: 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: discription
+      description: discription
+      timeString: 2024-09-27T16:54:19.000-07:00
+      commitTimeString: 2024-09-27T16:54:19.000-07:00
+      changes: []
+    - commitID: ef554b896a3d8e3e9518b1bcbb3b484d20556f40
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Start scene
+      description: Start scene
+      timeString: 2024-09-27T16:53:16.000-07:00
+      commitTimeString: 2024-09-27T16:53:16.000-07:00
+      changes:
+      - path: Assets\Scenes\Start.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+        projectPath: Assets\Scenes\Start.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+      mergeA: 
+      mergeB: 
+      authorName: A1x-Z
+      authorEmail: azha0109@outlook.com
+      commitEmail: azha0109@outlook.com
+      commitName: A1x-Z
+      summary: description
+      description: add some description
+      timeString: 2024-09-27T16:52:29.000-07:00
+      commitTimeString: 2024-09-27T16:52:29.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 3f2ed227165fd3c79e808a28a8251e6a022bc07f
+      mergeA: 22bce51a45175d1576191f327c53a4a5d26d9a73
+      mergeB: 9d46f3b618e37434d3ec487e6c03376a0f57636c
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Merge branch 'master' of https://github.com/wangms1145/Unity_2d_Proj
+      description: 
+      timeString: 2024-09-27T13:35:49.000-07:00
+      commitTimeString: 2024-09-27T13:35:49.000-07:00
+      changes: []
+    - commitID: 22bce51a45175d1576191f327c53a4a5d26d9a73
+      mergeA: 
+      mergeB: 
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Update default-2022.dwlt
+      description: 
+      timeString: 2024-09-27T13:34:55.000-07:00
+      commitTimeString: 2024-09-27T13:34:55.000-07:00
+      changes:
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 9d46f3b618e37434d3ec487e6c03376a0f57636c
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: small fix
+      description: 
+      timeString: 2024-09-27T13:34:07.000-07:00
+      commitTimeString: 2024-09-27T13:34:07.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\VC_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+        projectPath: Assets\VC_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\debug.cs
+        fullPath: C:\Users\ROG\My project\Assets\debug.cs
+        projectPath: Assets\debug.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\debug.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\debug.cs.meta
+        projectPath: Assets\debug.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 0a9981c5426a765951393270435665aabb6fac43
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: cam zoom
+      description: zooming
+      timeString: 2024-09-27T13:01:42.000-07:00
+      commitTimeString: 2024-09-27T13:01:42.000-07:00
+      changes:
+      - path: Assets\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+        projectPath: Assets\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\VC_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+        projectPath: Assets\VC_Script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\VC_Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs.meta
+        projectPath: Assets\VC_Script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 7f5789baddbf359074ce8be3df1c3f95a7c3345f
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Camera Follow
+      description: Camera Follow
+      timeString: 2024-09-26T16:58:20.000-07:00
+      commitTimeString: 2024-09-26T16:58:20.000-07:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\ROG\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 97510b5c8650362c0a21bd26d39aea4a72c4bcef
       mergeA: 
       mergeB: 
@@ -1394,14 +2029,822 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2024-09-26T16:57:13.685-07:00
+      updatedTimeString: 2024-10-01T21:15:00.510-07:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2024-09-26T16:57:13.671-07:00
+      updatedTimeString: 2024-10-01T21:15:00.494-07:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: a413f3c9e47986200609a7c5b2a423bb025be11e
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Revert "wired bug"
+        description: This reverts commit 28bb43bdc396e382447c6bb60ff8cb14336a7e9a.
+        timeString: 2024-10-01T21:14:29.000-07:00
+        commitTimeString: 2024-10-01T21:14:29.000-07:00
+        changes:
+        - path: Assets\Scripts\Classes.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+          projectPath: Assets\Scripts\Classes.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 46a63a6bd1b0eb44e5d8b39c4d7c7b8874229115
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Revert "test"
+        description: This reverts commit 02972d948645884f4917bb2123300e6b21ca5fe8.
+        timeString: 2024-10-01T21:14:23.000-07:00
+        commitTimeString: 2024-10-01T21:14:23.000-07:00
+        changes:
+        - path: Packages\manifest.json
+          fullPath: C:\Users\ROG\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 02972d948645884f4917bb2123300e6b21ca5fe8
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: test
+        description: test
+        timeString: 2024-10-01T21:14:04.000-07:00
+        commitTimeString: 2024-10-01T21:14:04.000-07:00
+        changes:
+        - path: Packages\manifest.json
+          fullPath: C:\Users\ROG\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 28bb43bdc396e382447c6bb60ff8cb14336a7e9a
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: wired bug
+        description: wired bug
+        timeString: 2024-10-01T21:13:49.000-07:00
+        commitTimeString: 2024-10-01T21:13:49.000-07:00
+        changes:
+        - path: Assets\Scripts\Classes.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+          projectPath: Assets\Scripts\Classes.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: c3b11dceb54831ca6cb91ba972abffd8ace8ba49
+        mergeA: 5ab3993480835fb002974186fb82eb5326fba74a
+        mergeB: 51f4c96539350dd31a60d5e4214f7f412c0645f9
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: small fix
+        description: small fix
+        timeString: 2024-10-01T18:34:14.000-07:00
+        commitTimeString: 2024-10-01T18:34:14.000-07:00
+        changes: []
+      - commitID: 5ab3993480835fb002974186fb82eb5326fba74a
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: New Folders & ground check
+        description: 'New folders to make it more clear and easier to read.
+
+          Ground
+          Check'
+        timeString: 2024-10-01T18:33:32.000-07:00
+        commitTimeString: 2024-10-01T18:33:32.000-07:00
+        changes:
+        - path: Assets\PhysicsMaterials.meta
+          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials.meta
+          projectPath: Assets\PhysicsMaterials.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PhysicsMaterials\Player.physicsMaterial2D
+          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Player.physicsMaterial2D
+          projectPath: Assets\PhysicsMaterials\Player.physicsMaterial2D
+          originalPath: Assets\Player.physicsMaterial2D
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+          projectPath: Assets\PhysicsMaterials\Player.physicsMaterial2D.meta
+          originalPath: Assets\Player.physicsMaterial2D.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts.meta
+          projectPath: Assets\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\CamPos_scr.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\CamPos_scr.cs
+          projectPath: Assets\Scripts\CamPos_scr.cs
+          originalPath: Assets\CamPos_scr.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\CamPos_scr.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\CamPos_scr.cs.meta
+          projectPath: Assets\Scripts\CamPos_scr.cs.meta
+          originalPath: Assets\CamPos_scr.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
+          projectPath: Assets\Scripts\Cam_script.cs
+          originalPath: Assets\Cam_script.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Cam_script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs.meta
+          projectPath: Assets\Scripts\Cam_script.cs.meta
+          originalPath: Assets\Cam_script.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Classes.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+          projectPath: Assets\Scripts\Classes.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Classes.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs.meta
+          projectPath: Assets\Scripts\Classes.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+          projectPath: Assets\Scripts\PlayerScript.cs
+          originalPath: Assets\PlayerScript.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs.meta
+          projectPath: Assets\Scripts\PlayerScript.cs.meta
+          originalPath: Assets\PlayerScript.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\VC_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\VC_Script.cs
+          projectPath: Assets\Scripts\VC_Script.cs
+          originalPath: Assets\VC_Script.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\VC_Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\VC_Script.cs.meta
+          projectPath: Assets\Scripts\VC_Script.cs.meta
+          originalPath: Assets\VC_Script.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+          projectPath: Assets\Scripts\Weapon_Script.cs
+          originalPath: Assets\Weapon_Script.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs.meta
+          projectPath: Assets\Scripts\Weapon_Script.cs.meta
+          originalPath: Assets\Weapon_Script.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\debug.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
+          projectPath: Assets\Scripts\debug.cs
+          originalPath: Assets\debug.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\debug.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs.meta
+          projectPath: Assets\Scripts\debug.cs.meta
+          originalPath: Assets\debug.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Sprites.meta
+          fullPath: C:\Users\ROG\My project\Assets\Sprites.meta
+          projectPath: Assets\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\NOVA.png
+          fullPath: C:\Users\ROG\My project\Assets\Sprites\NOVA.png
+          projectPath: Assets\Sprites\NOVA.png
+          originalPath: Assets\NOVA.png
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Sprites\NOVA.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\Sprites\NOVA.png.meta
+          projectPath: Assets\Sprites\NOVA.png.meta
+          originalPath: Assets\NOVA.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: "Assets\\Sprites\\\u5730\u56FE.png"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u5730\u56FE.png"
+          projectPath: "Assets\\Sprites\\\u5730\u56FE.png"
+          originalPath: "Assets\\\u5730\u56FE.png"
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: "Assets\\Sprites\\\u5730\u56FE.png.meta"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u5730\u56FE.png.meta"
+          projectPath: "Assets\\Sprites\\\u5730\u56FE.png.meta"
+          originalPath: "Assets\\\u5730\u56FE.png.meta"
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: "Assets\\Sprites\\\u73A9\u5BB6.png"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u73A9\u5BB6.png"
+          projectPath: "Assets\\Sprites\\\u73A9\u5BB6.png"
+          originalPath: "Assets\\\u73A9\u5BB6.png"
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: "Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+          projectPath: "Assets\\Sprites\\\u73A9\u5BB6.png.meta"
+          originalPath: "Assets\\\u73A9\u5BB6.png.meta"
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 51f4c96539350dd31a60d5e4214f7f412c0645f9
+        mergeA: c162becebdfe1be4d76e9ca181ce16709ca54cf8
+        mergeB: d979c84c692823d3aabffccc078ee57803989151
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+        description: 
+        timeString: 2024-10-01T10:28:38.000-07:00
+        commitTimeString: 2024-10-01T10:28:38.000-07:00
+        changes: []
+      - commitID: c162becebdfe1be4d76e9ca181ce16709ca54cf8
+        mergeA: 
+        mergeB: 
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: asdf
+        description: asdf
+        timeString: 2024-10-01T10:28:34.000-07:00
+        commitTimeString: 2024-10-01T10:28:34.000-07:00
+        changes:
+        - path: Packages\manifest.json
+          fullPath: C:\Users\ROG\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: d979c84c692823d3aabffccc078ee57803989151
+        mergeA: 9f0113b95be83eb91e1caf4037d3076a02d7c5de
+        mergeB: 90aeb9a72bdc21d36c5feba1b4adcac676dd9165
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Merge branch 'master' of https://github.com/wangms1145/Unity_2d_Proj
+        description: 
+        timeString: 2024-09-29T22:59:18.000-07:00
+        commitTimeString: 2024-09-29T22:59:18.000-07:00
+        changes: []
+      - commitID: 9f0113b95be83eb91e1caf4037d3076a02d7c5de
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Camera follow mouse
+        description: Just Camera follow mouse.
+        timeString: 2024-09-29T22:58:40.000-07:00
+        commitTimeString: 2024-09-29T22:58:40.000-07:00
+        changes:
+        - path: Assets\CamPos_scr.cs
+          fullPath: C:\Users\ROG\My project\Assets\CamPos_scr.cs
+          projectPath: Assets\CamPos_scr.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\CamPos_scr.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\CamPos_scr.cs.meta
+          projectPath: Assets\CamPos_scr.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 90aeb9a72bdc21d36c5feba1b4adcac676dd9165
+        mergeA: 2fc7de77cbeac421401587645449854d36c94d35
+        mergeB: ca5239adf9aad2f9713b82d9b1269c8f3b5f1ba6
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+        description: 
+        timeString: 2024-09-28T16:20:20.000-07:00
+        commitTimeString: 2024-09-28T16:20:20.000-07:00
+        changes: []
+      - commitID: 2fc7de77cbeac421401587645449854d36c94d35
+        mergeA: 
+        mergeB: 
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Update default-2022.dwlt
+        description: 
+        timeString: 2024-09-28T16:19:21.000-07:00
+        commitTimeString: 2024-09-28T16:19:21.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\NOVA.png
+          fullPath: C:\Users\ROG\My project\Assets\NOVA.png
+          projectPath: Assets\NOVA.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NOVA.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\NOVA.png.meta
+          projectPath: Assets\NOVA.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Start.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+          projectPath: Assets\Scenes\Start.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\VC_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+          projectPath: Assets\VC_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs
+          projectPath: Assets\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Weapon_Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs.meta
+          projectPath: Assets\Weapon_Script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\debug.cs
+          fullPath: C:\Users\ROG\My project\Assets\debug.cs
+          projectPath: Assets\debug.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: ca5239adf9aad2f9713b82d9b1269c8f3b5f1ba6
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Our first weapon
+        description: I made our first weapon. It is a regular NOVA shotgun is CS.
+        timeString: 2024-09-28T13:19:22.000-07:00
+        commitTimeString: 2024-09-28T13:19:22.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\NOVA.png
+          fullPath: C:\Users\ROG\My project\Assets\NOVA.png
+          projectPath: Assets\NOVA.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NOVA.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\NOVA.png.meta
+          projectPath: Assets\NOVA.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs
+          projectPath: Assets\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Weapon_Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Weapon_Script.cs.meta
+          projectPath: Assets\Weapon_Script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 31084a9fbf4d3a5d993347e6f42ef4454cdb3765
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: More Discriptions
+        description: Discritptions on other variables about what they do and how
+          does the code work.
+        timeString: 2024-09-28T00:23:16.000-07:00
+        commitTimeString: 2024-09-28T00:23:16.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\VC_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+          projectPath: Assets\VC_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\debug.cs
+          fullPath: C:\Users\ROG\My project\Assets\debug.cs
+          projectPath: Assets\debug.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f7104bd94ddb11011bedc3f387ba136ae1b39414
+        mergeA: ef554b896a3d8e3e9518b1bcbb3b484d20556f40
+        mergeB: 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: discription
+        description: discription
+        timeString: 2024-09-27T16:54:19.000-07:00
+        commitTimeString: 2024-09-27T16:54:19.000-07:00
+        changes: []
+      - commitID: ef554b896a3d8e3e9518b1bcbb3b484d20556f40
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Start scene
+        description: Start scene
+        timeString: 2024-09-27T16:53:16.000-07:00
+        commitTimeString: 2024-09-27T16:53:16.000-07:00
+        changes:
+        - path: Assets\Scenes\Start.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Start.unity
+          projectPath: Assets\Scenes\Start.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 860db4742c7076ad7eb6f9ca4c2843300721f9a3
+        mergeA: 
+        mergeB: 
+        authorName: A1x-Z
+        authorEmail: azha0109@outlook.com
+        commitEmail: azha0109@outlook.com
+        commitName: A1x-Z
+        summary: description
+        description: add some description
+        timeString: 2024-09-27T16:52:29.000-07:00
+        commitTimeString: 2024-09-27T16:52:29.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 3f2ed227165fd3c79e808a28a8251e6a022bc07f
+        mergeA: 22bce51a45175d1576191f327c53a4a5d26d9a73
+        mergeB: 9d46f3b618e37434d3ec487e6c03376a0f57636c
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Merge branch 'master' of https://github.com/wangms1145/Unity_2d_Proj
+        description: 
+        timeString: 2024-09-27T13:35:49.000-07:00
+        commitTimeString: 2024-09-27T13:35:49.000-07:00
+        changes: []
+      - commitID: 22bce51a45175d1576191f327c53a4a5d26d9a73
+        mergeA: 
+        mergeB: 
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Update default-2022.dwlt
+        description: 
+        timeString: 2024-09-27T13:34:55.000-07:00
+        commitTimeString: 2024-09-27T13:34:55.000-07:00
+        changes:
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 9d46f3b618e37434d3ec487e6c03376a0f57636c
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: small fix
+        description: 
+        timeString: 2024-09-27T13:34:07.000-07:00
+        commitTimeString: 2024-09-27T13:34:07.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\VC_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+          projectPath: Assets\VC_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\debug.cs
+          fullPath: C:\Users\ROG\My project\Assets\debug.cs
+          projectPath: Assets\debug.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\debug.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\debug.cs.meta
+          projectPath: Assets\debug.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 0a9981c5426a765951393270435665aabb6fac43
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: cam zoom
+        description: zooming
+        timeString: 2024-09-27T13:01:42.000-07:00
+        commitTimeString: 2024-09-27T13:01:42.000-07:00
+        changes:
+        - path: Assets\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
+          projectPath: Assets\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\VC_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs
+          projectPath: Assets\VC_Script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\VC_Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\VC_Script.cs.meta
+          projectPath: Assets\VC_Script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 7f5789baddbf359074ce8be3df1c3f95a7c3345f
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Camera Follow
+        description: Camera Follow
+        timeString: 2024-09-26T16:58:20.000-07:00
+        commitTimeString: 2024-09-26T16:58:20.000-07:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\ROG\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\ROG\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 97510b5c8650362c0a21bd26d39aea4a72c4bcef
         mergeA: 
         mergeB: 
@@ -1985,19 +3428,19 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: -1
+      selectedIndex: 4
     selectedEntry:
-      commitID: 
-      mergeA: 
-      mergeB: 
-      authorName: 
-      authorEmail: 
-      commitEmail: 
-      commitName: 
-      summary: 
-      description: 
-      timeString: 0001-01-01T00:00:00.000+00:00
-      commitTimeString: 0001-01-01T00:00:00.000+00:00
+      commitID: c3b11dceb54831ca6cb91ba972abffd8ace8ba49
+      mergeA: 5ab3993480835fb002974186fb82eb5326fba74a
+      mergeB: 51f4c96539350dd31a60d5e4214f7f412c0645f9
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: small fix
+      description: small fix
+      timeString: 2024-10-01T18:34:14.000-07:00
+      commitTimeString: 2024-10-01T18:34:14.000-07:00
       changes: []
     treeChanges:
       assets:
@@ -2010,12 +3453,30 @@ MonoBehaviour:
         keys: []
         values: []
       title: 
-      pathSeparator: /
+      pathSeparator: \
       displayRootNode: 0
       isSelectable: 1
       isCheckable: 0
       isUsingGlobalSelection: 0
-      nodes: []
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
       selectedNode:
         path: 
         label: 
@@ -2038,30 +3499,30 @@ MonoBehaviour:
     detailsScroll: {x: 0, y: 0}
   settingsView:
     gitPathView:
-      gitPath: D:\Git\cmd\git.exe
-      gitLfsPath: D:\Git\cmd\git-lfs.exe
+      gitPath: 
+      gitLfsPath: 
       errorMessage: 
       resetToBundled: 0
       resetToSystem: 0
       changingManually: 0
       installSettingsHidden: 0
-    hasRemote: 1
+    hasRemote: 0
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-25T16:28:53.255-07:00
-      cacheType: 1
-    newRepositoryRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
-    repositoryRemoteName: origin
-    repositoryRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
+      updatedTimeString: 
+      cacheType: 0
+    newRepositoryRemoteUrl: 
+    repositoryRemoteName: 
+    repositoryRemoteUrl: 
     scroll: {x: 0, y: 0}
     userSettingsView:
-      gitName: wangms1145
-      gitEmail: wangms1145@gmail.com
-      newGitName: wangms1145
-      newGitEmail: wangms1145@gmail.com
+      gitName: 
+      gitEmail: 
+      newGitName: 
+      newGitEmail: 
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2024-09-25T16:30:48.821-07:00
-        cacheType: 8
+        updatedTimeString: 
+        cacheType: 0
       configSettingsHidden: 0
     repositorySettingsHidden: 0
     generalSettingsHidden: 0
@@ -2069,10 +3530,10 @@ MonoBehaviour:
     uiSceneSettingsHidden: 0
     uiProjectSettingsHidden: 0
   locksView:
-    currentRemoteHasUpdate: 1
+    currentRemoteHasUpdate: 0
     currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
-    keychainHasUpdate: 1
+    keychainHasUpdate: 0
     locksControl:
       scroll: {x: 0, y: 0}
       gitLockEntries: []
@@ -2091,36 +3552,18 @@ MonoBehaviour:
             email: 
           lockedAtString: 
         gitFileStatus: 0
-        lockedAt: "1 1\u6708 0001, 00:00"
+        lockedAt: 
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:42.444-07:00
-      cacheType: 1
+      updatedTimeString: 
+      cacheType: 0
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:42.475-07:00
-      cacheType: 7
+      updatedTimeString: 
+      cacheType: 0
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-27T16:57:41.355-07:00
-      cacheType: 6
+      updatedTimeString: 
+      cacheType: 0
     lockedFiles: []
-    gitStatusEntries:
-    - path: Assets\Cam_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Cam_script.cs
-      projectPath: Assets\Cam_script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\PlayerScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
-      projectPath: Assets\PlayerScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+    gitStatusEntries: []
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -2134,7 +3577,7 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/wangms1145/Unity_2d_Proj.git
-  statusAhead: 0
+  statusAhead: 1
   statusBehind: 0
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
@@ -2147,13 +3590,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-09-27T16:57:42.444-07:00
+    updatedTimeString: 2024-10-01T21:14:58.482-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-09-27T16:57:43.993-07:00
+    updatedTimeString: 2024-10-01T21:20:23.569-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-09-27T16:57:43.975-07:00
+    updatedTimeString: 2024-10-01T21:36:40.640-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2171,12 +3614,205 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.9998959
-  repositoryProgressMessage: Pushed
+  repositoryProgressValue: 0
+  repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
 --- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 559.4286
+    width: 1116.1428
+    height: 174.71426
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Scripts
+    m_Globs: []
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\ROG\My project
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 23.499756}
+    m_SelectedIDs: 7e750000
+    m_LastClickedID: 30078
+    m_ExpandedIDs: 00000000fe72000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000fe72000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 207
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1117.143
+    y: 72.571434
+    width: 344.71436
+    height: 661.5714
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2198,8 +3834,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.571434
-    width: 267.57144
-    height: 440.7143
+    width: 275.57144
+    height: 465.85715
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2215,7 +3851,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aef8fffffafaffff
+      m_ExpandedIDs: fafaffff42fbffff9e720000aa720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2231,7 +3867,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2239,7 +3875,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2259,10 +3895,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 268.57144
+    x: 276.57144
     y: 72.571434
-    width: 828.28577
-    height: 440.7143
+    width: 838.5714
+    height: 465.85715
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2277,8 +3913,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -174, y: -26}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -172, y: -25.714294}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -2536,19 +4172,6 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
-      snapOffset: {x: 48, y: 9.714264}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: UnityEditor.SceneViewCameraOverlay
-      index: 12
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
       displayed: 0
       snapOffset: {x: 48, y: 48}
       snapOffsetDelta: {x: 0, y: 0}
@@ -2621,9 +4244,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.1639836, y: -0.5730921, z: -0.065518245}
+    m_Target: {x: 4.9118357, y: -1.6519448, z: -0.0121552395}
     speed: 2
-    m_Value: {x: 2.1639836, y: -0.5730921, z: -0.065518245}
+    m_Value: {x: 4.9118357, y: -1.6519448, z: -0.0121552395}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2673,9 +4296,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.642053
+    m_Target: 3.7881784
     speed: 2
-    m_Value: 6.642053
+    m_Value: 3.7881784
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2700,7 +4323,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2720,10 +4343,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 268.57144
+    x: 276.57144
     y: 72.571434
-    width: 828.28577
-    height: 440.7143
+    width: 838.5714
+    height: 465.85715
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2740,7 +4363,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 746, y: 419.7143}
+  m_TargetSize: {x: 3840, y: 2160}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2749,16 +4372,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -213.14287
-    m_HBaseRangeMax: 213.14287
-    m_VBaseRangeMin: -119.91837
-    m_VBaseRangeMax: 119.91837
+    m_HBaseRangeMin: -1097.143
+    m_HBaseRangeMax: 1097.143
+    m_VBaseRangeMin: -617.1429
+    m_VBaseRangeMax: 617.1429
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2776,175 +4399,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 828.28577
-      height: 419.7143
-    m_Scale: {x: 1.7500001, y: 1.7500001}
-    m_Translation: {x: 414.14288, y: 209.85715}
+      width: 838.5714
+      height: 444.85715
+    m_Scale: {x: 0.36041668, y: 0.36041665}
+    m_Translation: {x: 419.28574, y: 222.42857}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -236.65306
-      y: -119.918365
-      width: 473.30612
-      height: 239.83673
+      x: -1163.336
+      y: -617.1429
+      width: 2326.672
+      height: 1234.2858
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1449.5001, y: 771.25}
+  m_defaultScale: 0.36041665
+  m_LastWindowPixelSize: {x: 1467.5, y: 815.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 534.28577
-    width: 1097.8572
-    height: 199.85712
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets
-    m_Globs: []
-    m_OriginalText: 
-    m_ImportLogFlags: 0
-    m_FilterByTypeIntersection: 0
-  m_ViewMode: 1
-  m_StartGridSize: 49
-  m_LastFolders:
-  - Assets
-  m_LastFoldersGridSize: 49
-  m_LastProjectPath: C:\Users\ROG\My project
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0.1428833}
-    m_SelectedIDs: ba720000
-    m_LastClickedID: 29370
-    m_ExpandedIDs: 00000000ba72000000ca9a3b
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba720000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 49
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 207
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2965,43 +4442,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 534.28577
-    width: 1097.8572
-    height: 199.85712
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6629f1bb292b749a18b5fff7994c8b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 350}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Unity Version Control
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 533.7143
+    y: 559.4286
     width: 1116.1428
-    height: 200.42856
+    height: 174.71426
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3012,51 +4455,3 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  mForceToReOpen: 0
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1098.8572
-    y: 72.571434
-    width: 363
-    height: 661.5714
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 16896
-  m_LastVerticalScrollValue: 40
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
