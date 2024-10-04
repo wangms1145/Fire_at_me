@@ -22,6 +22,7 @@ public class Weapon_Script : MonoBehaviour
     private bool flag;
     private Vector3 scale;
     public Rigidbody2D myRigidbody;
+    public PolygonCollider2D myCol;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class Weapon_Script : MonoBehaviour
         myRigidbody.simulated = false;
         scale.x = (float)-0.3;
         scale.z = 1;
+        myCol.autoTiling = true;
     }
 
     // Call This method when ever you need to change the attibutes.
