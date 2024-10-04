@@ -1,0 +1,52 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+//using System.Numerics;
+using UnityEngine;
+
+
+public class debug : MonoBehaviour
+{
+    /*******************************************************************
+    * Read This first before changing this code!!!!                    *
+    *                                                                  *
+    * This code is for debuging mouse position only                    *
+    *                                                                  *
+    * PLS create a new script for the aim point and crosshair!!!!!!    *
+    ********************************************************************/
+    public PlayerScript ply;
+    public Rigidbody2D myRigidbody;
+    private UnityEngine.Vector3 pos;
+    private bool flag;
+    // Start is called before the first frame update
+    void Start()
+    {
+        myRigidbody.simulated = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(ply.isAlive){
+            flag = true;
+            //displaying mouse pos using the player as an origin
+            pos.x = ply.disX;
+            pos.y = ply.disY;
+            pos.z = 0;
+            transform.localPosition = pos;
+        }
+        else{
+            //died
+            if(flag){
+                flag = false;
+                myRigidbody.simulated = true;
+                float ang = UnityEngine.Random.Range(-180, 180);
+                myRigidbody.velocity = Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
+                myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
+            }
+            if(transform.position.y<ply.diedYpos - 10){
+                myRigidbody.simulated = false;
+            }
+        }
+    }
+}
