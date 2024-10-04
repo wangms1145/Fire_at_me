@@ -15,46 +15,61 @@ public class Weapon_Script : MonoBehaviour
     * There will be an array of images and attibutes here       *
     *************************************************************/
     public PlayerScript ply;
-    private Vector2 pos;
-    private Vector3 scale;
+    public WeaponClass[] weapon;
+    public SpriteRenderer mySprite;
+    public float recoil_ani;
     private float ang;
     private bool flag;
+    private Vector3 scale;
     public Rigidbody2D myRigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
-        Change(14,(float)0.7);
+        Change(weapon[0]);
         myRigidbody.simulated = false;
+        scale.x = (float)-0.3;
+        scale.z = 1;
     }
 
     // Call This method when ever you need to change the attibutes.
-    void Change(float recoil,float time){// There will be much more attributes then this
-        ply.recoil = recoil;
-        ply.reloading_time = time;//In seconds
+    void Change(WeaponClass wp){// There will be much more attributes then this
+        ply.recoil = wp.recoil;
+        ply.firing_time = wp.firing_time;//In seconds
+        mySprite.sprite = wp.spr;
+        ply.auto = wp.automatic;
+        //transform.localScale = wp.scale;
+        
+        //Debug.Log(wp.scale);
     }
     // Update is called once per frame
     void Update()
     {
         if(ply.isAlive){
             myRigidbody.simulated = false;
-            transform.localPosition = Vector3.zero;
-            flag = true;
-            /*
-            pos.x = ply.sX;
-            pos.y = ply.sY;
-            transform.position = pos;
-            */
 
             ang = Mathf.Atan(ply.disY/ply.disX);
-            scale.x = (float)-0.3;
-            scale.z = (float)1;
             if(ply.disX<0){
                 ang += Mathf.PI;
+                //scale.y = -Math.Abs(scale.y);
                 scale.y = (float)-0.3;
             }
             else{
                 scale.y = (float)0.3;
             }
+
+
+            if(recoil_ani != 0){
+                transform.localPosition -= Vector3.right * (float)Math.Cos(ang)*recoil_ani + Vector3.up * (float)Math.Sin(ang)*recoil_ani;
+                recoil_ani = 0;
+                //Debug.Log(ang);
+            }
+            transform.localPosition += (Vector3.zero - transform.localPosition)*30*Time.deltaTime;
+            flag = true;
+            
+            
+            if(Input.GetKeyDown(KeyCode.C))Change(weapon[1]);
+            if(Input.GetKeyDown(KeyCode.F))Change(weapon[0]);
             transform.localScale = scale;
             transform.rotation = quaternion.RotateZ(ang);
         }

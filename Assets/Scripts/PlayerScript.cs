@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
 
     
     public float recoil;
+    public float firing_time;
     public float reloading_time;
     
     //ray casting box size
@@ -43,13 +44,15 @@ public class PlayerScript : MonoBehaviour
     public float mouse_mult;
     public bool isAlive = true;
     public float diedYpos;
+    public bool auto;
 
    
     [SerializeField]
     public Cam_script cam_script;
-
+    public Weapon_Script wp;
 
     private float ang;
+    private bool fire;
     private float spdx,spdy;
     private float tspd;
     private float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
@@ -96,10 +99,12 @@ public class PlayerScript : MonoBehaviour
 
 
             //recoil
-            if(Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= (time_last_shoot + reloading_time)){
+            fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
+            if(fire && Time.time >= (time_last_shoot + firing_time)){
                 myRigidbody.velocity += Vector2.right * (Mathf.Cos(ang) * recoil);
                 myRigidbody.velocity += Vector2.up * (Mathf.Sin(ang) * recoil);
                 time_last_shoot = Time.time;
+                wp.recoil_ani = (float)Math.Clamp(recoil / 6.0,0,0.7);
             }
             //Debug.LogWarning(""+ time_last_shoot + " " + reloading_time + " " + Time.time);
 

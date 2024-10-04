@@ -1,12 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
-public class ParentClass : MonoBehaviour
-{
-
-}
-public class Classes : ParentClass
+public class Classes : MonoBehaviour
 {
 
 }
@@ -14,27 +12,30 @@ public class Classes : ParentClass
 [System.Serializable]
 public class WeaponClass
 {
-    Sprite spr;
-    float recoil;
-    float bulletSpd;
-    float maxDistance;
-    int type;
-    Vector2 firePos;
-    Sprite fireEff;
-    float damage;
-    int damageType;
+    public Sprite spr;
+    public float recoil;
+    public float bulletSpd;
+    public float maxDistance;
+    public int type;
+    public Vector2 firePos;
+    public Sprite fireEff;
+    public float damage;
+    public int damageType;
+    public float firing_time;
+    public float reloading_time;
+    public int bullet_count;
+    public bool automatic;
 }
 public class Bullets // I guess it is a better idea to change this stuff to a gam object but idk how to do it yet
 {                    // So just don't use it
-    Sprite bullet;
-    Vector2 launchPos;
-    float bulletSpd;
-    float maxDistance;
-    float trigDistance;
-    int type;
-    float damage;
-    int damageType;
-    
+    public Sprite bullet;
+    public Vector2 launchPos;
+    public float bulletSpd;
+    public float maxDistance;
+    public float trigDistance;
+    public int type;
+    public float damage;
+    public int damageType;
 }
 //What ever classes goes after this thing
 
