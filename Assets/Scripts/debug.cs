@@ -28,10 +28,13 @@ public class debug : MonoBehaviour
     void Update()
     {
         if(ply.isAlive){
+            myRigidbody.simulated = false;
+            myRigidbody.rotation = 0;
+            transform.rotation = Quaternion.Euler(0,0,0);
             flag = true;
             //displaying mouse pos using the player as an origin
-            pos.x = ply.disX;
-            pos.y = ply.disY;
+            pos.x = ply.sX + ply.disX;
+            pos.y = ply.sY + ply.disY;
             pos.z = 0;
             transform.localPosition = pos;
         }
