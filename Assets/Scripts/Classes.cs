@@ -25,11 +25,13 @@ public class WeaponClass
     public float reloading_time;
     public int bullet_count;
     public bool automatic;
+    public float arm_time;
+    public int mag_c;
+    public int reload_type;
 }
 public class Bullets // I guess it is a better idea to change this stuff to a gam object but idk how to do it yet
 {                    // So just don't use it
     public Sprite bullet;
-    public Vector2 launchPos;
     public float bulletSpd;
     public float maxDistance;
     public float trigDistance;

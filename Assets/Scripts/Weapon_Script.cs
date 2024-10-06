@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class Weapon_Script : MonoBehaviour
 {
@@ -18,31 +20,45 @@ public class Weapon_Script : MonoBehaviour
     public WeaponClass[] weapon;
     public SpriteRenderer mySprite;
     public float recoil_ani;
+    public Bullet_gene_scr bullet;
     private float ang;
     private bool flag;
     private Vector3 scale;
+    private int now_ind;
+    private float time;
+    private bool reload;
+    private int last_wp;
+    private float fl;
+    private bool can_shoot,shoot;
+    private bool auto;
     public Rigidbody2D myRigidbody;
-    public PolygonCollider2D myCol;
+    private float shoot_last_time;
+    private float firing_time;
 
     // Start is called before the first frame update
     void Start()
     {
-        Change(weapon[0]);
+        Change(weapon[0],0);
         myRigidbody.simulated = false;
         scale.x = (float)-0.3;
         scale.z = 1;
-        myCol.autoTiling = true;
+        for(int i = 0;i<weapon.Length;i++){
+            weapon[i].mag_c = weapon[i].bullet_count;
+        }
+        can_shoot = true;
     }
 
     // Call This method when ever you need to change the attibutes.
-    void Change(WeaponClass wp){// There will be much more attributes then this
+    void Change(WeaponClass wp,int ind){// There will be much more attributes then this
+        now_ind = ind;
         ply.recoil = wp.recoil;
-        ply.firing_time = wp.firing_time;//In seconds
+        auto = wp.automatic;
+        ply.time_last_shoot = Time.time + wp.arm_time - wp.firing_time;
+        firing_time = wp.firing_time;//In seconds
         mySprite.sprite = wp.spr;
-        ply.auto = wp.automatic;
-        //transform.localScale = wp.scale;
-        
-        //Debug.Log(wp.scale);
+        reload = false;
+        time = 0;
+        shoot = false;
     }
     // Update is called once per frame
     void Update()
@@ -53,30 +69,93 @@ public class Weapon_Script : MonoBehaviour
             ang = Mathf.Atan(ply.disY/ply.disX);
             if(ply.disX<0){
                 ang += Mathf.PI;
-                //scale.y = -Math.Abs(scale.y);
                 scale.y = (float)-0.3;
             }
             else{
                 scale.y = (float)0.3;
             }
+            bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
+            if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
+                weapon[now_ind].mag_c--;
+                ply.shoot = true; 
+                shoot_last_time = Time.time;
+                bullet.SpawnBullet(weapon[now_ind],ang);
+                shoot = true;
+            }
+            if(weapon[now_ind].mag_c <= 0){
+                can_shoot=false;
+                reload = true;
+                fl = 9999;
+            }
+            else if(!reload || (weapon[now_ind].reload_type == 1 && weapon[now_ind].mag_c > 0)){
+                can_shoot = true;
+            }
+            else{
+                can_shoot = false;
+            }
+            if(Input.GetKeyDown(KeyCode.R) && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
+                time = 0;
+                reload = true;
+                fl = 9999;
+            }
+            if(reload && (weapon[now_ind].reload_type == 0)){
+                time+=Time.deltaTime;
+                if(now_ind != last_wp){
+                    reload = false;
+                    time = 0;
+                }
+                last_wp = now_ind;
+                if(time > weapon[now_ind].reloading_time){
+                    reload = false;
+                    weapon[now_ind].mag_c = weapon[now_ind].bullet_count;
+                    time = 0;
+                }
+            }
+            else if(reload && (weapon[now_ind].reload_type == 1)){
+                time+=Time.deltaTime;
+                if(now_ind != last_wp || shoot){
+                    reload = false;
+                    time = 0;
+                }
+                last_wp = now_ind;
+                if(time > weapon[now_ind].reloading_time && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
+                    weapon[now_ind].mag_c++;
+                    time = 0;
+                }
+                if(weapon[now_ind].mag_c == weapon[now_ind].bullet_count && fl == 9999){
+                    fl = time;
+                }
+                if(time > (fl + weapon[now_ind].arm_time)){
+                    reload = false;
+                    time = 0;
+                }
+            } 
 
 
             if(recoil_ani != 0){
                 transform.localPosition -= Vector3.right * (float)Math.Cos(ang)*recoil_ani + Vector3.up * (float)Math.Sin(ang)*recoil_ani;
                 recoil_ani = 0;
-                //Debug.Log(ang);
             }
             transform.localPosition += (Vector3.zero - transform.localPosition)*30*Time.deltaTime;
             flag = true;
             
             
-            if(Input.GetKeyDown(KeyCode.C))Change(weapon[1]);
-            if(Input.GetKeyDown(KeyCode.F))Change(weapon[0]);
+            if(Input.GetKeyDown(KeyCode.C))Change(weapon[1],1);
+            if(Input.GetKeyDown(KeyCode.F))Change(weapon[0],0);
             transform.localScale = scale;
-            transform.rotation = quaternion.RotateZ(ang);
+            if(!reload)transform.rotation = quaternion.RotateZ(ang);
+            else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);
+            else transform.rotation = quaternion.RotateZ(1*weapon[now_ind].mag_c);
+            shoot = false;
         }
         else{
             if(flag){
+                reload = false;
+                time = 0;
+                for(int i = 0;i<weapon.Length;i++){
+                    weapon[i].mag_c = weapon[i].bullet_count;
+                }
+                can_shoot = true;
                 flag = false;
                 myRigidbody.simulated = true;
                 float ang = UnityEngine.Random.Range(-180, 180);

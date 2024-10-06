@@ -46,7 +46,7 @@ public class Cam_script : MonoBehaviour
         scr_x = cam.pixelWidth;
         scr_y = cam.pixelHeight;
         
-        //delete this if you don't want is to appear on screen.
+        //delete this if you don't want it to appear on screen.
         //****************************************************************************************************************************************************************
         GUILayout.BeginArea(new Rect(20, 20, 250, 120));
         GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);

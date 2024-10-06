@@ -7,7 +7,6 @@ using UnityEngine.Rendering;
 using System;
 using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 using System.Text.RegularExpressions;
-//using UnityEngine.Random;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -28,8 +27,6 @@ public class PlayerScript : MonoBehaviour
 
     
     public float recoil;
-    public float firing_time;
-    public float reloading_time;
     
     //ray casting box size
     public Vector2 boxSize;
@@ -44,7 +41,8 @@ public class PlayerScript : MonoBehaviour
     public float mouse_mult;
     public bool isAlive = true;
     public float diedYpos;
-    public bool auto;
+    public bool shoot;
+    //public int mag,c_mag;
 
    
     [SerializeField]
@@ -52,19 +50,17 @@ public class PlayerScript : MonoBehaviour
     public Weapon_Script wp;
 
     private float ang;
-    private bool fire;
     private float spdx,spdy;
     private float tspd;
-    private float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
+    public float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
     public float mouY,mouX;
     public float disY,disX;
     public float sX,sY;
     // Start is called before the first frame update
     void Start()
     {
-        //myRigidbody.freezeRotation = true;
-        //transform.position.y;
         myRigidbody.sharedMaterial = inGame_material;
+        
     }
 
     // Update is called once per frame
@@ -90,23 +86,19 @@ public class PlayerScript : MonoBehaviour
 
             //recoil angle
             ang = Mathf.Atan(disY/disX);
-            //Debug.LogWarning((mouY - transform.position.y) + " " + (mouX - transform.position.x));
-            //ang/=Mathf.PI;
-            //ang*=180;
             if(mouX - transform.position.x > 0){
                 ang+=Mathf.PI;
             }
 
 
             //recoil
-            fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
-            if(fire && Time.time >= (time_last_shoot + firing_time)){
+            if(shoot){
                 myRigidbody.velocity += Vector2.right * (Mathf.Cos(ang) * recoil);
                 myRigidbody.velocity += Vector2.up * (Mathf.Sin(ang) * recoil);
                 time_last_shoot = Time.time;
                 wp.recoil_ani = (float)Math.Clamp(recoil / 6.0,0,0.7);
+                shoot = false;
             }
-            //Debug.LogWarning(""+ time_last_shoot + " " + reloading_time + " " + Time.time);
 
             //move
             tspd = 0;
@@ -119,8 +111,6 @@ public class PlayerScript : MonoBehaviour
 
             if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G)){
                 isAlive = false;
-
-                //transform.position = Vector2.zero;
                 float ang = UnityEngine.Random.Range(-180, 180);
                 myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
                 myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
@@ -142,13 +132,14 @@ public class PlayerScript : MonoBehaviour
                 myRigidbody.simulated = true;
                 myRigidbody.position = Vector2.zero;
                 myRigidbody.rotation = 0;
-                isAlive = true;
                 myRigidbody.velocity = Vector2.zero;
+                isAlive = true;
+                
             }
         }
     }
 
-    //ground detect using ray casting
+    //ground detect using box casting
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
             return true;
