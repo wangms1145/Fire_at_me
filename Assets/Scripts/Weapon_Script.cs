@@ -34,6 +34,7 @@ public class Weapon_Script : MonoBehaviour
     public Rigidbody2D myRigidbody;
     private float shoot_last_time;
     private float firing_time;
+    private int j = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -140,8 +141,8 @@ public class Weapon_Script : MonoBehaviour
             flag = true;
             
             
-            if(Input.GetKeyDown(KeyCode.C))Change(weapon[1],1);
-            if(Input.GetKeyDown(KeyCode.F))Change(weapon[0],0);
+            if(Input.GetKeyDown(KeyCode.F)){Change(weapon[j],j);j++;}
+            if(j>weapon.Length - 1){j = 0;}
             transform.localScale = scale;
             if(!reload)transform.rotation = quaternion.RotateZ(ang);
             else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);

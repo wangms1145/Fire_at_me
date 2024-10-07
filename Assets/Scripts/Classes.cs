@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
+
 public class Classes : MonoBehaviour
 {
 
@@ -28,6 +29,9 @@ public class WeaponClass
     public float arm_time;
     public int mag_c;
     public int reload_type;
+    public AudioClip fire_audio;
+    public float spd_offset;
+    public float ang_offset;
 }
 public class Bullets // I guess it is a better idea to change this stuff to a gam object but idk how to do it yet
 {                    // So just don't use it

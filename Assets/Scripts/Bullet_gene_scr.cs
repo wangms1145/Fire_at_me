@@ -28,14 +28,16 @@ public class Bullet_gene_scr : MonoBehaviour
         if(wp.type == 1){
             for (int i = 1; i <= UnityEngine.Random.Range(8,12); i++){
                 GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
-                float angp = (float)(UnityEngine.Random.Range(-2,2)/180.0 * Math.PI);
-                float spdp = (float)(UnityEngine.Random.Range(-3, 3) / 3.0);
+                float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
+                float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset) / 3.0);
                 bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
             }
         }
         else{
             GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
-            bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang) * wp.bulletSpd) * Vector2.right + (float)(Math.Sin(ang) * wp.bulletSpd) * Vector2.up;
+            float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
+            float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
+            bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
         }
         
     }

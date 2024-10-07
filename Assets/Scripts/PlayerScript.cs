@@ -104,7 +104,9 @@ public class PlayerScript : MonoBehaviour
             tspd = 0;
             if(Input.GetKey(KeyCode.A))tspd += spd;
             if(Input.GetKey(KeyCode.D))tspd -= spd;
-            myRigidbody.velocity += Vector2.left * (tspd+spdx)*acc*Time.deltaTime*100;
+            float acc_add = 0;
+            if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = 1;tspd = 0;}
+            myRigidbody.velocity += Vector2.left * (tspd+spdx)*(acc+acc_add)*Time.deltaTime*100;
 
             //rotation lock
             myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*aacc*Time.deltaTime*100);
