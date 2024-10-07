@@ -1274,7 +1274,7 @@ MonoBehaviour:
     ang_offset: 0
   - spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
     recoil: 2.3
-    bulletSpd: 30
+    bulletSpd: 50
     maxDistance: 0
     type: 0
     firePos: {x: -3.1, y: 0.54}
@@ -1303,260 +1303,13 @@ MonoBehaviour:
     firing_time: 0.35
     reloading_time: 1.1
     bullet_count: 7
-    automatic: 1
+    automatic: 0
     arm_time: 0.23
     mag_c: 0
     reload_type: 0
     fire_audio: {fileID: 0}
     spd_offset: 7
     ang_offset: 5
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
-  - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
-    recoil: 15
-    bulletSpd: 0
-    maxDistance: 0
-    type: 0
-    firePos: {x: 0, y: 0}
-    fireEff: {fileID: 0}
-    damage: 0
-    damageType: 0
-    firing_time: 1
-    reloading_time: 0
-    bullet_count: 0
-    automatic: 0
-    arm_time: 0
-    mag_c: 0
-    reload_type: 0
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
   mySprite: {fileID: 1848485543}
   recoil_ani: 0
   bullet: {fileID: 1606644788}
@@ -1922,22 +1675,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
-      propertyPath: m_CallbackLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
-      propertyPath: m_ForceSendLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
-      propertyPath: m_ForceReceiveLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
-      propertyPath: m_ContactCaptureLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3236533606441466475, guid: b7a375088c756f747965a82aafacb180, type: 3}
       propertyPath: m_Name
       value: Bullet1
@@ -1981,6 +1718,10 @@ PrefabInstance:
     - target: {fileID: 4157757634098587277, guid: b7a375088c756f747965a82aafacb180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339025568286558188, guid: b7a375088c756f747965a82aafacb180, type: 3}
+      propertyPath: m_Color.g
+      value: 0.73032314
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
