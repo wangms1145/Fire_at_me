@@ -1254,7 +1254,7 @@ MonoBehaviour:
   weapon:
   - spr: {fileID: 21300000, guid: d2572c2d61880fc438162b9a9a4e7cf1, type: 3}
     recoil: 15
-    bulletSpd: 0
+    bulletSpd: 23
     maxDistance: 0
     type: 1
     firePos: {x: -3, y: 0.4}
@@ -1270,7 +1270,7 @@ MonoBehaviour:
     reload_type: 1
   - spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
     recoil: 2.3
-    bulletSpd: 10
+    bulletSpd: 30
     maxDistance: 0
     type: 0
     firePos: {x: -3.1, y: 0.54}
@@ -1777,6 +1777,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
+      propertyPath: m_CallbackLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
+      propertyPath: m_ForceSendLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
+      propertyPath: m_ForceReceiveLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861962734843399500, guid: b7a375088c756f747965a82aafacb180, type: 3}
+      propertyPath: m_ContactCaptureLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3236533606441466475, guid: b7a375088c756f747965a82aafacb180, type: 3}
       propertyPath: m_Name
       value: Bullet1
@@ -1877,10 +1893,6 @@ PrefabInstance:
     - target: {fileID: 4849828006635120214, guid: bf241fc9a32c56c4191e453f284d5b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459629456720595680, guid: bf241fc9a32c56c4191e453f284d5b98, type: 3}
-      propertyPath: m_Mass
-      value: 0.002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
