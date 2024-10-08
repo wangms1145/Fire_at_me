@@ -42,6 +42,11 @@ public class PlayerScript : MonoBehaviour
     public bool isAlive = true;
     public float diedYpos;
     public bool shoot;
+    public AudioSource audSource;
+    public AudioClip fall;
+    public AudioClip died;
+    public AudioClip zhuiji;
+    public AudioDistortionFilter filter;
     //public int mag,c_mag;
 
    
@@ -56,6 +61,9 @@ public class PlayerScript : MonoBehaviour
     public float mouY,mouX;
     public float disY,disX;
     public float sX,sY;
+    private bool groundFlag;
+    private float ys = 0;
+    private int i;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,7 +113,7 @@ public class PlayerScript : MonoBehaviour
             if(Input.GetKey(KeyCode.A))tspd += spd;
             if(Input.GetKey(KeyCode.D))tspd -= spd;
             float acc_add = 0;
-            if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = 1;tspd = 0;}
+            if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
             myRigidbody.velocity += Vector2.left * (tspd+spdx)*(acc+acc_add)*Time.deltaTime*100;
 
             //rotation lock
@@ -117,7 +125,22 @@ public class PlayerScript : MonoBehaviour
                 myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
                 myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
                 myRigidbody.sharedMaterial = died_material;
+                if(transform.position.y < diedYpos){
+                    filter.distortionLevel = 0;
+                    audSource.PlayOneShot(zhuiji);
+                }
+                else{
+                    filter.distortionLevel = 0;
+                    audSource.PlayOneShot(died);
+                }
             }
+            if(isGrounded() && !groundFlag){
+                filter.distortionLevel = Mathf.InverseLerp(-10,-30,ys);
+                audSource.PlayOneShot(fall);
+            }
+            groundFlag = isGrounded();
+            if(i >= 5){ys = myRigidbody.velocity.y;i = 0;}
+            i++;
         }
         else{
             //died
@@ -132,11 +155,10 @@ public class PlayerScript : MonoBehaviour
             }
             if(Input.GetKey(KeyCode.R)){
                 myRigidbody.simulated = true;
+                myRigidbody.velocity = Vector2.zero;
                 myRigidbody.position = Vector2.zero;
                 myRigidbody.rotation = 0;
-                myRigidbody.velocity = Vector2.zero;
                 isAlive = true;
-                
             }
         }
     }

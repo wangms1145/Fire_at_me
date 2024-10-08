@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -21,6 +22,7 @@ public class Weapon_Script : MonoBehaviour
     public SpriteRenderer mySprite;
     public float recoil_ani;
     public Bullet_gene_scr bullet;
+    public AudioSource audSource;
     private float ang;
     private bool flag;
     private Vector3 scale;
@@ -60,6 +62,7 @@ public class Weapon_Script : MonoBehaviour
         reload = false;
         time = 0;
         shoot = false;
+        audSource.clip = wp.fire_audio;
     }
     // Update is called once per frame
     void Update()
@@ -82,11 +85,11 @@ public class Weapon_Script : MonoBehaviour
                 shoot_last_time = Time.time;
                 bullet.SpawnBullet(weapon[now_ind],ang);
                 shoot = true;
+                audSource.PlayOneShot(weapon[now_ind].fire_audio);
             }
-            if(weapon[now_ind].mag_c <= 0){
+            if(weapon[now_ind].mag_c <= 0 && !reload){
                 can_shoot=false;
-                reload = true;
-                fl = 9999;
+                SetReload();
             }
             else if(!reload || (weapon[now_ind].reload_type == 1 && weapon[now_ind].mag_c > 0)){
                 can_shoot = true;
@@ -94,29 +97,25 @@ public class Weapon_Script : MonoBehaviour
             else{
                 can_shoot = false;
             }
-            if(Input.GetKeyDown(KeyCode.R) && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
-                time = 0;
-                reload = true;
-                fl = 9999;
+            if(Input.GetKeyDown(KeyCode.R) && weapon[now_ind].mag_c < weapon[now_ind].bullet_count && !reload){
+                SetReload();
             }
             if(reload && (weapon[now_ind].reload_type == 0)){
                 time+=Time.deltaTime;
                 if(now_ind != last_wp){
-                    reload = false;
-                    time = 0;
+                    CancelReload();
                 }
                 last_wp = now_ind;
                 if(time > weapon[now_ind].reloading_time){
-                    reload = false;
                     weapon[now_ind].mag_c = weapon[now_ind].bullet_count;
-                    time = 0;
+                    CancelReload();
                 }
             }
             else if(reload && (weapon[now_ind].reload_type == 1)){
                 time+=Time.deltaTime;
+                //Debug.Log(time);
                 if(now_ind != last_wp || shoot){
-                    reload = false;
-                    time = 0;
+                    CancelReload();
                 }
                 last_wp = now_ind;
                 if(time > weapon[now_ind].reloading_time && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
@@ -127,8 +126,7 @@ public class Weapon_Script : MonoBehaviour
                     fl = time;
                 }
                 if(time > (fl + weapon[now_ind].arm_time)){
-                    reload = false;
-                    time = 0;
+                    CancelReload();
                 }
             } 
 
@@ -167,5 +165,17 @@ public class Weapon_Script : MonoBehaviour
                 myRigidbody.simulated = false;
             }
         }
+    }
+    private void SetReload(){
+        reload = true;
+        fl = 9999;
+        time = 0;
+        if(weapon[now_ind].reload_type == 1){
+            time = (float)-0.5;
+        }
+    }
+    private void CancelReload(){
+        reload = false;
+        time = 0;
     }
 }

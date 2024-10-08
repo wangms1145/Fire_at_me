@@ -1041,6 +1041,8 @@ GameObject:
   - component: {fileID: 1750998417}
   - component: {fileID: 1750998416}
   - component: {fileID: 1750998420}
+  - component: {fileID: 1750998421}
+  - component: {fileID: 1750998422}
   m_Layer: 7
   m_Name: PlayerDev
   m_TagString: Untagged
@@ -1209,6 +1211,11 @@ MonoBehaviour:
   isAlive: 1
   diedYpos: -10
   shoot: 0
+  audSource: {fileID: 1750998421}
+  fall: {fileID: 8300000, guid: a52da54d638549746aac112bb091c6f0, type: 3}
+  died: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
+  zhuiji: {fileID: 8300000, guid: 4bddc8efd15caec4a95f3dd24468b3b6, type: 3}
+  filter: {fileID: 1750998422}
   cam_script: {fileID: 1732998586}
   wp: {fileID: 1848485542}
   time_last_shoot: -999
@@ -1218,6 +1225,111 @@ MonoBehaviour:
   disX: 0
   sX: 0
   sY: 0
+--- !u!82 &1750998421
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750998415}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a52da54d638549746aac112bb091c6f0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!170 &1750998422
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750998415}
+  m_Enabled: 1
+  m_DistortionLevel: 0
 --- !u!1 &1848485541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,9 +1381,9 @@ MonoBehaviour:
     arm_time: 0.53
     mag_c: 0
     reload_type: 1
-    fire_audio: {fileID: 0}
-    spd_offset: 0
-    ang_offset: 0
+    fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
+    spd_offset: 2
+    ang_offset: 5
   - spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
     recoil: 2.3
     bulletSpd: 50
@@ -1288,7 +1400,7 @@ MonoBehaviour:
     arm_time: 0.43
     mag_c: 0
     reload_type: 0
-    fire_audio: {fileID: 0}
+    fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
     spd_offset: 4
     ang_offset: 1.1
   - spr: {fileID: 21300000, guid: 05679c563dccf8747a8fe7428de4c7c7, type: 3}
@@ -1307,12 +1419,13 @@ MonoBehaviour:
     arm_time: 0.23
     mag_c: 0
     reload_type: 0
-    fire_audio: {fileID: 0}
+    fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
     spd_offset: 7
     ang_offset: 5
   mySprite: {fileID: 1848485543}
   recoil_ani: 0
   bullet: {fileID: 1606644788}
+  audSource: {fileID: 1848485548}
   myRigidbody: {fileID: 1848485546}
 --- !u!212 &1848485543
 SpriteRenderer:

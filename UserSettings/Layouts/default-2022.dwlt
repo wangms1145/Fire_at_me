@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1462.8572
     height: 732.5715
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 51
+  controlID: 94
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -69,14 +69,14 @@ MonoBehaviour:
     y: 0
     width: 345.71436
     height: 682.5714
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,14 +314,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: -1
+  progressMessageClearTime: 3731.7909873
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -480,10 +480,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2024-10-04T15:45:28.823-07:00
+      updatedTimeString: 2024-10-07T15:55:49.646-07:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2024-10-04T15:44:01.271-07:00
+      updatedTimeString: 2024-10-07T15:55:06.040-07:00
       cacheType: 1
     currentBranch:
       name: master
@@ -505,381 +505,20 @@ MonoBehaviour:
     - name: origin/test_for_multiplayer
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 637ce4b643002ff4e90155d62c3dfff6
-        - b7a375088c756f747965a82aafacb180
-        - bf241fc9a32c56c4191e453f284d5b98
-        - 6fbaef45f03499b42b8558c91eed5c91
-        - 0e8713c2b151c0b44a5bb8d4f801fd2b
-        - 1b0e7ac1078adbb40aa5aded95883b4e
-        - f80b75fcd0b21324190420c153f48c70
-        - 82b027d73556d034bbdb8b14b61b1750
-        - 70f41bd642984db4097a339912298d00
-        - 419d863eecb818e4fa9e4488c4453ef7
-        - 706cf95bd55349841b87c57d2c89f42a
-        - f4b6ba9dabc2e474db555ad2e4c9e7f4
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects\Bullet1.prefab
-          label: Bullet1.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\Bullet1.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
-            projectPath: Assets\GameObjects\Bullet1.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\GameObjects\Bullet2.prefab
-          label: Bullet2.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\Bullet2.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
-            projectPath: Assets\GameObjects\Bullet2.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Game.unity
-          label: Game.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Game.unity
-            fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-            projectPath: Assets\Scenes\Game.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Bullet_gene_scr.cs
-          label: Bullet_gene_scr.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Bullet_gene_scr.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-            projectPath: Assets\Scripts\Bullet_gene_scr.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\Cam_script.cs
-          label: Cam_script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Cam_script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
-            projectPath: Assets\Scripts\Cam_script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Classes.cs
-          label: Classes.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Classes.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-            projectPath: Assets\Scripts\Classes.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\debug.cs
-          label: debug.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\debug.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
-            projectPath: Assets\Scripts\debug.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\PlayerScript.cs
-          label: PlayerScript.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\PlayerScript.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-            projectPath: Assets\Scripts\PlayerScript.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Weapon_Script.cs
-          label: Weapon_Script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Weapon_Script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-            projectPath: Assets\Scripts\Weapon_Script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\GameObjects
-        - Assets\Scenes
-        - Assets\Scripts
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -908,366 +547,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\GameObjects.meta
-        label: GameObjects.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects.meta
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects.meta
-          projectPath: Assets\GameObjects.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects
-        label: GameObjects
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\GameObjects\Bullet1.prefab
-        label: Bullet1.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Bullet1.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
-          projectPath: Assets\GameObjects\Bullet1.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects\Bullet1.prefab.meta
-        label: Bullet1.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Bullet1.prefab.meta
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab.meta
-          projectPath: Assets\GameObjects\Bullet1.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects\Bullet2.prefab
-        label: Bullet2.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Bullet2.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
-          projectPath: Assets\GameObjects\Bullet2.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects\Bullet2.prefab.meta
-        label: Bullet2.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Bullet2.prefab.meta
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab.meta
-          projectPath: Assets\GameObjects\Bullet2.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Game.unity
-        label: Game.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Game.unity
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-          projectPath: Assets\Scenes\Game.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Bullet_gene_scr.cs
-        label: Bullet_gene_scr.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Bullet_gene_scr.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-          projectPath: Assets\Scripts\Bullet_gene_scr.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Bullet_gene_scr.cs.meta
-        label: Bullet_gene_scr.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Bullet_gene_scr.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs.meta
-          projectPath: Assets\Scripts\Bullet_gene_scr.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Cam_script.cs
-        label: Cam_script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Cam_script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
-          projectPath: Assets\Scripts\Cam_script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Classes.cs
-        label: Classes.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Classes.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-          projectPath: Assets\Scripts\Classes.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\debug.cs
-        label: debug.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\debug.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
-          projectPath: Assets\Scripts\debug.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\PlayerScript.cs
-        label: PlayerScript.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\PlayerScript.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-          projectPath: Assets\Scripts\PlayerScript.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Weapon_Script.cs
-        label: Weapon_Script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Weapon_Script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-          projectPath: Assets\Scripts\Weapon_Script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -1287,97 +566,13 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\GameObjects.meta
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects.meta
-      projectPath: Assets\GameObjects.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Bullet1.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
-      projectPath: Assets\GameObjects\Bullet1.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Bullet1.prefab.meta
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab.meta
-      projectPath: Assets\GameObjects\Bullet1.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Bullet2.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
-      projectPath: Assets\GameObjects\Bullet2.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Bullet2.prefab.meta
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab.meta
-      projectPath: Assets\GameObjects\Bullet2.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Game.unity
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-      projectPath: Assets\Scenes\Game.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Bullet_gene_scr.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-      projectPath: Assets\Scripts\Bullet_gene_scr.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Bullet_gene_scr.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs.meta
-      projectPath: Assets\Scripts\Bullet_gene_scr.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Cam_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
-      projectPath: Assets\Scripts\Cam_script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Classes.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-      projectPath: Assets\Scripts\Classes.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\debug.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
-      projectPath: Assets\Scripts\debug.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\PlayerScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-      projectPath: Assets\Scripts\PlayerScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Weapon_Script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-      projectPath: Assets\Scripts\Weapon_Script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 14 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-10-07T13:07:51.478-07:00
+      updatedTimeString: 2024-10-07T16:56:57.441-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-10-07T13:12:17.163-07:00
+      updatedTimeString: 2024-10-07T16:56:40.827-07:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -1386,6 +581,228 @@ MonoBehaviour:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 4305a31833e022cf6708158157461da26b9a84d0
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: NOVA
+      description: NOVA
+      timeString: 2024-10-07T15:55:25.000-07:00
+      commitTimeString: 2024-10-07T15:55:25.000-07:00
+      changes:
+      - path: Assets\GameObjects\Bullet1.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
+        projectPath: Assets\GameObjects\Bullet1.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Bullet2.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
+        projectPath: Assets\GameObjects\Bullet2.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet2Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs
+        projectPath: Assets\Scripts\Bullet2Script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet2Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs.meta
+        projectPath: Assets\Scripts\Bullet2Script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet_gene_scr.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+        projectPath: Assets\Scripts\Bullet_gene_scr.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 1857912e8e42757bd5d3195f76943c89f52b2f66
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Bullets
+      description: Our first Bullet
+      timeString: 2024-10-06T15:10:02.000-07:00
+      commitTimeString: 2024-10-06T15:10:02.000-07:00
+      changes:
+      - path: Assets\GameObjects.meta
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects.meta
+        projectPath: Assets\GameObjects.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Bullet1.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
+        projectPath: Assets\GameObjects\Bullet1.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Bullet1.prefab.meta
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab.meta
+        projectPath: Assets\GameObjects\Bullet1.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Bullet2.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
+        projectPath: Assets\GameObjects\Bullet2.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Bullet2.prefab.meta
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab.meta
+        projectPath: Assets\GameObjects\Bullet2.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet1Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+        projectPath: Assets\Scripts\Bullet1Script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet1Script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs.meta
+        projectPath: Assets\Scripts\Bullet1Script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet_gene_scr.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+        projectPath: Assets\Scripts\Bullet_gene_scr.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet_gene_scr.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs.meta
+        projectPath: Assets\Scripts\Bullet_gene_scr.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Cam_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
+        projectPath: Assets\Scripts\Cam_script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Classes.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+        projectPath: Assets\Scripts\Classes.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+        projectPath: Assets\Scripts\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+        projectPath: Assets\Scripts\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\debug.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
+        projectPath: Assets\Scripts\debug.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 369a3bef9c5b7ef18381d369ed78673092805dc4
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Fixing  snailmen problem
+      description: Fixing  snailmen problem
+      timeString: 2024-10-04T12:44:48.000-07:00
+      commitTimeString: 2024-10-04T12:44:48.000-07:00
+      changes:
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+        projectPath: Assets\PlayerScript.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+        projectPath: Assets\Scripts\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 6ff996a65f8592aba87e0778d66ba62060942541
+      mergeA: 95f0fe0cae384cf11a1df91baf084555fd0a564a
+      mergeB: cdf68bcaed8e725680a57068575e0b0718d8257d
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+      description: 
+      timeString: 2024-10-04T10:48:31.000-07:00
+      commitTimeString: 2024-10-04T10:48:31.000-07:00
+      changes: []
     - commitID: 95f0fe0cae384cf11a1df91baf084555fd0a564a
       mergeA: 
       mergeB: 
@@ -1439,6 +856,54 @@ MonoBehaviour:
         projectPath: Assets\Sprites\AK47.png.meta
         originalPath: 
         indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: cdf68bcaed8e725680a57068575e0b0718d8257d
+      mergeA: 4983136d242e1daf116efe4083ffece5d9727985
+      mergeB: 5be211e1f8c673a45261513b2ea02610679551ab
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+      description: 
+      timeString: 2024-10-04T10:30:06.000-07:00
+      commitTimeString: 2024-10-04T10:30:06.000-07:00
+      changes: []
+    - commitID: 4983136d242e1daf116efe4083ffece5d9727985
+      mergeA: 
+      mergeB: 
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: kbk
+      description: knk
+      timeString: 2024-10-04T10:29:38.000-07:00
+      commitTimeString: 2024-10-04T10:29:38.000-07:00
+      changes:
+      - path: Assets\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+        projectPath: Assets\PlayerScript.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PlayerScript.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+        projectPath: Assets\PlayerScript.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRP.asset
+        fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset
+        projectPath: Assets\Settings\UniversalRP.asset
+        originalPath: 
+        indexStatus: 3
         workTreeStatus: 0
       - path: UserSettings\Layouts\default-2022.dwlt
         fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
@@ -3082,16 +2547,238 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 1
+    statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-10-07T15:56:54.955-07:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-10-07T15:56:54.899-07:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: 4305a31833e022cf6708158157461da26b9a84d0
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: NOVA
+        description: NOVA
+        timeString: 2024-10-07T15:55:25.000-07:00
+        commitTimeString: 2024-10-07T15:55:25.000-07:00
+        changes:
+        - path: Assets\GameObjects\Bullet1.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
+          projectPath: Assets\GameObjects\Bullet1.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Bullet2.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
+          projectPath: Assets\GameObjects\Bullet2.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet2Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs
+          projectPath: Assets\Scripts\Bullet2Script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet2Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs.meta
+          projectPath: Assets\Scripts\Bullet2Script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet_gene_scr.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+          projectPath: Assets\Scripts\Bullet_gene_scr.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 1857912e8e42757bd5d3195f76943c89f52b2f66
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Bullets
+        description: Our first Bullet
+        timeString: 2024-10-06T15:10:02.000-07:00
+        commitTimeString: 2024-10-06T15:10:02.000-07:00
+        changes:
+        - path: Assets\GameObjects.meta
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects.meta
+          projectPath: Assets\GameObjects.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Bullet1.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab
+          projectPath: Assets\GameObjects\Bullet1.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Bullet1.prefab.meta
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet1.prefab.meta
+          projectPath: Assets\GameObjects\Bullet1.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Bullet2.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab
+          projectPath: Assets\GameObjects\Bullet2.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Bullet2.prefab.meta
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet2.prefab.meta
+          projectPath: Assets\GameObjects\Bullet2.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet1Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+          projectPath: Assets\Scripts\Bullet1Script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet1Script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs.meta
+          projectPath: Assets\Scripts\Bullet1Script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet_gene_scr.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+          projectPath: Assets\Scripts\Bullet_gene_scr.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet_gene_scr.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs.meta
+          projectPath: Assets\Scripts\Bullet_gene_scr.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Cam_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Cam_script.cs
+          projectPath: Assets\Scripts\Cam_script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Classes.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+          projectPath: Assets\Scripts\Classes.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+          projectPath: Assets\Scripts\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+          projectPath: Assets\Scripts\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\debug.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\debug.cs
+          projectPath: Assets\Scripts\debug.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\ROG\My project\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 369a3bef9c5b7ef18381d369ed78673092805dc4
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Fixing  snailmen problem
+        description: Fixing  snailmen problem
+        timeString: 2024-10-04T12:44:48.000-07:00
+        commitTimeString: 2024-10-04T12:44:48.000-07:00
+        changes:
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+          projectPath: Assets\PlayerScript.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+          projectPath: Assets\Scripts\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 6ff996a65f8592aba87e0778d66ba62060942541
+        mergeA: 95f0fe0cae384cf11a1df91baf084555fd0a564a
+        mergeB: cdf68bcaed8e725680a57068575e0b0718d8257d
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+        description: 
+        timeString: 2024-10-04T10:48:31.000-07:00
+        commitTimeString: 2024-10-04T10:48:31.000-07:00
+        changes: []
       - commitID: 95f0fe0cae384cf11a1df91baf084555fd0a564a
         mergeA: 
         mergeB: 
@@ -3145,6 +2832,54 @@ MonoBehaviour:
           projectPath: Assets\Sprites\AK47.png.meta
           originalPath: 
           indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: cdf68bcaed8e725680a57068575e0b0718d8257d
+        mergeA: 4983136d242e1daf116efe4083ffece5d9727985
+        mergeB: 5be211e1f8c673a45261513b2ea02610679551ab
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+        description: 
+        timeString: 2024-10-04T10:30:06.000-07:00
+        commitTimeString: 2024-10-04T10:30:06.000-07:00
+        changes: []
+      - commitID: 4983136d242e1daf116efe4083ffece5d9727985
+        mergeA: 
+        mergeB: 
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: kbk
+        description: knk
+        timeString: 2024-10-04T10:29:38.000-07:00
+        commitTimeString: 2024-10-04T10:29:38.000-07:00
+        changes:
+        - path: Assets\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs
+          projectPath: Assets\PlayerScript.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PlayerScript.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\PlayerScript.cs.meta
+          projectPath: Assets\PlayerScript.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRP.asset
+          fullPath: C:\Users\ROG\My project\Assets\Settings\UniversalRP.asset
+          projectPath: Assets\Settings\UniversalRP.asset
+          originalPath: 
+          indexStatus: 3
           workTreeStatus: 0
         - path: UserSettings\Layouts\default-2022.dwlt
           fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
@@ -4788,8 +4523,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 1
-      selectedIndex: 0
+      statusAhead: 0
+      selectedIndex: 4
     selectedEntry:
       commitID: 95f0fe0cae384cf11a1df91baf084555fd0a564a
       mergeA: 
@@ -5320,12 +5055,12 @@ MonoBehaviour:
       installSettingsHidden: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-10-02T23:25:03.642-07:00
+      updatedTimeString: 2024-10-07T16:55:16.059-07:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/wangms1145/Fire_at_me.git
     repositoryRemoteName: origin
     repositoryRemoteUrl: https://github.com/wangms1145/Fire_at_me.git
-    scroll: {x: 0, y: 0}
+    scroll: {x: 0, y: 48}
     userSettingsView:
       gitName: wangms1145
       gitEmail: wangms1145@gmail.com
@@ -5333,7 +5068,7 @@ MonoBehaviour:
       newGitEmail: wangms1145@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2024-10-02T23:25:05.540-07:00
+        updatedTimeString: 2024-10-07T16:51:28.277-07:00
         cacheType: 8
       configSettingsHidden: 0
     repositorySettingsHidden: 0
@@ -5366,22 +5101,16 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: "1 1\u6708 0001, 00:00"
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-10-02T23:25:03.642-07:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2024-10-02T23:25:05.368-07:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-10-02T23:24:37.777-07:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries:
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+    gitStatusEntries: []
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -5397,7 +5126,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/wangms1145/Fire_at_me.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -5408,13 +5137,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-10-04T16:44:02.543-07:00
+    updatedTimeString: 2024-10-07T16:56:57.441-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-10-04T16:46:02.419-07:00
+    updatedTimeString: 2024-10-07T16:56:57.719-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-10-06T12:01:46.806-07:00
+    updatedTimeString: 2024-10-07T16:56:40.827-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -5432,8 +5161,8 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
-  repositoryProgressMessage: 
+  repositoryProgressValue: 1
+  repositoryProgressMessage: Pushed
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
@@ -5669,7 +5398,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff
+      m_ExpandedIDs: fafaffffb0720000bc720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -6062,9 +5791,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.307708, y: -2.0588424, z: -0.03871409}
+    m_Target: {x: 6.3741636, y: -2.5134182, z: -0.029850213}
     speed: 2
-    m_Value: {x: 6.307708, y: -2.0588424, z: -0.03871409}
+    m_Value: {x: 6.3741636, y: -2.5134182, z: -0.029850213}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -6114,9 +5843,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.5521897
+    m_Target: 0.66359806
     speed: 2
-    m_Value: 1.5521897
+    m_Value: 0.66359806
   m_Ortho:
     m_Target: 1
     speed: 2
