@@ -39,6 +39,5 @@ public class Bullet_gene_scr : MonoBehaviour
             float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
             bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
         }
-        
     }
 }

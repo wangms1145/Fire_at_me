@@ -139,8 +139,8 @@ public class Weapon_Script : MonoBehaviour
             flag = true;
             
             
-            if(Input.GetKeyDown(KeyCode.F)){Change(weapon[j],j);j++;}
-            if(j>weapon.Length - 1){j = 0;}
+            if(Input.GetKeyDown(KeyCode.F)){j++;Change(weapon[j],j);}
+            if(j>=weapon.Length - 1){j = -1;}
             transform.localScale = scale;
             if(!reload)transform.rotation = quaternion.RotateZ(ang);
             else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);
