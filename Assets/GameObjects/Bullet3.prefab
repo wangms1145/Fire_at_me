@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7004631902072198356}
   - component: {fileID: 8432998296681204364}
   - component: {fileID: 1390287995257743961}
-  - component: {fileID: 8778903987072247605}
   - component: {fileID: 3129270808334025006}
-  m_Layer: 0
+  - component: {fileID: 2345036739071612571}
+  m_Layer: 8
   m_Name: Bullet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,8 +219,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8778903987072247605
-BoxCollider2D:
+--- !u!114 &3129270808334025006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608955736457869223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb964f52144b4fd4aa10e9bccb30a39e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trig: 0.8
+  des: 0
+  myRigidbody: {fileID: 1390287995257743961}
+--- !u!58 &2345036739071612571
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -252,30 +267,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &3129270808334025006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6608955736457869223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb964f52144b4fd4aa10e9bccb30a39e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trig: 0.8
-  des: 0
-  myRigidbody: {fileID: 1390287995257743961}
+  m_Radius: 0.5

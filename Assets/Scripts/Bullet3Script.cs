@@ -13,7 +13,6 @@ public class Bullet3Script : MonoBehaviour
     void Start()
     {
         des = CalcTime(trig);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class Bullet3Script : MonoBehaviour
     {
         timed += Time.deltaTime;
         if(timed > trig){
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            
             if(trig/2 >= 0.01){
                 GameObject sec_bullet = Instantiate(gameObject,transform.position,transform.rotation);
                 sec_bullet.GetComponent<Bullet3Script>().trig = trig/2;
@@ -33,7 +32,7 @@ public class Bullet3Script : MonoBehaviour
             }
             myRigidbody.velocity = Vector2.zero;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
             if(timed > des*1.5){
                 gameObject.GetComponent<TrailRenderer>().enabled = false;
                 Destroy(gameObject);

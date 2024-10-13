@@ -19,7 +19,7 @@ public class WeaponClass
     public float maxDistance;
     public int type;
     public Vector2 firePos;
-    public Sprite fireEff;
+    public GameObject fireEff;
     public float damage;
     public int damageType;
     public float firing_time;

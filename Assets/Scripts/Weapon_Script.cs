@@ -43,7 +43,7 @@ public class Weapon_Script : MonoBehaviour
     {
         Change(weapon[0],0);
         myRigidbody.simulated = false;
-        scale.x = (float)-0.3;
+        scale.x = 0.3f;
         scale.z = 1;
         for(int i = 0;i<weapon.Length;i++){
             weapon[i].mag_c = weapon[i].bullet_count;
@@ -73,10 +73,10 @@ public class Weapon_Script : MonoBehaviour
             ang = Mathf.Atan(ply.disY/ply.disX);
             if(ply.disX<0){
                 ang += Mathf.PI;
-                scale.y = (float)-0.3;
+                scale.y = -0.3f;
             }
             else{
-                scale.y = (float)0.3;
+                scale.y = 0.3f;
             }
             bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
             if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
@@ -86,6 +86,7 @@ public class Weapon_Script : MonoBehaviour
                 bullet.SpawnBullet(weapon[now_ind],ang);
                 shoot = true;
                 audSource.PlayOneShot(weapon[now_ind].fire_audio);
+                
             }
             if(weapon[now_ind].mag_c <= 0 && !reload){
                 can_shoot=false;

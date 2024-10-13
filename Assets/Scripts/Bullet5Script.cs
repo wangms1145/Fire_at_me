@@ -7,11 +7,12 @@ using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class Bullet1Script : MonoBehaviour
+public class Bullet5Script : MonoBehaviour
 {
     public Vector2 vel;
+    public float radius;
     public LayerMask groundLayer;
-    public GameObject bullet_hole;
+    public GameObject explode;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
     // Start is called before the first frame update
@@ -24,22 +25,30 @@ public class Bullet1Script : MonoBehaviour
     void Update()
     {
         timed += Time.deltaTime;
-        if(timed > 6){
+        if(timed > 30){
             Destroy(gameObject);
         }
         vel = myRigidbody.velocity;
         RaycastHit2D hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
-            Instantiate(bullet_hole,a,quaternion.RotateZ(0));
+            Instantiate(explode,a,quaternion.RotateZ(0));
             Destroy(gameObject);
         }
     }
     private RaycastHit2D collide_check(){
-        return Physics2D.Raycast(transform.position,vel,vel.magnitude*Time.deltaTime*2.3f,groundLayer);
+        RaycastHit2D hit1 =  Physics2D.Raycast(transform.position,vel,vel.magnitude*Time.deltaTime*5,groundLayer);
+        RaycastHit2D hit2 =  Physics2D.CircleCast(transform.position,radius,Vector2.right,0,groundLayer);
+        if(hit2){
+            return hit2;
+        }
+        else{
+            return hit1;
+        }
     }
     private void OnDrawGizmos(){
         //Gizmos.DrawWireCube(transform.position + vel/myRigidbody.velocity.magnitude * (boxSize.x/2-0.1f),boxSize);
-        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*2.3f);
+        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*5);
+        Gizmos.DrawWireSphere(transform.position,radius);
     }
 }

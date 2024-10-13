@@ -84,7 +84,7 @@ public class PlayerScript : MonoBehaviour
                 myRigidbody.velocity += Vector2.up * jumpStrength;
             }
 
-            //debug
+            //debug    Actually don't delete this bcs cameraPos takes that parameter.
             mouX = cam_script.mousePosition.x;
             mouY = cam_script.mousePosition.y;
             sX = transform.position.x;
