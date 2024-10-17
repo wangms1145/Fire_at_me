@@ -8,7 +8,7 @@ using System;
 using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 using System.Text.RegularExpressions;
 
-public class PlayerScript : MonoBehaviour
+public class BotScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
 
@@ -23,7 +23,6 @@ public class PlayerScript : MonoBehaviour
 
     //
     public float jumpStrength;
-    public bool DoBunnyHop;
 
     
     public float recoil;
@@ -41,20 +40,17 @@ public class PlayerScript : MonoBehaviour
     public float mouse_mult;
     public bool isAlive = true;
     public float diedYpos;
-    public bool shoot;
     public AudioSource audSource;
     public AudioClip fall;
     public AudioClip died;
     public AudioClip zhuiji;
     public AudioDistortionFilter filter;
+    public float health = 100;
     //public int mag,c_mag;
 
    
-    [SerializeField]
-    public Cam_script cam_script;
-    public Weapon_Script wp;
 
-    private float ang;
+    private float health_max;
     private float spdx,spdy;
     private float tspd;
     public float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
@@ -68,7 +64,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         myRigidbody.sharedMaterial = inGame_material;
-        
+        health_max = health;
     }
 
     // Update is called once per frame
@@ -80,46 +76,23 @@ public class PlayerScript : MonoBehaviour
             spdy = myRigidbody.velocity.y;
 
             //jump
-            if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+            if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded()){
                 myRigidbody.velocity += Vector2.up * jumpStrength;
             }
 
-            //debug    Actually don't delete this bcs cameraPos takes that parameter.
-            mouX = cam_script.mousePosition.x;
-            mouY = cam_script.mousePosition.y;
-            sX = transform.position.x;
-            sY = transform.position.y;
-            disY = (mouY - transform.position.y) * mouse_mult;
-            disX = (mouX - transform.position.x) * mouse_mult;
-
-            //recoil angle
-            ang = Mathf.Atan(disY/disX);
-            if(mouX - transform.position.x > 0){
-                ang+=Mathf.PI;
-            }
-
-
-            //recoil
-            if(shoot){
-                myRigidbody.velocity += Vector2.right * (Mathf.Cos(ang) * recoil);
-                myRigidbody.velocity += Vector2.up * (Mathf.Sin(ang) * recoil);
-                time_last_shoot = Time.time;
-                wp.recoil_ani = (float)Math.Clamp(recoil / 6.0,0,0.7);
-                shoot = false;
-            }
 
             //move
             tspd = 0;
-            if(Input.GetKey(KeyCode.A))tspd += spd;
-            if(Input.GetKey(KeyCode.D))tspd -= spd;
+            if(Input.GetKey(KeyCode.LeftArrow))tspd += spd;
+            if(Input.GetKey(KeyCode.RightArrow))tspd -= spd;
             float acc_add = 0;
-            if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
+            if(Input.GetKey(KeyCode.Tab) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
             myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
 
             //rotation lock
             myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-1,1));
 
-            if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G)){
+            if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
                 isAlive = false;
                 float ang = UnityEngine.Random.Range(-180, 180);
                 myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
@@ -143,13 +116,6 @@ public class PlayerScript : MonoBehaviour
             i++;
         }
         else{
-            //died
-            mouX = cam_script.mousePosition.x;
-            mouY = cam_script.mousePosition.y;
-            sX = transform.position.x;
-            sY = transform.position.y;
-            disY = (mouY - transform.position.y) * mouse_mult;
-            disX = (mouX - transform.position.x) * mouse_mult;
             if(transform.position.y < diedYpos-30){
                 myRigidbody.simulated = false;
             }
@@ -158,6 +124,7 @@ public class PlayerScript : MonoBehaviour
                 myRigidbody.velocity = Vector2.zero;
                 myRigidbody.position = Vector2.zero;
                 myRigidbody.rotation = 0;
+                health = health_max;
                 isAlive = true;
             }
         }

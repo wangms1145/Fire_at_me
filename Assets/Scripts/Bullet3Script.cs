@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Bullet3Script : MonoBehaviour
 {
-    public float trig,des;
+    public float trig,des,damage;
     private float timed = 0;
     public Rigidbody2D myRigidbody;
     // Start is called before the first frame update

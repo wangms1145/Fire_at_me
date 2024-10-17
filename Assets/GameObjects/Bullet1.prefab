@@ -183,8 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce94d85bcc6e694fa3232cf46c29d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impact: 0.04
   vel: {x: 0, y: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 192
+  damage: 0
   bullet_hole: {fileID: 8529851836600150010, guid: 3253c0896d6b5174493145afdb8ee80c, type: 3}

@@ -23,7 +23,7 @@ public class Weapon_Script : MonoBehaviour
     public float recoil_ani;
     public Bullet_gene_scr bullet;
     public AudioSource audSource;
-    private float ang;
+    private float ang,ang_rec;
     private bool flag;
     private Vector3 scale;
     private int now_ind;
@@ -69,25 +69,31 @@ public class Weapon_Script : MonoBehaviour
     {
         if(ply.isAlive){
             myRigidbody.simulated = false;
-
-            ang = Mathf.Atan(ply.disY/ply.disX);
+            int sign = 0;
+            ang = Mathf.Atan2(ply.disY,ply.disX);
+            float dis_m = (float)Math.Sqrt(Math.Pow(ply.disX,2) + Math.Pow(ply.disY,2));
+            gameObject.GetComponentsInChildren<Transform>()[2].localPosition = Vector2.right * dis_m * 3.2f;
             if(ply.disX<0){
-                ang += Mathf.PI;
                 scale.y = -0.3f;
+                sign = -1;
             }
             else{
                 scale.y = 0.3f;
+                sign = 1;
             }
             bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
             if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
                 weapon[now_ind].mag_c--;
+                ang_rec = Math.Clamp(ang_rec, 0,weapon[now_ind].ang_rec);
+                transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
                 ply.shoot = true; 
                 shoot_last_time = Time.time;
-                bullet.SpawnBullet(weapon[now_ind],ang);
+                bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity);
                 shoot = true;
                 audSource.PlayOneShot(weapon[now_ind].fire_audio);
-                
+                ang_rec += weapon[now_ind].ang_rec/5;
             }
+            ang_rec += (0-ang_rec)*weapon[now_ind].rec_acc;
             if(weapon[now_ind].mag_c <= 0 && !reload){
                 can_shoot=false;
                 SetReload();
@@ -143,7 +149,7 @@ public class Weapon_Script : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F)){j++;Change(weapon[j],j);}
             if(j>=weapon.Length - 1){j = -1;}
             transform.localScale = scale;
-            if(!reload)transform.rotation = quaternion.RotateZ(ang);
+            if(!reload)transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
             else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);
             else transform.rotation = quaternion.RotateZ(1*weapon[now_ind].mag_c);
             shoot = false;

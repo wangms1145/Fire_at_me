@@ -11,6 +11,7 @@ public class Bullet5Script : MonoBehaviour
 {
     public Vector2 vel;
     public float radius;
+    public float damage;
     public LayerMask groundLayer;
     public GameObject explode;
     private float timed = 0;
@@ -31,20 +32,12 @@ public class Bullet5Script : MonoBehaviour
         vel = myRigidbody.velocity;
         RaycastHit2D hit = collide_check();
         if(hit){
-            Vector2 a = hit.point;
-            Instantiate(explode,a,quaternion.RotateZ(0));
+            Instantiate(explode,transform.position,quaternion.RotateZ(0)).GetComponent<explode_script>().damage = damage;
             Destroy(gameObject);
         }
     }
     private RaycastHit2D collide_check(){
-        RaycastHit2D hit1 =  Physics2D.Raycast(transform.position,vel,vel.magnitude*Time.deltaTime*5,groundLayer);
-        RaycastHit2D hit2 =  Physics2D.CircleCast(transform.position,radius,Vector2.right,0,groundLayer);
-        if(hit2){
-            return hit2;
-        }
-        else{
-            return hit1;
-        }
+        return Physics2D.CircleCast(transform.position,radius,Vector2.right,0,groundLayer);
     }
     private void OnDrawGizmos(){
         //Gizmos.DrawWireCube(transform.position + vel/myRigidbody.velocity.magnitude * (boxSize.x/2-0.1f),boxSize);

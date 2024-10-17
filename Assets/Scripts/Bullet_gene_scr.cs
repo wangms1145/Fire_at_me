@@ -20,26 +20,49 @@ public class Bullet_gene_scr : MonoBehaviour
     {
         //transform.localPosition = Vector3.zero;
     }
-    public void SpawnBullet(WeaponClass wp,float ang){
+    public void SpawnBullet(WeaponClass wp,float ang,Vector2 ply_vel){
         //need spawn bullet
         Debug.Log("spawn");
         GameObject bullet = bullets[wp.type];
         transform.localPosition = wp.firePos;
-        if(wp.type == 1){
-            for (int i = 1; i <= UnityEngine.Random.Range(8,12); i++){
-                GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
+        switch (wp.type){
+            case 0:
+                def_spawn(wp,ang,bullet,ply_vel).GetComponent<Bullet1Script>().damage = wp.damage;
+                break;
+            case 1:
+                for (int i = 1; i <= UnityEngine.Random.Range(8,12); i++){
+                    def_spawn(wp,ang,bullet,ply_vel).GetComponent<Bullet2Script>().damage = wp.damage;
+                }
+                break;
+            case 2:
+                def_spawn(wp,ang,bullet,ply_vel).GetComponent<Bullet3Script>().damage = wp.damage;
+                break;
+            case 3:
+                def_spawn(wp,ang,bullet,ply_vel);
+                break;
+            case 4:
+                def_spawn(wp,ang,bullet,ply_vel).GetComponent<Bullet5Script>().damage = wp.damage;
+                break;
+            case 5:
+                GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(0));
                 float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
-                float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset) / 3.0);
+                float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
+                bullet_spawned.GetComponent<TNT_script>().damage = wp.damage;
+                bullet_spawned.GetComponent<Rigidbody2D>().velocity = ply_vel;
                 bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
-            }
-            Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
+                break;
+            default:
+                def_spawn(wp,ang,bullet,ply_vel);
+                break;
         }
-        else{
-            GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
-            float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
-            float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
-            bullet_spawned.GetComponent<Rigidbody2D>().velocity = (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
-            Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
-        }
+        Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
+    }
+    GameObject def_spawn(WeaponClass wp,float ang,GameObject bullet,Vector2 ply_vel){
+        GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
+        float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
+        float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
+        bullet_spawned.GetComponent<Rigidbody2D>().velocity = ply_vel;
+        bullet_spawned.GetComponent<Rigidbody2D>().velocity += (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
+        return bullet_spawned;
     }
 }
