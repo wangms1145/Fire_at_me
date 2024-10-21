@@ -10,48 +10,69 @@ using System.Text.RegularExpressions;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Tooltip("刚体（物理引擎）")]
     public Rigidbody2D myRigidbody;
 
     //player max speed
+    [Tooltip("最大速度")]
     public float spd;
 
     //player move acceleration
+    [Tooltip("加速度")]
     public float acc;
 
     //rotation lock acceleration
+    [Tooltip("角加速度")]
     public float aacc;
 
-    //
+    [Tooltip("跳跃力度")]
     public float jumpStrength;
+    [Tooltip("是否连跳（没做）")]
     public bool DoBunnyHop;
 
-    
+    [Tooltip("后坐力（没事别动，这玩意会自动修改）")]
     public float recoil;
     
     //ray casting box size
+    [Tooltip("地面检测碰撞箱大小")]
     public Vector2 boxSize;
     //ray casting distance
+    [Tooltip("碰撞箱距离")]
     public float castDistance;
     //ray casting layermark
+    [Tooltip("地面图层")]
     public LayerMask groundLayer;
+    [Tooltip("游玩时物理")]
     public PhysicsMaterial2D inGame_material;
+    [Tooltip("死人物理")]
     public PhysicsMaterial2D died_material;
 
     //for debug
+    [Tooltip("鼠标坐标系数（debug）")]
     public float mouse_mult;
+    [Tooltip("是否活者")]
     public bool isAlive = true;
+    [Tooltip("虚空y坐标")]
     public float diedYpos;
+    [Tooltip("射击（别动）")]
     public bool shoot;
+    [Tooltip("玩家音频源")]
     public AudioSource audSource;
+    [Tooltip("摔落音频")]
     public AudioClip fall;
+    [Tooltip("死亡音频")]
     public AudioClip died;
+    [Tooltip("掉虚空音效")]
     public AudioClip zhuiji;
+    [Tooltip("失真效果器")]
     public AudioDistortionFilter filter;
     //public int mag,c_mag;
 
    
     [SerializeField]
+    [Tooltip("相机代码")]
     public Cam_script cam_script;
+    [Tooltip("武器代码")]
     public Weapon_Script wp;
 
     private float ang;
@@ -117,7 +138,11 @@ public class PlayerScript : MonoBehaviour
             myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
 
             //rotation lock
-            myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-1,1));
+            myRigidbody.angularVelocity = (0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
+            if(Input.GetKey(KeyCode.T)){
+                myRigidbody.AddForceAtPosition(Vector2.left * 100,Vector2.up);
+                myRigidbody.AddForceAtPosition(Vector2.right * 100,Vector2.down);
+            }
 
             if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G)){
                 isAlive = false;

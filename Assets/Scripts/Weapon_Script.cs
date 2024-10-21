@@ -5,6 +5,10 @@ using System.Linq;
 using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine.Timeline;
 
 public class Weapon_Script : MonoBehaviour
@@ -17,11 +21,16 @@ public class Weapon_Script : MonoBehaviour
     * Including the weapon choosing System.                     *
     * There will be an array of images and attibutes here       *
     *************************************************************/
+    [Tooltip("玩家代码")]
     public PlayerScript ply;
+    [Tooltip("武器（所有武器都在这里）")]
     public WeaponClass[] weapon;
+    [Tooltip("角色渲染器")]
     public SpriteRenderer mySprite;
     public float recoil_ani;
+    [Tooltip("子弹生成器代码")]
     public Bullet_gene_scr bullet;
+    [Tooltip("音效播放器")]
     public AudioSource audSource;
     private float ang,ang_rec;
     private bool flag;
@@ -37,6 +46,7 @@ public class Weapon_Script : MonoBehaviour
     private float shoot_last_time;
     private float firing_time;
     private int j = 0;
+    private float fire_timer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +82,8 @@ public class Weapon_Script : MonoBehaviour
             int sign = 0;
             ang = Mathf.Atan2(ply.disY,ply.disX);
             float dis_m = (float)Math.Sqrt(Math.Pow(ply.disX,2) + Math.Pow(ply.disY,2));
-            gameObject.GetComponentsInChildren<Transform>()[2].localPosition = Vector2.right * dis_m * 3.2f;
+            gameObject.GetComponentsInChildren<Transform>(false)[1].localPosition = Vector2.right * dis_m * 3.3333f;
+            
             if(ply.disX<0){
                 scale.y = -0.3f;
                 sign = -1;
@@ -81,17 +92,42 @@ public class Weapon_Script : MonoBehaviour
                 scale.y = 0.3f;
                 sign = 1;
             }
-            bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
-            if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
-                weapon[now_ind].mag_c--;
-                ang_rec = Math.Clamp(ang_rec, 0,weapon[now_ind].ang_rec);
-                transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
-                ply.shoot = true; 
-                shoot_last_time = Time.time;
-                bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity);
-                shoot = true;
-                audSource.PlayOneShot(weapon[now_ind].fire_audio);
-                ang_rec += weapon[now_ind].ang_rec/5;
+            SpriteRenderer sec_wp =  gameObject.GetComponentsInChildren<SpriteRenderer>()[2];
+            Transform wec_wp_transform = gameObject.GetComponentsInChildren<Transform>()[2];
+            if(weapon[now_ind].duo_hold){
+                sec_wp.sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+                wec_wp_transform.localPosition = weapon[now_ind].Sec_pos;
+                sec_wp.enabled = true;
+                if(weapon[now_ind].bullet_count % 2 == 1){
+                    Debug.LogError("双持武器弹夹容量必须是偶数");
+                    Debug.Break();
+                }
+            }
+            else{
+                sec_wp.enabled = false;
+            }
+            bool sec = weapon[now_ind].duo_hold && weapon[now_ind].mag_c % 2 == 1;
+            if(!weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
+                bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
+                if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
+                    fire_wp(sign,sec);
+                }
+            }
+            else if(weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
+                bool fire = Input.GetKey(KeyCode.Mouse0);
+                if(fire){
+                    fire_timer += Time.deltaTime;
+                    if(fire_timer > weapon[now_ind].time){
+                        fire_wp(sign,sec);
+                    }
+                }
+                else{
+                    fire_timer = 0;
+                }
+                
+            }
+            else{
+
             }
             ang_rec += (0-ang_rec)*weapon[now_ind].rec_acc;
             if(weapon[now_ind].mag_c <= 0 && !reload){
@@ -185,4 +221,17 @@ public class Weapon_Script : MonoBehaviour
         reload = false;
         time = 0;
     }
+    private void fire_wp(int sign,bool sec){
+        weapon[now_ind].mag_c--;
+        ang_rec = Math.Clamp(ang_rec, 0,weapon[now_ind].ang_rec);
+        transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
+        ply.shoot = true; 
+        shoot_last_time = Time.time;
+        bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity,sec);
+        shoot = true;
+        audSource.PlayOneShot(weapon[now_ind].fire_audio);
+        ang_rec += weapon[now_ind].ang_rec/5;
+    }
 }
+
+
