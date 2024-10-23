@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 101
+  controlID: 48
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 275.42856
-    height: 483.42856
+    height: 488.57144
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -113,23 +113,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 483.42856
+    y: 488.57144
     width: 1115.4286
-    height: 199.14285
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+    height: 193.99997
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1115.4286
-    height: 483.42856
+    height: 488.57144
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
     x: 275.42856
     y: 0
     width: 840
-    height: 483.42856
+    height: 488.57144
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -610,52 +610,21 @@ MonoBehaviour:
     - name: origin/test_for_multiplayer
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
+    currentBranchHasUpdate: 1
     currentStatusEntriesHasUpdate: 1
     currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 961}
+    treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 637ce4b643002ff4e90155d62c3dfff6
-        - b57b8add149db1e4eb4c9e784c66997d
-        - a2197356efe99ae49af25164b5a71143
-        - 6674b06d2d7f326498e60e8a30a41054
-        - 517f14893c45c894f8eeb97b9c4368e4
-        - 6fbaef45f03499b42b8558c91eed5c91
-        - 0e8713c2b151c0b44a5bb8d4f801fd2b
-        - 19e76658dc120324fa6d79b39799fd9f
-        - efe274432b7c7834faab79df109b18b1
-        - b95e1fbee7b76764984dd491bb7bbbf0
-        - d83f08935ecde0d43b7aa5c2a14b134b
-        - c73986c3885b425439a6618bbaa9895c
-        - 782b71b8a87a76246ab1308614920e88
-        - 89dc57930f5c8e4478ded416af32ccb4
-        - c12d6d7d2de45ee4388af874ed976e5b
-        - e3cd104f111780643a7644065fb955d0
-        - b5ad7d3671c4d48408d4c5d84e468fc0
-        - 75471606c1a07d14fa09e86da33ab237
-        - ee5901691f3e4e5408275226761c560a
-        - d9347719202375c448ca0a61bf938ab0
-        - e2e74d92ccd9de64b892ac5995c95edd
-        - 64d51aa044b722f4c956e5552582c4b1
-        - 020772eaadbef7647836c2f8f0110039
-        - 26ef09f5a735a39468d03ecb32646725
-        - 72f4b0ddc484a0c4dbf9ca5249617f1c
-        - 2b1c10335e1af3f4991675f3c5dcc2f8
         - 1b0e7ac1078adbb40aa5aded95883b4e
         - dd0e7abcaf0424c41a3df044d5f273db
-        - f80b75fcd0b21324190420c153f48c70
-        - 5ce94d85bcc6e694fa3232cf46c29d7e
-        - 70f41bd642984db4097a339912298d00
-        - a614265a5948e354d80ede004e1cd23c
         - 706cf95bd55349841b87c57d2c89f42a
         - f4b6ba9dabc2e474db555ad2e4c9e7f4
-        - 9fec58475560d3c4085083f055e8ae6f
         values:
         - path: Assets
           label: Assets
@@ -675,491 +644,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects\explode.prefab
-          label: explode.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\explode.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-            projectPath: Assets\GameObjects\explode.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\GameObjects\Fish.prefab
-          label: Fish.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\Fish.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab
-            projectPath: Assets\GameObjects\Fish.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\PhysicsMaterials
-          label: PhysicsMaterials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-          label: Fish.physicsMaterial2D
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-            fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D
-            projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Game.unity
-          label: Game.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Game.unity
-            fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-            projectPath: Assets\Scenes\Game.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes\New Lighting Settings.lighting
-          label: New Lighting Settings.lighting
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\New Lighting Settings.lighting
-            fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting
-            projectPath: Assets\Scenes\New Lighting Settings.lighting
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy
-          label: ScriptBoy
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver
-          label: Polygon Collider 2D Solver
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos
-          label: Demos
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-          label: Demo 1.unity
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Demo 1.unity
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-            Paths.unity
-          label: Demo 2 Multiple Paths.unity
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-              Paths.unity
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Demo 2 Multiple Paths.unity
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2
-              Multiple Paths.unity
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts
-          label: Scripts
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-          label: Spawner.cs
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Scripts\Spawner.cs
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites
-          label: Sprites
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-          label: Circle.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Sprites\Circle.png
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-            With Holes.png
-          label: Ground With Holes.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-              With Holes.png
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Sprites\Ground With Holes.png
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-              With Holes.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-          label: Ground.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Sprites\Ground.png
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-          label: Square.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Demos\Sprites\Square.png
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation
-          label: Documentation
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-          label: Changelog.txt
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Documentation\Changelog.txt
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-          label: README.txt
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Documentation\README.txt
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts
-          label: Scripts
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-          label: PolygonCollider2DSolver.cs
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Scripts\PolygonCollider2DSolver.cs
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-          label: PolygonUtility.cs
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-            fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-              Solver\Scripts\PolygonUtility.cs
-            projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Scripts
           label: Scripts
           level: 1
@@ -1196,78 +680,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
-        - path: Assets\Scripts\Bullet_gene_scr.cs
-          label: Bullet_gene_scr.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Bullet_gene_scr.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-            projectPath: Assets\Scripts\Bullet_gene_scr.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Bullet1Script.cs
-          label: Bullet1Script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Bullet1Script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
-            projectPath: Assets\Scripts\Bullet1Script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Classes.cs
-          label: Classes.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Classes.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-            projectPath: Assets\Scripts\Classes.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Fish_script.cs
-          label: Fish_script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Fish_script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs
-            projectPath: Assets\Scripts\Fish_script.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Scripts\PlayerScript.cs
           label: PlayerScript.cs
           level: 2
@@ -1304,41 +716,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
       folders:
         keys:
         - Assets
-        - Assets\GameObjects
-        - Assets\PhysicsMaterials
-        - Assets\Scenes
-        - Assets\ScriptBoy
-        - Assets\ScriptBoy\Polygon Collider 2D Solver
-        - Assets\ScriptBoy\Polygon Collider 2D Solver\Demos
-        - Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts
-        - Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites
-        - Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation
-        - Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts
         - Assets\Scripts
-        - Assets\Sprites
-        - UserSettings
-        - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
@@ -1358,242 +739,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\PhysicsMaterials
-          label: PhysicsMaterials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy
-          label: ScriptBoy
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver
-          label: Polygon Collider 2D Solver
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos
-          label: Demos
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts
-          label: Scripts
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites
-          label: Sprites
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation
-          label: Documentation
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts
-          label: Scripts
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
         - path: Assets\Scripts
           label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1656,890 +803,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\GameObjects
-        label: GameObjects
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\GameObjects\explode.prefab
-        label: explode.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\explode.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-          projectPath: Assets\GameObjects\explode.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\GameObjects\Fish.prefab
-        label: Fish.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Fish.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab
-          projectPath: Assets\GameObjects\Fish.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects\Fish.prefab.meta
-        label: Fish.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Fish.prefab.meta
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab.meta
-          projectPath: Assets\GameObjects\Fish.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\PhysicsMaterials
-        label: PhysicsMaterials
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-        label: Fish.physicsMaterial2D
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D
-          projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-        label: Fish.physicsMaterial2D.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-          projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Game.unity
-        label: Game.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Game.unity
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-          projectPath: Assets\Scenes\Game.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes\New Lighting Settings.lighting
-        label: New Lighting Settings.lighting
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\New Lighting Settings.lighting
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting
-          projectPath: Assets\Scenes\New Lighting Settings.lighting
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes\New Lighting Settings.lighting.meta
-        label: New Lighting Settings.lighting.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\New Lighting Settings.lighting.meta
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting.meta
-          projectPath: Assets\Scenes\New Lighting Settings.lighting.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy.meta
-        label: ScriptBoy.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy.meta
-          projectPath: Assets\ScriptBoy.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy
-        label: ScriptBoy
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-        label: Polygon Collider 2D Solver.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver
-        label: Polygon Collider 2D Solver
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-        label: Demos.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos
-        label: Demos
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-        label: Demo 1.unity
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Demo 1.unity
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
-        label: Demo 1.unity.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Demo 1.unity.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity
-        label: Demo 2 Multiple Paths.unity
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-            Paths.unity
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Demo 2 Multiple Paths.unity
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-            Paths.unity
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity.meta
-        label: Demo 2 Multiple Paths.unity.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-            Paths.unity.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Demo 2 Multiple Paths.unity.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-            Paths.unity.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-        label: Scripts.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Scripts.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts
-        label: Scripts
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-        label: Spawner.cs
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Scripts\Spawner.cs
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-        label: Spawner.cs.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Scripts\Spawner.cs.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-        label: Sprites.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites
-        label: Sprites
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-        label: Circle.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Circle.png
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-        label: Circle.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Circle.png.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
-          Holes.png
-        label: Ground With Holes.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-            With Holes.png
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Ground With Holes.png
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-            With Holes.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
-          Holes.png.meta
-        label: Ground With Holes.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-            With Holes.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Ground With Holes.png.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-            With Holes.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-        label: Ground.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Ground.png
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-        label: Ground.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Ground.png.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-        label: Square.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Square.png
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-        label: Square.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Demos\Sprites\Square.png.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-        label: Documentation.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Documentation.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation
-        label: Documentation
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-        label: Changelog.txt
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Documentation\Changelog.txt
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-        label: Changelog.txt.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Documentation\Changelog.txt.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-        label: README.txt
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Documentation\README.txt
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-        label: README.txt.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Documentation\README.txt.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-        label: Scripts.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Scripts.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts
-        label: Scripts
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-        label: PolygonCollider2DSolver.cs
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Scripts\PolygonCollider2DSolver.cs
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-        label: PolygonCollider2DSolver.cs.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Scripts\PolygonCollider2DSolver.cs.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-        label: PolygonUtility.cs
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Scripts\PolygonUtility.cs
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-        label: PolygonUtility.cs.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
-            Solver\Scripts\PolygonUtility.cs.meta
-          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Scripts
         label: Scripts
         level: 1
@@ -2576,96 +839,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\Scripts\Bullet_gene_scr.cs
-        label: Bullet_gene_scr.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Bullet_gene_scr.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-          projectPath: Assets\Scripts\Bullet_gene_scr.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Bullet1Script.cs
-        label: Bullet1Script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Bullet1Script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
-          projectPath: Assets\Scripts\Bullet1Script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Classes.cs
-        label: Classes.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Classes.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-          projectPath: Assets\Scripts\Classes.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Fish_script.cs
-        label: Fish_script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Fish_script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs
-          projectPath: Assets\Scripts\Fish_script.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Fish_script.cs.meta
-        label: Fish_script.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Fish_script.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs.meta
-          projectPath: Assets\Scripts\Fish_script.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Scripts\PlayerScript.cs
         label: PlayerScript.cs
         level: 2
@@ -2702,150 +875,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\Sprites
-        label: Sprites
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\mp5.png
-        label: mp5.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\mp5.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png
-          projectPath: Assets\Sprites\mp5.png
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Sprites\mp5.png.meta
-        label: mp5.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\mp5.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png.meta
-          projectPath: Assets\Sprites\mp5.png.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings\Search.settings
-        label: Search.settings
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Search.settings
-          fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
-          projectPath: UserSettings\Search.settings
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -2866,276 +895,12 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\GameObjects\explode.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-      projectPath: Assets\GameObjects\explode.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\GameObjects\Fish.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab
-      projectPath: Assets\GameObjects\Fish.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Fish.prefab.meta
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab.meta
-      projectPath: Assets\GameObjects\Fish.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-      fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D
-      projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-      fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-      projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Game.unity
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-      projectPath: Assets\Scenes\Game.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\New Lighting Settings.lighting
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting
-      projectPath: Assets\Scenes\New Lighting Settings.lighting
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\New Lighting Settings.lighting.meta
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting.meta
-      projectPath: Assets\Scenes\New Lighting Settings.lighting.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy.meta
-      projectPath: Assets\ScriptBoy.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
-        1.unity
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
-        1.unity.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
-        2 Multiple Paths.unity
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-        Paths.unity
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
-        2 Multiple Paths.unity.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
-        Paths.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
-        Holes.png
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-        With Holes.png
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-        With Holes.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
-        Holes.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-        With Holes.png.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
-        With Holes.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-      projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: Assets\Scripts\BotScript.cs
       fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
       projectPath: Assets\Scripts\BotScript.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Scripts\Bullet_gene_scr.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-      projectPath: Assets\Scripts\Bullet_gene_scr.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Bullet1Script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
-      projectPath: Assets\Scripts\Bullet1Script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Classes.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
-      projectPath: Assets\Scripts\Classes.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Fish_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs
-      projectPath: Assets\Scripts\Fish_script.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Fish_script.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs.meta
-      projectPath: Assets\Scripts\Fish_script.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: Assets\Scripts\PlayerScript.cs
       fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
       projectPath: Assets\Scripts\PlayerScript.cs
@@ -3148,45 +913,15 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Sprites\mp5.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png
-      projectPath: Assets\Sprites\mp5.png
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Sprites\mp5.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png.meta
-      projectPath: Assets\Sprites\mp5.png.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Search.settings
-      fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
-      projectPath: UserSettings\Search.settings
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 50 changed files
+    changedFilesText: 3 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-10-20T22:54:47.686-07:00
+      updatedTimeString: 2024-10-23T10:59:59.648-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-10-20T23:09:07.616-07:00
+      updatedTimeString: 2024-10-23T11:24:41.999-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-10-20T23:08:02.670-07:00
+      updatedTimeString: 2024-10-23T11:24:29.371-07:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -10215,13 +7950,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-10-20T22:54:47.686-07:00
+    updatedTimeString: 2024-10-21T19:58:57.412-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-10-20T22:54:50.219-07:00
+    updatedTimeString: 2024-10-21T19:59:01.007-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-10-20T22:54:50.207-07:00
+    updatedTimeString: 2024-10-21T19:59:00.985-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -10265,9 +8000,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 556
+    y: 561.1429
     width: 1114.4286
-    height: 178.14285
+    height: 172.99997
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -10359,8 +8094,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 745e0000
-    m_LastClickedInstanceID: 24180
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -10460,7 +8195,7 @@ MonoBehaviour:
     x: 0
     y: 72.571434
     width: 274.42856
-    height: 462.42856
+    height: 467.57144
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -10474,9 +8209,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 745e0000
+      m_SelectedIDs: 34540000
       m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff02730000
+      m_ExpandedIDs: fafaffff0273000014730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10523,7 +8258,7 @@ MonoBehaviour:
     x: 275.4286
     y: 72.571434
     width: 838
-    height: 462.42856
+    height: 467.57144
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -10538,7 +8273,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -172, y: -25.714294}
+      snapOffset: {x: -177.7143, y: -25.714294}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
@@ -10882,9 +8617,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.586216, y: -1.0578028, z: -3.726085}
+    m_Target: {x: -4.8353615, y: 7.370723, z: -0.25104222}
     speed: 2
-    m_Value: {x: 0.586216, y: -1.0578028, z: -3.726085}
+    m_Value: {x: -4.8353615, y: 7.370723, z: -0.25104222}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -10934,9 +8669,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.225372
+    m_Target: 10.243806
     speed: 2
-    m_Value: 7.225372
+    m_Value: 10.243806
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -10984,7 +8719,7 @@ MonoBehaviour:
     x: 275.4286
     y: 72.571434
     width: 838
-    height: 462.42856
+    height: 467.57144
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -11038,22 +8773,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 838
-      height: 441.42856
-    m_Scale: {x: 0.71527773, y: 0.71527773}
-    m_Translation: {x: 419, y: 220.71428}
+      height: 446.57144
+    m_Scale: {x: 0.7236111, y: 0.7236111}
+    m_Translation: {x: 419, y: 223.28572}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -585.78644
+      x: -579.0403
       y: -308.57144
-      width: 1171.5729
+      width: 1158.0806
       height: 617.1429
     m_MinimalGUI: 1
-  m_defaultScale: 0.71527773
-  m_LastWindowPixelSize: {x: 1466.5, y: 809.25}
+  m_defaultScale: 0.7236111
+  m_LastWindowPixelSize: {x: 1466.5, y: 818.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -11080,9 +8815,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 556
+    y: 561.1429
     width: 1114.4286
-    height: 178.14285
+    height: 172.99997
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

@@ -23,9 +23,6 @@ public class BotScript : MonoBehaviour
 
     //
     public float jumpStrength;
-
-    
-    public float recoil;
     
     //ray casting box size
     public Vector2 boxSize;
@@ -35,9 +32,6 @@ public class BotScript : MonoBehaviour
     public LayerMask groundLayer;
     public PhysicsMaterial2D inGame_material;
     public PhysicsMaterial2D died_material;
-
-    //for debug
-    public float mouse_mult;
     public bool isAlive = true;
     public float diedYpos;
     public AudioSource audSource;
@@ -53,10 +47,6 @@ public class BotScript : MonoBehaviour
     private float health_max;
     private float spdx,spdy;
     private float tspd;
-    public float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
-    public float mouY,mouX;
-    public float disY,disX;
-    public float sX,sY;
     private bool groundFlag;
     private float ys = 0;
     private int i;
@@ -86,13 +76,13 @@ public class BotScript : MonoBehaviour
             if(Input.GetKey(KeyCode.LeftArrow))tspd += spd;
             if(Input.GetKey(KeyCode.RightArrow))tspd -= spd;
             float acc_add = 0;
-            if(Input.GetKey(KeyCode.Tab) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
+            if(Input.GetKey(KeyCode.RightControl) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
             myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
 
             //rotation lock
             myRigidbody.angularVelocity = (0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
 
-            if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
+            if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.Y) || health < 0){
                 isAlive = false;
                 float ang = UnityEngine.Random.Range(-180, 180);
                 myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
@@ -119,7 +109,7 @@ public class BotScript : MonoBehaviour
             if(transform.position.y < diedYpos-30){
                 myRigidbody.simulated = false;
             }
-            if(Input.GetKey(KeyCode.R)){
+            if(Input.GetKey(KeyCode.RightShift)){
                 myRigidbody.simulated = true;
                 myRigidbody.velocity = Vector2.zero;
                 myRigidbody.position = Vector2.zero;

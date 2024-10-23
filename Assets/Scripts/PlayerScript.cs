@@ -74,13 +74,17 @@ public class PlayerScript : MonoBehaviour
     public Cam_script cam_script;
     [Tooltip("武器代码")]
     public Weapon_Script wp;
-
-    private float ang;
+    [HideInInspector]
+    public float ang;
     private float spdx,spdy;
     private float tspd;
+    [HideInInspector]
     public float time_last_shoot = -999;// Initialized to make sure you could shoot when ever you start the game
+    [HideInInspector]
     public float mouY,mouX;
+    [HideInInspector]
     public float disY,disX;
+    [HideInInspector]
     public float sX,sY;
     private bool groundFlag;
     private float ys = 0;
@@ -113,11 +117,6 @@ public class PlayerScript : MonoBehaviour
             disY = (mouY - transform.position.y) * mouse_mult;
             disX = (mouX - transform.position.x) * mouse_mult;
 
-            //recoil angle
-            ang = Mathf.Atan(disY/disX);
-            if(mouX - transform.position.x > 0){
-                ang+=Mathf.PI;
-            }
 
 
             //recoil

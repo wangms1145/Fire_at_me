@@ -21,6 +21,7 @@ public class Bullet1Script : MonoBehaviour
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         vel = myRigidbody.velocity;
+        
         RaycastHit2D hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
@@ -65,11 +66,11 @@ public class Bullet1Script : MonoBehaviour
     }
     private RaycastHit2D collide_check(){
         //Debug.DrawRay(transform.position,vel.normalized*Time.deltaTime*2.3f);
-        return Physics2D.Raycast(transform.position,vel.normalized,vel.magnitude*Time.deltaTime*2.3f,groundLayer);
+        return Physics2D.Raycast(transform.position,vel.normalized,vel.magnitude*0.03333f,groundLayer);
     }
     private void OnDrawGizmos(){
         //Gizmos.DrawWireCube(transform.position + vel/myRigidbody.velocity.magnitude * (boxSize.x/2-0.1f),boxSize);
-        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*2.3f);
+        Gizmos.DrawRay(transform.position,vel*0.03333f);
     }
     private Vector2 angToSpd(float strength,float ang){
         Vector2 a;

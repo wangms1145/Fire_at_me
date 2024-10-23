@@ -23,6 +23,7 @@ public class Bullet2Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         timed += Time.deltaTime;
         if(timed > 6){
             Destroy(gameObject);
@@ -45,10 +46,10 @@ public class Bullet2Script : MonoBehaviour
         }
     }
     private RaycastHit2D collide_check(){
-        return Physics2D.Raycast(transform.position,vel.normalized,vel.magnitude*Time.deltaTime*3,groundLayer);
+        return Physics2D.Raycast(transform.position,vel.normalized,vel.magnitude*0.03333f,groundLayer);
     }
     private void OnDrawGizmos(){
-        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*3);
+        Gizmos.DrawRay(transform.position,vel*0.03333f);
     }
     private Vector2 angToSpd(float strength,float ang){
         Vector2 a;
