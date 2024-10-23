@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEditor.EditorTools;
 
 public class Classes : MonoBehaviour
 {
@@ -58,14 +59,20 @@ public class WeaponClass
     //blaa
     [Tooltip("要延迟开火就勾选这个")]
     public bool delay_fire = false;
-        [Tooltip("蓄力/延迟时间")]
-        [ShowIf("delay_fire", true)][SerializeField] public float time = 0f;
-        [Tooltip("要蓄力就勾选这个")]
-        [ShowIf("delay_fire", true)][SerializeField] public bool hold_to_fire = false;
+    [Tooltip("蓄力/延迟时间")]
+    [ShowIf("delay_fire", true)][SerializeField] public float time = 0f;
+    [Tooltip("要蓄力就勾选这个")]
+    [ShowIf("delay_fire", true)][SerializeField] public bool hold_to_fire = false;
+    [Tooltip("满蓄力自动释放")]
+    [ShowIf("delay_fire", true)][SerializeField] public bool auto_release = false;
+    [HideInInspector]
+    public float hold_time;
+
     [Tooltip("双持武器")]
     public bool duo_hold = false;
-        [Tooltip("第二武器位置")]
-        [ShowIf("duo_hold", true)][SerializeField] public Vector2 Sec_pos = Vector2.zero;
+    [Tooltip("第二武器位置")]
+    [ShowIf("duo_hold", true)][SerializeField] public Vector2 Sec_pos = Vector2.zero;
+    
         
 }
 /* Title : Attribute for show a field if other field is true or false.

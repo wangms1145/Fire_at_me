@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 48
+  controlID: 17
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 347.4286
     height: 682.5714
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 18
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 50
+  controlID: 19
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -425,10 +425,10 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 1
-  changeTab: 3
-  activeTab: 3
+  changeTab: 2
+  activeTab: 2
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -610,153 +610,20 @@ MonoBehaviour:
     - name: origin/test_for_multiplayer
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 1b0e7ac1078adbb40aa5aded95883b4e
-        - dd0e7abcaf0424c41a3df044d5f273db
-        - 706cf95bd55349841b87c57d2c89f42a
-        - f4b6ba9dabc2e474db555ad2e4c9e7f4
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\BotScript.cs
-          label: BotScript.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\BotScript.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
-            projectPath: Assets\Scripts\BotScript.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\PlayerScript.cs
-          label: PlayerScript.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\PlayerScript.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-            projectPath: Assets\Scripts\PlayerScript.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Weapon_Script.cs
-          label: Weapon_Script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Weapon_Script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-            projectPath: Assets\Scripts\Weapon_Script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Scripts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -785,96 +652,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\BotScript.cs
-        label: BotScript.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\BotScript.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
-          projectPath: Assets\Scripts\BotScript.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\PlayerScript.cs
-        label: PlayerScript.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\PlayerScript.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-          projectPath: Assets\Scripts\PlayerScript.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Weapon_Script.cs
-        label: Weapon_Script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Weapon_Script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-          projectPath: Assets\Scripts\Weapon_Script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -894,39 +671,441 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Scripts\BotScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
-      projectPath: Assets\Scripts\BotScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\PlayerScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-      projectPath: Assets\Scripts\PlayerScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Weapon_Script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-      projectPath: Assets\Scripts\Weapon_Script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 3 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-10-23T10:59:59.648-07:00
+      updatedTimeString: 2024-10-23T12:35:19.953-07:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-10-23T11:24:41.999-07:00
+      updatedTimeString: 2024-10-23T12:35:41.798-07:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-10-23T11:24:29.371-07:00
+      updatedTimeString: 2024-10-23T12:35:41.896-07:00
       cacheType: 7
   historyView:
-    currentLogHasUpdate: 0
-    currentTrackingStatusHasUpdate: 0
+    currentLogHasUpdate: 1
+    currentTrackingStatusHasUpdate: 1
     logEntries:
+    - commitID: b6e4da2acc55e46321ad66fd34791804f32aeaa3
+      mergeA: 8770976d5c4c6c93a1127e66d696ea0887d08362
+      mergeB: f4f6784618a66007bdfe31e57fdb665e9182f530
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+      description: 
+      timeString: 2024-10-23T12:34:47.000-07:00
+      commitTimeString: 2024-10-23T12:34:47.000-07:00
+      changes: []
+    - commitID: 8770976d5c4c6c93a1127e66d696ea0887d08362
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: scene fix
+      description: scene fix
+      timeString: 2024-10-23T12:34:41.000-07:00
+      commitTimeString: 2024-10-23T12:34:41.000-07:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 4bca6ae70c38b0c55eacaf59645648c471c811a1
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: Solving bullet clipping
+      description: Solving bullet clipping
+      timeString: 2024-10-23T12:34:27.000-07:00
+      commitTimeString: 2024-10-23T12:34:27.000-07:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\BotScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
+        projectPath: Assets\Scripts\BotScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet1Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+        projectPath: Assets\Scripts\Bullet1Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet2Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs
+        projectPath: Assets\Scripts\Bullet2Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+        projectPath: Assets\Scripts\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+        projectPath: Assets\Scripts\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f4f6784618a66007bdfe31e57fdb665e9182f530
+      mergeA: 
+      mergeB: 
+      authorName: COOKIES114
+      authorEmail: snailmen666@gmail.com
+      commitEmail: snailmen666@gmail.com
+      commitName: COOKIES114
+      summary: Update CurrentMaximizeLayout.dwlt
+      description: 
+      timeString: 2024-10-23T10:50:45.000-07:00
+      commitTimeString: 2024-10-23T10:50:45.000-07:00
+      changes:
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: c6308c7d4172aee6a50f8eb0932becf596c897d4
+      mergeA: 
+      mergeB: 
+      authorName: wangms1145
+      authorEmail: wangms1145@gmail.com
+      commitEmail: wangms1145@gmail.com
+      commitName: wangms1145
+      summary: collider solve and duo_hold
+      description: collider solve and duo_hold
+      timeString: 2024-10-21T16:15:56.000-07:00
+      commitTimeString: 2024-10-21T16:15:56.000-07:00
+      changes:
+      - path: Assets\GameObjects\Fish.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab
+        projectPath: Assets\GameObjects\Fish.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\Fish.prefab.meta
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab.meta
+        projectPath: Assets\GameObjects\Fish.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\GameObjects\explode.prefab
+        fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
+        projectPath: Assets\GameObjects\explode.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
+        fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D
+        projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+        fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+        projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\New Lighting Settings.lighting
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting
+        projectPath: Assets\Scenes\New Lighting Settings.lighting
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\New Lighting Settings.lighting.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting.meta
+        projectPath: Assets\Scenes\New Lighting Settings.lighting.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy.meta
+        projectPath: Assets\ScriptBoy.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
+          1.unity
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
+          1.unity.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
+          2 Multiple Paths.unity
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+          Paths.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple Paths.unity.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo
+          2 Multiple Paths.unity.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+          Paths.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
+          Holes.png
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+          With Holes.png
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+          With Holes.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground With
+          Holes.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+          With Holes.png.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+          With Holes.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
+        originalPath: Assets\Sprites\mp5.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
+        projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\BotScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
+        projectPath: Assets\Scripts\BotScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet1Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+        projectPath: Assets\Scripts\Bullet1Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bullet_gene_scr.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+        projectPath: Assets\Scripts\Bullet_gene_scr.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Classes.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+        projectPath: Assets\Scripts\Classes.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Fish_script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs
+        projectPath: Assets\Scripts\Fish_script.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Fish_script.cs.meta
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs.meta
+        projectPath: Assets\Scripts\Fish_script.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerScript.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+        projectPath: Assets\Scripts\PlayerScript.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Weapon_Script.cs
+        fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+        projectPath: Assets\Scripts\Weapon_Script.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites\mp5.png
+        fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png
+        projectPath: Assets\Sprites\mp5.png
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 141988e0a78ef5282d81da2a61ab5a0e9e493037
       mergeA: 
       mergeB: 
@@ -4087,14 +4266,458 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-10-23T15:37:07.711-07:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-10-23T15:37:07.952-07:00
       cacheType: 5
     historyControl:
-      scroll: {x: 0, y: 1573}
+      scroll: {x: 0, y: 0}
       entries:
+      - commitID: b6e4da2acc55e46321ad66fd34791804f32aeaa3
+        mergeA: 8770976d5c4c6c93a1127e66d696ea0887d08362
+        mergeB: f4f6784618a66007bdfe31e57fdb665e9182f530
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Merge branch 'master' of https://github.com/wangms1145/Fire_at_me
+        description: 
+        timeString: 2024-10-23T12:34:47.000-07:00
+        commitTimeString: 2024-10-23T12:34:47.000-07:00
+        changes: []
+      - commitID: 8770976d5c4c6c93a1127e66d696ea0887d08362
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: scene fix
+        description: scene fix
+        timeString: 2024-10-23T12:34:41.000-07:00
+        commitTimeString: 2024-10-23T12:34:41.000-07:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 4bca6ae70c38b0c55eacaf59645648c471c811a1
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: Solving bullet clipping
+        description: Solving bullet clipping
+        timeString: 2024-10-23T12:34:27.000-07:00
+        commitTimeString: 2024-10-23T12:34:27.000-07:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\BotScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
+          projectPath: Assets\Scripts\BotScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet1Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+          projectPath: Assets\Scripts\Bullet1Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet2Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet2Script.cs
+          projectPath: Assets\Scripts\Bullet2Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+          projectPath: Assets\Scripts\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+          projectPath: Assets\Scripts\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f4f6784618a66007bdfe31e57fdb665e9182f530
+        mergeA: 
+        mergeB: 
+        authorName: COOKIES114
+        authorEmail: snailmen666@gmail.com
+        commitEmail: snailmen666@gmail.com
+        commitName: COOKIES114
+        summary: Update CurrentMaximizeLayout.dwlt
+        description: 
+        timeString: 2024-10-23T10:50:45.000-07:00
+        commitTimeString: 2024-10-23T10:50:45.000-07:00
+        changes:
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: c6308c7d4172aee6a50f8eb0932becf596c897d4
+        mergeA: 
+        mergeB: 
+        authorName: wangms1145
+        authorEmail: wangms1145@gmail.com
+        commitEmail: wangms1145@gmail.com
+        commitName: wangms1145
+        summary: collider solve and duo_hold
+        description: collider solve and duo_hold
+        timeString: 2024-10-21T16:15:56.000-07:00
+        commitTimeString: 2024-10-21T16:15:56.000-07:00
+        changes:
+        - path: Assets\GameObjects\Fish.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab
+          projectPath: Assets\GameObjects\Fish.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\Fish.prefab.meta
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Fish.prefab.meta
+          projectPath: Assets\GameObjects\Fish.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\GameObjects\explode.prefab
+          fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
+          projectPath: Assets\GameObjects\explode.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D
+          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D
+          projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+          projectPath: Assets\PhysicsMaterials\Fish.physicsMaterial2D.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\New Lighting Settings.lighting
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting
+          projectPath: Assets\Scenes\New Lighting Settings.lighting
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\New Lighting Settings.lighting.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scenes\New Lighting Settings.lighting.meta
+          projectPath: Assets\Scenes\New Lighting Settings.lighting.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy.meta
+          projectPath: Assets\ScriptBoy.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Demo 1.unity
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Demo 1.unity.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 1.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+            Paths.unity
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Demo 2 Multiple Paths.unity
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+            Paths.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+            Paths.unity.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Demo 2 Multiple Paths.unity.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Demo 2 Multiple
+            Paths.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Scripts.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Scripts\Spawner.cs
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Scripts\Spawner.cs.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Scripts\Spawner.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Circle.png
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Circle.png.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Circle.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+            With Holes.png
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Ground With Holes.png
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+            With Holes.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+            With Holes.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Ground With Holes.png.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground
+            With Holes.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Ground.png
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Ground.png.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Ground.png.meta
+          originalPath: Assets\Sprites\mp5.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Square.png
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Demos\Sprites\Square.png.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Demos\Sprites\Square.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Documentation.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Documentation\Changelog.txt
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Documentation\Changelog.txt.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\Changelog.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Documentation\README.txt
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Documentation\README.txt.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Documentation\README.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Scripts.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Scripts\PolygonCollider2DSolver.cs
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Scripts\PolygonCollider2DSolver.cs.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonCollider2DSolver.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Scripts\PolygonUtility.cs
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\ScriptBoy\Polygon Collider 2D
+            Solver\Scripts\PolygonUtility.cs.meta
+          projectPath: Assets\ScriptBoy\Polygon Collider 2D Solver\Scripts\PolygonUtility.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\BotScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\BotScript.cs
+          projectPath: Assets\Scripts\BotScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet1Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet1Script.cs
+          projectPath: Assets\Scripts\Bullet1Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bullet_gene_scr.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
+          projectPath: Assets\Scripts\Bullet_gene_scr.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Classes.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Classes.cs
+          projectPath: Assets\Scripts\Classes.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Fish_script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs
+          projectPath: Assets\Scripts\Fish_script.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Fish_script.cs.meta
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Fish_script.cs.meta
+          projectPath: Assets\Scripts\Fish_script.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerScript.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
+          projectPath: Assets\Scripts\PlayerScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Weapon_Script.cs
+          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
+          projectPath: Assets\Scripts\Weapon_Script.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Sprites\mp5.png
+          fullPath: C:\Users\ROG\My project\Assets\Sprites\mp5.png
+          projectPath: Assets\Sprites\mp5.png
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ROG\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\ROG\My project\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 141988e0a78ef5282d81da2a61ab5a0e9e493037
         mergeA: 
         mergeB: 
@@ -7950,13 +8573,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-10-21T19:58:57.412-07:00
+    updatedTimeString: 2024-10-23T12:35:19.953-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-10-21T19:59:01.007-07:00
+    updatedTimeString: 2024-10-23T12:35:41.805-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-10-21T19:59:00.985-07:00
+    updatedTimeString: 2024-10-23T12:38:31.621-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -8039,9 +8662,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 30760000
-    m_LastClickedID: 30256
-    m_ExpandedIDs: 000000008e74000000ca9a3bffffff7f
+    m_SelectedIDs: 28760000
+    m_LastClickedID: 30248
+    m_ExpandedIDs: 00000000907400002676000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8069,7 +8692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e740000
+    m_ExpandedIDs: 0000000090740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8096,7 +8719,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -8121,7 +8744,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 87.00003}
     m_GridSize: 67
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 209.28572
@@ -8209,9 +8832,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 34540000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff0273000014730000
+      m_ExpandedIDs: fafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -8617,9 +9240,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.8353615, y: 7.370723, z: -0.25104222}
+    m_Target: {x: 3.7367105, y: 0.7678132, z: -0.20677006}
     speed: 2
-    m_Value: {x: -4.8353615, y: 7.370723, z: -0.25104222}
+    m_Value: {x: 3.7367105, y: 0.7678132, z: -0.20677006}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -8669,9 +9292,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.243806
+    m_Target: 5.816584
     speed: 2
-    m_Value: 10.243806
+    m_Value: 5.816584
   m_Ortho:
     m_Target: 1
     speed: 2
