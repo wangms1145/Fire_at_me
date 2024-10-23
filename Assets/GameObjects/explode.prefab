@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani_time: 0.26
-  radius: 3.9
+  radius: 6.4
   impact: 30.6
   damage: 1
   groundLayer:

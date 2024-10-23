@@ -7,7 +7,7 @@ using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class Bullet1Script : MonoBehaviour
+public class Fish_script : MonoBehaviour
 {
     public float impact;
     public Vector2 vel;
@@ -20,33 +20,17 @@ public class Bullet1Script : MonoBehaviour
     void Start()
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
-        vel = myRigidbody.velocity;
-        RaycastHit2D hit = collide_check();
-        if(hit){
-            Vector2 a = hit.point;
-
-            if(hit.collider.GetComponent<BotScript>() != null){
-                BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= myRigidbody.velocity.magnitude/1 * damage;
-            }
-            if(hit.rigidbody != null){
-                Vector2 diff = hit.point - (Vector2)transform.position;
-                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
-            }
-            Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
         timed += Time.deltaTime;
-        if(timed > 6){
+        if(timed > 30){
             Destroy(gameObject);
         }
         vel = myRigidbody.velocity;
-        myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);
+        myRigidbody.velocity = vel * (1-Time.deltaTime * 0.2f);
         RaycastHit2D hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
@@ -57,19 +41,19 @@ public class Bullet1Script : MonoBehaviour
             }
             if(hit.rigidbody != null){
                 Vector2 diff = hit.point - (Vector2)transform.position;
-                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
+                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 3, spdToAng(diff));
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
             Destroy(gameObject);
         }
     }
-    private RaycastHit2D collide_check(){
+        private RaycastHit2D collide_check(){
         //Debug.DrawRay(transform.position,vel.normalized*Time.deltaTime*2.3f);
-        return Physics2D.Raycast(transform.position,vel.normalized,vel.magnitude*Time.deltaTime*2.3f,groundLayer);
+        return Physics2D.Raycast(transform.position,vel.normalized,Math.Max(vel.magnitude*Time.deltaTime*4f,0.7f),groundLayer);
     }
     private void OnDrawGizmos(){
         //Gizmos.DrawWireCube(transform.position + vel/myRigidbody.velocity.magnitude * (boxSize.x/2-0.1f),boxSize);
-        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*2.3f);
+        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*4f);
     }
     private Vector2 angToSpd(float strength,float ang){
         Vector2 a;

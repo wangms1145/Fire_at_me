@@ -90,7 +90,7 @@ public class BotScript : MonoBehaviour
             myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
 
             //rotation lock
-            myRigidbody.MoveRotation(myRigidbody.rotation+(0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-1,1));
+            myRigidbody.angularVelocity = (0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
 
             if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
                 isAlive = false;

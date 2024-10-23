@@ -1,0 +1,11 @@
+vesion 1.1.0
+main changes:
+- Added support for the PolygonCollider2D with multiple paths
+other changes:
+- Added new function to PolygonUtility (IsPointInsidePolygon(Vector2[] polygon, Vector2 point))
+- Changed PolygonCollider2DSolver.ClosestPoint(Vector2 point) to public
+- Changed PolygonCollider2DSolver AddComponentMenu Address
+- Removed Debug.DrawLine from PolygonCollider2DSolver.OnCollisionStay2D()
+
+vesion 1.0.0
+- First release
