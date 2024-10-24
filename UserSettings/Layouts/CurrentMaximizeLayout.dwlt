@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 14}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 27071
+  controlID: 51069
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -35,21 +35,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
+  m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1155
+    x: 282.5
     y: 67
-    width: 356
-    height: 874
+    width: 870.5
+    height: 614.5
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -60,19 +60,70 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -480
+    m_HBaseRangeMax: 480
+    m_VBaseRangeMin: -270
+    m_VBaseRangeMax: 270
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 870.5
+      height: 593.5
+    m_Scale: {x: 0.9067708, y: 0.9067708}
+    m_Translation: {x: 435.25, y: 296.75}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -480
+      y: -327.2602
+      width: 960
+      height: 654.5204
+    m_MinimalGUI: 1
+  m_defaultScale: 0.9067708
+  m_LastWindowPixelSize: {x: 1741, y: 1229}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -87,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -97,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 27122
+  controlID: 51070
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -123,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 27123
+  controlID: 51115
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -142,7 +193,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 285.5
+    width: 282.5
     height: 635.5
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -173,7 +224,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 67
-    width: 284.5
+    width: 281.5
     height: 614.5
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -188,9 +239,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c910000
-      m_LastClickedID: 37244
-      m_ExpandedIDs: 6c4f53fffcfafffff87200000a7300006a9100007c910000
+      m_SelectedIDs: 8ae00000
+      m_LastClickedID: 57482
+      m_ExpandedIDs: 4cce0cfff8ce0cff16d00cff58d10cff6c4f53fffcfafffff87200000a7300006a9100007c910000f0e0000002e10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -206,7 +257,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -229,17 +280,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 285.5
+    x: 282.5
     y: 0
-    width: 869.5
+    width: 872.5
     height: 635.5
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 9}
+  m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
+  - {fileID: 2}
   - {fileID: 9}
-  - {fileID: 10}
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &8
@@ -262,9 +313,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 285.5
+    x: 282.5
     y: 67
-    width: 867.5
+    width: 870.5
     height: 614.5
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -624,9 +675,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.0274425, y: -5.5720987, z: 0.034838393}
+    m_Target: {x: 9.646334, y: -2.9546218, z: -0.1495709}
     speed: 2
-    m_Value: {x: 3.0274425, y: -5.5720987, z: 0.034838393}
+    m_Value: {x: 9.563886, y: -2.9292376, z: -0.1487119}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -676,9 +727,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.578335
+    m_Target: 12.811802
     speed: 2
-    m_Value: 19.578335
+    m_Value: 12.725902
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -711,104 +762,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 285.5
-    y: 67
-    width: 867.5
-    height: 614.5
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -480
-    m_HBaseRangeMax: 480
-    m_VBaseRangeMin: -270
-    m_VBaseRangeMax: 270
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 867.5
-      height: 593.5
-    m_Scale: {x: 0.9036458, y: 0.9036458}
-    m_Translation: {x: 433.75, y: 296.75}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -480
-      y: -328.39194
-      width: 960
-      height: 656.7839
-    m_MinimalGUI: 1
-  m_defaultScale: 0.9036458
-  m_LastWindowPixelSize: {x: 1735, y: 1229}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -821,9 +774,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 285.5
+    x: 282.5
     y: 67
-    width: 867.5
+    width: 870.5
     height: 614.5
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -905,7 +858,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &11
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -926,13 +879,13 @@ MonoBehaviour:
     height: 259.5
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 11}
   m_Panes:
+  - {fileID: 11}
   - {fileID: 12}
-  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &12
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -977,7 +930,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/GameObjects
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -985,15 +938,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 67
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/GameObjects
   m_LastFoldersGridSize: 67
   m_LastProjectPath: "/Users/snailman/\u5411\u6211\u5F00\u70AE/Unity_2d_Proj"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 06760000
-    m_LastClickedID: 30214
+    m_SelectedIDs: f8750000
+    m_LastClickedID: 30200
     m_ExpandedIDs: 000000006c74000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1047,9 +1000,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7c910000
-    m_LastClickedInstanceID: 37244
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 8ae00000
+    m_LastClickedInstanceID: 57482
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1066,7 +1019,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1074,11 +1027,11 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 102.000885}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 67
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 209.28572
---- !u!114 &13
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1112,7 +1065,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &14
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1131,14 +1084,61 @@ MonoBehaviour:
     y: 0
     width: 357
     height: 895
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 2}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 2}
+  - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 1
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1155
+    y: 67
+    width: 356
+    height: 874
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1159,10 +1159,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1117.143
-    y: 72.571434
-    width: 344.71436
-    height: 661.5714
+    x: 1155
+    y: 67
+    width: 356
+    height: 874
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1173,13 +1173,13 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 11177.873463999998
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
@@ -1364,804 +1364,25 @@ MonoBehaviour:
     - name: origin/test_for_multiplayer
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
-    currentBranch: master
+    currentBranch: 
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - b64505db9e6bced4cabd7caaf0d935cd
-        - c9c2c7f08dcc05d4bbf4bdc738136568
-        - b92c0be8d7a5dd1438d9d23d6282cdbc
-        - 637ce4b643002ff4e90155d62c3dfff6
-        - 4464e2c7828622d49975b7e74d5ea0a8
-        - b57b8add149db1e4eb4c9e784c66997d
-        - 3253c0896d6b5174493145afdb8ee80c
-        - e44fe218d56c5b74db85af0f09e96672
-        - 6674b06d2d7f326498e60e8a30a41054
-        - 2afa1c6e746942748b3f63a0a53bcb07
-        - 6fbaef45f03499b42b8558c91eed5c91
-        - 0e8713c2b151c0b44a5bb8d4f801fd2b
-        - 1b0e7ac1078adbb40aa5aded95883b4e
-        - f80b75fcd0b21324190420c153f48c70
-        - b00fa1bcac19ae34e958c94fc3eec9d3
-        - 706cf95bd55349841b87c57d2c89f42a
-        - 612c0e9c5b9c75c4cadfb43460e1ea87
-        - f4b6ba9dabc2e474db555ad2e4c9e7f4
-        - 68a0c91cac4790641b929d9f48fe0c1a
-        - 730db474a0c86a14abf05ab7d8024aec
-        - 693b707bcaa6eb945a8883308f2ee0f2
-        - e0a71effd50fb5045a4a0602afccd81e
-        - 9c7dfd7a244d24b4985eeea919a20e34
-        - eea8710ad7c76604486ea39013a01959
-        - 9fec58475560d3c4085083f055e8ae6f
-        - 20e5a8199e34079468b565e8204a4d76
-        - c5bec2da123ef0a4f836219909ba2e09
-        - e7b59444130340c49ba17278daa9e65b
-        - 7aa0588525e9d49418719850cbebbeb9
-        - 536b887f5ac313342b2e7fad01540690
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Animations
-          label: Animations
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Animations\TNT.anim
-          label: TNT.anim
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Animations\TNT.anim
-            fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.anim
-            projectPath: Assets\Animations\TNT.anim
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Animations\TNT.controller
-          label: TNT.controller
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Animations\TNT.controller
-            fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.controller
-            projectPath: Assets\Animations\TNT.controller
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects\Bullet5.prefab
-          label: Bullet5.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\Bullet5.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet5.prefab
-            projectPath: Assets\GameObjects\Bullet5.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\GameObjects\explode.prefab
-          label: explode.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\explode.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-            projectPath: Assets\GameObjects\explode.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\GameObjects\Square.prefab
-          label: Square.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\Square.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\Square.prefab
-            projectPath: Assets\GameObjects\Square.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\GameObjects\TNT.prefab
-          label: TNT.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\GameObjects\TNT.prefab
-            fullPath: C:\Users\ROG\My project\Assets\GameObjects\TNT.prefab
-            projectPath: Assets\GameObjects\TNT.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\PhysicsMaterials
-          label: PhysicsMaterials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-          label: TNT.physicsMaterial2D
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-            fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\TNT.physicsMaterial2D
-            projectPath: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Game.unity
-          label: Game.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Game.unity
-            fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-            projectPath: Assets\Scenes\Game.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Bullet_gene_scr.cs
-          label: Bullet_gene_scr.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Bullet_gene_scr.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-            projectPath: Assets\Scripts\Bullet_gene_scr.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\explode_script.cs
-          label: explode_script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\explode_script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\explode_script.cs
-            projectPath: Assets\Scripts\explode_script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\PlayerScript.cs
-          label: PlayerScript.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\PlayerScript.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-            projectPath: Assets\Scripts\PlayerScript.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\TNT_script.cs
-          label: TNT_script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\TNT_script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\TNT_script.cs
-            projectPath: Assets\Scripts\TNT_script.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\Weapon_Script.cs
-          label: Weapon_Script.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Weapon_Script.cs
-            fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-            projectPath: Assets\Scripts\Weapon_Script.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Sound
-          label: Sound
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sound\explode.mp3
-          label: explode.mp3
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sound\explode.mp3
-            fullPath: C:\Users\ROG\My project\Assets\Sound\explode.mp3
-            projectPath: Assets\Sound\explode.mp3
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sound\explode1.mp3
-          label: explode1.mp3
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sound\explode1.mp3
-            fullPath: C:\Users\ROG\My project\Assets\Sound\explode1.mp3
-            projectPath: Assets\Sound\explode1.mp3
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sound\pre_explode.mp3
-          label: pre_explode.mp3
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sound\pre_explode.mp3
-            fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode.mp3
-            projectPath: Assets\Sound\pre_explode.mp3
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sound\pre_explode1.mp3
-          label: pre_explode1.mp3
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sound\pre_explode1.mp3
-            fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode1.mp3
-            projectPath: Assets\Sound\pre_explode1.mp3
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-          label: "\u9634\u95F4\u52A8\u9759.mp3"
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-            fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-            projectPath: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\tnt white.png
-          label: tnt white.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\tnt white.png
-            fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt white.png
-            projectPath: Assets\Sprites\tnt white.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\tnt.png
-          label: tnt.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\tnt.png
-            fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt.png
-            projectPath: Assets\Sprites\tnt.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\W11.png
-          label: W11.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\W11.png
-            fullPath: C:\Users\ROG\My project\Assets\Sprites\W11.png
-            projectPath: Assets\Sprites\W11.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\W12.png
-          label: W12.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\W12.png
-            fullPath: C:\Users\ROG\My project\Assets\Sprites\W12.png
-            projectPath: Assets\Sprites\W12.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\W4.png
-          label: W4.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\W4.png
-            fullPath: C:\Users\ROG\My project\Assets\Sprites\W4.png
-            projectPath: Assets\Sprites\W4.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Animations
-        - Assets\GameObjects
-        - Assets\PhysicsMaterials
-        - Assets\Scenes
-        - Assets\Scripts
-        - Assets\Sound
-        - Assets\Sprites
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Animations
-          label: Animations
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\GameObjects
-          label: GameObjects
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\PhysicsMaterials
-          label: PhysicsMaterials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sound
-          label: Sound
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
       title: 
-      pathSeparator: \
+      pathSeparator: /
       displayRootNode: 0
       isSelectable: 1
       isCheckable: 1
@@ -2185,888 +1406,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Animations
-        label: Animations
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Animations\TNT.anim
-        label: TNT.anim
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Animations\TNT.anim
-          fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.anim
-          projectPath: Assets\Animations\TNT.anim
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Animations\TNT.anim.meta
-        label: TNT.anim.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Animations\TNT.anim.meta
-          fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.anim.meta
-          projectPath: Assets\Animations\TNT.anim.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Animations\TNT.controller
-        label: TNT.controller
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Animations\TNT.controller
-          fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.controller
-          projectPath: Assets\Animations\TNT.controller
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Animations\TNT.controller.meta
-        label: TNT.controller.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Animations\TNT.controller.meta
-          fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.controller.meta
-          projectPath: Assets\Animations\TNT.controller.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects
-        label: GameObjects
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\GameObjects\Bullet5.prefab
-        label: Bullet5.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Bullet5.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet5.prefab
-          projectPath: Assets\GameObjects\Bullet5.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\GameObjects\explode.prefab
-        label: explode.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\explode.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-          projectPath: Assets\GameObjects\explode.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\GameObjects\Square.prefab
-        label: Square.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\Square.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\Square.prefab
-          projectPath: Assets\GameObjects\Square.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\GameObjects\TNT.prefab
-        label: TNT.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\TNT.prefab
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\TNT.prefab
-          projectPath: Assets\GameObjects\TNT.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\GameObjects\TNT.prefab.meta
-        label: TNT.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\GameObjects\TNT.prefab.meta
-          fullPath: C:\Users\ROG\My project\Assets\GameObjects\TNT.prefab.meta
-          projectPath: Assets\GameObjects\TNT.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\PhysicsMaterials
-        label: PhysicsMaterials
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-        label: TNT.physicsMaterial2D
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\TNT.physicsMaterial2D
-          projectPath: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-        label: TNT.physicsMaterial2D.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-          fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-          projectPath: Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Game.unity
-        label: Game.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Game.unity
-          fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-          projectPath: Assets\Scenes\Game.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Bullet_gene_scr.cs
-        label: Bullet_gene_scr.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Bullet_gene_scr.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-          projectPath: Assets\Scripts\Bullet_gene_scr.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\explode_script.cs
-        label: explode_script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\explode_script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\explode_script.cs
-          projectPath: Assets\Scripts\explode_script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\PlayerScript.cs
-        label: PlayerScript.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\PlayerScript.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-          projectPath: Assets\Scripts\PlayerScript.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\TNT_script.cs
-        label: TNT_script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\TNT_script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\TNT_script.cs
-          projectPath: Assets\Scripts\TNT_script.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\TNT_script.cs.meta
-        label: TNT_script.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\TNT_script.cs.meta
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\TNT_script.cs.meta
-          projectPath: Assets\Scripts\TNT_script.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Weapon_Script.cs
-        label: Weapon_Script.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Weapon_Script.cs
-          fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-          projectPath: Assets\Scripts\Weapon_Script.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Sound
-        label: Sound
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sound\explode.mp3
-        label: explode.mp3
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\explode.mp3
-          fullPath: C:\Users\ROG\My project\Assets\Sound\explode.mp3
-          projectPath: Assets\Sound\explode.mp3
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\explode.mp3.meta
-        label: explode.mp3.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\explode.mp3.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sound\explode.mp3.meta
-          projectPath: Assets\Sound\explode.mp3.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\explode1.mp3
-        label: explode1.mp3
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\explode1.mp3
-          fullPath: C:\Users\ROG\My project\Assets\Sound\explode1.mp3
-          projectPath: Assets\Sound\explode1.mp3
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\explode1.mp3.meta
-        label: explode1.mp3.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\explode1.mp3.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sound\explode1.mp3.meta
-          projectPath: Assets\Sound\explode1.mp3.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\pre_explode.mp3
-        label: pre_explode.mp3
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\pre_explode.mp3
-          fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode.mp3
-          projectPath: Assets\Sound\pre_explode.mp3
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\pre_explode.mp3.meta
-        label: pre_explode.mp3.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\pre_explode.mp3.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode.mp3.meta
-          projectPath: Assets\Sound\pre_explode.mp3.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\pre_explode1.mp3
-        label: pre_explode1.mp3
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\pre_explode1.mp3
-          fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode1.mp3
-          projectPath: Assets\Sound\pre_explode1.mp3
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sound\pre_explode1.mp3.meta
-        label: pre_explode1.mp3.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sound\pre_explode1.mp3.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode1.mp3.meta
-          projectPath: Assets\Sound\pre_explode1.mp3.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-        label: "\u9634\u95F4\u52A8\u9759.mp3"
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-          projectPath: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-        label: "\u9634\u95F4\u52A8\u9759.mp3.meta"
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-          fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-          projectPath: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites
-        label: Sprites
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\tnt white.png
-        label: tnt white.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\tnt white.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt white.png
-          projectPath: Assets\Sprites\tnt white.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\tnt white.png.meta
-        label: tnt white.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\tnt white.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt white.png.meta
-          projectPath: Assets\Sprites\tnt white.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\tnt.png
-        label: tnt.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\tnt.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt.png
-          projectPath: Assets\Sprites\tnt.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\tnt.png.meta
-        label: tnt.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\tnt.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt.png.meta
-          projectPath: Assets\Sprites\tnt.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W11.png
-        label: W11.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W11.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W11.png
-          projectPath: Assets\Sprites\W11.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W11.png.meta
-        label: W11.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W11.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W11.png.meta
-          projectPath: Assets\Sprites\W11.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W12.png
-        label: W12.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W12.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W12.png
-          projectPath: Assets\Sprites\W12.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W12.png.meta
-        label: W12.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W12.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W12.png.meta
-          projectPath: Assets\Sprites\W12.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W4.png
-        label: W4.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W4.png
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W4.png
-          projectPath: Assets\Sprites\W4.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\W4.png.meta
-        label: W4.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\W4.png.meta
-          fullPath: C:\Users\ROG\My project\Assets\Sprites\W4.png.meta
-          projectPath: Assets\Sprites\W4.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -3086,242 +1425,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Animations\TNT.anim
-      fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.anim
-      projectPath: Assets\Animations\TNT.anim
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Animations\TNT.anim.meta
-      fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.anim.meta
-      projectPath: Assets\Animations\TNT.anim.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Animations\TNT.controller
-      fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.controller
-      projectPath: Assets\Animations\TNT.controller
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Animations\TNT.controller.meta
-      fullPath: C:\Users\ROG\My project\Assets\Animations\TNT.controller.meta
-      projectPath: Assets\Animations\TNT.controller.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\Bullet5.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Bullet5.prefab
-      projectPath: Assets\GameObjects\Bullet5.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\GameObjects\explode.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\explode.prefab
-      projectPath: Assets\GameObjects\explode.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\GameObjects\Square.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\Square.prefab
-      projectPath: Assets\GameObjects\Square.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\GameObjects\TNT.prefab
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\TNT.prefab
-      projectPath: Assets\GameObjects\TNT.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\GameObjects\TNT.prefab.meta
-      fullPath: C:\Users\ROG\My project\Assets\GameObjects\TNT.prefab.meta
-      projectPath: Assets\GameObjects\TNT.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-      fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\TNT.physicsMaterial2D
-      projectPath: Assets\PhysicsMaterials\TNT.physicsMaterial2D
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-      fullPath: C:\Users\ROG\My project\Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-      projectPath: Assets\PhysicsMaterials\TNT.physicsMaterial2D.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Game.unity
-      fullPath: C:\Users\ROG\My project\Assets\Scenes\Game.unity
-      projectPath: Assets\Scenes\Game.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\Bullet_gene_scr.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Bullet_gene_scr.cs
-      projectPath: Assets\Scripts\Bullet_gene_scr.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\explode_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\explode_script.cs
-      projectPath: Assets\Scripts\explode_script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\PlayerScript.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\PlayerScript.cs
-      projectPath: Assets\Scripts\PlayerScript.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\TNT_script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\TNT_script.cs
-      projectPath: Assets\Scripts\TNT_script.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\TNT_script.cs.meta
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\TNT_script.cs.meta
-      projectPath: Assets\Scripts\TNT_script.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Weapon_Script.cs
-      fullPath: C:\Users\ROG\My project\Assets\Scripts\Weapon_Script.cs
-      projectPath: Assets\Scripts\Weapon_Script.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Sound\explode.mp3
-      fullPath: C:\Users\ROG\My project\Assets\Sound\explode.mp3
-      projectPath: Assets\Sound\explode.mp3
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\explode.mp3.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sound\explode.mp3.meta
-      projectPath: Assets\Sound\explode.mp3.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\explode1.mp3
-      fullPath: C:\Users\ROG\My project\Assets\Sound\explode1.mp3
-      projectPath: Assets\Sound\explode1.mp3
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\explode1.mp3.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sound\explode1.mp3.meta
-      projectPath: Assets\Sound\explode1.mp3.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\pre_explode.mp3
-      fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode.mp3
-      projectPath: Assets\Sound\pre_explode.mp3
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\pre_explode.mp3.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode.mp3.meta
-      projectPath: Assets\Sound\pre_explode.mp3.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\pre_explode1.mp3
-      fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode1.mp3
-      projectPath: Assets\Sound\pre_explode1.mp3
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sound\pre_explode1.mp3.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sound\pre_explode1.mp3.meta
-      projectPath: Assets\Sound\pre_explode1.mp3.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-      fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-      projectPath: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3"
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-      fullPath: "C:\\Users\\ROG\\My project\\Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-      projectPath: "Assets\\Sound\\\u9634\u95F4\u52A8\u9759.mp3.meta"
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\tnt white.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt white.png
-      projectPath: Assets\Sprites\tnt white.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\tnt white.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt white.png.meta
-      projectPath: Assets\Sprites\tnt white.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\tnt.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt.png
-      projectPath: Assets\Sprites\tnt.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\tnt.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\tnt.png.meta
-      projectPath: Assets\Sprites\tnt.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W11.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W11.png
-      projectPath: Assets\Sprites\W11.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W11.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W11.png.meta
-      projectPath: Assets\Sprites\W11.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W12.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W12.png
-      projectPath: Assets\Sprites\W12.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W12.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W12.png.meta
-      projectPath: Assets\Sprites\W12.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W4.png
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W4.png
-      projectPath: Assets\Sprites\W4.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\W4.png.meta
-      fullPath: C:\Users\ROG\My project\Assets\Sprites\W4.png.meta
-      projectPath: Assets\Sprites\W4.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\ROG\My project\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 39 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 1
@@ -8299,7 +6404,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/wangms1145/Fire_at_me.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -8316,7 +6421,7 @@ MonoBehaviour:
     updatedTimeString: 2024-10-14T15:35:00.020-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-10-15T20:43:06.742-07:00
+    updatedTimeString: 0001-01-01T00:00:00.000+00:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -8334,8 +6439,8 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.9864865
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
-  appManagerProgressValue: 1
+  appManagerProgressValue: 0.9
   appManagerProgressMessage: 
   primaryConnectionUsername: 

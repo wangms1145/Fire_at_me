@@ -54,6 +54,9 @@ public class Bullet_gene_scr : MonoBehaviour
             case 6:
                 def_spawn(wp,ang,bullet,ply_vel).GetComponent<Fish_script>().damage = wp.damage;
                 break;
+            case 7:
+                def_spawn(wp, ang, bullet, ply_vel).GetComponent<Bullet6Script>().damage = wp.damage;
+                break;
             default:
                 def_spawn(wp,ang,bullet,ply_vel);
                 break;
