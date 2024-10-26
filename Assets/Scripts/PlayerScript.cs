@@ -15,7 +15,7 @@ public class PlayerScript : NetworkBehaviour
 {
 
     [Tooltip("刚体（物理引擎）")]
-    private Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
 
     //player max speed
     [Tooltip("最大速度")]
@@ -92,9 +92,15 @@ public class PlayerScript : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(gameObject.TryGetComponent<Rigidbody2D>(out myRigidbody));
+        UnityEngine.Debug.Log(gameObject.TryGetComponent<Rigidbody2D>(out myRigidbody));
         Debug.Log(myRigidbody.gravityScale);
-        Debug.Break();
+        GameObject cam = Camera.main.gameObject;
+        cam_script = cam.GetComponent<Cam_script>();
+        GameObject vc = GameObject.Find("VC player camera");
+        vc.GetComponent<VC_Script>().ply = this;
+        vc.GetComponent<VC_Script>().myVCam.Follow = transform.GetChild(1);
+        GameObject aim = GameObject.FindGameObjectWithTag("Aim");
+        aim.GetComponent<debug>().ply = this;
         myRigidbody.sharedMaterial = inGame_material;
         
     }
@@ -110,26 +116,33 @@ public class PlayerScript : NetworkBehaviour
     {   
         Debug.Log("Play_Script update called");
         if (isAlive) {
+            Debug.Log("player_alive");
+            Debug.Log(Time.deltaTime);
             myRigidbody.sharedMaterial = inGame_material;
             spdx = myRigidbody.velocity.x;
             spdy = myRigidbody.velocity.y;
+            Debug.Log(spdx + " _ " + spdy);
 
             //jump
             if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
                 myRigidbody.velocity += Vector2.up * jumpStrength;
             }
+            Debug.Log("1");
 
             //debug    Actually don't delete this bcs cameraPos takes that parameter.
+            
             mouX = cam_script.mousePosition.x;
             mouY = cam_script.mousePosition.y;
             sX = transform.position.x;
             sY = transform.position.y;
             disY = (mouY - transform.position.y) * mouse_mult;
             disX = (mouX - transform.position.x) * mouse_mult;
+            
 
             //recoil angle
             ang = Mathf.Atan2(disY,disX);
-
+            ang += Mathf.PI;
+            Debug.Log("2");
 
             //recoil
             if(shoot){
@@ -146,7 +159,8 @@ public class PlayerScript : NetworkBehaviour
             if(Input.GetKey(KeyCode.D))tspd -= spd;
             float acc_add = 0;
             if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
-            transform.up = Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
+            myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
+            Debug.Log(myRigidbody.angularVelocity);
 
             //rotation lock
             myRigidbody.angularVelocity = (0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
@@ -186,12 +200,14 @@ public class PlayerScript : NetworkBehaviour
         }
         else{
             //died
+            
             mouX = cam_script.mousePosition.x;
             mouY = cam_script.mousePosition.y;
             sX = transform.position.x;
             sY = transform.position.y;
             disY = (mouY - transform.position.y) * mouse_mult;
             disX = (mouX - transform.position.x) * mouse_mult;
+            
             if(transform.position.y < diedYpos-30){
                 myRigidbody.simulated = false;
             }

@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b027d73556d034bbdb8b14b61b1750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1732998583}
   vc: {fileID: 19456090}
   mousePosition: {x: 0, y: 0}
   scr_x: 0
@@ -2012,7 +2012,7 @@ GameObject:
   - component: {fileID: 2035727598}
   m_Layer: 0
   m_Name: Triangle (change this to aim later)
-  m_TagString: Untagged
+  m_TagString: Aim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
