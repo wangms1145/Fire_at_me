@@ -7,11 +7,15 @@ using UnityEngine.Rendering;
 using System;
 using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 using System.Text.RegularExpressions;
+using Unity.Netcode;
+using UnityEngine.Networking;
+using Unity.Netcode.Components;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : NetworkBehaviour
 {
+
     [Tooltip("刚体（物理引擎）")]
-    public Rigidbody2D myRigidbody;
+    private Rigidbody2D myRigidbody;
 
     //player max speed
     [Tooltip("最大速度")]
@@ -88,13 +92,23 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(gameObject.TryGetComponent<Rigidbody2D>(out myRigidbody));
+        Debug.Log(myRigidbody.gravityScale);
+        Debug.Break();
         myRigidbody.sharedMaterial = inGame_material;
         
     }
 
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        Debug.Log("player created");
+  
+    }
     // Update is called once per frame
     void Update()
-    {
+    {   
+        Debug.Log("Play_Script update called");
         if (isAlive) {
             myRigidbody.sharedMaterial = inGame_material;
             spdx = myRigidbody.velocity.x;
@@ -114,10 +128,7 @@ public class PlayerScript : MonoBehaviour
             disX = (mouX - transform.position.x) * mouse_mult;
 
             //recoil angle
-            ang = Mathf.Atan(disY/disX);
-            if(mouX - transform.position.x > 0){
-                ang+=Mathf.PI;
-            }
+            ang = Mathf.Atan2(disY,disX);
 
 
             //recoil
@@ -131,11 +142,11 @@ public class PlayerScript : MonoBehaviour
 
             //move
             tspd = 0;
-            if(Input.GetKey(KeyCode.A))tspd += spd;
+            if(Input.GetKey(KeyCode.A)){Debug.Log("A Pressed"); tspd += spd;}
             if(Input.GetKey(KeyCode.D))tspd -= spd;
             float acc_add = 0;
             if(Input.GetKey(KeyCode.LeftShift) && isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
-            myRigidbody.velocity += Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
+            transform.up = Vector2.left * (tspd+spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
 
             //rotation lock
             myRigidbody.angularVelocity = (0-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
@@ -144,6 +155,8 @@ public class PlayerScript : MonoBehaviour
                 myRigidbody.AddForceAtPosition(Vector2.right * 100,Vector2.down);
             }
 
+
+            //death
             if(transform.position.y < diedYpos || Input.GetKeyDown(KeyCode.G)){
                 isAlive = false;
                 float ang = UnityEngine.Random.Range(-180, 180);
@@ -159,10 +172,14 @@ public class PlayerScript : MonoBehaviour
                     audSource.PlayOneShot(died);
                 }
             }
+
+
             if(isGrounded() && !groundFlag){
                 filter.distortionLevel = Mathf.InverseLerp(-10,-30,ys);
                 audSource.PlayOneShot(fall);
             }
+
+
             groundFlag = isGrounded();
             if(i >= 5){ys = myRigidbody.velocity.y;i = 0;}
             i++;
@@ -178,6 +195,8 @@ public class PlayerScript : MonoBehaviour
             if(transform.position.y < diedYpos-30){
                 myRigidbody.simulated = false;
             }
+
+            
             if(Input.GetKey(KeyCode.R)){
                 myRigidbody.simulated = true;
                 myRigidbody.velocity = Vector2.zero;
