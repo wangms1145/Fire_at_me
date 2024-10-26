@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using UnityEditor.EditorTools;
+using System.Runtime.CompilerServices;
 
 public class Classes : MonoBehaviour
 {
@@ -35,8 +36,10 @@ public class WeaponClass
     public float firing_time;
     [Tooltip("换弹时间 (弹夹式：总时间)(泵动式：装一颗子弹的时间)")]
     public float reloading_time;
+    [Tooltip("无限子弹")]
+    public bool infinite = false;
     [Tooltip("弹夹容量")]
-    public int bullet_count;
+    [ShowIf("infinite",false,true)][SerializeField] public int bullet_count;
     [Tooltip("全自动？")]
     public bool automatic;
     [Tooltip("拉栓时间")]
@@ -65,6 +68,10 @@ public class WeaponClass
     [ShowIf("delay_fire", true)][SerializeField] public bool hold_to_fire = false;
     [Tooltip("满蓄力自动释放")]
     [ShowIf("delay_fire", true)][SerializeField] public bool auto_release = false;
+    [Tooltip("蓄力起始伤害")]
+    [ShowIf("hold_to_fire", true)][SerializeField] public float start_damage = 0;
+    [Tooltip("蓄力起始后坐力")]
+    [ShowIf("hold_to_fire", true)][SerializeField] public float strat_recoil = 0;
     [HideInInspector]
     public float hold_time;
 

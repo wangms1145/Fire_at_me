@@ -16,6 +16,7 @@ public class Bullet6Script : MonoBehaviour
     public GameObject bullet_hole;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
+    private RaycastHit2D last_hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,11 +50,12 @@ public class Bullet6Script : MonoBehaviour
         if(hit){
             Vector2 a = hit.point;
 
-            if(hit.collider.GetComponent<BotScript>() != null){
+            if(hit.collider.GetComponent<BotScript>() != null && !hit.collider.Equals(last_hit.collider)){
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= damage;
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
+            last_hit = hit;
             //Destroy(gameObject);
         }
     }

@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using System;
-using Unity.VersionControl.Git.ICSharpCode.SharpZipLib;
 using System.Text.RegularExpressions;
 
 public class PlayerScript : MonoBehaviour
