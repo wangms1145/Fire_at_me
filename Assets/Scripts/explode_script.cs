@@ -42,6 +42,9 @@ public class explode_script : MonoBehaviour
                     Instantiate(hit_p, hit.point, quaternion.RotateX(0));
                     if(hit.rigidbody != null){
                         Vector2 diff = hit.point - (Vector2)transform.position;
+                        if(diff.magnitude < 0.5){
+                            diff = diff.normalized * 0.5f;
+                        }
                         hit.rigidbody.velocity += angToSpd(impact/(diff.magnitude/18 + 1.5f)/240, spdToAng(diff));
                     }
                     if(hit.collider.GetComponent<BotScript>() != null){
