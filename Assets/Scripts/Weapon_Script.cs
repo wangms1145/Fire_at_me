@@ -47,6 +47,7 @@ public class Weapon_Script : MonoBehaviour
     private float firing_time;
     private int j = 0;
     private float fire_timer = 0f;
+    private bool fire_flag = true;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,7 @@ public class Weapon_Script : MonoBehaviour
         scale.z = 1;
         for(int i = 0;i<weapon.Length;i++){
             weapon[i].mag_c = weapon[i].bullet_count;
+            if(weapon[i].infinite)weapon[i].bullet_count = 10;
         }
         can_shoot = true;
     }
@@ -79,7 +81,7 @@ public class Weapon_Script : MonoBehaviour
     {
         if(ply.isAlive){
             myRigidbody.simulated = false;
-            int sign = 0;
+            int sign;
             ang = Mathf.Atan2(ply.disY,ply.disX);
             float dis_m = (float)Math.Sqrt(Math.Pow(ply.disX,2) + Math.Pow(ply.disY,2));
             gameObject.GetComponentsInChildren<Transform>(false)[1].localPosition = Vector2.right * dis_m * 3.3333f;
@@ -93,13 +95,13 @@ public class Weapon_Script : MonoBehaviour
                 sign = 1;
             }
             SpriteRenderer sec_wp =  gameObject.GetComponentsInChildren<SpriteRenderer>()[2];
-            Transform wec_wp_transform = gameObject.GetComponentsInChildren<Transform>()[2];
+            Transform sec_wp_transform = gameObject.GetComponentsInChildren<Transform>()[2];
             if(weapon[now_ind].duo_hold){
                 sec_wp.sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-                wec_wp_transform.localPosition = weapon[now_ind].Sec_pos;
+                sec_wp_transform.localPosition = weapon[now_ind].Sec_pos;
                 sec_wp.enabled = true;
                 if(weapon[now_ind].bullet_count % 2 == 1){
-                    Debug.LogError("双持武器弹夹容量必须是偶数");
+                    Debug.LogError("双持武器弹夹容量必须是偶数，请检查Element"+now_ind);
                     Debug.Break();
                 }
             }
@@ -115,10 +117,11 @@ public class Weapon_Script : MonoBehaviour
             }
             else if(weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
                 bool fire = Input.GetKey(KeyCode.Mouse0);
-                if(fire){
+                if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
                     fire_timer += Time.deltaTime;
-                    if(fire_timer > weapon[now_ind].time){
+                    if(fire_timer >= weapon[now_ind].time && can_shoot && Time.time > shoot_last_time + firing_time){
                         fire_wp(sign,sec);
+                        fire_timer = 0;
                     }
                 }
                 else{
@@ -127,7 +130,33 @@ public class Weapon_Script : MonoBehaviour
                 
             }
             else{
-
+                bool fire = Input.GetKey(KeyCode.Mouse0);
+                bool fire_up = Input.GetKeyUp(KeyCode.Mouse0);
+                if(fire && fire_flag && can_shoot && Time.time > shoot_last_time + firing_time){
+                    fire_timer += Time.deltaTime;
+                    Debug.Log(fire_timer);
+                    
+                    transform.localPosition = Vector3.up * UnityEngine.Random.Range(-1f,1f)/30f + Vector3.right * UnityEngine.Random.Range(-1f,1f)/30f;
+                    float offset = fire_timer/weapon[now_ind].time * 0.2f;
+                    transform.localPosition -= Vector3.right * (float)Mathf.Cos(ang)*offset + Vector3.up * (float)Mathf.Sin(ang)*offset;
+                }
+                if(fire_timer >= weapon[now_ind].time){
+                    fire_timer = weapon[now_ind].time;
+                    if(weapon[now_ind].auto_release && can_shoot && Time.time > shoot_last_time + firing_time){
+                        weapon[now_ind].hold_time = fire_timer;
+                        fire_wp(sign,sec);
+                        fire_timer = 0;
+                        if(!auto)fire_flag = false;
+                    }
+                }
+                if(fire_up && can_shoot && Time.time > shoot_last_time + firing_time && fire_flag){
+                    weapon[now_ind].hold_time = fire_timer;
+                    fire_wp(sign,sec);
+                    fire_timer = 0;
+                    if(!auto)fire_flag = false;
+                }
+                if(!auto && fire_up)fire_flag = true;
+                //weapon[now_ind].hold_time = fire_timer;
             }
             ang_rec += (0-ang_rec)*weapon[now_ind].rec_acc;
             if(weapon[now_ind].mag_c <= 0 && !reload){
@@ -222,11 +251,13 @@ public class Weapon_Script : MonoBehaviour
         time = 0;
     }
     private void fire_wp(int sign,bool sec){
-        weapon[now_ind].mag_c--;
+        Debug.Log(weapon[now_ind].hold_time);
+        if(!weapon[now_ind].infinite)weapon[now_ind].mag_c--;
         ang_rec = Math.Clamp(ang_rec, 0,weapon[now_ind].ang_rec);
         transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
         ply.shoot = true; 
         shoot_last_time = Time.time;
+        ply.ang = (float)(ang + ang_rec + Math.PI);
         bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity,sec);
         shoot = true;
         audSource.PlayOneShot(weapon[now_ind].fire_audio);

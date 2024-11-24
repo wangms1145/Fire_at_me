@@ -7,7 +7,7 @@ using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class Bullet1Script : MonoBehaviour
+public class Bullet6Script : MonoBehaviour
 {
     public float impact;
     public Vector2 vel;
@@ -16,6 +16,7 @@ public class Bullet1Script : MonoBehaviour
     public GameObject bullet_hole;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
+    private RaycastHit2D last_hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,15 +29,12 @@ public class Bullet1Script : MonoBehaviour
 
             if(hit.collider.GetComponent<BotScript>() != null){
                 BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= myRigidbody.velocity.magnitude/1 * damage;
-            }
-            if(hit.rigidbody != null){
-                Vector2 diff = hit.point - (Vector2)transform.position;
-                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
+                aim.health -= damage;
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
+        //Debug.Break();
     }
 
     // Update is called once per frame
@@ -52,16 +50,13 @@ public class Bullet1Script : MonoBehaviour
         if(hit){
             Vector2 a = hit.point;
 
-            if(hit.collider.GetComponent<BotScript>() != null){
+            if(hit.collider.GetComponent<BotScript>() != null && !hit.collider.Equals(last_hit.collider)){
                 BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= myRigidbody.velocity.magnitude/1 * damage;
-            }
-            if(hit.rigidbody != null){
-                Vector2 diff = hit.point - (Vector2)transform.position;
-                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
+                aim.health -= damage;
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
+            last_hit = hit;
+            //Destroy(gameObject);
         }
     }
     private RaycastHit2D collide_check(){
