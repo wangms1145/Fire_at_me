@@ -61,13 +61,13 @@ public class playerLogic : MonoBehaviour
             myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
             myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
             myRigidbody.sharedMaterial = died_material;
-            GetComponent<playerSound>().onStartDeath();
+            GetComponent<playerSound>().onStartDeath();//死亡音效
         }
 
         if(i >= 5){ys = myRigidbody.velocity.y;i = 0;}
         i++;
         if(isGrounded() && !groundFlag){
-            GetComponent<playerSound>().fallsound();
+            GetComponent<playerSound>().fallsound();//摔落音效
         }
         groundFlag = isGrounded();
     }

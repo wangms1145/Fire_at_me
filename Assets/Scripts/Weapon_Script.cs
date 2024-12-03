@@ -64,7 +64,7 @@ public class Weapon_Script : MonoBehaviour
     }
 
     // Call This method when ever you need to change the attibutes.
-    void Change(WeaponClass wp,int ind){// There will be much more attributes then this
+    private void Change(WeaponClass wp,int ind){// There will be much more attributes then this
         now_ind = ind;
         ply.recoil = wp.recoil;
         auto = wp.automatic;
@@ -264,5 +264,3 @@ public class Weapon_Script : MonoBehaviour
         ang_rec += weapon[now_ind].ang_rec/5;
     }
 }
-
-
