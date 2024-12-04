@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class playerSound : MonoBehaviour
+public class playerSound : NetworkBehaviour
 {
     public PlayerScript varibles;
     public playerLogic player_logic;

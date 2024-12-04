@@ -9,8 +9,8 @@ using System.Text.RegularExpressions;
 using Unity.Mathematics;
 using TMPro;
 using static UnityEngine.ParticleSystem;
-
-public class PlayerScript : MonoBehaviour
+using Unity.Netcode;
+public class PlayerScript : NetworkBehaviour
 {
     [Tooltip("刚体（物理引擎）")]
     public Rigidbody2D myRigidbody;
@@ -58,6 +58,11 @@ public class PlayerScript : MonoBehaviour
         player_logic = GetComponent<playerLogic>();
         player_camera = GetComponent<playerCamera>();
         rotate = GetComponent<playerRotation>();
+    }
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        Debug.Log("player created");
     }
 
     // Update is called once per frame

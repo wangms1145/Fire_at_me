@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
-
-public class playerLogic : MonoBehaviour
+using Unity.Netcode;
+public class playerLogic : NetworkBehaviour
 {
     public PlayerScript varibles;
     public Rigidbody2D myRigidbody;

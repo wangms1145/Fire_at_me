@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class playerRecoil : MonoBehaviour
+public class playerRecoil : NetworkBehaviour
 {
     public PlayerScript varibles;
     public Rigidbody2D myRigidbody;

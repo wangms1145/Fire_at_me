@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
-public class playerMove : MonoBehaviour
+public class playerMove : NetworkBehaviour
 {
     public PlayerScript varibles;
     public playerLogic player_logic;
