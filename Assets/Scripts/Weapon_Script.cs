@@ -6,12 +6,23 @@ using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
+using Unity.VisualScripting;
+using UnityEditor.PackageManager;
+using UnityEngine.LowLevel;
+using System.Net;
+
+
+
+
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine.Timeline;
 
-public class Weapon_Script : MonoBehaviour
+
+public class Weapon_Script : NetworkBehaviour
 {
     /************************************************************
     * Read This Before You Code On This Script!                 *
@@ -50,21 +61,18 @@ public class Weapon_Script : MonoBehaviour
     private bool fire_flag = true;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Change(weapon[0],0);
-        myRigidbody.simulated = false;
-        scale.x = 0.3f;
-        scale.z = 1;
-        for(int i = 0;i<weapon.Length;i++){
-            weapon[i].mag_c = weapon[i].bullet_count;
-            if(weapon[i].infinite)weapon[i].bullet_count = 10;
-        }
-        can_shoot = true;
+
+    
+    private void Change(int ind){
+        if(!GetComponentInParent<PlayerScript>().IsOwner){return;}
+        ChangeWeapon(ind);
+        GetComponentInParent<playerLogic>().ChangeWeaponClientRpc(ind);
+        Debug.Log("ServerRpc called by owner on" +GetComponentInParent<PlayerScript>().OwnerClientId);
     }
 
     // Call This method when ever you need to change the attibutes.
-    private void Change(WeaponClass wp,int ind){// There will be much more attributes then this
+    public void ChangeWeapon(int ind){// There will be much more attributes then this
+        WeaponClass wp = weapon[ind];
         now_ind = ind;
         ply.recoil = wp.recoil;
         auto = wp.automatic;
@@ -75,10 +83,43 @@ public class Weapon_Script : MonoBehaviour
         time = 0;
         shoot = false;
         audSource.clip = wp.fire_audio;
+        SpriteRenderer sec_wp =  gameObject.GetComponentsInChildren<SpriteRenderer>()[2];
+        Transform sec_wp_transform = gameObject.GetComponentsInChildren<Transform>()[2];
+        if(weapon[now_ind].duo_hold){
+            sec_wp.sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            sec_wp_transform.localPosition = weapon[now_ind].Sec_pos;
+            sec_wp.enabled = true;
+            if(weapon[now_ind].bullet_count % 2 == 1){
+                Debug.LogError("双持武器弹夹容量必须是偶数，请检查Element"+now_ind);
+                Debug.Break();
+            }
+        }
+        else{
+            sec_wp.enabled = false;
+        }
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        Debug.Log("weapon created");
+    }
+    void Start()
+    {
+        Change(0);
+        myRigidbody.simulated = false;
+        scale.x = 0.3f;
+        scale.z = 1;
+        for(int i = 0;i<weapon.Length;i++){
+            weapon[i].mag_c = weapon[i].bullet_count;
+            if(weapon[i].infinite)weapon[i].bullet_count = 10;
+        }
+        can_shoot = true;
     }
     // Update is called once per frame
     void Update()
     {
+        if(!GetComponentInParent<PlayerScript>().IsOwner){return;}
         if(ply.isAlive){
             myRigidbody.simulated = false;
             int sign;
@@ -93,20 +134,6 @@ public class Weapon_Script : MonoBehaviour
             else{
                 scale.y = 0.3f;
                 sign = 1;
-            }
-            SpriteRenderer sec_wp =  gameObject.GetComponentsInChildren<SpriteRenderer>()[2];
-            Transform sec_wp_transform = gameObject.GetComponentsInChildren<Transform>()[2];
-            if(weapon[now_ind].duo_hold){
-                sec_wp.sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-                sec_wp_transform.localPosition = weapon[now_ind].Sec_pos;
-                sec_wp.enabled = true;
-                if(weapon[now_ind].bullet_count % 2 == 1){
-                    Debug.LogError("双持武器弹夹容量必须是偶数，请检查Element"+now_ind);
-                    Debug.Break();
-                }
-            }
-            else{
-                sec_wp.enabled = false;
             }
             bool sec = weapon[now_ind].duo_hold && weapon[now_ind].mag_c % 2 == 1;
             if(!weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
@@ -211,7 +238,7 @@ public class Weapon_Script : MonoBehaviour
             flag = true;
             
             
-            if(Input.GetKeyDown(KeyCode.F)){j++;Change(weapon[j],j);}
+            if(Input.GetKeyDown(KeyCode.F)){j++;Change(j);}
             if(j>=weapon.Length - 1){j = -1;}
             transform.localScale = scale;
             if(!reload)transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);

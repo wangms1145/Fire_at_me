@@ -31,6 +31,13 @@ public class playerLogic : NetworkBehaviour
     [HideInInspector]
     public float ys = 0;
     private int i;
+    [Rpc(SendTo.ClientsAndHost)]
+    public void ChangeWeaponClientRpc(int ind){
+        //if(GetComponentInParent<PlayerScript>().IsOwner){return;}
+        Debug.Log("ClientRpc recieved 1 on" +GetComponentInParent<PlayerScript>().OwnerClientId);
+        GetComponentInChildren<Weapon_Script>().ChangeWeapon(ind);
+        Debug.Log("ClientRpc recieved 2 on" +GetComponentInParent<PlayerScript>().OwnerClientId);
+    }
     void Start(){
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
