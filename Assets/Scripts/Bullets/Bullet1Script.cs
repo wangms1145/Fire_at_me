@@ -16,39 +16,37 @@ public class Bullet1Script : MonoBehaviour
     public GameObject bullet_hole;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
+    private bool waitDes = false;
+    private double timer = 0;
+    private RaycastHit2D hit;
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
-        vel = myRigidbody.velocity;
-        
-        RaycastHit2D hit = collide_check();
-        if(hit){
-            Vector2 a = hit.point;
-
-            if(hit.collider.GetComponent<BotScript>() != null){
-                BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= myRigidbody.velocity.magnitude/1 * damage;
-            }
-            if(hit.rigidbody != null){
-                Vector2 diff = hit.point - (Vector2)transform.position;
-                hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
-            }
-            Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
-        }
+        checkHit();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(waitDes){
+            transform.position = hit.point;
+            timer += Time.deltaTime;
+            if(timer > GetComponent<TrailRenderer>().time){
+                Destroy(gameObject);
+            }
+            return;
+        }
         timed += Time.deltaTime;
         if(timed > 6){
             Destroy(gameObject);
         }
+        checkHit();
+    }
+    private void checkHit(){
         vel = myRigidbody.velocity;
         myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);
-        RaycastHit2D hit = collide_check();
+        hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
 
@@ -61,7 +59,9 @@ public class Bullet1Script : MonoBehaviour
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
+            myRigidbody.simulated = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            waitDes = true;
         }
     }
     private RaycastHit2D collide_check(){
