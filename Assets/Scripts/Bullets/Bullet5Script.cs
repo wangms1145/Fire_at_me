@@ -41,7 +41,6 @@ public class Bullet5Script : MonoBehaviour
     }
     private void OnDrawGizmos(){
         //Gizmos.DrawWireCube(transform.position + vel/myRigidbody.velocity.magnitude * (boxSize.x/2-0.1f),boxSize);
-        Gizmos.DrawRay(transform.position,vel*Time.deltaTime*5);
         Gizmos.DrawWireSphere(transform.position,radius);
     }
 }

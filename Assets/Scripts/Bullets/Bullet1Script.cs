@@ -41,11 +41,11 @@ public class Bullet1Script : MonoBehaviour
         if(timed > 6){
             Destroy(gameObject);
         }
+        myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);
         checkHit();
     }
     private void checkHit(){
         vel = myRigidbody.velocity;
-        myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);
         hit = collide_check();
         if(hit){
             Vector2 a = hit.point;

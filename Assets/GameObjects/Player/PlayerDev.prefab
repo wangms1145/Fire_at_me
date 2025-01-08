@@ -463,10 +463,10 @@ MonoBehaviour:
   varibles: {fileID: 0}
   myRigidbody: {fileID: 0}
   boxSize: {x: 0.1, y: 0.03}
-  castDistance: 0.51
+  castDistance: 0.517
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   inGame_material: {fileID: 6200000, guid: 6837d44b3ab589f4bbcf0699b1fe7296, type: 2}
   died_material: {fileID: 6200000, guid: 047ed6a65c9836f4c8488d80cfd68cf9, type: 2}
   max_eff_spd: 30
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
   - spr: {fileID: 21300000, guid: e7b59444130340c49ba17278daa9e65b, type: 3}
-    recoil: 7
+    recoil: 5
     bulletSpd: 10
     type: 5
     firePos: {x: 1.913, y: 0.251}

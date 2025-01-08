@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3267211818841247296}
   - component: {fileID: 124955891862376741}
   - component: {fileID: 7591527977112128514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exp_time: 3.85
   aud_off: 1.17
+  damage: 0
   source: {fileID: 7591527977112128514}
   explode_aud: {fileID: 8300000, guid: 9c7dfd7a244d24b4985eeea919a20e34, type: 3}
   explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}

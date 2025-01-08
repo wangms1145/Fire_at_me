@@ -57,6 +57,11 @@ public class explode_script : MonoBehaviour
     }
     void OnDrawGizmos(){
         Gizmos.DrawWireSphere(transform.position, radius);
+        /*
+        for(float i = 0;i < Math.PI*2;i+=(float)Math.PI/60){
+            Gizmos.DrawRay(transform.position,angToSpd(1,i)*radius);
+        }
+        */
     }
     private RaycastHit2D explodeCheck(float ang){
         return Physics2D.Raycast(transform.position,angToSpd(1,ang),radius,groundLayer);

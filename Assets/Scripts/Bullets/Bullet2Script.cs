@@ -14,23 +14,38 @@ public class Bullet2Script : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject bullet_hole;
     private Rigidbody2D myRigidbody;
+    private bool waitDes = false;
+    private double timer = 0;
+    private RaycastHit2D hit;
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        checkHit();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(waitDes){
+            transform.position = hit.point;
+            timer += Time.deltaTime;
+            if(timer > GetComponent<TrailRenderer>().time){
+                Destroy(gameObject);
+            }
+            return;
+        }
         timed += Time.deltaTime;
         if(timed > 6){
             Destroy(gameObject);
         }
-        vel = myRigidbody.velocity;
         myRigidbody.velocity = vel * (1-Time.deltaTime * 0.7f);
-        RaycastHit2D hit = collide_check();
+        checkHit();
+    }
+    private void checkHit(){
+        vel = myRigidbody.velocity;
+        
+        hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
             if(hit.collider.GetComponent<BotScript>() != null){
@@ -42,7 +57,9 @@ public class Bullet2Script : MonoBehaviour
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 400, spdToAng(diff));
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            Destroy(gameObject);
+            myRigidbody.simulated = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            waitDes = true;
         }
     }
     private RaycastHit2D collide_check(){
