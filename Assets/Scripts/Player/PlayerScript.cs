@@ -47,6 +47,8 @@ public class PlayerScript : NetworkBehaviour
     private playerLogic player_logic;
     private playerCamera player_camera;
     private playerRotation rotate;
+
+    [SerializeField] private GameObject thisArmsRoulette;
     
     
     // Start is called before the first frame update
@@ -81,6 +83,11 @@ public class PlayerScript : NetworkBehaviour
             player_logic.logic();
             //sound
             sound.sound();
+
+            if(Input.GetMouseButton(1))
+            {
+                thisArmsRoulette.SetActive(true);
+            }
         }
         else{
             //died

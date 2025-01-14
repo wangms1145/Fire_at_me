@@ -42,5 +42,7 @@ public class playerMove : NetworkBehaviour
         if(Input.GetKey(KeyCode.LeftShift) && player_logic.isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
         myRigidbody.velocity += Vector2.left * (float)(tspd+varibles.spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
     }
+
+
     
 }
