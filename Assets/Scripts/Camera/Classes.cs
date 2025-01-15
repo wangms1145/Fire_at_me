@@ -39,7 +39,8 @@ public class WeaponClass
     [Tooltip("无限子弹")]
     public bool infinite = false;
     [Tooltip("弹夹容量")]
-    [ShowIf("infinite",false,true)][SerializeField] public int bullet_count;
+    [ShowIf("infinite",false,true)]public int bullet_count;
+
     [Tooltip("全自动？")]
     public bool automatic;
     [Tooltip("拉栓时间")]

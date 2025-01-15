@@ -1393,6 +1393,36 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+  - spr: {fileID: 21300000, guid: ee602d009e91a4463a2a1979d3e62d15, type: 3}
+    recoil: 0
+    bulletSpd: 10
+    type: 8
+    firePos: {x: 2.5, y: 0}
+    fireEff: {fileID: 0}
+    damage: 9999
+    damageType: 0
+    firing_time: 0.1
+    reloading_time: 1.1
+    infinite: 1
+    bullet_count: 4
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 2
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 1
+    time: 5
+    hold_to_fire: 1
+    auto_release: 1
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
   mySprite: {fileID: 6376191802700342874}
   recoil_ani: 0
   bullet: {fileID: 4708711018766681592}
@@ -11627,6 +11657,7 @@ MonoBehaviour:
   - {fileID: 5203371177037641957, guid: e44fe218d56c5b74db85af0f09e96672, type: 3}
   - {fileID: 5431028120728231433, guid: a2197356efe99ae49af25164b5a71143, type: 3}
   - {fileID: 7089568371247552439, guid: 528e518c6996343ef97ae750c89792e7, type: 3}
+  - {fileID: 3661799797300261522, guid: 6f457dde214424428b4272f3d2bb4dfe, type: 3}
 --- !u!212 &6316822139269174104
 SpriteRenderer:
   m_ObjectHideFlags: 0
