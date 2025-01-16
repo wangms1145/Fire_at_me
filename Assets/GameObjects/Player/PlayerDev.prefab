@@ -973,7 +973,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ply: {fileID: 5736963517767273633}
   weapon:
-  - spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
     recoil: 2.3
     bulletSpd: 70
     type: 0
@@ -1003,7 +1004,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: 62c4f4c0150f4134ba7a890d6f1690ed, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 62c4f4c0150f4134ba7a890d6f1690ed, type: 3}
     recoil: 15
     bulletSpd: 40
     type: 1
@@ -1033,7 +1035,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: f351803335fb7b849a6d8c254084644e, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: f351803335fb7b849a6d8c254084644e, type: 3}
     recoil: 7
     bulletSpd: 57
     type: 0
@@ -1063,7 +1066,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 1
     Sec_pos: {x: 0.759, y: -0.29}
-  - spr: {fileID: 21300000, guid: 536b887f5ac313342b2e7fad01540690, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 536b887f5ac313342b2e7fad01540690, type: 3}
     recoil: 7
     bulletSpd: 10
     type: 4
@@ -1093,7 +1097,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: cf8b28f3e75a14549877802c00a7d233, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: cf8b28f3e75a14549877802c00a7d233, type: 3}
     recoil: 1.8
     bulletSpd: 100
     type: 0
@@ -1123,7 +1128,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: 44ff2fddc221a264982275849e2003b6, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 44ff2fddc221a264982275849e2003b6, type: 3}
     recoil: 1.7
     bulletSpd: 80
     type: 0
@@ -1153,7 +1159,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 1, y: 1}
-  - spr: {fileID: 21300000, guid: e9567ce4c2a474c4d823aa3a44e3eaba, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: e9567ce4c2a474c4d823aa3a44e3eaba, type: 3}
     recoil: 5
     bulletSpd: 10
     type: 6
@@ -1183,7 +1190,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: 8ee490e691117064fb6f56176ef62348, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 8ee490e691117064fb6f56176ef62348, type: 3}
     recoil: 3
     bulletSpd: 100
     type: 0
@@ -1213,7 +1221,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
     recoil: 1
     bulletSpd: 70
     type: 0
@@ -1243,7 +1252,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: ec7e6759d0cd1c548bfcf9e6d2ea9b68, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: ec7e6759d0cd1c548bfcf9e6d2ea9b68, type: 3}
     recoil: 1.2
     bulletSpd: 130
     type: 7
@@ -1273,7 +1283,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: e7b59444130340c49ba17278daa9e65b, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: e7b59444130340c49ba17278daa9e65b, type: 3}
     recoil: 5
     bulletSpd: 10
     type: 5
@@ -1303,7 +1314,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: 7aa0588525e9d49418719850cbebbeb9, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 7aa0588525e9d49418719850cbebbeb9, type: 3}
     recoil: 0
     bulletSpd: 0
     type: 0
@@ -1333,7 +1345,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: 76d8cceef4930e5428b6dba2ac401114, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: 76d8cceef4930e5428b6dba2ac401114, type: 3}
     recoil: 20
     bulletSpd: 10
     type: 3
@@ -1363,7 +1376,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: a5e2de517c769dc448569c1b25572018, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: a5e2de517c769dc448569c1b25572018, type: 3}
     recoil: 7
     bulletSpd: 15
     type: 2
@@ -1393,7 +1407,8 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
-  - spr: {fileID: 21300000, guid: ee602d009e91a4463a2a1979d3e62d15, type: 3}
+  - f: 0
+    spr: {fileID: 21300000, guid: ee602d009e91a4463a2a1979d3e62d15, type: 3}
     recoil: 0
     bulletSpd: 10
     type: 8
@@ -1405,7 +1420,7 @@ MonoBehaviour:
     reloading_time: 1.1
     infinite: 1
     bullet_count: 4
-    automatic: 1
+    automatic: 0
     arm_time: 0.23
     mag_c: 0
     reload_type: 2

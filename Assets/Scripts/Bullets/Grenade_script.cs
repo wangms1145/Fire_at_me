@@ -7,6 +7,7 @@ public class Grenade_script : MonoBehaviour
     public float exp_time;
     public float aud_off;
     public float damage;
+    public float hold_time;
     public AudioSource source;
     public AudioClip explode_aud;
     public GameObject explode;
@@ -24,12 +25,12 @@ public class Grenade_script : MonoBehaviour
     {
         //myRigidbody.MoveRotation(0);
         timed += Time.deltaTime;
-        if (timed > exp_time)
+        if (timed+hold_time > exp_time)
         {
             Instantiate(explode, transform.position, transform.rotation).GetComponent<explode_script>().damage = damage;
             Destroy(gameObject);
         }
-        if (timed > exp_time - aud_off && aud_flag)
+        if (timed+hold_time > exp_time - aud_off && aud_flag)
         {
             aud_flag = false;
             source.PlayOneShot(explode_aud);

@@ -368,8 +368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp_time: 5
-  aud_off: 2.32
+  aud_off: 1.17
   damage: 0
+  hold_time: 0
   source: {fileID: 2257152989372050635}
   explode_aud: {fileID: 8300000, guid: 9c7dfd7a244d24b4985eeea919a20e34, type: 3}
   explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 using UnityEditor;
 using UnityEditor.EditorTools;
 using System.Runtime.CompilerServices;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 
 public class Classes : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class Classes : MonoBehaviour
 [System.Serializable]
 public class WeaponClass
 {
+    [HideInInspector]
+    public bool f = false;
+    
     [Tooltip("贴图")]
     public Sprite spr;
     [Tooltip("后坐力")]
@@ -36,11 +41,12 @@ public class WeaponClass
     public float firing_time;
     [Tooltip("换弹时间 (弹夹式：总时间)(泵动式：装一颗子弹的时间)")]
     public float reloading_time;
+    
     [Tooltip("无限子弹")]
     public bool infinite = false;
     [Tooltip("弹夹容量")]
-    [ShowIf("infinite",false,true)]public int bullet_count;
-
+    [ShowIf("infinite",false,true)] public int bullet_count;
+    [ShowIf("f",false)]
     [Tooltip("全自动？")]
     public bool automatic;
     [Tooltip("拉栓时间")]
@@ -73,13 +79,15 @@ public class WeaponClass
     [ShowIf("hold_to_fire", true)][SerializeField] public float start_damage = 0;
     [Tooltip("蓄力起始后坐力")]
     [ShowIf("hold_to_fire", true)][SerializeField] public float strat_recoil = 0;
+    
     [HideInInspector]
     public float hold_time;
-
-    [Tooltip("双持武器")]
+    
+    [Tooltip("双持武器")][ShowIf("f",false)]
     public bool duo_hold = false;
     [Tooltip("第二武器位置")]
     [ShowIf("duo_hold", true)][SerializeField] public Vector2 Sec_pos = Vector2.zero;
+    
     
         
 }

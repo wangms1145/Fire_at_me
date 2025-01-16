@@ -61,6 +61,12 @@ public class Bullet_gene_scr : MonoBehaviour
                 Debug.Log(damage);
                 def_spawn(wp, ang, bullet, ply_vel).GetComponent<Bullet6Script>().damage = damage;
                 break;
+            case 8:
+                Debug.Log(wp.hold_time);
+                GameObject spawed = def_spawn(wp,ang,bullet,ply_vel);
+                spawed.GetComponent<Grenade_script>().damage = wp.damage;
+                spawed.GetComponent<Grenade_script>().hold_time = wp.hold_time;
+                break;
             default:
                 def_spawn(wp,ang,bullet,ply_vel);
                 break;
