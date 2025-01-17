@@ -20,7 +20,7 @@ public class BagManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
 
-        if(other.transform.tag != "DropedWeapon")
+        if(other.transform.tag != "DroppedWeapon")
             return;
 
         // if ( weaponInBag.Count < 5)

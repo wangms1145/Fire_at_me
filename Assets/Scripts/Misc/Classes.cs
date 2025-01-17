@@ -91,6 +91,26 @@ public class WeaponClass
     
         
 }
+[System.Serializable]
+public class DroppedWeapon
+{
+    [HideInInspector]
+    public bool f = false;
+    [Tooltip("武器id")]
+    public int id;
+    [Tooltip("武器弹夹子弹数量")]
+    public int mag_now;
+    [Tooltip("贴图")]
+    public Sprite spr;
+    [Tooltip("双持武器")][ShowIf("f",false)]
+    public bool duo_hold = false;
+    [Tooltip("第二武器位置")]
+    [ShowIf("duo_hold", true)][SerializeField] public Vector2 Sec_pos = Vector2.zero;
+    [ShowIf("f",false)]
+    [Tooltip("类型")]
+    public int type;
+
+}
 /* Title : Attribute for show a field if other field is true or false.
  * Author : Anth
 */

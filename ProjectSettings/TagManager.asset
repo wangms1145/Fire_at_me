@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Aim
   - Weapon
+  - DroppedWeapon
   layers:
   - Default
   - TransparentFX
