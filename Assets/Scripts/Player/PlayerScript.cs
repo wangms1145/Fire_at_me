@@ -48,7 +48,7 @@ public class PlayerScript : NetworkBehaviour
     private playerCamera player_camera;
     private playerRotation rotate;
 
-    [SerializeField] private GameObject thisArmsRoulette;
+    [SerializeField] private GameObject thisWeaponWheel;
     
     
     // Start is called before the first frame update
@@ -84,9 +84,9 @@ public class PlayerScript : NetworkBehaviour
             //sound
             sound.sound();
 
-            if(Input.GetMouseButton(1))
+            if(Input.GetMouseButtonDown(1))
             {
-                thisArmsRoulette.SetActive(true);
+                thisWeaponWheel.SetActive(true);
             }
         }
         else{

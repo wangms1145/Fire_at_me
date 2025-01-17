@@ -63,7 +63,7 @@ public class Weapon_Script : NetworkBehaviour
     // Start is called before the first frame update
 
     
-    private void Change(int ind){
+    public void Change(int ind){
         if(!GetComponentInParent<PlayerScript>().IsOwner){return;}
         ChangeWeapon(ind);
         GetComponentInParent<playerLogic>().ChangeWeaponClientRpc(ind);
@@ -122,6 +122,7 @@ public class Weapon_Script : NetworkBehaviour
         if(!GetComponentInParent<PlayerScript>().IsOwner){return;}
         if(ply.isAlive){
             myRigidbody.simulated = false;
+
             int sign;
             ang = Mathf.Atan2(ply.disY,ply.disX);
             float dis_m = (float)Math.Sqrt(Math.Pow(ply.disX,2) + Math.Pow(ply.disY,2));
@@ -135,7 +136,13 @@ public class Weapon_Script : NetworkBehaviour
                 scale.y = 0.3f;
                 sign = 1;
             }
+
+
+
             bool sec = weapon[now_ind].duo_hold && weapon[now_ind].mag_c % 2 == 1;
+
+
+            //蓄力
             if(!weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
                 bool fire = auto ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
                 if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
@@ -185,7 +192,13 @@ public class Weapon_Script : NetworkBehaviour
                 if(!auto && fire_up)fire_flag = true;
                 //weapon[now_ind].hold_time = fire_timer;
             }
+
+
+
+
             ang_rec += (0-ang_rec)*weapon[now_ind].rec_acc;
+
+
             if(weapon[now_ind].mag_c <= 0 && !reload){
                 can_shoot=false;
                 SetReload();
@@ -240,10 +253,13 @@ public class Weapon_Script : NetworkBehaviour
             
             if(Input.GetKeyDown(KeyCode.F)){j++;Change(j);}
             if(j>=weapon.Length - 1){j = -1;}
+
             transform.localScale = scale;
+
             if(!reload)transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
             else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);
             else transform.rotation = quaternion.RotateZ(1*weapon[now_ind].mag_c);
+
             shoot = false;
         }
         else{

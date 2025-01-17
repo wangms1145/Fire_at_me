@@ -50,6 +50,7 @@ Transform:
   - {fileID: 6383546984022931337}
   - {fileID: 2373794902718222902}
   - {fileID: 5693569808652900115}
+  - {fileID: 4387333510734565019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6548578944932981465
@@ -216,7 +217,7 @@ MonoBehaviour:
   spdx: 0
   spdy: 0
   angSpd: 0
-  thisArmsRoulette: {fileID: 5073718349714210230}
+  thisWeaponWheel: {fileID: 5073718349714210230}
 --- !u!82 &8843207243350810041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -884,7 +885,7 @@ GameObject:
   - component: {fileID: 1088906752028039509}
   m_Layer: 0
   m_Name: WeaponDev
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1616,7 +1617,7 @@ GameObject:
   - component: {fileID: 6030675247343581754}
   - component: {fileID: 334468277644857476}
   m_Layer: 5
-  m_Name: CanvasArms Roulette
+  m_Name: WeaponWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1743,6 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePositionPointer: {fileID: 9147972081255058354}
   angleAdjustment: -90
+  currentWeaponIndex: 0
 --- !u!1 &5690627680913903795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1904,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6688579602074141053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4387333510734565019}
+  - component: {fileID: 7921965923016388278}
+  m_Layer: 0
+  m_Name: BackPack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4387333510734565019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688579602074141053}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 930.2745, y: 458.41568, z: -9.210133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5774720453054218421}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7921965923016388278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688579602074141053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4daceacc03d2d41a1c63466d4a74af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_Script: {fileID: 0}
+  weaponWheel: {fileID: 0}
+  weaponInBag: 
+  const_MaxWeponNum: 5
 --- !u!1 &7516319215434169793
 GameObject:
   m_ObjectHideFlags: 0
