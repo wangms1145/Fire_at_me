@@ -2312,18 +2312,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7784264510776006634, guid: 591d13b01869623488e027616e088177, type: 3}
-      propertyPath: weapon.id
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7784264510776006634, guid: 591d13b01869623488e027616e088177, type: 3}
-      propertyPath: weapon.spr
-      value: 
-      objectReference: {fileID: 21300000, guid: e9567ce4c2a474c4d823aa3a44e3eaba, type: 3}
-    - target: {fileID: 7784264510776006634, guid: 591d13b01869623488e027616e088177, type: 3}
-      propertyPath: weapon.mag_now
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7933228520522663058, guid: 591d13b01869623488e027616e088177, type: 3}
       propertyPath: m_Name
       value: DroppedWeapon
