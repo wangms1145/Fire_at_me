@@ -13,12 +13,16 @@ public class WeaponWheel : NetworkBehaviour
     [SerializeField] private GameObject[] menus = new GameObject[5];
     private bool[] menuflag = new bool[5];
     [SerializeField] private float angleAdjustment;
-    public int currentWeaponIndex;
+    public int currentWeaponIndex = 1,id;
     public float scaleFactor;
     private Vector2 mousePositionRelativeToCenter;
     private float angle;
     private const float kAngOff = 90;
     private const float kAng = 72;//both in degrees
+
+
+
+
     void Start()
     {
         menus = GameObject.FindGameObjectsWithTag("UImenu");
@@ -27,15 +31,21 @@ public class WeaponWheel : NetworkBehaviour
         canvasRectTransform = GetComponent<RectTransform>(); 
         playerPosition = GetComponentInParent<Transform>();
        
-        
     }
+
+
+
+
     void OnEnable(){
         for(int i = 0 ; i < 5 ; i++){
             menus[i].GetComponent<Animator>().SetTrigger("Reset");
             menuflag[i] = false;
         }
+        GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponWheel = GetComponent<WeaponWheel>();
     }
-    // Update is called once per frame
+
+
+
     void Update()
     {   
         //Debug.Log("1");
@@ -60,6 +70,7 @@ public class WeaponWheel : NetworkBehaviour
             ac = menuActivateInd(angle);
             if(ac == i){
                 if(!menuflag[i-1])menus[i-1].GetComponent<Animator>().SetTrigger("OnSelect");
+                id = ac;
             }
             else{
                 if(menuflag[i-1])menus[i-1].GetComponent<Animator>().SetTrigger("OnUnSelect");
@@ -67,9 +78,21 @@ public class WeaponWheel : NetworkBehaviour
             menuflag[i-1] = ac==i;
         }
     }
+    private void OnDisable() {
+        currentWeaponIndex = id-1;
+    }
+
+
+
+
+
     private double vecToAng(Vector2 pos){
         return Mathf.Atan2(pos.y,pos.x);
     }
+
+
+
+
     private int menuActivateInd(float ang){
         ang-=kAngOff;
         ang+=kAng/2;
@@ -79,8 +102,7 @@ public class WeaponWheel : NetworkBehaviour
         if(ang < 0){
             ang += 360;
         }
-        Debug.Log(ang);
-        ;
+        
         return (int)(ang/kAng)+1;
     }
 }

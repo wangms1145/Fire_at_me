@@ -8,6 +8,7 @@ public class PlayerReachManager : MonoBehaviour
     public double WeaponReachDistance;
     [HideInInspector]
     public GameObject[] ReachableWeapons;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class PlayerReachManager : MonoBehaviour
     void Update()
     {
         ReachableWeapons = WeaponInDis(GameObject.FindGameObjectsWithTag("DroppedWeapon"));
-        Debug.Log("" + ReachableWeapons.Length);
+        //Debug.Log("" + ReachableWeapons.Length);
     }
     private bool WpDisCheck(GameObject wp){
         Vector2 dif = wp.transform.position-transform.position;

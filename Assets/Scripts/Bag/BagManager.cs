@@ -1,55 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BagManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Weapon_Script weapon_Script;
-    [SerializeField] private WeaponWheel weaponWheel;
+    [SerializeField] public WeaponWheel weaponWheel;
     [SerializeField] private List<int> weaponInBag = new List<int>();
-    [SerializeField] private int const_MaxWeponNum = 5;
+    private const int kMaxWeponNum = 5;
+    [SerializeField] private GameObject droppedWeaponPrefab;
+    [SerializeField] private PlayerScript ply;
+
+    
+    public PlayerReachManager playerReachManager;
 
 
     void Start()
     {
         weapon_Script = GameObject.FindObjectOfType<Weapon_Script>();
         weaponWheel = GameObject.FindObjectOfType<WeaponWheel>();
+        playerReachManager = transform.GetComponentInParent<PlayerReachManager>();
     }
 
-
-    private void OnCollisionEnter2D(Collision2D other) {
-
-        if(other.transform.tag != "DroppedWeapon")
-            return;
-
-        // if ( weaponInBag.Count < 5)
-        //     weaponInBag.Add(other.gameObject.GetComponent<>.GetWeapponID();)//complete this
-    }
-
-    //if the player stays on the weapon and click f, change the weapon
-    private void OnCollisionStay(Collision other) {
-        if(other.transform.tag != "DropedWepon")
-            return;
-
-        if(Input.GetKeyDown("z"))
+    void Update()
+    {
+        if( Input.GetKeyDown(KeyCode.E) && playerReachManager.ReachableWeapons.Length > 0)//pick the wheapon
         {
-            //weaponInBag[weaponWheel.currentWeaponIndex] = other.gameObject.GetComponent<>.GetWeapponID();//complete this
-            weapon_Script.Change(weaponWheel.currentWeaponIndex);
+            GameObject temp = playerReachManager.ReachableWeapons[0];
+            if( weaponInBag.Count < kMaxWeponNum )
+            {
+                weaponInBag.Add(getId(temp));
+                //Destroy(playerReachManager.ReachableWeapons[0]);
+            }
+            else
+            {
+                GameObject throwedWeapon = Instantiate(droppedWeaponPrefab, transform.position + new Vector3(ply.disX,ply.disY,0).normalized * 1.5f, Quaternion.identity);
+                throwedWeapon.GetComponent<Rigidbody2D>().velocity = new Vector2(ply.disX,ply.disY).normalized * 10;
+                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = weaponWheel.currentWeaponIndex;
+                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[weaponWheel.currentWeaponIndex].spr;
+                weaponInBag[weaponWheel.currentWeaponIndex] = getId(temp);
+                
+            }
+            Destroy(temp);
+
         }
-        
     }
 
 
 
+
+    // private void OnCollisionEnter2D(Collision2D other) {
+
+    //     if(other.transform.tag != "DroppedWeapon")
+    //         return;
+
+    //     // if ( weaponInBag.Count < 5)
+    //     //     weaponInBag.Add(other.gameObject.GetComponent<>.GetWeapponID();)//complete this
+    // }
+
+    // //if the player stays on the weapon and click f, change the weapon
+    // private void OnCollisionStay(Collision other) {
+    //     if(other.transform.tag != "DroppedWepon")
+    //         return;
+
+    //     if(Input.GetKeyDown("z"))
+    //     {
+    //         //weaponInBag[weaponWheel.currentWeaponIndex] = other.gameObject.GetComponent<>.GetWeapponID();//complete this
+    //         weapon_Script.Change(weaponWheel.currentWeaponIndex);
+    //     }
+        
+    // }
+
+    private int getId(GameObject a){
+        return a.GetComponent<DroppedWeaponScript>().weapon.id;
+    }
     //call this in weapon script
     public void DropTheWeaponAfterBulletUsedUp()
     {
         weaponInBag.Remove(weaponWheel.currentWeaponIndex);
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

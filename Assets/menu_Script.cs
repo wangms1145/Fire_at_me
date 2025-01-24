@@ -6,6 +6,7 @@ public class menu_Script : MonoBehaviour
 {
     public float pos;
     public float ang;
+    public float imgDis;
     
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,6 @@ public class menu_Script : MonoBehaviour
     void Update()
     {        
         transform.localPosition = Vector2.right * Mathf.Cos(ang*Mathf.Deg2Rad) * pos + Vector2.up * Mathf.Sin(ang*Mathf.Deg2Rad) * pos;
+        transform.GetChild(1).localPosition = Vector2.right * Mathf.Cos(ang*Mathf.Deg2Rad) * (imgDis+pos) + Vector2.up * Mathf.Sin(ang*Mathf.Deg2Rad) * (imgDis+pos);
     }
 }
