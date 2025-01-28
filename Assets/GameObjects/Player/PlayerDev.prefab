@@ -2496,6 +2496,7 @@ MonoBehaviour:
   recoil_ani: 0
   bullet: {fileID: 4708711018766681592}
   audSource: {fileID: 1088906752028039509}
+  jsName: WeaponData.json
   myRigidbody: {fileID: 2313817667901989447}
 --- !u!50 &2313817667901989447
 Rigidbody2D:
@@ -3226,6 +3227,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   angleAdjustment: -90
+  weapon_Script: {fileID: 1485709207727238658}
+  Empty: {fileID: 21300000, guid: c24fb9fa40c7e614aa70accdcae9414d, type: 3}
   currentWeaponIndex: 0
   id: 0
   scaleFactor: 1.2

@@ -8,10 +8,11 @@ public class BagManager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Weapon_Script weapon_Script;
     [SerializeField] public WeaponWheel weaponWheel;
-    [SerializeField] private List<int> weaponInBag = new List<int>();
+    [SerializeField] public List<int> weaponInBag = new List<int>();
     private const int kMaxWeponNum = 5;
     [SerializeField] private GameObject droppedWeaponPrefab;
     [SerializeField] private PlayerScript ply;
+    private int currId = -1;
 
     
     public PlayerReachManager playerReachManager;
@@ -44,10 +45,12 @@ public class BagManager : MonoBehaviour
                 throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = id;
                 throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[id].spr;
                 weaponInBag[weaponWheel.currentWeaponIndex] = getId(temp);
-                
             }
             Destroy(temp);
-
+        }
+        if(weaponWheel.currentWeaponIndex < weaponInBag.Count && weaponInBag[weaponWheel.currentWeaponIndex] != currId){
+            currId = weaponInBag[weaponWheel.currentWeaponIndex];
+            weapon_Script.Change(currId);
         }
     }
 

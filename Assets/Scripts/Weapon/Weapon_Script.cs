@@ -43,6 +43,8 @@ public class Weapon_Script : NetworkBehaviour
     public Bullet_gene_scr bullet;
     [Tooltip("音效播放器")]
     public AudioSource audSource;
+    [Tooltip("JSON文件名")]
+    [SerializeField] private String jsName;
     private float ang,ang_rec;
     private bool flag;
     private Vector3 scale;

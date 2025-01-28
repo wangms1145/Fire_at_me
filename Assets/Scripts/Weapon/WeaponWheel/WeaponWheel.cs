@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 using Unity.VisualScripting;
 using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.UI;
 
 
 public class WeaponWheel : NetworkBehaviour 
@@ -13,6 +14,8 @@ public class WeaponWheel : NetworkBehaviour
     [SerializeField] private GameObject[] menus = new GameObject[5];
     private bool[] menuflag = new bool[5];
     [SerializeField] private float angleAdjustment;
+    [SerializeField] private Weapon_Script weapon_Script;
+    [SerializeField] private Sprite Empty;
     public int currentWeaponIndex = 1,id=1;
     public float scaleFactor;
     private Vector2 mousePositionRelativeToCenter;
@@ -20,6 +23,7 @@ public class WeaponWheel : NetworkBehaviour
     private const float kAngOff = 90;
     private const float kAng = 72;//both in degrees
     private bool flag = false;
+    private int[] wps;
 
 
 
@@ -40,9 +44,17 @@ public class WeaponWheel : NetworkBehaviour
 
 
     void OnEnable(){
+        wps = GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponInBag.ToArray();
         for(int i = 0 ; i < 5 ; i++){
             menus[i].GetComponent<Animator>().SetTrigger("Reset");
             menuflag[i] = false;
+            if(i < wps.Length){
+                menus[i].transform.GetChild(1).GetComponent<Image>().sprite = weapon_Script.weapon[wps[i]].spr;
+                menus[i].transform.GetChild(1).GetComponent<Image>().SetNativeSize();
+            }
+            else{
+                menus[i].transform.GetChild(1).GetComponent<Image>().sprite = Empty;
+            }
         }
     }
 
