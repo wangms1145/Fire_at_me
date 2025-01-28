@@ -13,12 +13,13 @@ public class WeaponWheel : NetworkBehaviour
     [SerializeField] private GameObject[] menus = new GameObject[5];
     private bool[] menuflag = new bool[5];
     [SerializeField] private float angleAdjustment;
-    public int currentWeaponIndex = 1,id;
+    public int currentWeaponIndex = 1,id=1;
     public float scaleFactor;
     private Vector2 mousePositionRelativeToCenter;
     private float angle;
     private const float kAngOff = 90;
     private const float kAng = 72;//both in degrees
+    private bool flag = false;
 
 
 
@@ -26,13 +27,15 @@ public class WeaponWheel : NetworkBehaviour
     void Start()
     {
         menus = GameObject.FindGameObjectsWithTag("UImenu");
-        this.gameObject.SetActive(false);
         Debug.Log("false");
         canvasRectTransform = GetComponent<RectTransform>(); 
         playerPosition = GetComponentInParent<Transform>();
-       
-    }
+        GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponWheel = this;
+        flag = true;
 
+
+        //gameObject.SetActive(false);
+    }
 
 
 
@@ -41,7 +44,6 @@ public class WeaponWheel : NetworkBehaviour
             menus[i].GetComponent<Animator>().SetTrigger("Reset");
             menuflag[i] = false;
         }
-        GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponWheel = GetComponent<WeaponWheel>();
     }
 
 
@@ -78,8 +80,15 @@ public class WeaponWheel : NetworkBehaviour
             menuflag[i-1] = ac==i;
         }
     }
-    private void OnDisable() {
-        currentWeaponIndex = id-1;
+    private void LateUpdate() {
+        if(flag){
+            gameObject.SetActive(false);
+            flag = false;
+        }
+    }
+    void OnDisable() {
+        currentWeaponIndex = id-1 < 0 ? 0 : id-1;
+        GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponWheel = this;
     }
 
 

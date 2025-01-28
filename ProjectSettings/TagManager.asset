@@ -9,6 +9,7 @@ TagManager:
   - DroppedWeapon
   - UImenu
   - BAG
+  - WeaponWheel
   layers:
   - Default
   - TransparentFX

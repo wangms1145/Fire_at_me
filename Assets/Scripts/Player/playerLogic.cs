@@ -31,17 +31,20 @@ public class playerLogic : NetworkBehaviour
     [HideInInspector]
     public float ys = 0;
     private int i;
+
+    [SerializeField] private GameObject thisWeaponWheel;
+
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
         //if(GetComponentInParent<PlayerScript>().IsOwner){return;}
-        Debug.Log("ClientRpc recieved 1 on" +GetComponentInParent<PlayerScript>().OwnerClientId);
         GetComponentInChildren<Weapon_Script>().ChangeWeapon(ind);
-        Debug.Log("ClientRpc recieved 2 on" +GetComponentInParent<PlayerScript>().OwnerClientId);
+
     }
     void Start(){
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.sharedMaterial = inGame_material;
+        thisWeaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel");
     }
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
@@ -52,6 +55,8 @@ public class playerLogic : NetworkBehaviour
         }
     }
     public void logic(){
+
+        
         myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
@@ -77,6 +82,12 @@ public class playerLogic : NetworkBehaviour
             GetComponent<playerSound>().fallsound();//摔落音效
         }
         groundFlag = isGrounded();
+
+            if(Input.GetMouseButtonDown(1))
+            {
+                thisWeaponWheel.SetActive(true);
+            }
+
     }
     public void onDeath(){
         if(transform.position.y < varibles.diedYpos-30){
@@ -93,5 +104,7 @@ public class playerLogic : NetworkBehaviour
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
     }
+
     
+
 }

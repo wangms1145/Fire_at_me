@@ -41,6 +41,9 @@ public class PlayerScript : NetworkBehaviour
     [HideInInspector]
     public float angSpd;
 
+    [HideInInspector] public int plycurrenthealth ;
+    public const int kMaxHealth = 1000;
+
     private playerMove move;
     private playerSound sound;
     private playerRecoil player_recoil;
@@ -48,7 +51,7 @@ public class PlayerScript : NetworkBehaviour
     private playerCamera player_camera;
     private playerRotation rotate;
 
-    [SerializeField] private GameObject thisWeaponWheel;
+
     
     
     // Start is called before the first frame update
@@ -71,6 +74,8 @@ public class PlayerScript : NetworkBehaviour
     void Update()
     {
         if (isAlive) {
+
+            
             //jump
             move.move();
             //Camera
@@ -84,10 +89,7 @@ public class PlayerScript : NetworkBehaviour
             //sound
             sound.sound();
 
-            if(Input.GetMouseButtonDown(1))
-            {
-                thisWeaponWheel.SetActive(true);
-            }
+
         }
         else{
             //died

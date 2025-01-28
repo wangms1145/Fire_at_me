@@ -860,11 +860,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e5513d54-b02c-4d17-b57a-0693f886a978
+  cloudProjectId: 63c000ab-10b8-4325-9574-c2910f4de08f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project
-  organizationId: wangms1145
+  projectName: "\u5411\u6211\u5F00\u70AE"
+  organizationId: alx_z
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

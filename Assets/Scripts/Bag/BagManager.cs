@@ -26,6 +26,7 @@ public class BagManager : MonoBehaviour
 
     void Update()
     {
+        //weaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel").GetComponent<WeaponWheel>();
         if( Input.GetKeyDown(KeyCode.E) && playerReachManager.ReachableWeapons.Length > 0)//pick the wheapon
         {
             GameObject temp = playerReachManager.ReachableWeapons[0];
@@ -36,10 +37,12 @@ public class BagManager : MonoBehaviour
             }
             else
             {
+                Debug.Log(weaponWheel.currentWeaponIndex);
                 GameObject throwedWeapon = Instantiate(droppedWeaponPrefab, transform.position + new Vector3(ply.disX,ply.disY,0).normalized * 1.5f, Quaternion.identity);
                 throwedWeapon.GetComponent<Rigidbody2D>().velocity = new Vector2(ply.disX,ply.disY).normalized * 10;
-                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = weaponWheel.currentWeaponIndex;
-                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[weaponWheel.currentWeaponIndex].spr;
+                int id = weaponInBag[weaponWheel.currentWeaponIndex];
+                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = id;
+                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[id].spr;
                 weaponInBag[weaponWheel.currentWeaponIndex] = getId(temp);
                 
             }
