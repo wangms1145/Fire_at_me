@@ -60,6 +60,8 @@ How to play?
   
   <img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260"><img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="260">
   
+* ## Discussion Board(Chart)
+  `https://docs.google.com/spreadsheets/d/1mUdpVYhd80aO2JBmmXu_dqk1tBpLQ8nSn7lLdhjr6fc/edit?usp=sharing`
 
 ## Collaborator:
 [<img alt="wangms1145" src="https://avatars.githubusercontent.com/u/122420690?v=4" width="80">](https://github.com/wangms1145)
