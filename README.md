@@ -64,7 +64,8 @@ How to play?
   `https://docs.google.com/spreadsheets/d/1mUdpVYhd80aO2JBmmXu_dqk1tBpLQ8nSn7lLdhjr6fc/edit?usp=sharing`
 
 ## Collaborator:
-[<img alt="wangms1145" src="https://avatars.githubusercontent.com/u/122420690?v=4" width="80">](https://github.com/wangms1145)
-[<img alt="A1x-Z" src="https://avatars.githubusercontent.com/u/166950853?v=4" width="80">](https://github.com/A1x-Z)
-[<img alt="COOKIES114" src="https://avatars.githubusercontent.com/u/181303318?v=4" width="80">](https://github.com/COOKIES114)
-[<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
+* ## Code
+  [<img alt="wangms1145" src="https://avatars.githubusercontent.com/u/122420690?v=4" width="80">](https://github.com/wangms1145)
+  [<img alt="A1x-Z" src="https://avatars.githubusercontent.com/u/166950853?v=4" width="80">](https://github.com/A1x-Z)
+  [<img alt="COOKIES114" src="https://avatars.githubusercontent.com/u/181303318?v=4" width="80">](https://github.com/COOKIES114)
+  [<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
