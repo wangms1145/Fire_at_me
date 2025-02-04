@@ -73,3 +73,8 @@ _你需要**2022.3.47f1**版本的Unity编辑器才能玩这个游戏._
   [<img alt="A1x-Z" src="https://avatars.githubusercontent.com/u/166950853?v=4" width="80">](https://github.com/A1x-Z)
   [<img alt="COOKIES114" src="https://avatars.githubusercontent.com/u/181303318?v=4" width="80">](https://github.com/COOKIES114)
   [<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
+  * ## 美术
+  [<img alt="flysandwichNOTFOUND" src="https://avatars.githubusercontent.com/u/195259935?v=4" width="80">](https://github.com/flysandwichNOTFOUND)
+* ## 音频
+  [<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
+  [<img alt="flysandwichNOTFOUND" src="https://avatars.githubusercontent.com/u/195259935?v=4" width="80">](https://github.com/flysandwichNOTFOUND)
