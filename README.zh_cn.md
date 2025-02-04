@@ -25,7 +25,9 @@ _这并**不是**一个开源项目_
 <img alt="fish" src="./Assets/Sprites/fish_bullet.png" width="40">
 
 《向我开炮》是一个夸大了枪械后坐力的2D射击游戏
+
 还在开发，别急
+
 别守着那个release页面不放了，发布之前会隐藏这个项目
 
 ## 安装
