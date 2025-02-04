@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3616798923288366877}
   m_Layer: 7
   m_Name: PlayerDev
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 1.6
   m_Material: {fileID: 6200000, guid: 6837d44b3ab589f4bbcf0699b1fe7296, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -566,6 +566,8 @@ MonoBehaviour:
   died_material: {fileID: 6200000, guid: 047ed6a65c9836f4c8488d80cfd68cf9, type: 2}
   max_eff_spd: 30
   min_eff_spd: 10
+  health: 0
+  max_health: 1000
   groundFlag: 0
   ys: 0
   thisWeaponWheel: {fileID: 0}
@@ -3342,7 +3344,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -424, y: 442}
-  m_SizeDelta: {x: 1000, y: 100}
+  m_SizeDelta: {x: 1020, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3960526801238089770
 CanvasRenderer:
@@ -3393,6 +3395,7 @@ GameObject:
   - component: {fileID: 8833625552797046956}
   - component: {fileID: 8261080268153550199}
   - component: {fileID: 6678155535983934802}
+  - component: {fileID: 6687557943081015721}
   m_Layer: 5
   m_Name: CurrentHealth
   m_TagString: Untagged
@@ -3416,8 +3419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -873, y: 440}
-  m_SizeDelta: {x: 100, y: 80}
+  m_AnchoredPosition: {x: -424, y: 442}
+  m_SizeDelta: {x: 1000, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8261080268153550199
 CanvasRenderer:
@@ -3448,15 +3451,29 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 20e5a8199e34079468b565e8204a4d76, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6687557943081015721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687965202892810040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195a1908b4181a74e85f3bc93eb1ecbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  bar: {fileID: 0}
 --- !u!1 &5911981240306651564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3559,7 +3576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5962866026365115868
 RectTransform:
   m_ObjectHideFlags: 0

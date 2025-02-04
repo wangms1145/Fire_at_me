@@ -51,6 +51,10 @@ public class explode_script : MonoBehaviour
                         BotScript aim = hit.collider.GetComponent<BotScript>();
                         aim.health -= damage;
                     }
+                    if(hit.collider.GetComponent<playerLogic>() != null){
+                        playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                        aim.damage(damage);
+                    }
                 }
             }
         }

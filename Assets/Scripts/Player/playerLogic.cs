@@ -26,6 +26,12 @@ public class playerLogic : NetworkBehaviour
     public float max_eff_spd;
     [Tooltip("特效最小速度")]
     public float min_eff_spd;
+    [Tooltip("血量")]
+    [SerializeField]
+    private float health;
+    [Tooltip("最大血量")]
+    [SerializeField]
+    private float max_health;
     [HideInInspector]
     public bool groundFlag;
     [HideInInspector]
@@ -45,6 +51,7 @@ public class playerLogic : NetworkBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.sharedMaterial = inGame_material;
         thisWeaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel");
+        health = max_health;
     }
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
@@ -67,7 +74,7 @@ public class playerLogic : NetworkBehaviour
         a = transform.GetChild(1).GetComponent<ParticleSystem>().trails;
         a.colorOverTrail = col;
 
-        if(transform.position.y < varibles.diedYpos || Input.GetKeyDown(KeyCode.G)){
+        if(transform.position.y < varibles.diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
             varibles.isAlive = false;
             float ang = UnityEngine.Random.Range(-180, 180);
             myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
@@ -98,13 +105,25 @@ public class playerLogic : NetworkBehaviour
             myRigidbody.velocity = Vector2.zero;
             myRigidbody.position = Vector2.zero;
             myRigidbody.rotation = 0;
+            health = max_health;
             varibles.isAlive = true;
         }
     }
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
     }
-
+    public float GetHealth(){
+        return health;
+    }
+    public float GetMaxHealth(){
+        return max_health;
+    }
+    public void SetHealth(float health){
+        this.health = health;
+    }
+    public void damage(float damage){
+        health -= damage;
+    }
     
 
 }
