@@ -69,3 +69,8 @@ How to play?
   [<img alt="A1x-Z" src="https://avatars.githubusercontent.com/u/166950853?v=4" width="80">](https://github.com/A1x-Z)
   [<img alt="COOKIES114" src="https://avatars.githubusercontent.com/u/181303318?v=4" width="80">](https://github.com/COOKIES114)
   [<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
+* ## Art
+  [<img alt="flysandwichNOTFOUND" src="https://avatars.githubusercontent.com/u/195259935?v=4" width="80">](https://github.com/flysandwichNOTFOUND)
+* ## Sound Design
+  [<img alt="yayyayyayyayyay" src="https://avatars.githubusercontent.com/u/169942146?v=4" width="80">](https://github.com/yayyayyayyayyay)
+  [<img alt="flysandwichNOTFOUND" src="https://avatars.githubusercontent.com/u/195259935?v=4" width="80">](https://github.com/flysandwichNOTFOUND)
