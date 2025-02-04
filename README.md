@@ -27,7 +27,7 @@ _This is **Not** a open source project_
 Fire at me is a 2D shooter video game which involves exagerated recoil, renewed rules and interesting weapons such as tnt gun, tree and lazer. It is still developing and not yet been officially released.
 
 ## Install
-_If you want to play this game you will need a **2022.3f47** version of Unity editor._
+_If you want to play this game you will need a **2022.3.47f1** version of Unity editor._
 
 How to play?
 1. Install Unity Hub and editor.
