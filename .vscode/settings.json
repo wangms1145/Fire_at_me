@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Unity_2d_Proj.sln"
+    "dotnet.defaultSolution": "Fire_at_me.sln"
 }

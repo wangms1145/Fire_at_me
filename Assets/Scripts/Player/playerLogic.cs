@@ -119,10 +119,10 @@ public class playerLogic : NetworkBehaviour
         return max_health;
     }
     public void SetHealth(float health){
-        this.health = health;
+        if(varibles.IsOwner)this.health = health;
     }
     public void damage(float damage){
-        health -= damage;
+        if(varibles.IsOwner)health -= damage;
     }
     
 

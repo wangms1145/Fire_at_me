@@ -308,4 +308,16 @@ public class Weapon_Script : NetworkBehaviour
         audSource.PlayOneShot(weapon[now_ind].fire_audio);
         ang_rec += weapon[now_ind].ang_rec/5;
     }
+    public int GetIndex(){
+        return now_ind;
+    }
+    public int GetMag(){
+        return weapon[now_ind].bullet_count;
+    }
+    public int GetLeft(){
+        return weapon[now_ind].mag_c;
+    }
+    public WeaponClass GetWeapon(){
+        return weapon[now_ind];
+    }
 }

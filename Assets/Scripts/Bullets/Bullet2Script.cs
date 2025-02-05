@@ -52,6 +52,10 @@ public class Bullet2Script : MonoBehaviour
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= myRigidbody.velocity.magnitude/0.5f*damage;
             }
+            if(hit.collider.GetComponent<playerLogic>() != null){
+                playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                aim.damage(myRigidbody.velocity.magnitude/0.5f * damage);
+            }
             if(hit.rigidbody != null){
                 Vector2 diff = hit.point - (Vector2)transform.position;
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 400, spdToAng(diff));

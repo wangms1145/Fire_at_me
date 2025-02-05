@@ -39,6 +39,10 @@ public class Fish_script : MonoBehaviour
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= myRigidbody.velocity.magnitude/1 * damage;
             }
+            if(hit.collider.GetComponent<playerLogic>() != null){
+                playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                aim.damage(myRigidbody.velocity.magnitude/1 * damage);
+            }
             if(hit.rigidbody != null){
                 Vector2 diff = hit.point - (Vector2)transform.position;
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 3, spdToAng(diff));

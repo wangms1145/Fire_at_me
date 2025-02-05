@@ -12,7 +12,7 @@ public class healthBar_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponentInParent<transform>().GetComponentInParent<playerLogic>();
+        player = GetComponentInParent<Transform>().GetComponentInParent<playerLogic>();
         bar = GetComponent<Image>();
     }
 

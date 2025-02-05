@@ -31,6 +31,10 @@ public class Bullet6Script : MonoBehaviour
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= damage;
             }
+            if(hit.collider.GetComponent<playerLogic>() != null){
+                playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                aim.damage(damage);
+            }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
             //Destroy(gameObject);
         }
@@ -53,6 +57,10 @@ public class Bullet6Script : MonoBehaviour
             if(hit.collider.GetComponent<BotScript>() != null && !hit.collider.Equals(last_hit.collider)){
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= damage;
+            }
+            if(hit.collider.GetComponent<playerLogic>() != null){
+                playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                aim.damage(damage);
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
             last_hit = hit;

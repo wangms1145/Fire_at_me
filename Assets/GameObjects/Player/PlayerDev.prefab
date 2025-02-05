@@ -3570,6 +3570,7 @@ GameObject:
   - component: {fileID: 8992770968603096521}
   - component: {fileID: 738693339117003524}
   - component: {fileID: 377684258950628998}
+  - component: {fileID: 3105465988677585955}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -3662,6 +3663,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3105465988677585955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461164382478495097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87990928811338e4fa2de7b8c5793cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6688579602074141053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,6 +3736,7 @@ GameObject:
   - component: {fileID: 2275258644585142933}
   - component: {fileID: 8302593664292690905}
   - component: {fileID: 6861243940787357314}
+  - component: {fileID: 300561181955716819}
   m_Layer: 5
   m_Name: BulletLeft
   m_TagString: Untagged
@@ -3791,6 +3805,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 30/30
+--- !u!114 &300561181955716819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810545553678107511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4805e2670fae84d809e271472441da75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6861243940787357314}
+  wp: {fileID: 1485709207727238658}
 --- !u!1 &7516319215434169793
 GameObject:
   m_ObjectHideFlags: 0
