@@ -12,8 +12,8 @@ public class healthBar_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponentInParent<GameObject>().GetComponentInParent<GameObject>().GetComponent<playerLogic>();
-        bar = GetComponentInParent<Image>();
+        player = GetComponentInParent<transform>().GetComponentInParent<playerLogic>();
+        bar = GetComponent<Image>();
     }
 
     // Update is called once per frame
