@@ -6,8 +6,9 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Bullet6Script : MonoBehaviour
+public class Bullet6Script : NetworkBehaviour
 {
     public float impact;
     public Vector2 vel;

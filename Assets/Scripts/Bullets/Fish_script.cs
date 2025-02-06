@@ -6,8 +6,9 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Fish_script : MonoBehaviour
+public class Fish_script : NetworkBehaviour
 {
     public float impact;
     public Vector2 vel;

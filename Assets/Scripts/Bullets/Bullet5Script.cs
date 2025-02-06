@@ -6,8 +6,8 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-
-public class Bullet5Script : MonoBehaviour
+using Unity.Netcode;
+public class Bullet5Script : NetworkBehaviour
 {
     public Vector2 vel;
     public float radius;

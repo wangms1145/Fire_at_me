@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Bullet1Script : MonoBehaviour
+public class Bullet1Script : NetworkBehaviour
 {
     public float impact;
     public Vector2 vel;
@@ -22,6 +24,7 @@ public class Bullet1Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!IsOwner) return;
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         checkHit();
     }
@@ -29,6 +32,7 @@ public class Bullet1Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner) return;
         if(waitDes){
             transform.position = hit.point;
             timer += Time.deltaTime;

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEditor.Timeline;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Bullet4Script : MonoBehaviour
+public class Bullet4Script : NetworkBehaviour
 {
     private float timed = 0;
     private Rigidbody2D myRigidbody;

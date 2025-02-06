@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Transactions;
 using Unity.Mathematics;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Bullet2Script : MonoBehaviour
+public class Bullet2Script : NetworkBehaviour
 {
     private float timed = 0;
     public float impact;

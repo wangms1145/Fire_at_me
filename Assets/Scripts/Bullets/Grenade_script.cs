@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Grenade_script : MonoBehaviour
+public class Grenade_script : NetworkBehaviour
 {
     public float exp_time;
     public float aud_off;

@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Bullet3Script : MonoBehaviour
+public class Bullet3Script : NetworkBehaviour
 {
     public float trig,des,damage;
     private float timed = 0;
