@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 651595356387402119}
   - component: {fileID: 2257152989372050635}
   - component: {fileID: 8743300215282467981}
-  - component: {fileID: 8228405082721545018}
   - component: {fileID: -3788849431919376224}
+  - component: {fileID: 8228405082721545018}
   - component: {fileID: -1389307638390006010}
   - component: {fileID: -7514480826771997893}
   m_Layer: 8
@@ -358,25 +358,6 @@ PolygonCollider2D:
       - {x: 0.20166667, y: -0.8283334}
       - {x: 0.22833334, y: -0.8183333}
   m_UseDelaunayMesh: 0
---- !u!114 &8228405082721545018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3661799797300261522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34331bd5a1544baf97db43a0ea0357a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exp_time: 5
-  aud_off: 1.17
-  damage: 0
-  hold_time: 0
-  source: {fileID: 2257152989372050635}
-  explode_aud: {fileID: 8300000, guid: 9c7dfd7a244d24b4985eeea919a20e34, type: 3}
-  explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}
 --- !u!114 &-3788849431919376224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +379,25 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &8228405082721545018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661799797300261522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34331bd5a1544baf97db43a0ea0357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exp_time: 5
+  aud_off: 1.17
+  damage: 0
+  hold_time: 0
+  source: {fileID: 2257152989372050635}
+  explode_aud: {fileID: 8300000, guid: 9c7dfd7a244d24b4985eeea919a20e34, type: 3}
+  explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}
 --- !u!114 &-1389307638390006010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  Interpolate: 1
+  Interpolate: 0
   SlerpPosition: 0
 --- !u!114 &-7514480826771997893
 MonoBehaviour:

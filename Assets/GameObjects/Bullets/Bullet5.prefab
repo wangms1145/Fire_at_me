@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3054421251829539748}
   - component: {fileID: 218687254315229642}
   - component: {fileID: 2256359592346094165}
-  - component: {fileID: 8605865449042231569}
   - component: {fileID: -543698097857411388}
+  - component: {fileID: 8605865449042231569}
   - component: {fileID: -1188232748603466013}
   - component: {fileID: 6663790497983981304}
   m_Layer: 0
@@ -152,25 +152,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &8605865449042231569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7865664380318844199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55abba3a6170e614ba0d59678320088b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vel: {x: 0, y: 0}
-  radius: 0.18
-  damage: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 448
-  explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}
 --- !u!114 &-543698097857411388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +173,25 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &8605865449042231569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865664380318844199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55abba3a6170e614ba0d59678320088b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vel: {x: 0, y: 0}
+  radius: 0.18
+  damage: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 448
+  explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}
 --- !u!114 &-1188232748603466013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  Interpolate: 1
+  Interpolate: 0
   SlerpPosition: 0
 --- !u!114 &6663790497983981304
 MonoBehaviour:
