@@ -12,6 +12,7 @@ using static UnityEngine.ParticleSystem;
 using Unity.Netcode;
 public class PlayerScript : NetworkBehaviour
 {
+    [SerializeField] private NetworkPrefabsList list;
     [Tooltip("刚体（物理引擎）")]
     public Rigidbody2D myRigidbody;
     [Tooltip("后坐力（没事别动，这玩意会自动修改）")]
@@ -95,5 +96,28 @@ public class PlayerScript : NetworkBehaviour
             //died
             player_logic.onDeath();
         }
+    }
+    //[Rpc(SendTo.Server,RequireOwnership = false)]
+    public void RequestSpawn(String name, Vector3 pos, float rotate)
+    {
+        SpawnObjectServerRpc(name,pos,rotate);
+    }
+    [Rpc(SendTo.ClientsAndHost,RequireOwnership = false)]// 允许任何客户端调用
+    private void SpawnObjectServerRpc(String Objname,Vector3 pos, float rotate, ServerRpcParams rpcParams = default)
+    {
+        GameObject[] bullets = list.PrefabList.ConvertTo<List<GameObject>>().ToArray();
+        Debug.Log(bullets.Length);
+        GameObject bullet = null;
+        foreach(GameObject prefab in bullets){
+            if(prefab != null || prefab.name == Objname){
+                bullet = prefab;
+                break;
+            }
+        }
+        GameObject spawned = null;
+        if(bullet != null)spawned = Instantiate(bullet, pos, quaternion.RotateZ(rotate));
+        else Debug.LogError("You forget to add prefab: \"" + Objname + "\" dumbass!");
+        spawned.GetComponent<NetworkObject>().Spawn();
+        spawned.tag = "just_spawned_bullet";
     }
 }

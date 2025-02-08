@@ -10,10 +10,11 @@ using UnityEngine.Rendering;
 public class Bullet_gene_scr : MonoBehaviour
 {
     public GameObject[] bullets;
+    [SerializeField] private PlayerScript ply;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ply = GetComponentInParent<Transform>().GetComponentInParent<PlayerScript>();
     }
 
     // Update is called once per frame
@@ -75,13 +76,16 @@ public class Bullet_gene_scr : MonoBehaviour
         if(wp.fireEff != null)Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
     }
     GameObject def_spawn(WeaponClass wp,float ang,GameObject bullet,Vector2 ply_vel){
-        GameObject bullet_spawned = Instantiate(bullet, transform.position, quaternion.RotateZ(ang));
+        String name = bullet.name;
+        
+        ply.RequestSpawn(name, transform.position, ang);
+        GameObject bullet_spawned = GameObject.FindGameObjectWithTag("just_spawned_bullet");
+        bullet_spawned.tag = "";
         float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
         float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
         bullet_spawned.GetComponent<Rigidbody2D>().velocity = ply_vel;
         bullet_spawned.GetComponent<Rigidbody2D>().velocity += (float)(Math.Cos(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (wp.bulletSpd+spdp)) * Vector2.up;
-        NetworkObject net = bullet_spawned.GetComponent<NetworkObject>();
-        if(net != null) net.Spawn();
+        //if(net != null) ply.RequestSpawn(bullet_spawned);
         return bullet_spawned;
     }
 }
