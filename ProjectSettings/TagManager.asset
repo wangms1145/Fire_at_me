@@ -10,6 +10,7 @@ TagManager:
   - UImenu
   - BAG
   - WeaponWheel
+  - just_spawned_bullet
   layers:
   - Default
   - TransparentFX

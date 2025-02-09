@@ -296,7 +296,7 @@ public class Weapon_Script : NetworkBehaviour
         time = 0;
     }
     private void fire_wp(int sign,bool sec){
-        Debug.Log(weapon[now_ind].hold_time);
+//        Debug.Log(weapon[now_ind].hold_time);
         if(!weapon[now_ind].infinite)weapon[now_ind].mag_c--;
         ang_rec = Math.Clamp(ang_rec, 0,weapon[now_ind].ang_rec);
         transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);

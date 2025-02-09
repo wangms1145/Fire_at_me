@@ -24,9 +24,10 @@ public class Bullet_gene_scr : MonoBehaviour
     }
     public void SpawnBullet(WeaponClass wp,float ang,Vector2 ply_vel,bool sec){
         //need spawn bullet
-        Debug.Log("spawn");
+        //Debug.Log("spawn");
         GameObject bullet = bullets[wp.type];
         transform.localPosition = sec ? wp.Sec_pos + wp.firePos : wp.firePos;
+        /*
         switch (wp.type){
             case 0:
                 def_spawn(wp,ang,bullet,ply_vel).GetComponent<Bullet1Script>().damage = wp.damage/wp.bulletSpd;
@@ -73,14 +74,17 @@ public class Bullet_gene_scr : MonoBehaviour
                 def_spawn(wp,ang,bullet,ply_vel);
                 break;
         }
+        */
+        ply.RequestSpawn(wp, bullet.name,transform.position,ply_vel,ang);
         if(wp.fireEff != null)Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
     }
+    /*
     GameObject def_spawn(WeaponClass wp,float ang,GameObject bullet,Vector2 ply_vel){
         String name = bullet.name;
         
         ply.RequestSpawn(name, transform.position, ang);
         GameObject bullet_spawned = GameObject.FindGameObjectWithTag("just_spawned_bullet");
-        bullet_spawned.tag = "";
+        bullet_spawned.tag = "Untagged";
         float angp = (float)(UnityEngine.Random.Range(-wp.ang_offset,wp.ang_offset)/180.0 * Math.PI);
         float spdp = (float)(UnityEngine.Random.Range(-wp.spd_offset,wp.spd_offset)/3.0);
         bullet_spawned.GetComponent<Rigidbody2D>().velocity = ply_vel;
@@ -88,4 +92,5 @@ public class Bullet_gene_scr : MonoBehaviour
         //if(net != null) ply.RequestSpawn(bullet_spawned);
         return bullet_spawned;
     }
+    */
 }

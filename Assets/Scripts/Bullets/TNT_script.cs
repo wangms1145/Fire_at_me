@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using Unity.Mathematics;
 
 public class TNT_script : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class TNT_script : MonoBehaviour
     void Update()
     {
         myRigidbody.MoveRotation(0);
+        transform.rotation = quaternion.RotateZ(0);
         timed += Time.deltaTime;
         if(timed > exp_time){
             Instantiate(explode,transform.position,transform.rotation).GetComponent<explode_script>().damage = damage;

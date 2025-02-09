@@ -46,6 +46,7 @@ public class playerLogic : NetworkBehaviour
         GetComponentInChildren<Weapon_Script>().ChangeWeapon(ind);
 
     }
+    
     void Start(){
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
