@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class explode_script : MonoBehaviour
+public class explode_script : NetworkBehaviour
 {
     public float ani_time;
     public float radius;

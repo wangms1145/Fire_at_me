@@ -17,15 +17,18 @@ public class Fish_script : NetworkBehaviour
     public GameObject bullet_hole;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
+        net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         timed += Time.deltaTime;
         if(timed > 30){
             Destroy(gameObject);
@@ -49,6 +52,7 @@ public class Fish_script : NetworkBehaviour
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 3, spdToAng(diff));
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
+            net.Despawn();
             Destroy(gameObject);
         }
     }

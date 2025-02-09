@@ -21,11 +21,13 @@ public class Bullet1Script : NetworkBehaviour
     private bool waitDes = false;
     private double timer = 0;
     private RaycastHit2D hit;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
         if(!IsOwner) return;
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        net = gameObject.GetComponent<NetworkObject>();
         checkHit();
     }
 
@@ -37,12 +39,14 @@ public class Bullet1Script : NetworkBehaviour
             transform.position = hit.point;
             timer += Time.deltaTime;
             if(timer > GetComponent<TrailRenderer>().time){
+                net.Despawn();
                 Destroy(gameObject);
             }
             return;
         }
         timed += Time.deltaTime;
         if(timed > 6){
+            net.Despawn();
             Destroy(gameObject);
         }
         myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);

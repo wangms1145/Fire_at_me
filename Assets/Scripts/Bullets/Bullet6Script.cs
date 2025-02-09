@@ -18,9 +18,11 @@ public class Bullet6Script : NetworkBehaviour
     private float timed = 0;
     private Rigidbody2D myRigidbody;
     private RaycastHit2D last_hit;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
+        net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         vel = myRigidbody.velocity;
         
@@ -45,8 +47,10 @@ public class Bullet6Script : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         timed += Time.deltaTime;
         if(timed > 6){
+            net.Despawn();
             Destroy(gameObject);
         }
         vel = myRigidbody.velocity;

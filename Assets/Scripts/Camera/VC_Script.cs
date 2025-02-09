@@ -32,7 +32,8 @@ public class VC_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ply.isAlive){
+        
+        if(ply != null && ply.isAlive){
             //getting positions
             mX = Input.mousePosition.x;
             mY = Input.mousePosition.y;

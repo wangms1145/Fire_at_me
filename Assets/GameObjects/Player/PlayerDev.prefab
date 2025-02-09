@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 7028191339717531771}
   - component: {fileID: 3616798923288366877}
   - component: {fileID: 8819362219463053560}
+  - component: {fileID: 333807617329063963}
   m_Layer: 7
   m_Name: PlayerDev
   m_TagString: Player
@@ -272,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1009878700
+  GlobalObjectIdHash: 1468091284
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -293,7 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706cf95bd55349841b87c57d2c89f42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  list: {fileID: 11400000, guid: 9205e6d7c85f05b4fab68c2d64b85be0, type: 2}
   myRigidbody: {fileID: 852536400476424177}
   recoil: 10
   mouse_mult: 1
@@ -733,8 +733,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00024998188, y: -0.000100016594, z: 0}
-    m_Extent: {x: 1.00045, y: 1.0009, z: 0}
+    m_Center: {x: -0.00024986267, y: -0.0001001358, z: 0}
+    m_Extent: {x: 25.50045, y: 25.5009, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -749,6 +749,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &333807617329063963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309606502823975533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130f3e2087f6e764e8ba3750ec089634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: {fileID: 11400000, guid: 9205e6d7c85f05b4fab68c2d64b85be0, type: 2}
 --- !u!1 &349319402045506798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 536359794
+  GlobalObjectIdHash: 1468091284
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -13643,7 +13656,7 @@ MonoBehaviour:
   - {fileID: 7089568371247552439, guid: 528e518c6996343ef97ae750c89792e7, type: 3}
   - {fileID: 3661799797300261522, guid: 6f457dde214424428b4272f3d2bb4dfe, type: 3}
   - {fileID: 4908864704082370889, guid: 1f4630e579aa4fd4282f314e655028fc, type: 3}
-  ply: {fileID: 0}
+  rpc: {fileID: 0}
 --- !u!212 &6316822139269174104
 SpriteRenderer:
   m_ObjectHideFlags: 0

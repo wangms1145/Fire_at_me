@@ -10,11 +10,11 @@ using UnityEngine.Rendering;
 public class Bullet_gene_scr : MonoBehaviour
 {
     public GameObject[] bullets;
-    [SerializeField] private PlayerScript ply;
+    [SerializeField] private bullet_gene_rpc rpc;
     // Start is called before the first frame update
     void Start()
     {
-        ply = GetComponentInParent<Transform>().GetComponentInParent<PlayerScript>();
+        rpc = GetComponentInParent<Transform>().GetComponentInParent<bullet_gene_rpc>();
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class Bullet_gene_scr : MonoBehaviour
                 break;
         }
         */
-        ply.RequestSpawn(wp, bullet.name,transform.position,ply_vel,ang);
+        rpc.RequestSpawn(wp, bullet.name,transform.position,ply_vel,ang);
         if(wp.fireEff != null)Instantiate(wp.fireEff,transform.position,transform.rotation,transform);
     }
     /*

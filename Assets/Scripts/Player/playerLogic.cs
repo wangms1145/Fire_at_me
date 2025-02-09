@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 using Unity.Netcode;
+using System.Data;
 public class playerLogic : NetworkBehaviour
 {
     public PlayerScript varibles;
@@ -63,9 +64,8 @@ public class playerLogic : NetworkBehaviour
         }
     }
     public void logic(){
-
-        
         myRigidbody.sharedMaterial = inGame_material;
+        SyncSpd(myRigidbody.velocity);
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
         transform.GetChild(0).rotation = quaternion.RotateZ(varibles.angSpd);
@@ -123,8 +123,19 @@ public class playerLogic : NetworkBehaviour
         if(varibles.IsOwner)this.health = health;
     }
     public void damage(float damage){
-        if(varibles.IsOwner)health -= damage;
+        damageRpc(damage);
     }
-    
+    [Rpc(SendTo.ClientsAndHost,RequireOwnership = false)]
+    private void damageRpc(float damage){
+        if(!IsOwner) return;
+        health -= damage;
+    }
+    public void SyncSpd(Vector2 spd){
+        SyncSpdRpc(spd);
+    }
+    [Rpc(SendTo.ClientsAndHost,RequireOwnership = false)]
+    private void SyncSpdRpc(Vector2 spd){
+        if(!IsOwner)myRigidbody.velocity = spd;
+    }
 
 }

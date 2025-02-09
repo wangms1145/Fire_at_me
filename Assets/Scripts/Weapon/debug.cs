@@ -26,7 +26,7 @@ public class debug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ply.isAlive){
+        if(ply != null && ply.isAlive){
             myRigidbody.simulated = false;
             myRigidbody.rotation = 0;
             transform.rotation = Quaternion.Euler(0,0,0);
@@ -46,7 +46,7 @@ public class debug : MonoBehaviour
                 myRigidbody.velocity = Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
                 myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
             }
-            if(transform.position.y<ply.diedYpos - 10){
+            if(transform.position.y<-40f){
                 myRigidbody.simulated = false;
             }
         }

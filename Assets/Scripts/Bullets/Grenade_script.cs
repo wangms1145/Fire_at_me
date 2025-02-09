@@ -15,20 +15,26 @@ public class Grenade_script : NetworkBehaviour
     private float timed;
     private Rigidbody2D myRigidbody;
     private bool aud_flag = true;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
+        net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         //myRigidbody.MoveRotation(0);
         timed += Time.deltaTime;
         if (timed+hold_time > exp_time)
         {
-            Instantiate(explode, transform.position, transform.rotation).GetComponent<explode_script>().damage = damage;
+            GameObject exp = Instantiate(explode,transform.position,transform.rotation);
+            exp.GetComponent<explode_script>().damage = damage;
+            exp.GetComponent<NetworkObject>().Spawn();
+            net.Despawn();
             Destroy(gameObject);
         }
         if (timed+hold_time > exp_time - aud_off && aud_flag)

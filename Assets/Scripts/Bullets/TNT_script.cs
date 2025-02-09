@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.Mathematics;
 
-public class TNT_script : MonoBehaviour
+public class TNT_script : NetworkBehaviour
 {
     public float exp_time;
     public float aud_off;
@@ -15,20 +15,26 @@ public class TNT_script : MonoBehaviour
     private float timed;
     private Rigidbody2D myRigidbody;
     private bool aud_flag = true;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
+        net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         myRigidbody.MoveRotation(0);
         transform.rotation = quaternion.RotateZ(0);
         timed += Time.deltaTime;
         if(timed > exp_time){
-            Instantiate(explode,transform.position,transform.rotation).GetComponent<explode_script>().damage = damage;
+            GameObject exp = Instantiate(explode,transform.position,transform.rotation);
+            exp.GetComponent<explode_script>().damage = damage;
+            exp.GetComponent<NetworkObject>().Spawn();
+            net.Despawn();
             Destroy(gameObject);
         }
         if(timed > exp_time - aud_off && aud_flag){

@@ -16,23 +16,31 @@ public class Bullet5Script : NetworkBehaviour
     public GameObject explode;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
+    private NetworkObject net;
     // Start is called before the first frame update
     void Start()
     {
+        net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         timed += Time.deltaTime;
         if(timed > 30){
+            net.Despawn();
             Destroy(gameObject);
         }
         vel = myRigidbody.velocity;
         RaycastHit2D hit = collide_check();
         if(hit){
-            Instantiate(explode,transform.position,quaternion.RotateZ(0)).GetComponent<explode_script>().damage = damage;
+            //Instantiate(explode,transform.position,quaternion.RotateZ(0)).GetComponent<explode_script>().damage = damage;
+            GameObject exp = Instantiate(explode,transform.position,transform.rotation);
+            exp.GetComponent<explode_script>().damage = damage;
+            exp.GetComponent<NetworkObject>().Spawn();
+            net.Despawn();
             Destroy(gameObject);
         }
     }
