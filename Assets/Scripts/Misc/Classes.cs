@@ -247,3 +247,13 @@ public class Physics_Prop{
     [ShowIf("breakable", true)]public float health;
     [ShowIf("breakable", true)]public float maxHealth;
 }
+public class Distributed_random{
+    public static float range(float a,float b,int count){
+        float sum = 0;
+        for(int i = 0;i<count;i++){
+            sum += UnityEngine.Random.Range(a,b);
+        }
+        sum /= count;
+        return sum;
+    }
+}

@@ -6,6 +6,8 @@ using UnityEngine;
 using static UnityEngine.ParticleSystem;
 using Unity.Netcode;
 using System.Data;
+using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
 public class playerLogic : NetworkBehaviour
 {
     public PlayerScript varibles;
@@ -49,6 +51,7 @@ public class playerLogic : NetworkBehaviour
     }
     
     void Start(){
+        if(SceneManager.GetActiveScene().name.Contains("Start")) GetComponent<Light2D>().enabled = false;
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.sharedMaterial = inGame_material;
