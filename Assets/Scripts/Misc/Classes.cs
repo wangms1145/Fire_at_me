@@ -9,6 +9,7 @@ using UnityEditor.EditorTools;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class Classes : MonoBehaviour
 {
@@ -221,3 +222,28 @@ public class ConditionalHidePropertyDrawer : PropertyDrawer
     }
 }
 //What ever classes goes after this thing
+public class MapClass{
+    private bool fal = false;
+    public GameObject map;
+    public List<Physics_Prop> physics_Props= new List<Physics_Prop>();
+    public List<Vector3> player_spawn_point = new List<Vector3>();
+    public List<Vector3> weapon_spawn_point = new List<Vector3>();
+    public List<float> avalible_angles = new List<float>();
+    public float right_spn_off;
+    public float left_spn_off;
+    public float died_y_pos;
+    public float right_bound_pos;
+    public float left_bound_pos;
+
+}
+public class Physics_Prop{
+    private bool fal = false;
+    public GameObject prop;
+    public bool pickAble;
+    [ShowIf("pickAble", true)]public bool throwAble;
+    [ShowIf("throwAble", true)]public float throw_Spd;
+    [ShowIf("fal", false)]
+    public bool breakable;
+    [ShowIf("breakable", true)]public float health;
+    [ShowIf("breakable", true)]public float maxHealth;
+}
