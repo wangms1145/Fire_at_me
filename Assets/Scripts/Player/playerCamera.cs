@@ -18,7 +18,7 @@ public class playerCamera : NetworkBehaviour
             vc.GetComponent<VC_Script>().ply = GetComponent<PlayerScript>();
             vc.GetComponent<VC_Script>().myVCam.Follow = transform.GetChild(3);
             GameObject aim = GameObject.FindGameObjectWithTag("Aim");
-            aim.GetComponent<debug>().ply = GetComponent<PlayerScript>();
+            if(aim != null)aim.GetComponent<debug>().ply = GetComponent<PlayerScript>();
         }
     }
     public void cam(){

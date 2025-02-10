@@ -3384,7 +3384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6545109713831084462}
   - component: {fileID: 3960526801238089770}
-  - component: {fileID: 3073764374426407331}
+  - component: {fileID: 1554745058381894060}
   m_Layer: 5
   m_Name: HealthDisplayBackground
   m_TagString: Untagged
@@ -3406,10 +3406,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5962866026365115868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424, y: 442}
-  m_SizeDelta: {x: 1020, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 75, y: 75}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3960526801238089770
 CanvasRenderer:
@@ -3419,7 +3419,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269626253148068506}
   m_CullTransparentMesh: 1
---- !u!114 &3073764374426407331
+--- !u!114 &1554745058381894060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3428,27 +3428,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5269626253148068506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6809ed584a7e09d4aba886ff04974b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20e5a8199e34079468b565e8204a4d76, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  left: {fileID: 1788515500, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
+  mid: {fileID: 9871223, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
+  right: {fileID: -809016233, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
+  player: {fileID: 0}
+  Outline: {fileID: 6439159443309452685, guid: b0a068c3d284e35499af736e7424cde4, type: 3}
+  width: 75
 --- !u!1 &5687965202892810040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,7 +3447,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8833625552797046956}
   - component: {fileID: 8261080268153550199}
-  - component: {fileID: 6678155535983934802}
   - component: {fileID: 6687557943081015721}
   m_Layer: 5
   m_Name: CurrentHealth
@@ -3482,10 +3469,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5962866026365115868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424, y: 442}
-  m_SizeDelta: {x: 1000, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 75, y: 75}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8261080268153550199
 CanvasRenderer:
@@ -3495,36 +3482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5687965202892810040}
   m_CullTransparentMesh: 1
---- !u!114 &6678155535983934802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5687965202892810040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.8140888, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20e5a8199e34079468b565e8204a4d76, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &6687557943081015721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3537,8 +3494,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195a1908b4181a74e85f3bc93eb1ecbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: -348590754, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
+  mid: {fileID: 60943577, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
+  right: {fileID: 790697966, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
   player: {fileID: 0}
-  bar: {fileID: 0}
+  heart: {fileID: 2994897130230525534, guid: 1c437e9801e79ac4e837b38ad7632622, type: 3}
+  width: 75
 --- !u!1 &5911981240306651564
 GameObject:
   m_ObjectHideFlags: 0
