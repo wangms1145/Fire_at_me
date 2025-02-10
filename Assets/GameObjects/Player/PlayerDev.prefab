@@ -3431,9 +3431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6809ed584a7e09d4aba886ff04974b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: 1788515500, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
-  mid: {fileID: 9871223, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
-  right: {fileID: -809016233, guid: 6b52dd7c946147d41b0311996e35ac3f, type: 3}
+  left: {fileID: 10512038, guid: 65d93486a0de840a78609dde9b9bbc33, type: 3}
+  mid: {fileID: -1553937926, guid: 65d93486a0de840a78609dde9b9bbc33, type: 3}
+  right: {fileID: 462725601, guid: 65d93486a0de840a78609dde9b9bbc33, type: 3}
   player: {fileID: 0}
   Outline: {fileID: 6439159443309452685, guid: b0a068c3d284e35499af736e7424cde4, type: 3}
   width: 75
@@ -3494,9 +3494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195a1908b4181a74e85f3bc93eb1ecbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: -348590754, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
-  mid: {fileID: 60943577, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
-  right: {fileID: 790697966, guid: 7cb52045e17f42244ab4f245fa265c3a, type: 3}
+  left: {fileID: -1013630082, guid: 02f0b07a44f0c436c80785bb8f12c2be, type: 3}
+  mid: {fileID: 908019297, guid: 02f0b07a44f0c436c80785bb8f12c2be, type: 3}
+  right: {fileID: 310797077, guid: 02f0b07a44f0c436c80785bb8f12c2be, type: 3}
   player: {fileID: 0}
   heart: {fileID: 2994897130230525534, guid: 1c437e9801e79ac4e837b38ad7632622, type: 3}
   width: 75
