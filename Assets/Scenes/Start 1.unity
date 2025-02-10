@@ -881,6 +881,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 673036109}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.758}
+--- !u!1 &580906798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580906799}
+  m_Layer: 0
+  m_Name: Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580906799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580906798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673036107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloud: {fileID: 5103223371975289359, guid: 7a1553d910753d64283a0d1330855dea, type: 3}
+  parent: {fileID: 580906798}
   x_min: -90
   x_max: 160
   y_max: 40
@@ -3431,7 +3463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644176477}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018098203, y: -0.041867543, z: -0.6973114, w: 0.71531564}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7162303, w: 0.697864}
   m_LocalPosition: {x: 5, y: 26, z: 31}
   m_LocalScale: {x: 31.633999, y: 30.302, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3477,7 +3509,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 244.09981
+  m_PointLightOuterRadius: 724.96313
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -4896,3 +4928,4 @@ SceneRoots:
   - {fileID: 1128651057}
   - {fileID: 1572960107}
   - {fileID: 673036109}
+  - {fileID: 580906799}
