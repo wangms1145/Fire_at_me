@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-
-public class TransparencyOnTrigger : MonoBehaviour
+public class outside_script : MonoBehaviour
 {
     public GameObject objectToMakeTransparent; // The object to make transparent
     public float transparencyLevel = 1f; // The transparency level (0 = fully transparent, 1 = fully opaque)
@@ -13,26 +11,29 @@ public class TransparencyOnTrigger : MonoBehaviour
     public float spd;
     private void Start()
     {
+        objectToMakeTransparent = gameObject;
         // Ensure the object has a Renderer component
         if (objectToMakeTransparent != null && objectToMakeTransparent.GetComponent<SpriteRenderer>() != null)
         {
+            // Store the original material
             color = objectToMakeTransparent.GetComponent<SpriteRenderer>().color;
             // Create a new material with the same properties as the original
-            color.a = 0;
+            color.a = 1;
 
             objectToMakeTransparent.GetComponent<SpriteRenderer>().color = color;
+            //objectToMakeTransparent.
         }
         else
         {
             Debug.LogError("Object to make transparent is missing or does not have a Renderer component.");
         }
     }
-   void Update(){
+    void Update(){
         color.a += Mathf.Clamp(a-color.a,-Time.deltaTime*spd,Time.deltaTime*spd);
         objectToMakeTransparent.GetComponent<SpriteRenderer>().color = color;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("Exit");
         // Check if the player enters the trigger
@@ -41,7 +42,7 @@ public class TransparencyOnTrigger : MonoBehaviour
             a=0;
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         //Debug.Log("Enter");
         // Check if the player exits the trigger
