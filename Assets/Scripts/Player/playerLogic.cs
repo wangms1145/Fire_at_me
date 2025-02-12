@@ -42,6 +42,7 @@ public class playerLogic : NetworkBehaviour
     private int i;
 
     [SerializeField] private GameObject thisWeaponWheel;
+    private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -49,7 +50,12 @@ public class playerLogic : NetworkBehaviour
         GetComponentInChildren<Weapon_Script>().ChangeWeapon(ind);
 
     }
-    
+    public void RotateWeapon(float ang){
+        weapon_turn.Value = ang;
+    }
+    public float GetWeaponAng(){
+        return weapon_turn.Value;
+    }
     void Start(){
         if(SceneManager.GetActiveScene().name.Contains("Start")) GetComponent<Light2D>().enabled = false;
         varibles = GetComponent<PlayerScript>();
@@ -68,7 +74,6 @@ public class playerLogic : NetworkBehaviour
     }
     public void logic(){
         myRigidbody.sharedMaterial = inGame_material;
-        SyncSpd(myRigidbody.velocity);
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
         transform.GetChild(0).rotation = quaternion.RotateZ(varibles.angSpd);
@@ -132,13 +137,6 @@ public class playerLogic : NetworkBehaviour
     private void damageRpc(float damage){
         if(!IsOwner) return;
         health -= damage;
-    }
-    public void SyncSpd(Vector2 spd){
-        SyncSpdRpc(spd);
-    }
-    [Rpc(SendTo.ClientsAndHost,RequireOwnership = false)]
-    private void SyncSpdRpc(Vector2 spd){
-        if(!IsOwner)myRigidbody.velocity = spd;
     }
 
 }

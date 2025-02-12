@@ -45,6 +45,8 @@ public class Weapon_Script : NetworkBehaviour
     public AudioSource audSource;
     [Tooltip("JSON文件名")]
     [SerializeField] private String jsName;
+    [Tooltip("武器旋转同步速率")]
+    [SerializeField] private int rotateTick;
     private float ang,ang_rec;
     private bool flag;
     private Vector3 scale;
@@ -61,6 +63,8 @@ public class Weapon_Script : NetworkBehaviour
     private int j = 0;
     private float fire_timer = 0f;
     private bool fire_flag = true;
+    private playerLogic plyLogic;
+    private float tick_timer = 0f;
 
     // Start is called before the first frame update
 
@@ -108,6 +112,7 @@ public class Weapon_Script : NetworkBehaviour
     }
     void Start()
     {
+        plyLogic = GetComponentInParent<playerLogic>();
         Change(0);
         myRigidbody.simulated = false;
         scale.x = 0.3f;
@@ -121,8 +126,13 @@ public class Weapon_Script : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponentInParent<PlayerScript>().IsOwner){return;}
+        if(!GetComponentInParent<PlayerScript>().IsOwner){
+            transform.rotation = quaternion.RotateZ(plyLogic.GetWeaponAng());
+            return;
+        }
         if(ply.isAlive){
+            tick_timer += Time.deltaTime;
+            
             myRigidbody.simulated = false;
 
             int sign;
@@ -257,7 +267,9 @@ public class Weapon_Script : NetworkBehaviour
             if(j>=weapon.Length - 1){j = -1;}
 
             transform.localScale = scale;
-
+            if(tick_timer > 1f/rotateTick){
+                plyLogic.RotateWeapon(ang + ang_rec * sign);
+            }
             if(!reload)transform.rotation = quaternion.RotateZ(ang + ang_rec * sign);
             else if(weapon[now_ind].reload_type == 0) transform.rotation = quaternion.RotateX(10*Time.time);
             else transform.rotation = quaternion.RotateZ(1*weapon[now_ind].mag_c);
