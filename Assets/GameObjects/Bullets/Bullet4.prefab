@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955ba32f02fda714aad2dba0a4306124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel_tick_rt: 10
 --- !u!96 &6555575742339008725
 TrailRenderer:
   serializedVersion: 3
