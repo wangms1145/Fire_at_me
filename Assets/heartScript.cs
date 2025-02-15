@@ -13,13 +13,13 @@ public class heartScript : MonoBehaviour
     void Start()
     {
         txt = transform.GetChild(1).gameObject;
-        ply.gameObject.GetComponentInParent<playerLogic>();
+        ply=GetComponentInParent<playerLogic>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.GetComponentInParent<PlayerScript>().IsOwner == false){
+        if(ply.IsOwner){
             gameObject.SetActive(false);
             return;
         }

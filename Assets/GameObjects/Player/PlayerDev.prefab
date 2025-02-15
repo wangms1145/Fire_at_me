@@ -571,6 +571,7 @@ MonoBehaviour:
   min_eff_spd: 10
   health: 0
   max_health: 1000
+  health_tick: 0
   groundFlag: 0
   ys: 0
   thisWeaponWheel: {fileID: 0}
@@ -3344,7 +3345,7 @@ Transform:
   m_GameObject: {fileID: 5182622566337551764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7800215, y: 0.5902927, z: 1.0707716}
+  m_LocalPosition: {x: 0.7800215, y: 0.5902927, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3364,6 +3365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e2abd6ec948284985ebfc2aa9a8562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  ply: {fileID: 0}
 --- !u!1 &5205185775478670800
 GameObject:
   m_ObjectHideFlags: 0
