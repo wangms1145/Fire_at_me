@@ -73,7 +73,7 @@ public class playerLogic : NetworkBehaviour
         }
     }
     public void logic(){
-        myRigidbody.sharedMaterial = inGame_material;
+        if(myRigidbody.sharedMaterial.Equals(inGame_material) == false)myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
         transform.GetChild(0).rotation = quaternion.RotateZ(varibles.angSpd);
@@ -82,7 +82,14 @@ public class playerLogic : NetworkBehaviour
         transform.GetChild(1).rotation = quaternion.RotateZ(varibles.angSpd);
         a = transform.GetChild(1).GetComponent<ParticleSystem>().trails;
         a.colorOverTrail = col;
-
+        if(myRigidbody.velocity.magnitude > 0.1){
+            if(myRigidbody.velocity.x < 0){
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else{
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
         if(transform.position.y < varibles.diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
             varibles.isAlive = false;
             float ang = UnityEngine.Random.Range(-180, 180);

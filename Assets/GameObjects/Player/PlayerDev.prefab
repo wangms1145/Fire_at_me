@@ -2564,6 +2564,7 @@ MonoBehaviour:
   bullet: {fileID: 4708711018766681592}
   audSource: {fileID: 1088906752028039509}
   jsName: WeaponData.json
+  rotateTick: 0
   myRigidbody: {fileID: 2313817667901989447}
 --- !u!50 &2313817667901989447
 Rigidbody2D:

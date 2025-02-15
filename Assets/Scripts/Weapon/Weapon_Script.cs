@@ -22,7 +22,7 @@ using UnityEditor;
 using UnityEngine.Timeline;
 
 
-public class Weapon_Script : NetworkBehaviour
+public class Weapon_Script : MonoBehaviour
 {
     /************************************************************
     * Read This Before You Code On This Script!                 *
@@ -105,13 +105,10 @@ public class Weapon_Script : NetworkBehaviour
         }
     }
 
-    public override void OnNetworkSpawn()
-    {
-        base.OnNetworkSpawn();
-        Debug.Log("weapon created");
-    }
+
     void Start()
     {
+        if(name.Equals("Weapon_list"))return;
         plyLogic = GetComponentInParent<playerLogic>();
         Change(0);
         myRigidbody.simulated = false;
@@ -126,6 +123,7 @@ public class Weapon_Script : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(name.Equals("Weapon_list"))return;
         if(!GetComponentInParent<PlayerScript>().IsOwner){
             transform.rotation = quaternion.RotateZ(plyLogic.GetWeaponAng());
             return;

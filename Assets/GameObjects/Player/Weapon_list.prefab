@@ -1,0 +1,567 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5445580029792044035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2718779648536096746}
+  - component: {fileID: 7616621754444035681}
+  m_Layer: 0
+  m_Name: Weapon_list
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2718779648536096746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445580029792044035}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7616621754444035681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445580029792044035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b6ba9dabc2e474db555ad2e4c9e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ply: {fileID: 0}
+  weapon:
+  - f: 0
+    spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
+    recoil: 2.3
+    bulletSpd: 70
+    type: 0
+    firePos: {x: 3.1, y: 0.54}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 70
+    damageType: 0
+    firing_time: 0.1
+    reloading_time: 2.4
+    infinite: 0
+    bullet_count: 30
+    automatic: 1
+    arm_time: 0.43
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
+    spd_offset: 4
+    ang_offset: 1.1
+    ang_rec: 0.1
+    rec_acc: 0.05
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 62c4f4c0150f4134ba7a890d6f1690ed, type: 3}
+    recoil: 15
+    bulletSpd: 40
+    type: 1
+    firePos: {x: 2.87, y: 0.14}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 35
+    damageType: 0
+    firing_time: 0.8
+    reloading_time: 0.5
+    infinite: 0
+    bullet_count: 7
+    automatic: 0
+    arm_time: 0.53
+    mag_c: 0
+    reload_type: 1
+    fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
+    spd_offset: 2
+    ang_offset: 5
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: f351803335fb7b849a6d8c254084644e, type: 3}
+    recoil: 7
+    bulletSpd: 57
+    type: 0
+    firePos: {x: 1.79, y: 0.53}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 200
+    damageType: 0
+    firing_time: 0.2
+    reloading_time: 3.2
+    infinite: 0
+    bullet_count: 14
+    automatic: 0
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: eea8710ad7c76604486ea39013a01959, type: 3}
+    spd_offset: 5
+    ang_offset: 2
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 1
+    Sec_pos: {x: 0.759, y: -0.29}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 536b887f5ac313342b2e7fad01540690, type: 3}
+    recoil: 7
+    bulletSpd: 10
+    type: 4
+    firePos: {x: 2.622, y: 0.46}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 1440
+    damageType: 0
+    firing_time: 0.3
+    reloading_time: 2
+    infinite: 0
+    bullet_count: 10
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
+    spd_offset: 1
+    ang_offset: 3
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: cf8b28f3e75a14549877802c00a7d233, type: 3}
+    recoil: 1.8
+    bulletSpd: 100
+    type: 0
+    firePos: {x: 1.77, y: 0.37}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 50
+    damageType: 0
+    firing_time: 0.07
+    reloading_time: 1.6
+    infinite: 0
+    bullet_count: 30
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 5
+    ang_offset: 1
+    ang_rec: 0.05
+    rec_acc: 0.05
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 44ff2fddc221a264982275849e2003b6, type: 3}
+    recoil: 1.7
+    bulletSpd: 80
+    type: 0
+    firePos: {x: 2.91, y: 0.58}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 80
+    damageType: 0
+    firing_time: 0.05
+    reloading_time: 5
+    infinite: 0
+    bullet_count: 100
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 3
+    ang_offset: 2
+    ang_rec: 0.1
+    rec_acc: 0.05
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 1, y: 1}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: e9567ce4c2a474c4d823aa3a44e3eaba, type: 3}
+    recoil: 5
+    bulletSpd: 10
+    type: 6
+    firePos: {x: 2.25, y: -0.07}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 20
+    damageType: 0
+    firing_time: 0.2
+    reloading_time: 1
+    infinite: 0
+    bullet_count: 10
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
+    spd_offset: 0
+    ang_offset: 1
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 8ee490e691117064fb6f56176ef62348, type: 3}
+    recoil: 3
+    bulletSpd: 100
+    type: 0
+    firePos: {x: 2.7, y: 0.4}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 90
+    damageType: 0
+    firing_time: 0.1132
+    reloading_time: 3
+    infinite: 0
+    bullet_count: 40
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: eea8710ad7c76604486ea39013a01959, type: 3}
+    spd_offset: 3
+    ang_offset: 1
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
+    recoil: 1
+    bulletSpd: 70
+    type: 0
+    firePos: {x: 2.234, y: 0.583}
+    fireEff: {fileID: 0}
+    damage: 30
+    damageType: 0
+    firing_time: 0.03
+    reloading_time: 2.4
+    infinite: 0
+    bullet_count: 60
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 3
+    ang_offset: 2
+    ang_rec: 0.01
+    rec_acc: 1
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: ec7e6759d0cd1c548bfcf9e6d2ea9b68, type: 3}
+    recoil: 1.2
+    bulletSpd: 130
+    type: 7
+    firePos: {x: 3.06, y: 0.13}
+    fireEff: {fileID: 0}
+    damage: 1100
+    damageType: 0
+    firing_time: 0.1
+    reloading_time: 4
+    infinite: 1
+    bullet_count: 10
+    automatic: 0
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 1
+    time: 1
+    hold_to_fire: 1
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: e7b59444130340c49ba17278daa9e65b, type: 3}
+    recoil: 5
+    bulletSpd: 10
+    type: 5
+    firePos: {x: 1.913, y: 0.251}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 3700
+    damageType: 0
+    firing_time: 0.18
+    reloading_time: 1.8
+    infinite: 0
+    bullet_count: 17
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 06abf5e768146e443982d9bba8682aa9, type: 3}
+    spd_offset: 1
+    ang_offset: 1
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 7aa0588525e9d49418719850cbebbeb9, type: 3}
+    recoil: 0
+    bulletSpd: 0
+    type: 0
+    firePos: {x: 0, y: 0}
+    fireEff: {fileID: 0}
+    damage: 0
+    damageType: 0
+    firing_time: 0
+    reloading_time: 0
+    infinite: 0
+    bullet_count: 0
+    automatic: 0
+    arm_time: 0
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 0}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 76d8cceef4930e5428b6dba2ac401114, type: 3}
+    recoil: 20
+    bulletSpd: 10
+    type: 3
+    firePos: {x: 1.913, y: 0.251}
+    fireEff: {fileID: 0}
+    damage: 0
+    damageType: 0
+    firing_time: 1
+    reloading_time: 3
+    infinite: 0
+    bullet_count: 2
+    automatic: 0
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 1
+    fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
+    spd_offset: 0
+    ang_offset: 1
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: a5e2de517c769dc448569c1b25572018, type: 3}
+    recoil: 7
+    bulletSpd: 15
+    type: 2
+    firePos: {x: 2.19, y: 0.17}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 0
+    damageType: 0
+    firing_time: 0.333
+    reloading_time: 1.1
+    infinite: 0
+    bullet_count: 4
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 0
+    ang_offset: 1
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 0
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 0
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: ee602d009e91a4463a2a1979d3e62d15, type: 3}
+    recoil: 0
+    bulletSpd: 10
+    type: 8
+    firePos: {x: 2.5, y: 0}
+    fireEff: {fileID: 0}
+    damage: 9999
+    damageType: 0
+    firing_time: 0.1
+    reloading_time: 1.1
+    infinite: 1
+    bullet_count: 4
+    automatic: 0
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 2
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 1
+    time: 5
+    hold_to_fire: 1
+    auto_release: 1
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 7e73880c4c5f1b74b88d2035bda2f157, type: 3}
+    recoil: 0
+    bulletSpd: 13
+    type: 9
+    firePos: {x: 2.5, y: 0}
+    fireEff: {fileID: 0}
+    damage: 10000
+    damageType: 0
+    firing_time: 0.1
+    reloading_time: 1.1
+    infinite: 1
+    bullet_count: 4
+    automatic: 1
+    arm_time: 0.23
+    mag_c: 0
+    reload_type: 2
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 5
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  mySprite: {fileID: 0}
+  recoil_ani: 0
+  bullet: {fileID: 0}
+  audSource: {fileID: 0}
+  jsName: WeaponData.json
+  rotateTick: 0
+  myRigidbody: {fileID: 0}

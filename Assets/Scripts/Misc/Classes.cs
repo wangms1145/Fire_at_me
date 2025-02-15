@@ -88,6 +88,8 @@ public class WeaponClass
     public bool duo_hold = false;
     [Tooltip("第二武器位置")]
     [ShowIf("duo_hold", true)][SerializeField] public Vector2 Sec_pos = Vector2.zero;
+    [Tooltip("生成权重")]
+    public float spawn_probablity;
     
     
         
