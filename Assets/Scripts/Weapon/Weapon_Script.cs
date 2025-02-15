@@ -111,6 +111,7 @@ public class Weapon_Script : MonoBehaviour
     void Start()
     {
         if(name.Equals("Weapon_list"))return;
+        weapon = weapon_ls.GetComponent<Weapon_Script>().weapon;
         plyLogic = GetComponentInParent<playerLogic>();
         Change(0);
         myRigidbody.simulated = false;
@@ -126,7 +127,7 @@ public class Weapon_Script : MonoBehaviour
     void Update()
     {
         if(name.Equals("Weapon_list"))return;
-        weapon = weapon_ls.GetComponent<Weapon_Script>().weapon;
+        
         if(!GetComponentInParent<PlayerScript>().IsOwner){
             transform.rotation = quaternion.RotateZ(plyLogic.GetWeaponAng());
             return;
