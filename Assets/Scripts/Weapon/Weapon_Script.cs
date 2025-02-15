@@ -66,6 +66,7 @@ public class Weapon_Script : MonoBehaviour
     private bool fire_flag = true;
     private playerLogic plyLogic;
     private float tick_timer = 0f;
+    int sign;
 
     // Start is called before the first frame update
 
@@ -134,7 +135,7 @@ public class Weapon_Script : MonoBehaviour
             
             myRigidbody.simulated = false;
 
-            int sign;
+            
             ang = Mathf.Atan2(ply.disY,ply.disX);
             float dis_m = (float)Math.Sqrt(Math.Pow(ply.disX,2) + Math.Pow(ply.disY,2));
             gameObject.GetComponentsInChildren<Transform>(false)[1].localPosition = Vector2.right * dis_m * 3.3333f;
@@ -329,5 +330,11 @@ public class Weapon_Script : MonoBehaviour
     }
     public WeaponClass GetWeapon(){
         return weapon[now_ind];
+    }
+    public bool firing(){
+        return Input.GetKey(KeyCode.Mouse0);
+    }
+    public bool flip(){
+        return sign < 0;
     }
 }

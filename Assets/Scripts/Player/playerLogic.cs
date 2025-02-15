@@ -94,7 +94,10 @@ public class playerLogic : NetworkBehaviour
         a = transform.GetChild(1).GetComponent<ParticleSystem>().trails;
         a.colorOverTrail = col;
         if(myRigidbody.velocity.magnitude > 0.1){
-            if(myRigidbody.velocity.x < 0){
+            if(GetComponentInChildren<Weapon_Script>().firing()){
+                GetComponent<SpriteRenderer>().flipX = GetComponentInChildren<Weapon_Script>().flip();
+            }
+            else if(myRigidbody.velocity.x < 0){
                 GetComponent<SpriteRenderer>().flipX = true;
             }
             else{
