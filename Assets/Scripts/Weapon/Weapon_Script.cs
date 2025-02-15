@@ -313,7 +313,7 @@ public class Weapon_Script : MonoBehaviour
         ply.shoot = true; 
         shoot_last_time = Time.time;
         ply.ang = (float)(ang + ang_rec + Math.PI);
-        bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity,sec);
+        bullet.SpawnBullet(weapon[now_ind],ang + ang_rec * sign,ply.GetComponent<Rigidbody2D>().velocity,sec,sign);
         shoot = true;
         audSource.PlayOneShot(weapon[now_ind].fire_audio);
         ang_rec += weapon[now_ind].ang_rec/5;

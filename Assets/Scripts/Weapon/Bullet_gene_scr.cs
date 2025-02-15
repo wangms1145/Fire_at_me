@@ -22,11 +22,14 @@ public class Bullet_gene_scr : MonoBehaviour
     {
         //transform.localPosition = Vector3.zero;
     }
-    public void SpawnBullet(WeaponClass wp,float ang,Vector2 ply_vel,bool sec){
+    public void SpawnBullet(WeaponClass wp,float ang,Vector2 ply_vel,bool sec,int sign){
         //need spawn bullet
         //Debug.Log("spawn");
         GameObject bullet = bullets[wp.type];
         transform.localPosition = sec ? wp.Sec_pos + wp.firePos : wp.firePos;
+        Vector3 pos = transform.localPosition;
+        pos.y = pos.y * sign;
+        transform.localPosition = pos;
         /*
         switch (wp.type){
             case 0:
