@@ -46,8 +46,8 @@ public class playerLogic : NetworkBehaviour
 
     [SerializeField] private GameObject thisWeaponWheel;
     private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    private NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -145,12 +145,7 @@ public class playerLogic : NetworkBehaviour
     public float GetMaxHealth(){
         return max_health;
     }
-    public float GetNetHealth(){
-        return healthNet.Value;
-    }
-    public float GetNetMaxHealth(){
-        return healthMaxNet.Value;
-    }
+
     public void SetHealth(float health){
         if(varibles.IsOwner)this.health = health;
     }

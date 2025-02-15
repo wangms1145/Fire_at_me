@@ -23,7 +23,7 @@ public class heartScript : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
-        health = ply.GetNetHealth()/100;
+        health = ply.healthNet.Value/100;
         health = Mathf.Round(health*10)/10f;
         txt.GetComponent<TextMeshPro>().text = health + "X";
     }
