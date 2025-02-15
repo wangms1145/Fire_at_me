@@ -51,7 +51,6 @@ public class Weapon_Script : MonoBehaviour
     [SerializeField] private int rotateTick;
     private float ang,ang_rec;
     private bool flag;
-    private Vector3 scale;
     private int now_ind;
     private float time;
     private bool reload;
@@ -115,8 +114,6 @@ public class Weapon_Script : MonoBehaviour
         plyLogic = GetComponentInParent<playerLogic>();
         Change(0);
         myRigidbody.simulated = false;
-        scale.x = 0.3f;
-        scale.z = 1;
         for(int i = 0;i<weapon.Length;i++){
             weapon[i].mag_c = weapon[i].bullet_count;
             if(weapon[i].infinite)weapon[i].bullet_count = 10;
@@ -143,11 +140,11 @@ public class Weapon_Script : MonoBehaviour
             gameObject.GetComponentsInChildren<Transform>(false)[1].localPosition = Vector2.right * dis_m * 3.3333f;
             
             if(ply.disX<0){
-                scale.y = -0.3f;
+                mySprite.flipY = true;
                 sign = -1;
             }
             else{
-                scale.y = 0.3f;
+                mySprite.flipY = false;
                 sign = 1;
             }
 
@@ -268,7 +265,6 @@ public class Weapon_Script : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F)){j++;Change(j);}
             if(j>=weapon.Length - 1){j = -1;}
 
-            transform.localScale = scale;
             if(tick_timer > 1f/rotateTick){
                 plyLogic.RotateWeapon(ang + ang_rec * sign);
             }
