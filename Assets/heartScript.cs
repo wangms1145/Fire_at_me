@@ -1,0 +1,30 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class heartScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    [SerializeField] private GameObject txt;
+    [SerializeField] private playerLogic ply;
+    private float health;
+    void Start()
+    {
+        txt = transform.GetChild(1).gameObject;
+        ply.gameObject.GetComponentInParent<playerLogic>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(gameObject.GetComponentInParent<PlayerScript>().IsOwner == false){
+            gameObject.SetActive(false);
+            return;
+        }
+        health = ply.GetHealth()/ply.GetMaxHealth();
+        health = Mathf.Round(health*10)/10f;
+        txt.GetComponent<TextMeshPro>().text = health + "X";
+    }
+}

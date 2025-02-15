@@ -35,14 +35,19 @@ public class playerLogic : NetworkBehaviour
     [Tooltip("最大血量")]
     [SerializeField]
     private float max_health;
+    [SerializeField]
+    private float health_tick;
     [HideInInspector]
     public bool groundFlag;
     [HideInInspector]
     public float ys = 0;
     private int i;
+    private float timer = 0;
 
     [SerializeField] private GameObject thisWeaponWheel;
     private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    private NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -73,6 +78,12 @@ public class playerLogic : NetworkBehaviour
         }
     }
     public void logic(){
+        timer += Time.deltaTime;
+        if(timer > 1f/health_tick){
+            healthNet.Value = health;
+            healthMaxNet.Value = max_health;
+            timer = 0;
+        }
         if(myRigidbody.sharedMaterial.Equals(inGame_material) == false)myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
@@ -129,10 +140,10 @@ public class playerLogic : NetworkBehaviour
         Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
     }
     public float GetHealth(){
-        return health;
+        return healthNet.Value;
     }
     public float GetMaxHealth(){
-        return max_health;
+        return healthMaxNet.Value;
     }
     public void SetHealth(float health){
         if(varibles.IsOwner)this.health = health;
