@@ -2062,6 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ply: {fileID: 5736963517767273633}
+  weapon_ls: {fileID: 5445580029792044035, guid: 843052ffa2c5f3f4185da81aca0fca8f, type: 3}
   weapon:
   - f: 0
     spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
@@ -2094,6 +2095,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 62c4f4c0150f4134ba7a890d6f1690ed, type: 3}
     recoil: 15
@@ -2125,6 +2127,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: f351803335fb7b849a6d8c254084644e, type: 3}
     recoil: 7
@@ -2156,6 +2159,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 1
     Sec_pos: {x: 0.759, y: -0.29}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 536b887f5ac313342b2e7fad01540690, type: 3}
     recoil: 7
@@ -2187,6 +2191,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: cf8b28f3e75a14549877802c00a7d233, type: 3}
     recoil: 1.8
@@ -2218,6 +2223,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 44ff2fddc221a264982275849e2003b6, type: 3}
     recoil: 1.7
@@ -2249,6 +2255,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 1, y: 1}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: e9567ce4c2a474c4d823aa3a44e3eaba, type: 3}
     recoil: 5
@@ -2280,6 +2287,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 8ee490e691117064fb6f56176ef62348, type: 3}
     recoil: 3
@@ -2311,6 +2319,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
     recoil: 1
@@ -2342,6 +2351,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: ec7e6759d0cd1c548bfcf9e6d2ea9b68, type: 3}
     recoil: 1.2
@@ -2373,6 +2383,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: e7b59444130340c49ba17278daa9e65b, type: 3}
     recoil: 5
@@ -2404,6 +2415,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 7aa0588525e9d49418719850cbebbeb9, type: 3}
     recoil: 0
@@ -2435,6 +2447,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 76d8cceef4930e5428b6dba2ac401114, type: 3}
     recoil: 20
@@ -2466,6 +2479,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: a5e2de517c769dc448569c1b25572018, type: 3}
     recoil: 7
@@ -2497,6 +2511,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: ee602d009e91a4463a2a1979d3e62d15, type: 3}
     recoil: 0
@@ -2528,6 +2543,7 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   - f: 0
     spr: {fileID: 21300000, guid: 7e73880c4c5f1b74b88d2035bda2f157, type: 3}
     recoil: 0
@@ -2559,12 +2575,13 @@ MonoBehaviour:
     hold_time: 0
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
   mySprite: {fileID: 6376191802700342874}
   recoil_ani: 0
   bullet: {fileID: 4708711018766681592}
   audSource: {fileID: 1088906752028039509}
   jsName: WeaponData.json
-  rotateTick: 0
+  rotateTick: 30
   myRigidbody: {fileID: 2313817667901989447}
 --- !u!50 &2313817667901989447
 Rigidbody2D:

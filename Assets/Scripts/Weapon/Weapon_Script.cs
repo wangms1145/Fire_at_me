@@ -35,6 +35,8 @@ public class Weapon_Script : MonoBehaviour
     [Tooltip("玩家代码")]
     public PlayerScript ply;
     [Tooltip("武器（所有武器都在这里）")]
+    public GameObject weapon_ls;
+    [Tooltip("武器（所有武器都在这里）")]
     public WeaponClass[] weapon;
     [Tooltip("角色渲染器")]
     public SpriteRenderer mySprite;
@@ -124,6 +126,7 @@ public class Weapon_Script : MonoBehaviour
     void Update()
     {
         if(name.Equals("Weapon_list"))return;
+        weapon = weapon_ls.GetComponent<Weapon_Script>().weapon;
         if(!GetComponentInParent<PlayerScript>().IsOwner){
             transform.rotation = quaternion.RotateZ(plyLogic.GetWeaponAng());
             return;
