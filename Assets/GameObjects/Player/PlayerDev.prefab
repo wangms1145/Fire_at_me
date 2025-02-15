@@ -571,7 +571,7 @@ MonoBehaviour:
   min_eff_spd: 10
   health: 0
   max_health: 1000
-  health_tick: 0
+  health_tick: 30
   groundFlag: 0
   ys: 0
   thisWeaponWheel: {fileID: 0}

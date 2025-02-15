@@ -140,9 +140,15 @@ public class playerLogic : NetworkBehaviour
         Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
     }
     public float GetHealth(){
-        return healthNet.Value;
+        return health;
     }
     public float GetMaxHealth(){
+        return max_health;
+    }
+    public float GetNetHealth(){
+        return healthNet.Value;
+    }
+    public float GetNetMaxHealth(){
         return healthMaxNet.Value;
     }
     public void SetHealth(float health){
