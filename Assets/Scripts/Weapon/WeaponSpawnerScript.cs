@@ -34,6 +34,7 @@ public class WeaponSpawnerScript : MonoBehaviour
                     rand -= weapon_list[j].spawn_probablity;
                     j++;
                 }
+                j--;
                 int ind = UnityEngine.Random.Range(0,pos.Length);
                 DroppedWeapon spawned = Instantiate(droppedWeapon,pos[ind],quaternion.RotateZ(0)).GetComponent<DroppedWeaponScript>().weapon;
                 spawned.spr = weapon_list[j].spr;
