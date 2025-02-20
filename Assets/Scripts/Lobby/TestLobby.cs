@@ -6,17 +6,28 @@ using Unity.Services.Authentication;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
 
 public class TestLobby : MonoBehaviour
 {
+
+    public Lobby hostLobby;
+    private string playerName;
+
+
     //creating lobbies
-     string createLobbyName = "This_creat_Lobby";
-     int maxPlayer = 1;
-     bool isCreatedLobbyPrivate = true;
+    string createLobbyName = "This_creat_Lobby";
+    int maxPlayer = 2;
+    bool isCreatedLobbyPrivate = false;
 
     private float heartBeatTimer;
 
-    Lobby hostLobby;
+    //JoinLobby by code
+
+
+
+    public string joinLobbyCode{ get; set;}
 
     private void Update()
     {
@@ -43,6 +54,10 @@ public class TestLobby : MonoBehaviour
     // Start is called before the first frame update
     private async void Start()
     {
+
+        playerName = "someplayer" + UnityEngine.Random.Range(0,114514);
+        Debug.Log(playerName);
+
         await UnityServices.InitializeAsync();
         AuthenticationService.Instance.SignedIn += () =>{
             Debug.Log("Signed in: " + AuthenticationService.Instance.PlayerId);
@@ -56,14 +71,18 @@ public class TestLobby : MonoBehaviour
     {
         try{
 
-            CreateLobbyOptions createLobbyOptions= new CreateLobbyOptions{IsPrivate = isCreatedLobbyPrivate};
+            CreateLobbyOptions createLobbyOptions= new CreateLobbyOptions
+            {
+                IsPrivate = isCreatedLobbyPrivate,
+               Player = GetPlayer()
+            };
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(createLobbyName, maxPlayer,createLobbyOptions);
 
             hostLobby = lobby; 
 
             Debug.Log("createdLobby!  Lobby_Name:"+ lobby.Name+"  Max_Player:"+lobby.MaxPlayers + "  ID:"+lobby.Id + "  Code:" + lobby.LobbyCode);
 
-
+            PrintPlayers(hostLobby);
 
         }
         catch(LobbyServiceException e)
@@ -116,5 +135,64 @@ public class TestLobby : MonoBehaviour
         }
     }
      
+     public async Task JoinLobbyByCode( string code , InputWindow inputWindow)
+     {
+        try{
+            JoinLobbyByCodeOptions joinLobbyByCodeOptions= new JoinLobbyByCodeOptions(){
+                Player = GetPlayer()
+            };
+
+            Lobby joinedLobby = await Lobbies.Instance.JoinLobbyByCodeAsync(code,joinLobbyByCodeOptions);
+            Debug.Log("Joined Lobby with code:" + code);
+
+            PrintPlayers(joinedLobby);
+        }
+        catch (LobbyServiceException e)
+        {
+            Debug.Log("Join Lobby By Code Error in Input Window" + e);
+            inputWindow.avoidNextClose = true;
+        }
+
+     }
+
+     public async void QuickJoinLobby()
+     {
+        try 
+        {
+            QuickJoinLobbyOptions quickJoinLobbyOptions= new QuickJoinLobbyOptions(){
+                Player = GetPlayer()
+            };
+            await LobbyService.Instance.QuickJoinLobbyAsync(quickJoinLobbyOptions);
+        }
+        catch(LobbyServiceException e)
+        { 
+            Debug.Log("Quick join error: "+ e);
+        }
+     }
+
+    public  void PrintPlayers( Lobby lobby)
+    {
+        Debug.Log("Player in lobby" + lobby);
+        foreach (Player player in lobby.Players)
+        {
+            Debug.Log(player.Id + "  " + player.Data["playerName"].Value);
+        }
+    }
+
+    private Player GetPlayer()
+    {
+        Player  player = new Player
+                    {
+                        Data = new Dictionary<string,PlayerDataObject>
+                            {
+                            {"playerName" , new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, playerName)}
+                            }
+                    };
+        return player;
+    }
+
+
+
 
 }
+
