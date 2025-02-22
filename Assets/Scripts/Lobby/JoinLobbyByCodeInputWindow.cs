@@ -6,7 +6,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InputWindow : MonoBehaviour
+public class JoinLobbyByCodeInputWindow : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private TextMeshProUGUI titleText;
@@ -15,16 +15,28 @@ public class InputWindow : MonoBehaviour
     [SerializeField] private Button cancelButton;
     [SerializeField] private Button okButton;
     [SerializeField] private TestLobby testlobby;
-    [SerializeField] InputWindow inputWindow;
+    [SerializeField] JoinLobbyByCodeInputWindow inputWindow;
 
     public bool avoidNextClose = false;
 
     void Start()
     {
         testlobby = FindAnyObjectByType<TestLobby>();
-        inputWindow = FindObjectOfType<InputWindow>();
-        this.gameObject.SetActive(false);
+        inputWindow = FindObjectOfType<JoinLobbyByCodeInputWindow>();
     }
+
+    //Hide the window at start
+        private bool flag = true;
+        private void LateUpdate() 
+        {
+            if(flag)
+            {
+                gameObject.SetActive(false);
+                flag = false;
+            }
+        }
+
+
 
     public void onCancel()
     {
@@ -39,7 +51,7 @@ public class InputWindow : MonoBehaviour
 
 
         try{
-        await testlobby.JoinLobbyByCode(tMP_InputField.text, this.gameObject.GetComponent<InputWindow>());
+        await testlobby.JoinLobbyByCode(tMP_InputField.text, this.gameObject.GetComponent<JoinLobbyByCodeInputWindow>());
         }
         catch(Exception e)
         {   

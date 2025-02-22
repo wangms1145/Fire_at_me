@@ -17,9 +17,9 @@ public class TestLobby : MonoBehaviour
 
 
     //creating lobbies
-    string createLobbyName = "This_creat_Lobby";
-    int maxPlayer = 2;
-    bool isCreatedLobbyPrivate = false;
+    public string createLobbyName = "This_creat_Lobby";
+    public int maxPlayer = 2;
+    public bool isCreatedLobbyPrivate = false;
 
     private float heartBeatTimer;
 
@@ -51,7 +51,7 @@ public class TestLobby : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
+
     private async void Start()
     {
 
@@ -67,6 +67,8 @@ public class TestLobby : MonoBehaviour
 
     }
 
+
+    [ContextMenu("CreateLobby")]
     public async void CreateLobby()
     {
         try{
@@ -92,6 +94,8 @@ public class TestLobby : MonoBehaviour
 
     }
 
+
+    [ContextMenu("ListLobbies")]
     public async void ListLobbies(){
         try
         {
@@ -121,6 +125,10 @@ public class TestLobby : MonoBehaviour
         }
     }
 
+
+
+
+    [ContextMenu("JoinLobby")] 
     public async void JoinLobby()
     {
         try
@@ -135,7 +143,10 @@ public class TestLobby : MonoBehaviour
         }
     }
      
-     public async Task JoinLobbyByCode( string code , InputWindow inputWindow)
+
+
+    [ContextMenu("JoinLobbyByCode")]
+     public async Task JoinLobbyByCode( string code , JoinLobbyByCodeInputWindow inputWindow)
      {
         try{
             JoinLobbyByCodeOptions joinLobbyByCodeOptions= new JoinLobbyByCodeOptions(){
@@ -155,6 +166,9 @@ public class TestLobby : MonoBehaviour
 
      }
 
+
+
+    [ContextMenu("QuickJoinLobby")]
      public async void QuickJoinLobby()
      {
         try 
@@ -169,6 +183,8 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Quick join error: "+ e);
         }
      }
+
+
 
     public  void PrintPlayers( Lobby lobby)
     {
