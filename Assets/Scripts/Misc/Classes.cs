@@ -231,6 +231,8 @@ public class MapClass{
     public List<Vector3> player_spawn_point = new List<Vector3>();
     public List<Vector3> weapon_spawn_point = new List<Vector3>();
     public List<float> avalible_angles = new List<float>();
+    public float up_spn_rng_up;
+    public float up_spn_rng_down;
     public float right_spn_off;
     public float left_spn_off;
     public float died_y_pos;

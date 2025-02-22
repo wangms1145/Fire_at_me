@@ -44,6 +44,7 @@ public class WeaponWheel : NetworkBehaviour
 
 
     void OnEnable(){
+        if(menus[0] == null) return;
         wps = GameObject.FindGameObjectWithTag("BAG").GetComponent<BagManager>().weaponInBag.ToArray();
         for(int i = 0 ; i < 5 ; i++){
             menus[i].GetComponent<Animator>().SetTrigger("Reset");
