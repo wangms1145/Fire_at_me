@@ -224,6 +224,7 @@ public class ConditionalHidePropertyDrawer : PropertyDrawer
     }
 }
 //What ever classes goes after this thing
+[System.Serializable]
 public class MapClass{
     private bool fal = false;
     public GameObject map;

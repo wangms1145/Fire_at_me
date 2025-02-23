@@ -2285,6 +2285,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86b04159fcc7ab4196d86146d09bf3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maps:
+  - map: {fileID: 0}
+    player_spawn_point: []
+    weapon_spawn_point: []
+    avalible_angles: []
+    up_spn_rng_up: 0
+    up_spn_rng_down: 0
+    right_spn_off: 0
+    left_spn_off: 0
+    died_y_pos: 0
+    right_bound_pos: 0
+    left_bound_pos: 0
 --- !u!4 &1721449724
 Transform:
   m_ObjectHideFlags: 0
