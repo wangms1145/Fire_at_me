@@ -75,7 +75,7 @@ public class WeaponWheel : NetworkBehaviour
             mousePositionPointer.transform.rotation = Quaternion.AngleAxis(angle+angleAdjustment,Vector3.forward);
         //Debug.Log("3");
 
-        if ( !Input.GetMouseButton(1))
+        if ( !Input.GetKey(KeyCode.T) )
         {
             this.gameObject.SetActive(false);
             //Debug.Log("true");

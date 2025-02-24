@@ -41,6 +41,12 @@ public class playerLogic : NetworkBehaviour
     public bool groundFlag;
     [HideInInspector]
     public float ys = 0;
+    public float weight;
+    public bool heavy;
+    public float heavy_time_max;
+    public float heavy_time;
+    public float heavy_time_cost_start;
+    public float heavy_time_rate;
     private int i;
     private float timer = 0;
 
@@ -68,6 +74,7 @@ public class playerLogic : NetworkBehaviour
         myRigidbody.sharedMaterial = inGame_material;
         thisWeaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel");
         health = max_health;
+        heavy_time = heavy_time_max;
     }
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
@@ -84,6 +91,23 @@ public class playerLogic : NetworkBehaviour
             healthMaxNet.Value = max_health;
             timer = 0;
         }
+        if(heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1)){
+            myRigidbody.mass = weight;
+            heavy = false;
+            heavy_time += heavy_time_rate * Time.deltaTime;
+            
+        }
+        else if(Input.GetKey(KeyCode.Mouse1) && heavy_time > 0f){
+            myRigidbody.mass = weight * 10;
+            heavy = true;
+            if(Input.GetKeyDown(KeyCode.Mouse1))heavy_time -= heavy_time_cost_start;
+            heavy_time -= Time.deltaTime;
+        }
+        else{
+            myRigidbody.mass = weight;
+            heavy = false;
+        }
+        heavy_time = Mathf.Clamp(heavy_time,0f,heavy_time_max);
         if(myRigidbody.sharedMaterial.Equals(inGame_material) == false)myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
@@ -120,10 +144,10 @@ public class playerLogic : NetworkBehaviour
         }
         groundFlag = isGrounded();
 
-            if(Input.GetMouseButtonDown(1))
-            {
-                thisWeaponWheel.SetActive(true);
-            }
+        if(Input.GetKey(KeyCode.T))
+        {
+            thisWeaponWheel.SetActive(true);
+        }
 
     }
     public void onDeath(){
@@ -136,6 +160,7 @@ public class playerLogic : NetworkBehaviour
             myRigidbody.position = Vector2.zero;
             myRigidbody.rotation = 0;
             health = max_health;
+            heavy_time = heavy_time_max;
             varibles.isAlive = true;
         }
     }

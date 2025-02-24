@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 1009878700
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -574,7 +574,19 @@ MonoBehaviour:
   health_tick: 30
   groundFlag: 0
   ys: 0
+  weight: 1
+  heavy: 0
+  heavy_time_max: 10
+  heavy_time: 0
+  heavy_time_cost_start: 3
+  heavy_time_rate: 1
+  gravity: 1.6
+  gravity_heavy: 3.2
   thisWeaponWheel: {fileID: 0}
+  healthNet:
+    m_InternalValue: 0
+  healthMaxNet:
+    m_InternalValue: 0
 --- !u!114 &5279438165096562582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3285,7 +3297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 536359794
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

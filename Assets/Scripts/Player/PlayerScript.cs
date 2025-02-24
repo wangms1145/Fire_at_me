@@ -25,6 +25,7 @@ public class PlayerScript : NetworkBehaviour
     public float diedYpos;
     [Tooltip("射击（别动）")]
     public bool shoot;
+
     //public int mag,c_mag;
     [HideInInspector]
     public float ang;
@@ -41,7 +42,8 @@ public class PlayerScript : NetworkBehaviour
     [HideInInspector]
     public float angSpd;
 
-    [HideInInspector] public int plycurrenthealth ;
+    [HideInInspector] public int plycurrenthealth;
+    
     public const int kMaxHealth = 1000;
 
     private playerMove move;
@@ -63,6 +65,7 @@ public class PlayerScript : NetworkBehaviour
         player_logic = GetComponent<playerLogic>();
         player_camera = GetComponent<playerCamera>();
         rotate = GetComponent<playerRotation>();
+        
     }
     public override void OnNetworkSpawn()
     {
@@ -73,6 +76,7 @@ public class PlayerScript : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         if (isAlive) {
 
             
