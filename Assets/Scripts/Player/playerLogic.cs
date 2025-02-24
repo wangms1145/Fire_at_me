@@ -55,7 +55,7 @@ public class playerLogic : NetworkBehaviour
     private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    public NetworkVariable<Vector2> Vecocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    public NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -90,10 +90,11 @@ public class playerLogic : NetworkBehaviour
         if(!IsOwner) return;
         timer += Time.deltaTime;
         if(timer > 1f/health_tick){
+            Debug.Log(IsOwner);
             healthNet.Value = health;
             healthMaxNet.Value = max_health;
             timer = 0;
-            Vecocity.Value = myRigidbody.velocity;
+            Velocity.Value = myRigidbody.velocity;
         }
         if(heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1)){
             myRigidbody.mass = weight;
@@ -156,7 +157,7 @@ public class playerLogic : NetworkBehaviour
     }
     public void ifNotOwner(){
         if(IsOwner)return;
-        GetComponent<Rigidbody2D>().velocity = Vecocity.Value;
+        GetComponent<Rigidbody2D>().velocity = Velocity.Value;
     }
     public void onDeath(){
         if(transform.position.y < varibles.diedYpos-30){
