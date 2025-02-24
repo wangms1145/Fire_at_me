@@ -182,6 +182,12 @@ public class playerLogic : NetworkBehaviour
     public float GetMaxHealth(){
         return max_health;
     }
+    public float GetHealthNet(){
+        return healthNet.Value;
+    }
+    public float GetMaxHealthNet(){
+        return healthMaxNet.Value;
+    }
 
     public void SetHealth(float health){
         if(varibles.IsOwner)this.health = health;
