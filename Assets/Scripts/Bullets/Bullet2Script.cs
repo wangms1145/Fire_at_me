@@ -24,6 +24,7 @@ public class Bullet2Script : NetworkBehaviour
     {
         net = GetComponent<NetworkObject>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        if(!IsOwner)return;
         checkHit();
     }
 

@@ -52,10 +52,10 @@ public class playerLogic : NetworkBehaviour
     private float timer = 0;
 
     [SerializeField] private GameObject thisWeaponWheel;
-    private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    public NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    public NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    public NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){

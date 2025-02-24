@@ -76,7 +76,10 @@ public class PlayerScript : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!IsOwner)return;
+        if(!IsOwner){
+            player_logic.ifNotOwner();
+            return;
+        }
         if (isAlive) {
 
             
