@@ -2892,6 +2892,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4398285855999668445, guid: 230799f89f0474c3fafa3d462ca18daf, type: 3}
+      propertyPath: NetworkConfig.TickRate
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
