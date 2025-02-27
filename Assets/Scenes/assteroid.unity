@@ -353,6 +353,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef681439e1aec4e869562b79fae52921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &546333707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546333709}
+  - component: {fileID: 546333708}
+  m_Layer: 0
+  m_Name: MeteorSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &546333708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546333707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73446e9dc6323045adde2eb199b4048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteor: {fileID: 1794826677264910401, guid: 4731de14cd7393945b326cd276e2870a, type: 3}
+  ls:
+  - {fileID: 451598274, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 210592245, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1045044945, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 2113536181, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 428526386, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1542820961, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -923204955, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -856926902, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 40387708, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1530264121, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 530764016, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -389369863, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1361386071, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 71270849, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1347782448, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1981805201, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 947448889, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -407655052, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1291942620, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -493450560, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1626860496, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1138051263, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1623148815, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1363572262, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1363572262, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -951687898, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -156392680, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 648839143, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1702420596, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: 1979610650, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  - {fileID: -1914131696, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
+  hori: {x: 150, y: 300, z: 0}
+  vert: {x: -60, y: 30, z: 0}
+  depth: {x: 0, y: 0, z: 200}
+  center: {x: 36, y: 45, z: 488}
+--- !u!4 &546333709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546333707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573643366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1792,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: c9cebcad6ec054849945962361175e22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1753,9 +1834,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.484
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000009bdd47ec
@@ -1775,9 +1856,9 @@ MonoBehaviour:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 0
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 685.60126
-  m_PointLightOuterRadius: 762.63074
+  m_PointLightOuterAngle: 253.65302
+  m_PointLightInnerRadius: 207.32596
+  m_PointLightOuterRadius: 700
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2332,3 +2413,4 @@ SceneRoots:
   - {fileID: 289723528}
   - {fileID: 1287317738}
   - {fileID: 1050999071}
+  - {fileID: 546333709}

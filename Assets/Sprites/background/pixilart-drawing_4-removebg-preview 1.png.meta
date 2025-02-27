@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: ebbd2cfd87c5feb4d98cc42373545ac4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 247
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb8f509244398049902eedf3c576aec
+      internalID: 451598274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 247
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747b4ba2214c9a944bb4201d83c44962
+      internalID: 210592245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 217
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb923307c23eedb43ac058106f4b2b95
+      internalID: 1045044945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_3
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 230
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb674f55c5121824ba6400a1d5f1a191
+      internalID: 2113536181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 209
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e962398430c902946bd5b6379b87e015
+      internalID: 428526386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 201
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebf4fbf9dd080944b8c8b939eef9e3d
+      internalID: -1542820961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_6
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 187
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5711472937a24449b2c25c3e4bc3164
+      internalID: -923204955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 202
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604998cc884a36a46b94a61121f70234
+      internalID: -856926902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 191
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd8571f3847a88408017a34d4503e82
+      internalID: 40387708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 184
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3952ebd9694592b4eaf2d9fbe599c1ea
+      internalID: 1530264121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 179
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001ca81caeccb8e4e9740757cb0e4c4d
+      internalID: 530764016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_11
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 162
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7aba3b05bb692409ff8117b15a88e5
+      internalID: -389369863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 170
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce531975898d5bb4d9d87849cddce47f
+      internalID: -1361386071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 174
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0168c9a24c8c95b44ac256401ec71eba
+      internalID: 71270849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_14
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 141
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5e8f10e7284ea44ac6ba7e99fab9ef
+      internalID: 1347782448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_15
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 133
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7ddeab4e7a81245840dbaa4efc4d14
+      internalID: -1981805201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_16
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 139
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6095d2af1f8432468bda84470f12a3e
+      internalID: 947448889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_17
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 147
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eae9ddfa24b0ec48a61a9b191a4939e
+      internalID: -407655052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_18
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 153
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a408315d693259488b62c13474e2723
+      internalID: -1291942620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_19
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 135
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b145b10b339581c4c9bf554a02cf337f
+      internalID: -493450560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_20
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 135
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef2ba09810dc1e4199edcbaba736af9
+      internalID: 1626860496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_21
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 136
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c03661f415e54743a1e8c438d2e71f1
+      internalID: 1138051263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 119
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403ca18cedca7624ea9bfa0ed2d9e73c
+      internalID: -1623148815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_23
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 109
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ef47ca2fc6e394d9e55db7d61a36b6
+      internalID: -1363572262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_24
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 115
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6ddaf9ec3e30a439ada6651e41ade2
+      internalID: -951687898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_25
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 123
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ed4571f372c9a46924872e58568825
+      internalID: -156392680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_26
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 123
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28bff221cc373b46b803b8e74e73ab4
+      internalID: 648839143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_27
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 112
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ccedfddb054cd438a4a59993f39234
+      internalID: 1702420596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_28
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 99
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2428fd542cbdcde449a82ebd622399f1
+      internalID: 1979610650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-drawing_4-removebg-preview 1_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 97
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da157574c66afa4581fc70949682323
+      internalID: -1914131696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixilart-drawing_4-removebg-preview 1_0: 451598274
+      pixilart-drawing_4-removebg-preview 1_1: 210592245
+      pixilart-drawing_4-removebg-preview 1_10: 530764016
+      pixilart-drawing_4-removebg-preview 1_11: -389369863
+      pixilart-drawing_4-removebg-preview 1_12: -1361386071
+      pixilart-drawing_4-removebg-preview 1_13: 71270849
+      pixilart-drawing_4-removebg-preview 1_14: 1347782448
+      pixilart-drawing_4-removebg-preview 1_15: -1981805201
+      pixilart-drawing_4-removebg-preview 1_16: 947448889
+      pixilart-drawing_4-removebg-preview 1_17: -407655052
+      pixilart-drawing_4-removebg-preview 1_18: -1291942620
+      pixilart-drawing_4-removebg-preview 1_19: -493450560
+      pixilart-drawing_4-removebg-preview 1_2: 1045044945
+      pixilart-drawing_4-removebg-preview 1_20: 1626860496
+      pixilart-drawing_4-removebg-preview 1_21: 1138051263
+      pixilart-drawing_4-removebg-preview 1_22: -1623148815
+      pixilart-drawing_4-removebg-preview 1_23: -1363572262
+      pixilart-drawing_4-removebg-preview 1_24: -951687898
+      pixilart-drawing_4-removebg-preview 1_25: -156392680
+      pixilart-drawing_4-removebg-preview 1_26: 648839143
+      pixilart-drawing_4-removebg-preview 1_27: 1702420596
+      pixilart-drawing_4-removebg-preview 1_28: 1979610650
+      pixilart-drawing_4-removebg-preview 1_29: -1914131696
+      pixilart-drawing_4-removebg-preview 1_3: 2113536181
+      pixilart-drawing_4-removebg-preview 1_4: 428526386
+      pixilart-drawing_4-removebg-preview 1_5: -1542820961
+      pixilart-drawing_4-removebg-preview 1_6: -923204955
+      pixilart-drawing_4-removebg-preview 1_7: -856926902
+      pixilart-drawing_4-removebg-preview 1_8: 40387708
+      pixilart-drawing_4-removebg-preview 1_9: 1530264121
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
