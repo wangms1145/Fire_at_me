@@ -7,11 +7,11 @@
 <!-- 中英文切换 end -->
 <div align="center">
   
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
 
 </div>
 
@@ -19,10 +19,10 @@
 ==============================
 _This is **Not** a open source project_
 
-<img alt="player" src="./Assets/Sprites/玩家.png" width="40"><img alt="tnt" src="./Assets/Sprites/tnt.png" width="40">
-<img alt="nope" src="./Assets/Sprites/Nope.png" width="40">
-<img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="80">
-<img alt="fish" src="./Assets/Sprites/fish_bullet.png" width="40">
+<img alt="player" src="./Assets/Sprites/player/玩家.png" width="40"><img alt="tnt" src="./Assets/Sprites/tnt.png" width="40">
+<img alt="nope" src="./Assets/Sprites/weapon/Nope.png" width="40">
+<img alt="no_pic" src="./Assets/Sprites/weapon/no_pic_red.png" width="80">
+<img alt="fish" src="./Assets/Sprites/Bullets/fish_bullet.png" width="40">
 
 Fire at me is a 2D shooter video game which involves exagerated recoil, renewed rules and interesting weapons such as tnt gun, tree and lazer. It is still developing and not yet been officially released.
 
