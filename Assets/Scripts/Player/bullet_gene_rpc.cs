@@ -53,7 +53,7 @@ public class bullet_gene_rpc : NetworkBehaviour
                 }
                 break;
             case 2:
-                def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos).GetComponent<Bullet3Script>().damage = damage/bulletSpd;
+                def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos).GetComponent<Bullet3Script>().damage = damage;
                 break;
             case 3:
                 def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos);
@@ -78,7 +78,7 @@ public class bullet_gene_rpc : NetworkBehaviour
             case 8:
                 Debug.Log(hold_time);
                 GameObject spawed = def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos);
-                spawed.GetComponent<Grenade_script>().damage = damage;
+                spawed.GetComponent<Grenade_script>().damage = damage/1440;
                 spawed.GetComponent<Grenade_script>().hold_time = hold_time;
                 break;
             default:

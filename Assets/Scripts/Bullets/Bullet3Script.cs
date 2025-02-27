@@ -11,11 +11,25 @@ public class Bullet3Script : NetworkBehaviour
     private float timed = 0;
     public Rigidbody2D myRigidbody;
     private NetworkObject net;
+    public GameObject bullet_hole;
     // Start is called before the first frame update
     void Start()
     {
         des = CalcTime(trig);
         net = GetComponent<NetworkObject>();
+    }
+    void OnCollisionEnter2D(Collision2D other){
+        Vector2 a = other.GetContact(0).point;
+        Debug.Log(other.collider.gameObject.name);
+        if(other.collider.GetComponent<BotScript>() != null){
+            BotScript aim = other.collider.GetComponent<BotScript>();
+            aim.health -= damage;
+        }
+        if(other.collider.GetComponent<playerLogic>() != null){
+            playerLogic aim = other.collider.GetComponent<playerLogic>();
+            aim.damage(damage);
+        }
+        Instantiate(bullet_hole,a,quaternion.RotateZ(0));
     }
 
     // Update is called once per frame
