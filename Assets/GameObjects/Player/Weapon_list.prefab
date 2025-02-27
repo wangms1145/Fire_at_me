@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ply: {fileID: 0}
+  weapon_ls: {fileID: 0}
   weapon:
   - f: 0
     spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
@@ -61,7 +62,7 @@ MonoBehaviour:
     bullet_count: 30
     automatic: 1
     arm_time: 0.43
-    mag_c: 0
+    mag_c: 30
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
     spd_offset: 4
@@ -93,7 +94,7 @@ MonoBehaviour:
     bullet_count: 7
     automatic: 0
     arm_time: 0.53
-    mag_c: 0
+    mag_c: 7
     reload_type: 1
     fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
     spd_offset: 2
@@ -125,7 +126,7 @@ MonoBehaviour:
     bullet_count: 14
     automatic: 0
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 14
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: eea8710ad7c76604486ea39013a01959, type: 3}
     spd_offset: 5
@@ -157,7 +158,7 @@ MonoBehaviour:
     bullet_count: 10
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 10
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
     spd_offset: 1
@@ -189,7 +190,7 @@ MonoBehaviour:
     bullet_count: 30
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 30
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 5
@@ -221,7 +222,7 @@ MonoBehaviour:
     bullet_count: 100
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 100
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 3
@@ -253,7 +254,7 @@ MonoBehaviour:
     bullet_count: 10
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 10
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
     spd_offset: 0
@@ -285,7 +286,7 @@ MonoBehaviour:
     bullet_count: 40
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 40
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: eea8710ad7c76604486ea39013a01959, type: 3}
     spd_offset: 3
@@ -317,7 +318,7 @@ MonoBehaviour:
     bullet_count: 60
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 60
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 3
@@ -349,7 +350,7 @@ MonoBehaviour:
     bullet_count: 10
     automatic: 0
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 10
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
@@ -381,7 +382,7 @@ MonoBehaviour:
     bullet_count: 17
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 17
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 06abf5e768146e443982d9bba8682aa9, type: 3}
     spd_offset: 1
@@ -445,7 +446,7 @@ MonoBehaviour:
     bullet_count: 2
     automatic: 0
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 2
     reload_type: 1
     fire_audio: {fileID: 8300000, guid: 843fdeb1f7431fa4fa796d1f6dce8085, type: 3}
     spd_offset: 0
@@ -469,7 +470,7 @@ MonoBehaviour:
     type: 2
     firePos: {x: 2.19, y: 0.17}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
-    damage: 0
+    damage: 400
     damageType: 0
     firing_time: 0.333
     reloading_time: 1.1
@@ -477,7 +478,7 @@ MonoBehaviour:
     bullet_count: 4
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 2
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
@@ -506,10 +507,10 @@ MonoBehaviour:
     firing_time: 0.1
     reloading_time: 1.1
     infinite: 1
-    bullet_count: 4
+    bullet_count: 10
     automatic: 0
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 4
     reload_type: 2
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
@@ -538,10 +539,10 @@ MonoBehaviour:
     firing_time: 0.1
     reloading_time: 1.1
     infinite: 1
-    bullet_count: 4
+    bullet_count: 10
     automatic: 1
     arm_time: 0.23
-    mag_c: 0
+    mag_c: 4
     reload_type: 2
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
