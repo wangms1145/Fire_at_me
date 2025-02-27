@@ -22,17 +22,20 @@ public class explode_script : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!IsOwner)return;
         source.PlayOneShot(explode_aud);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner)return;
         timed += Time.deltaTime;
         if(timed > ani_time){
             GetComponent<SpriteRenderer>().enabled = false;
         }
         if(timed > aud_time){
+            GetComponent<NetworkObject>().Despawn();
             Destroy(gameObject);
         }
         if(timed > 0.05 && flag){
