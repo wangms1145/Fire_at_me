@@ -7,11 +7,11 @@
 <!-- 中英文切换 end -->
 <div align="center">
   
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
-![logo](./Assets/Sprites/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
+![logo](./Assets/Sprites/weapons/食人树.png)
 
 </div>
 
@@ -19,10 +19,10 @@
 ==============================
 _这并**不是**一个开源项目_
 
-<img alt="player" src="./Assets/Sprites/玩家.png" width="40"><img alt="tnt" src="./Assets/Sprites/tnt.png" width="40">
-<img alt="nope" src="./Assets/Sprites/Nope.png" width="40">
+<img alt="player" src="./Assets/Sprites/player/玩家.png" width="40"><img alt="tnt" src="./Assets/Sprites/Bullets/tnt.png" width="40">
+<img alt="nope" src="./Assets/Sprites/icons/Nope.png" width="40">
 <img alt="no_pic" src="./Assets/Sprites/no_pic_red.png" width="80">
-<img alt="fish" src="./Assets/Sprites/fish_bullet.png" width="40">
+<img alt="fish" src="./Assets/Sprites/Bullets/fish_bullet.png" width="40">
 
 《向我开炮》是一个夸大了枪械后坐力的2D射击游戏
 
