@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: -3065201189412856063}
   - component: {fileID: 1951470494627851877}
   - component: {fileID: -2941706005942047583}
-  m_Layer: 0
+  - component: {fileID: 8890380658558953065}
+  - component: {fileID: 2987042435331332352}
+  m_Layer: 9
   m_Name: eat_people_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,3 +232,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7c879794dfda4687da0e400131852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8890380658558953065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908864704082370889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789c6aae0d449d64fb7065f58112806e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  survive_time: 45
+--- !u!114 &2987042435331332352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908864704082370889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a235e6797df7f4fa3ab7a02964c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health_max: 800

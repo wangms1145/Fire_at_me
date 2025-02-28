@@ -415,7 +415,7 @@ MonoBehaviour:
   - {fileID: 1702420596, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
   - {fileID: 1979610650, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
   - {fileID: -1914131696, guid: ebbd2cfd87c5feb4d98cc42373545ac4, type: 3}
-  hori: {x: 150, y: 300, z: 0}
+  hori: {x: 400, y: 800, z: 0}
   vert: {x: -60, y: 30, z: 0}
   depth: {x: 0, y: 0, z: 200}
   center: {x: 36, y: 45, z: 488}
@@ -1814,7 +1814,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2471178, w: 0.9689855}
   m_LocalPosition: {x: 36, y: 45, z: 488}
-  m_LocalScale: {x: 218.07669, y: 204.57977, z: 1}
+  m_LocalScale: {x: 600, y: 600, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

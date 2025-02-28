@@ -20,6 +20,9 @@ public class playerMove : NetworkBehaviour
     public float jumpStrength;
     [Tooltip("是否连跳（没做）")]
     public bool DoBunnyHop;
+    [Tooltip("急停力度")]
+    public double acc_stp = 0.7f;
+    private double acc_add = 0;
     private double tspd;
 
     void Start(){
@@ -36,13 +39,19 @@ public class playerMove : NetworkBehaviour
             myRigidbody.velocity += Vector2.up * jumpStrength;
         }
         tspd = 0;
-        if(Input.GetKey(KeyCode.A))tspd += spd;
-        if(Input.GetKey(KeyCode.D))tspd -= spd;
-        float acc_add = 0;
-        if(Input.GetKey(KeyCode.LeftShift) && player_logic.isGrounded()){acc_add = (float)(0.7 - acc); tspd = 0;}
-        myRigidbody.velocity += Vector2.left * (float)(tspd+varibles.spdx)*Math.Clamp((acc+acc_add)*Time.deltaTime*100,-1,1);
+        if(Input.GetKey(KeyCode.A))tspd -= spd;
+        if(Input.GetKey(KeyCode.D))tspd += spd;
+        acc_add = 0;
+        double time = Time.deltaTime;
+        if(Input.GetKey(KeyCode.LeftShift) && player_logic.isGrounded()){
+            acc_add = 0.7 - acc;
+            tspd = 0;
+            time *= acc_stp;
+        }
+        double spdc = CalcSpd.calcSpdAdd(acc+acc_add, tspd, varibles.spdx,time);
+        myRigidbody.velocity += Vector2.right * (float)spdc;
     }
-
+    
 
     
 }

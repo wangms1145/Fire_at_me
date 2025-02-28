@@ -262,3 +262,12 @@ public class Distributed_random{
         return sum;
     }
 }
+public class CalcSpd{
+    public static double calcSpd(double acc,double tar,double curr,double time){
+        double ans = tar-(tar-curr)*Mathf.Pow((float)(1 - acc), (float)time);
+        return ans;
+    }
+    public static double calcSpdAdd(double acc,double tar,double curr,double time){
+        return calcSpd(acc,tar,curr,time) - curr;
+    }
+}

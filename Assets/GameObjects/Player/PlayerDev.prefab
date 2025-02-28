@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 1009878700
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -605,9 +605,10 @@ MonoBehaviour:
   player_logic: {fileID: 0}
   myRigidbody: {fileID: 0}
   spd: 10
-  acc: 0.006
+  acc: 0.5
   jumpStrength: 4
   DoBunnyHop: 0
+  acc_stp: 140
 --- !u!114 &3406629663134591044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,6 +625,8 @@ MonoBehaviour:
   myRigidbody: {fileID: 0}
   player_logic: {fileID: 0}
   wp: {fileID: 1485709207727238658}
+  up_comp_factor: 0.1
+  up_comp_factor_recoil: 0.2
 --- !u!114 &4897035973099964258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3299,7 +3302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 536359794
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

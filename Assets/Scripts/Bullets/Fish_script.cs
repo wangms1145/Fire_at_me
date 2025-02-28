@@ -47,6 +47,10 @@ public class Fish_script : NetworkBehaviour
                 playerLogic aim = hit.collider.GetComponent<playerLogic>();
                 aim.damage(myRigidbody.velocity.magnitude/1 * damage);
             }
+            if(hit.collider.GetComponent<HealthForObject>() != null){
+                HealthForObject aim = hit.collider.GetComponent<HealthForObject>();
+                aim.damageRPC(myRigidbody.velocity.magnitude/1 * damage);
+            }
             if(hit.rigidbody != null){
                 Vector2 diff = hit.point - (Vector2)transform.position;
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 3, spdToAng(diff));

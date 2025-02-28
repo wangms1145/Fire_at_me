@@ -215,7 +215,7 @@ MonoBehaviour:
   vel: {x: 0, y: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   damage: 10
   bullet_hole: {fileID: 8529851836600150010, guid: 3253c0896d6b5174493145afdb8ee80c, type: 3}
 --- !u!114 &-5593316210537233083

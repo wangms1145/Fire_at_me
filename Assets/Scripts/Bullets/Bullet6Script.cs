@@ -38,6 +38,10 @@ public class Bullet6Script : NetworkBehaviour
                 playerLogic aim = hit.collider.GetComponent<playerLogic>();
                 aim.damage(damage);
             }
+            if(hit.collider.GetComponent<HealthForObject>() != null){
+                HealthForObject aim = hit.collider.GetComponent<HealthForObject>();
+                aim.damageRPC(damage);
+            }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
             //Destroy(gameObject);
         }
