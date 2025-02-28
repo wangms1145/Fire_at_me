@@ -51,7 +51,3 @@ public class GravitySource2D
     public float gravityStrength = 9.81f; // Gravity pull strength
     public float minDistance = 1f; // Minimum distance for gravity effect
 }
-
-e4x3
-
-//2
