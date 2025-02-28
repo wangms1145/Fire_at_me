@@ -242,9 +242,15 @@ public class Weapon_Script : MonoBehaviour
                     CancelReload();
                 }
                 last_wp = now_ind;
-                if(time > weapon[now_ind].reloading_time && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
-                    weapon[now_ind].mag_c++;
-                    time = 0;
+                if(time >= weapon[now_ind].reloading_time && weapon[now_ind].mag_c < weapon[now_ind].bullet_count){
+                    if(weapon[now_ind].mag_c != 0){
+                        weapon[now_ind].mag_c++;
+                        time -= weapon[now_ind].reloading_time;
+                    }
+                    else if(time >= weapon[now_ind].reloading_time + weapon[now_ind].arm_time){
+                        weapon[now_ind].mag_c++;
+                        time -= weapon[now_ind].reloading_time + weapon[now_ind].arm_time;
+                    }
                 }
                 if(weapon[now_ind].mag_c == weapon[now_ind].bullet_count && fl == 9999){
                     fl = time;
@@ -259,7 +265,10 @@ public class Weapon_Script : MonoBehaviour
                 transform.localPosition -= Vector3.right * (float)Math.Cos(ang)*recoil_ani + Vector3.up * (float)Math.Sin(ang)*recoil_ani;
                 recoil_ani = 0;
             }
-            transform.localPosition += (Vector3.zero - transform.localPosition)*30*Time.deltaTime;
+            Vector3 normPos = transform.localPosition.normalized;
+            double magPos = transform.localPosition.magnitude;
+            float amount = (float)CalcSpd.calcSpdAdd(0.9,0,magPos,Time.deltaTime * 16);
+            transform.localPosition += normPos * amount;
             flag = true;
             
             

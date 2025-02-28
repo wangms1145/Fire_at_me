@@ -29,6 +29,10 @@ public class Bullet3Script : NetworkBehaviour
             playerLogic aim = other.collider.GetComponent<playerLogic>();
             aim.damage(damage);
         }
+        if(other.collider.GetComponent<HealthForObject>() != null){
+            HealthForObject aim = other.collider.GetComponent<HealthForObject>();
+            aim.damageRPC(damage);
+        }
         Instantiate(bullet_hole,a,quaternion.RotateZ(0));
     }
 

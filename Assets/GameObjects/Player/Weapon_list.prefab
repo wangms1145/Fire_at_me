@@ -50,7 +50,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: 6ebd5013fa7c0494094731301c7ab396, type: 3}
     recoil: 2.3
-    bulletSpd: 70
+    bulletSpd: 140
     type: 0
     firePos: {x: 3.1, y: 0.54}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -82,7 +82,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: 62c4f4c0150f4134ba7a890d6f1690ed, type: 3}
     recoil: 15
-    bulletSpd: 40
+    bulletSpd: 80
     type: 1
     firePos: {x: 2.87, y: 0.14}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -114,7 +114,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: f351803335fb7b849a6d8c254084644e, type: 3}
     recoil: 7
-    bulletSpd: 57
+    bulletSpd: 114
     type: 0
     firePos: {x: 1.79, y: 0.53}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -178,7 +178,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: cf8b28f3e75a14549877802c00a7d233, type: 3}
     recoil: 1.8
-    bulletSpd: 100
+    bulletSpd: 200
     type: 0
     firePos: {x: 1.77, y: 0.37}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -210,7 +210,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: 44ff2fddc221a264982275849e2003b6, type: 3}
     recoil: 1.7
-    bulletSpd: 80
+    bulletSpd: 160
     type: 0
     firePos: {x: 2.91, y: 0.58}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -222,7 +222,7 @@ MonoBehaviour:
     bullet_count: 100
     automatic: 1
     arm_time: 0.23
-    mag_c: 100
+    mag_c: 57
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 3
@@ -274,7 +274,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: 8ee490e691117064fb6f56176ef62348, type: 3}
     recoil: 3
-    bulletSpd: 100
+    bulletSpd: 200
     type: 0
     firePos: {x: 2.7, y: 0.4}
     fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
@@ -306,7 +306,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
     recoil: 1
-    bulletSpd: 70
+    bulletSpd: 140
     type: 0
     firePos: {x: 2.234, y: 0.583}
     fireEff: {fileID: 0}
@@ -338,7 +338,7 @@ MonoBehaviour:
   - f: 0
     spr: {fileID: 21300000, guid: ec7e6759d0cd1c548bfcf9e6d2ea9b68, type: 3}
     recoil: 1.2
-    bulletSpd: 130
+    bulletSpd: 260
     type: 7
     firePos: {x: 3.06, y: 0.13}
     fireEff: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
     auto_release: 0
     start_damage: 0
     strat_recoil: 0
-    hold_time: 0
+    hold_time: 0.073160104
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
     spawn_probablity: 1
@@ -478,7 +478,7 @@ MonoBehaviour:
     bullet_count: 4
     automatic: 1
     arm_time: 0.23
-    mag_c: 2
+    mag_c: 4
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
     bullet_count: 10
     automatic: 0
     arm_time: 0.23
-    mag_c: 4
+    mag_c: 10
     reload_type: 2
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
     auto_release: 1
     start_damage: 9999
     strat_recoil: 0
-    hold_time: 0
+    hold_time: 0.0101506
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
     spawn_probablity: 1
@@ -542,7 +542,7 @@ MonoBehaviour:
     bullet_count: 10
     automatic: 1
     arm_time: 0.23
-    mag_c: 4
+    mag_c: 10
     reload_type: 2
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 0
