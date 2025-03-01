@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3616798923288366877}
   - component: {fileID: 8819362219463053560}
   - component: {fileID: 333807617329063963}
+  - component: {fileID: 4033473567317428675}
   m_Layer: 7
   m_Name: PlayerDev
   m_TagString: Player
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1009878700
+  GlobalObjectIdHash: 1468091284
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -781,6 +782,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list: {fileID: 11400000, guid: 9205e6d7c85f05b4fab68c2d64b85be0, type: 2}
+--- !u!114 &4033473567317428675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309606502823975533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c488c13bcdfe7d742a0de0c03c32973a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedWeaponPrefab: {fileID: 7933228520522663058, guid: 591d13b01869623488e027616e088177, type: 3}
+  ply: {fileID: 0}
+  weapon_Script: {fileID: 0}
 --- !u!1 &349319402045506798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,7 +3318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 536359794
+  GlobalObjectIdHash: 1468091284
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -3324,12 +3340,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePositionPointer: {fileID: 9147972081255058354}
+  bag: {fileID: 7921965923016388278}
   menus:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3857379260195368857}
+  - {fileID: 414519353546532677}
+  - {fileID: 355169073601149161}
+  - {fileID: 1173421287666232305}
+  - {fileID: 4592703432501681929}
   angleAdjustment: -90
   weapon_Script: {fileID: 1485709207727238658}
   Empty: {fileID: 21300000, guid: c24fb9fa40c7e614aa70accdcae9414d, type: 3}

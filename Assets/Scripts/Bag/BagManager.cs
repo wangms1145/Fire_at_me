@@ -20,13 +20,15 @@ public class BagManager : MonoBehaviour
 
     void Start()
     {
-        weapon_Script = GameObject.FindObjectOfType<Weapon_Script>();
-        weaponWheel = GameObject.FindObjectOfType<WeaponWheel>();
+        //Transform player = GetComponentInParent<Transform>();
+        //weapon_Script = player.GetComponentInChildren<Weapon_Script>();
+        //weaponWheel = player.GetComponentInChildren<WeaponWheel>();
         playerReachManager = transform.GetComponentInParent<PlayerReachManager>();
     }
 
     void Update()
     {
+        if(!ply.IsOwner)return;
         //weaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel").GetComponent<WeaponWheel>();
         if( Input.GetKeyDown(KeyCode.E) && playerReachManager.ReachableWeapons.Length > 0)//pick the wheapon
         {
@@ -39,18 +41,23 @@ public class BagManager : MonoBehaviour
             else
             {
                 Debug.Log(weaponWheel.currentWeaponIndex);
-                GameObject throwedWeapon = Instantiate(droppedWeaponPrefab, transform.position + new Vector3(ply.disX,ply.disY,0).normalized * 1.5f, Quaternion.identity);
-                throwedWeapon.GetComponent<Rigidbody2D>().velocity = new Vector2(ply.disX,ply.disY).normalized * 10;
                 int id = weaponInBag[weaponWheel.currentWeaponIndex];
-                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = id;
-                throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[id].spr;
+                GetComponentInParent<BagManagerRpc>().throwWeapon(transform.position + new Vector3(ply.disX,ply.disY,0).normalized * 1.5f, id,new Vector2(ply.disX,ply.disY));
+                // GameObject throwedWeapon = Instantiate(droppedWeaponPrefab, transform.position + new Vector3(ply.disX,ply.disY,0).normalized * 1.5f, Quaternion.identity);
+                // throwedWeapon.GetComponent<Rigidbody2D>().velocity = new Vector2(ply.disX,ply.disY).normalized * 10;
+                // throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.id = id;
+                // throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.spr = weapon_Script.weapon[id].spr;
+                // throwedWeapon.GetComponent<DroppedWeaponScript>().weapon.mag_now = weapon_Script.weapon[id].mag_c;
+                weapon_Script.weapon[id].mag_c = getMag(temp);
                 weaponInBag[weaponWheel.currentWeaponIndex] = getId(temp);
             }
-            Destroy(temp);
+            //Destroy(temp);
+            temp.GetComponent<DroppedWeaponScript>().del();
         }
         if(weaponWheel.currentWeaponIndex < weaponInBag.Count && weaponInBag[weaponWheel.currentWeaponIndex] != currId){
             currId = weaponInBag[weaponWheel.currentWeaponIndex];
             weapon_Script.Change(currId);
+            
         }
     }
 
@@ -80,7 +87,10 @@ public class BagManager : MonoBehaviour
     // }
 
     private int getId(GameObject a){
-        return a.GetComponent<DroppedWeaponScript>().weapon.id;
+        return a.GetComponent<DroppedWeaponScript>().Getid();
+    }
+    private int getMag(GameObject a){
+        return a.GetComponent<DroppedWeaponScript>().Getmag();
     }
     //call this in weapon script
     public void DropTheWeaponAfterBulletUsedUp()

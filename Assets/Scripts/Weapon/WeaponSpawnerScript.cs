@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.Netcode;
 using UnityEngine;
 
 public class WeaponSpawnerScript : MonoBehaviour
@@ -13,8 +14,16 @@ public class WeaponSpawnerScript : MonoBehaviour
     private float spawn_probablity_sum = 0,timer = 0;
     [SerializeField]private GameObject droppedWeapon;
     // Start is called before the first frame update
+    void Awake()
+    {
+        if(GameObject.FindGameObjectWithTag("NetworkManager").GetComponent<NetworkManager>().IsClient){
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
+        
         weapon_list = weapon.GetComponent<Weapon_Script>().weapon;
         foreach(WeaponClass weapon in weapon_list){
             spawn_probablity_sum += weapon.spawn_probablity;
@@ -36,10 +45,12 @@ public class WeaponSpawnerScript : MonoBehaviour
                 }
                 j--;
                 int ind = UnityEngine.Random.Range(0,pos.Length);
-                DroppedWeapon spawned = Instantiate(droppedWeapon,pos[ind],quaternion.RotateZ(0)).GetComponent<DroppedWeaponScript>().weapon;
-                spawned.spr = weapon_list[j].spr;
+                GameObject spn_wp = Instantiate(droppedWeapon,pos[ind],quaternion.RotateZ(0));
+                DroppedWeapon spawned = spn_wp.GetComponent<DroppedWeaponScript>().weapon;
+                //spawned.spr = weapon_list[j].spr;
                 spawned.id = j;
                 spawned.mag_now = weapon_list[j].bullet_count;
+                spn_wp.GetComponent<NetworkObject>().Spawn();
             }
         }
     }

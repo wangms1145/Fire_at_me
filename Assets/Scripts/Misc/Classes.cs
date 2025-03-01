@@ -103,8 +103,8 @@ public class DroppedWeapon
     public int id;
     [Tooltip("武器弹夹子弹数量")]
     public int mag_now;
-    [Tooltip("贴图")]
-    public Sprite spr;
+    //[Tooltip("贴图")]
+    //public Sprite spr;
     [Tooltip("双持武器")][ShowIf("f",false)]
     public bool duo_hold = false;
     [Tooltip("第二武器位置")]

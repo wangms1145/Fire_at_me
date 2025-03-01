@@ -11,6 +11,7 @@ TagManager:
   - BAG
   - WeaponWheel
   - just_spawned_bullet
+  - NetworkManager
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - Player
   - Specbullet
   - hitableBullet
-  - 
-  - 
+  - temp
+  - DroppedWeapon
   - 
   - 
   - 

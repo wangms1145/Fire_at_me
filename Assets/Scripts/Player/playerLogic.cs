@@ -74,7 +74,7 @@ public class playerLogic : NetworkBehaviour
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.sharedMaterial = inGame_material;
-        thisWeaponWheel = GameObject.FindGameObjectWithTag("WeaponWheel");
+        thisWeaponWheel = transform.GetChild(4).gameObject;
         health = max_health;
         heavy_time = heavy_time_max;
     }
