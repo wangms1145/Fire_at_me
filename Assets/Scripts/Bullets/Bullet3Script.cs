@@ -20,7 +20,7 @@ public class Bullet3Script : NetworkBehaviour
     }
     void OnCollisionEnter2D(Collision2D other){
         Vector2 a = other.GetContact(0).point;
-        Debug.Log(other.collider.gameObject.name);
+        //Debug.Log(other.collider.gameObject.name);
         if(other.collider.GetComponent<BotScript>() != null){
             BotScript aim = other.collider.GetComponent<BotScript>();
             aim.health -= damage;

@@ -190,7 +190,7 @@ MonoBehaviour:
   damage: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 960
+    m_Bits: 3008
   explode: {fileID: 1287316097140317001, guid: b57b8add149db1e4eb4c9e784c66997d, type: 3}
 --- !u!114 &-1188232748603466013
 MonoBehaviour:

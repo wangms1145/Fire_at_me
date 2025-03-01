@@ -90,7 +90,7 @@ public class playerLogic : NetworkBehaviour
         if(!IsOwner) return;
         timer += Time.deltaTime;
         if(timer > 1f/health_tick){
-            Debug.Log(IsOwner);
+            //Debug.Log(IsOwner);
             healthNet.Value = health;
             healthMaxNet.Value = max_health;
             timer = 0;

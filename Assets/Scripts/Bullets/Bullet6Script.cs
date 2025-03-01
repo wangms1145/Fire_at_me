@@ -19,6 +19,9 @@ public class Bullet6Script : NetworkBehaviour
     private Rigidbody2D myRigidbody;
     private RaycastHit2D last_hit;
     private NetworkObject net;
+    RaycastHit2D hit;
+    private Stack<GameObject> hit_objects = new Stack<GameObject>();
+    private Stack<LayerMask> hit_layers = new Stack<LayerMask>();
     // Start is called before the first frame update
     void Start()
     {
@@ -26,26 +29,8 @@ public class Bullet6Script : NetworkBehaviour
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         vel = myRigidbody.velocity;
         
-        RaycastHit2D hit = collide_check();
-        if(hit){
-            Vector2 a = hit.point;
+        hitCollide();
 
-            if(hit.collider.GetComponent<BotScript>() != null){
-                BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= damage;
-            }
-            if(hit.collider.GetComponent<playerLogic>() != null){
-                playerLogic aim = hit.collider.GetComponent<playerLogic>();
-                aim.damage(damage);
-            }
-            if(hit.collider.GetComponent<HealthForObject>() != null){
-                HealthForObject aim = hit.collider.GetComponent<HealthForObject>();
-                aim.damageRPC(damage);
-            }
-            Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            //Destroy(gameObject);
-        }
-        //Debug.Break();
     }
 
     // Update is called once per frame
@@ -59,22 +44,7 @@ public class Bullet6Script : NetworkBehaviour
         }
         vel = myRigidbody.velocity;
         myRigidbody.velocity = vel * (1-Time.deltaTime * 0.6f);
-        RaycastHit2D hit = collide_check();
-        if(hit){
-            Vector2 a = hit.point;
-
-            if(hit.collider.GetComponent<BotScript>() != null && !hit.collider.Equals(last_hit.collider)){
-                BotScript aim = hit.collider.GetComponent<BotScript>();
-                aim.health -= damage;
-            }
-            if(hit.collider.GetComponent<playerLogic>() != null){
-                playerLogic aim = hit.collider.GetComponent<playerLogic>();
-                aim.damage(damage);
-            }
-            Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            last_hit = hit;
-            //Destroy(gameObject);
-        }
+        hitCollide();
     }
     private RaycastHit2D collide_check(){
         //Debug.DrawRay(transform.position,vel.normalized*Time.deltaTime*2.3f);
@@ -94,5 +64,32 @@ public class Bullet6Script : NetworkBehaviour
         double a;
         a = Math.Atan2(spd.y,spd.x);
         return (float)a;
+    }
+    private void hitCollide(){
+        hit_objects.Clear();
+        do{
+            hit = collide_check();
+            if(hit){
+                Vector2 a = hit.point;
+                hit_objects.Push(hit.collider.gameObject);
+                hit_layers.Push(hit.collider.gameObject.layer);
+                hit.collider.gameObject.layer = LayerMask.NameToLayer("temp");
+                if(hit.collider.GetComponent<BotScript>() != null && !hit.collider.Equals(last_hit.collider)){
+                    BotScript aim = hit.collider.GetComponent<BotScript>();
+                    aim.health -= damage;
+                }
+                if(hit.collider.GetComponent<playerLogic>() != null){
+                    playerLogic aim = hit.collider.GetComponent<playerLogic>();
+                    aim.damage(damage);
+                }
+                Instantiate(bullet_hole,a,quaternion.RotateZ(0));
+                last_hit = hit;
+                //Destroy(gameObject);
+            }
+        }while(hit);
+        while(hit_objects.Count > 0){
+            GameObject change = hit_objects.Pop();
+            change.layer = hit_layers.Pop();
+        }
     }
 }

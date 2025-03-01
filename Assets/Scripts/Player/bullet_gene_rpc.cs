@@ -70,10 +70,10 @@ public class bullet_gene_rpc : NetworkBehaviour
                 break;
             case 7:
                 float damage1 = Math.Clamp(hold_time/time,0,1);
-                Debug.Log(damage1);
+                //Debug.Log(damage1);
                 damage1 = Mathf.Lerp(start_damage,damage,damage1);
-                Debug.Log(damage1);
-                def_spawn(ang_offset,spd_offset,bulletSpd, rotate, bullet, ply_vel,pos).GetComponent<Bullet6Script>().damage = damage;
+                //Debug.Log(damage1);
+                def_spawn(ang_offset,spd_offset,bulletSpd, rotate, bullet, ply_vel,pos).GetComponent<Bullet6Script>().damage = damage1;
                 break;
             case 8:
                 Debug.Log(hold_time);

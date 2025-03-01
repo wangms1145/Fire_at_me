@@ -180,7 +180,7 @@ public class Weapon_Script : MonoBehaviour
                 bool fire_up = Input.GetKeyUp(KeyCode.Mouse0);
                 if(fire && fire_flag && can_shoot && Time.time > shoot_last_time + firing_time){
                     fire_timer += Time.deltaTime;
-                    Debug.Log(fire_timer);
+                    //Debug.Log(fire_timer);
                     
                     transform.localPosition = Vector3.up * UnityEngine.Random.Range(-1f,1f)/30f + Vector3.right * UnityEngine.Random.Range(-1f,1f)/30f;
                     float offset = fire_timer/weapon[now_ind].time * 0.2f;
