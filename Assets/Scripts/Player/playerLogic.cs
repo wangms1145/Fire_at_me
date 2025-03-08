@@ -87,15 +87,17 @@ public class playerLogic : NetworkBehaviour
         }
     }
     public void logic(){
-        if(!IsOwner) return;
-        timer += Time.deltaTime;
-        if(timer > 1f/health_tick){
-            //Debug.Log(IsOwner);
-            healthNet.Value = health;
-            healthMaxNet.Value = max_health;
-            timer = 0;
-            Velocity.Value = myRigidbody.velocity;
+        if(IsHost){
+            timer += Time.deltaTime;
+            if(timer > 1f/health_tick){
+                //Debug.Log(IsOwner);
+                healthNet.Value = health;
+                healthMaxNet.Value = max_health;
+                timer = 0;
+                //Velocity.Value = myRigidbody.velocity;
+            }
         }
+        if(!IsOwner) return;
         if(heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1)){
             myRigidbody.mass = weight;
             heavy = false;
@@ -157,7 +159,7 @@ public class playerLogic : NetworkBehaviour
     }
     public void ifNotOwner(){
         if(IsOwner)return;
-        GetComponent<Rigidbody2D>().velocity = Velocity.Value;
+        //GetComponent<Rigidbody2D>().velocity = Velocity.Value;
     }
     public void onDeath(){
         if(transform.position.y < varibles.diedYpos-30){

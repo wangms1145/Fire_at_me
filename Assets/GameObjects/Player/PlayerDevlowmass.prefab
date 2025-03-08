@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1611991291
+  GlobalObjectIdHash: 1677948907
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -608,6 +608,7 @@ MonoBehaviour:
   acc: 0.006
   jumpStrength: 10
   DoBunnyHop: 1
+  acc_stp: 0.699999988079071
 --- !u!114 &3406629663134591044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,6 +625,8 @@ MonoBehaviour:
   myRigidbody: {fileID: 0}
   player_logic: {fileID: 0}
   wp: {fileID: 1485709207727238658}
+  up_comp_factor: 0
+  up_comp_factor_recoil: 0
 --- !u!114 &4897035973099964258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3299,7 +3302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1611991291
+  GlobalObjectIdHash: 2066665944
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -3321,6 +3324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePositionPointer: {fileID: 9147972081255058354}
+  bag: {fileID: 0}
   menus:
   - {fileID: 0}
   - {fileID: 0}

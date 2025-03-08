@@ -22,8 +22,10 @@ public class playerMove : NetworkBehaviour
     public bool DoBunnyHop;
     [Tooltip("急停力度")]
     public double acc_stp = 0.7f;
+    public int move_tick;
     private double acc_add = 0;
     private double tspd;
+    private float timer = 0;
 
     void Start(){
         varibles = GetComponent<PlayerScript>();
@@ -31,12 +33,13 @@ public class playerMove : NetworkBehaviour
         player_logic = GetComponent<playerLogic>();
     }
     public void move(){
+        if(!IsOwner)return;
         varibles.spdx = myRigidbody.velocity.x;
         varibles.spdy = myRigidbody.velocity.y;
         varibles.angSpd = (float)Math.Atan2(varibles.spdy,varibles.spdx);
         varibles.angSpd += (float)Math.PI;
         if(Input.GetKeyDown(KeyCode.Space) && player_logic.isGrounded()){
-            myRigidbody.velocity += Vector2.up * jumpStrength;
+            addSpdRPC(Vector2.up * jumpStrength);
         }
         tspd = 0;
         if(Input.GetKey(KeyCode.A))tspd -= spd;
@@ -49,9 +52,10 @@ public class playerMove : NetworkBehaviour
             time *= acc_stp;
         }
         double spdc = CalcSpd.calcSpdAdd(acc+acc_add, tspd, varibles.spdx,time);
-        myRigidbody.velocity += Vector2.right * (float)spdc;
+        addSpdRPC(Vector2.right * (float)spdc);
     }
-    
-
-    
+    [Rpc(SendTo.Server)]
+    public void addSpdRPC(Vector2 spd){
+        myRigidbody.velocity += spd;
+    }
 }
