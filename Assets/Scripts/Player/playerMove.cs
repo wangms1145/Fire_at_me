@@ -24,8 +24,11 @@ public class playerMove : NetworkBehaviour
     public double acc_stp = 0.7f;
     public int move_tick;
     private double acc_add = 0;
+    [SerializeField]
     private double tspd;
     private float timer = 0;
+    private NetworkVariable<float> tm = new NetworkVariable<float>(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    private NetworkVariable<float> spd_net = new NetworkVariable<float>(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
 
     void Start(){
         varibles = GetComponent<PlayerScript>();
@@ -34,8 +37,8 @@ public class playerMove : NetworkBehaviour
     }
     public void move(){
         if(!IsOwner)return;
-        varibles.spdx = myRigidbody.velocity.x;
-        varibles.spdy = myRigidbody.velocity.y;
+        //varibles.spdx = myRigidbody.velocity.x;
+        //varibles.spdy = myRigidbody.velocity.y;
         varibles.angSpd = (float)Math.Atan2(varibles.spdy,varibles.spdx);
         varibles.angSpd += (float)Math.PI;
         if(Input.GetKeyDown(KeyCode.Space) && player_logic.isGrounded()){
@@ -51,8 +54,22 @@ public class playerMove : NetworkBehaviour
             tspd = 0;
             time *= acc_stp;
         }
-        double spdc = CalcSpd.calcSpdAdd(acc+acc_add, tspd, varibles.spdx,time);
-        addSpdRPC(Vector2.right * (float)spdc);
+        spd_net.Value = (float)tspd;
+        tm.Value = (float)time;
+    }
+    void Update()
+    {
+        if(!IsServer)return;
+        varibles.spdx = myRigidbody.velocity.x;
+        varibles.spdy = myRigidbody.velocity.y;
+        setSpdRPC(myRigidbody.velocity);
+        double spdc = CalcSpd.calcSpdAdd(acc+acc_add, spd_net.Value, varibles.spdx,tm.Value);
+        myRigidbody.velocity += Vector2.right * (float)spdc;
+    }
+    [Rpc(SendTo.NotServer)]
+    public void setSpdRPC(Vector2 spd){
+        varibles.spdx = spd.x;
+        varibles.spdy = spd.y;
     }
     [Rpc(SendTo.Server)]
     public void addSpdRPC(Vector2 spd){
