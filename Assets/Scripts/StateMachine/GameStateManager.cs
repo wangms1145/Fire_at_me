@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+    private static GameStateManager _instance;
     GameBaseState currentState;
-    MenuState menuState = new MenuState();
-    StartState startState = new StartState();
-    LobbyState lobbyState= new LobbyState();
-    CombatState combatState = new CombatState();
-    ShopState shopState = new ShopState();
-    
+    public MenuState menuState = new MenuState();
+    public StartState startState = new StartState();
+    public LobbyState lobbyState= new LobbyState();
+    public CombatState combatState = new CombatState();
+    public ShopState shopState = new ShopState();
 
+    void Awake()
+    {
+        if(_instance != null && !_instance.Equals(this)){
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else{
+            DontDestroyOnLoad(gameObject);
+            _instance = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +35,7 @@ public class GameStateManager : MonoBehaviour
         currentState.UpdateState(this);
     }
     public void SetState(GameBaseState state){
+        currentState.ExitState(this);
         currentState = state;
         currentState.EnterState(this);
     }
