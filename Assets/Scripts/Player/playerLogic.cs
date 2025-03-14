@@ -163,17 +163,25 @@ public class playerLogic : NetworkBehaviour
     }
     public void onDeath(){
         if(transform.position.y < varibles.diedYpos-30){
-            myRigidbody.simulated = false;
+            disablePhysicsRPC();
         }
         if(Input.GetKey(KeyCode.R)){
-            myRigidbody.simulated = true;
-            myRigidbody.velocity = Vector2.zero;
-            myRigidbody.position = Vector2.zero;
-            myRigidbody.rotation = 0;
+            respawnRigidbodyRPC();
             health = max_health;
             heavy_time = heavy_time_max;
             varibles.isAlive = true;
         }
+    }
+    [Rpc(SendTo.Server)]
+    private void respawnRigidbodyRPC(){
+        myRigidbody.simulated = true;
+        myRigidbody.velocity = Vector2.zero;
+        myRigidbody.position = Vector2.zero;
+        myRigidbody.rotation = 0;
+    }
+    [Rpc(SendTo.Server)]
+    private void disablePhysicsRPC(){
+        myRigidbody.simulated = false;
     }
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
