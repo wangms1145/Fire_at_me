@@ -113,14 +113,14 @@ public class CreateLobbyInputWindow : MonoBehaviour
         public void SetLobby_Public()
         {
             testLobby.isCreatedLobbyPrivate = false;
-            Update_Max_Player_Button(false);
+            Update_Privacy_Button(false);
         }
         public void SetLobby_Private()
         {
             testLobby.isCreatedLobbyPrivate = true;
-            Update_Max_Player_Button(true);         
+            Update_Privacy_Button(true);         
         }
-        private void Update_Max_Player_Button(bool value)
+        private void Update_Privacy_Button(bool value)
         {
             if (value)
             {

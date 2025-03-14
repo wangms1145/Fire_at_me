@@ -8,6 +8,8 @@ using Unity.Services.Lobbies.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class TestLobby : MonoBehaviour
 {
@@ -63,8 +65,10 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Signed in: " + AuthenticationService.Instance.PlayerId);
 
         };
+
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
+        DontDestroyOnLoad(gameObject);
     }
 
 
@@ -91,6 +95,9 @@ public class TestLobby : MonoBehaviour
         {
             Debug.LogError("Loby Creation error:" + e);
         }
+
+        SceneManager.LoadScene("Start 1");
+
 
     }
 

@@ -12,6 +12,7 @@ TagManager:
   - WeaponWheel
   - just_spawned_bullet
   - NetworkManager
+  - TestLobby
   layers:
   - Default
   - TransparentFX
