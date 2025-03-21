@@ -23,6 +23,9 @@ public class DroppedWeaponScript : NetworkBehaviour
     void Start()
     {
         //if(weapon.spr != null)GetComponent<SpriteRenderer>().sprite = weapon.spr;
+        sprRPC(weapon.id);
+        net_id.Value = weapon.id;
+        net_mag.Value = weapon.mag_now;
     }
 
     // Update is called once per frame

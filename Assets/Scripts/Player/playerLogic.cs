@@ -56,6 +56,7 @@ public class playerLogic : NetworkBehaviour
     [SerializeField] private NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    private SlidebarForImage slideBar;
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -77,6 +78,7 @@ public class playerLogic : NetworkBehaviour
         thisWeaponWheel = transform.GetChild(4).gameObject;
         health = max_health;
         heavy_time = heavy_time_max;
+        slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
     }
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
@@ -115,6 +117,7 @@ public class playerLogic : NetworkBehaviour
             heavy = false;
         }
         heavy_time = Mathf.Clamp(heavy_time,0f,heavy_time_max);
+        slideBar.setAmount(heavy_time/heavy_time_max);
         if(myRigidbody.sharedMaterial.Equals(inGame_material) == false)myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
         col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);

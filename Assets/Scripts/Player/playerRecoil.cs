@@ -15,10 +15,10 @@ public class playerRecoil : NetworkBehaviour
     public float up_comp_factor;
     public float up_comp_factor_recoil;
     private NetworkVariable<Vector2> speedNet = new NetworkVariable<Vector2>(
-                                            new Vector2(0,0),
-                                            NetworkVariableReadPermission.Everyone,
-                                            NetworkVariableWritePermission.Server
-                                            );
+                                                    new Vector2(0,0),
+                                                    NetworkVariableReadPermission.Everyone,
+                                                    NetworkVariableWritePermission.Server
+                                                    );
     private float recoil;
     //public bool heavy = false;
     void Start(){

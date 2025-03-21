@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -36,7 +37,11 @@ public class GameStateManager : MonoBehaviour
     }
     public void SetState(GameBaseState state){
         currentState.ExitState(this);
+        string name = currentState.getName(this);
         currentState = state;
         currentState.EnterState(this);
+        if(currentState.getName(this).Equals(name) == false){
+            SceneManager.LoadScene(currentState.getName(this));
+        }
     }
 }

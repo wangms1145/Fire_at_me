@@ -13,4 +13,7 @@ public class ShopState : GameBaseState
     public override void UpdateState(GameStateManager game){
 
     }
+    public override string getName(GameStateManager game){
+        return "";
+    }
 }
