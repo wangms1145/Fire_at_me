@@ -49,6 +49,7 @@ public class Weapon_Script : MonoBehaviour
     [SerializeField] private String jsName;
     [Tooltip("武器旋转同步速率")]
     [SerializeField] private int rotateTick;
+    [SerializeField] private GameObject hold_bar;
     private float ang,ang_rec;
     private bool flag;
     private int now_ind;
@@ -160,6 +161,10 @@ public class Weapon_Script : MonoBehaviour
                 if(fire && can_shoot && Time.time > shoot_last_time + firing_time){
                     fire_wp(sign,sec);
                 }
+                if(hold_bar != null){
+                    hold_bar.SetActive(false);
+                    //hold_bar.GetComponent<SlidebarForImage>().setAmount(fire_timer/weapon[now_ind].time);
+                }
             }
             else if(weapon[now_ind].delay_fire && !weapon[now_ind].hold_to_fire){
                 bool fire = Input.GetKey(KeyCode.Mouse0);
@@ -172,6 +177,10 @@ public class Weapon_Script : MonoBehaviour
                 }
                 else{
                     fire_timer = 0;
+                }
+                if(hold_bar != null){
+                    hold_bar.SetActive(true);
+                    hold_bar.GetComponent<SlidebarForImage>().setAmount(fire_timer/weapon[now_ind].time);
                 }
                 
             }
@@ -194,6 +203,10 @@ public class Weapon_Script : MonoBehaviour
                         fire_timer = 0;
                         if(!auto)fire_flag = false;
                     }
+                }
+                if(hold_bar != null){
+                    hold_bar.SetActive(true);
+                    hold_bar.GetComponent<SlidebarForImage>().setAmount(fire_timer/weapon[now_ind].time);
                 }
                 if(fire_up && can_shoot && Time.time > shoot_last_time + firing_time && fire_flag){
                     weapon[now_ind].hold_time = fire_timer;

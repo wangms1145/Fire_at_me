@@ -36,8 +36,8 @@ public class GameStateManager : MonoBehaviour
         currentState.UpdateState(this);
     }
     public void SetState(GameBaseState state){
-        currentState.ExitState(this);
-        string name = currentState.getName(this);
+        if(currentState != null)currentState.ExitState(this);
+        string name = currentState != null ? currentState.getName(this) : "";
         currentState = state;
         currentState.EnterState(this);
         if(currentState.getName(this).Equals(name) == false){
