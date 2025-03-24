@@ -24,9 +24,18 @@ public class TestLobby : MonoBehaviour
     public bool isCreatedLobbyPrivate = false;
 
     private float heartBeatTimer;
+    private float lobbyPollTimer;
 
     //JoinLobby by code
 
+
+    public event EventHandler<LobbyEventArgs> OnJoinedLobby;
+    public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
+    public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
+    public event EventHandler<LobbyEventArgs> OnLobbyGameModeChanged;
+        public class LobbyEventArgs : EventArgs {
+        public Lobby lobby;
+    }
 
 
     public string joinLobbyCode{ get; set;}
@@ -53,6 +62,41 @@ public class TestLobby : MonoBehaviour
     }
 
 
+    private async void HandleLobbyPolling() {
+        if (hostLobby != null) {
+            lobbyPollTimer -= Time.deltaTime;
+            if (lobbyPollTimer < 0f) {
+                float lobbyPollTimerMax = 1.1f;
+                lobbyPollTimer = lobbyPollTimerMax;
+
+                hostLobby = await LobbyService.Instance.GetLobbyAsync(hostLobby.Id);
+
+                OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = hostLobby });
+
+                // if (!IsPlayerInLobby()) {
+                //     // Player was kicked out of this lobby
+                //     Debug.Log("Kicked from Lobby!");
+
+                //     OnKickedFromLobby?.Invoke(this, new LobbyEventArgs { lobby = joinedLobby });
+
+                //     joinedLobby = null;
+                // }
+
+                    if( hostLobby.Data["Key_Start_Game"].Value != "0")
+                    {
+                        if(!IsLobbyHost() )
+                        {
+                            TestRelay._instance.JoinRelay(hostLobby.Data["Key_Start_Game"].Value);
+                        }
+                    }
+            }
+        }
+    }
+
+
+    public bool IsLobbyHost() {
+        return hostLobby != null && hostLobby.HostId == AuthenticationService.Instance.PlayerId;
+    }
 
     private async void Start()
     {
@@ -72,6 +116,8 @@ public class TestLobby : MonoBehaviour
     }
 
 
+
+
     [ContextMenu("CreateLobby")]
     public async void CreateLobby()
     {
@@ -80,7 +126,10 @@ public class TestLobby : MonoBehaviour
             CreateLobbyOptions createLobbyOptions= new CreateLobbyOptions
             {
                 IsPrivate = isCreatedLobbyPrivate,
-               Player = GetPlayer()
+                Player = GetPlayer(),
+                Data = new Dictionary<string, DataObject>{
+                    { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member,"0")}
+                }
             };
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(createLobbyName, maxPlayer,createLobbyOptions);
 
@@ -98,6 +147,23 @@ public class TestLobby : MonoBehaviour
 
         SceneManager.LoadScene("Start 1");
 
+
+        try{
+        string relayCode = await TestRelay._instance.CreateRelay();
+        
+        hostLobby = await Lobbies.Instance.UpdateLobbyAsync(hostLobby.Id, new UpdateLobbyOptions{
+            Data = new Dictionary<string, DataObject>
+            {
+                { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)}
+            }
+        });
+
+        Debug.Log ("relay code: "+ relayCode);
+        }
+        catch(LobbyServiceException e)
+        {
+            Debug.LogError("LobbyServiceException: testlobby->createlobby()\n" + e);
+        }
 
     }
 
@@ -170,7 +236,7 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Join Lobby By Code Error in Input Window" + e);
             inputWindow.avoidNextClose = true;
         }
-
+ 
      }
 
 
@@ -213,6 +279,8 @@ public class TestLobby : MonoBehaviour
                     };
         return player;
     }
+
+
 
 
 

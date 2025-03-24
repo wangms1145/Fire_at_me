@@ -7,9 +7,12 @@ using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
+using Unity.Networking.Transport.Relay;
+using System;
+using System.Threading.Tasks;
 
 
-public class RelayManger : MonoBehaviour
+public class TestRelay : MonoBehaviour
 {
 
     private TestLobby testLobby;
@@ -17,7 +20,7 @@ public class RelayManger : MonoBehaviour
     
 
     //Singleton
-    private static RelayManger _instance;
+    public static TestRelay _instance;
     void Awake()
     {
         ManageSingleton();
@@ -28,7 +31,7 @@ public class RelayManger : MonoBehaviour
             Destroy(gameObject);
         }
         else{
-            _instance = GetComponent<RelayManger>();
+            _instance = GetComponent<TestRelay>();
         }
     }
 
@@ -54,7 +57,7 @@ public class RelayManger : MonoBehaviour
 
 
     [ContextMenu("CreateRelay")]
-    private async void CreateRelay()
+    public async Task<string> CreateRelay()
     {
         try{
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(testLobby.maxPlayer-1);
@@ -63,39 +66,35 @@ public class RelayManger : MonoBehaviour
 
             Debug.Log("joincode: " + joinCode);
 
-            NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData
-            (
-                allocation.RelayServer.IpV4,
-                (ushort)allocation.RelayServer.Port,
-                allocation.AllocationIdBytes,
-                allocation.Key,
-                allocation.ConnectionData
-            );
+            RelayServerData relayServerData = new RelayServerData(allocation,"dtls");
+
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartHost();
+
+            return joinCode;
         }
         catch(RelayServiceException e)
         {
             Debug.Log("RelayServiceException" + e);
+            return  null;
         }
+
+        
     }
 
 
     [ContextMenu("JoinRelay")]
-    private async void JoinRelay(string joinCode)
+    public async void JoinRelay(string joinCode)
     {
         try{
             Debug.Log("Join realy with join code:" + joinCode);
         JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-        NetworkManager.Singleton.GetComponent<UnityTransport>().SetClientRelayData(
-            joinAllocation.RelayServer.IpV4,
-            (ushort)joinAllocation.RelayServer.Port,
-            joinAllocation.AllocationIdBytes,
-            joinAllocation.Key,
-            joinAllocation.ConnectionData,
-            joinAllocation.HostConnectionData
-        );
+                    RelayServerData relayServerData = new RelayServerData(joinAllocation,"dtls");
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+
+
 
             NetworkManager.Singleton.StartClient();
         }
