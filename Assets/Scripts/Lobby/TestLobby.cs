@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 public class TestLobby : MonoBehaviour
 {
 
+    bool isAlreadyInRelay = false;
     public Lobby hostLobby;
     private string playerName;
 
@@ -23,8 +24,8 @@ public class TestLobby : MonoBehaviour
     public int maxPlayer = 2;
     public bool isCreatedLobbyPrivate = false;
 
-    private float heartBeatTimer;
-    private float lobbyPollTimer;
+    private float heartBeatTimer =1.1f;
+    private float lobbyPollTimer= 1.1f;
 
     //JoinLobby by code
 
@@ -43,6 +44,7 @@ public class TestLobby : MonoBehaviour
     private void Update()
     {
         HandleLobbyHeartBeat();
+        HandleLobbyPolling();
     }
 
 
@@ -63,9 +65,14 @@ public class TestLobby : MonoBehaviour
 
 
     private async void HandleLobbyPolling() {
+
+        Debug.Log("HandleLobbyPolling");
+
         if (hostLobby != null) {
+            Debug.Log("Hostlobby != null");
             lobbyPollTimer -= Time.deltaTime;
             if (lobbyPollTimer < 0f) {
+                Debug.Log("Lobby Pull Time < 0");
                 float lobbyPollTimerMax = 1.1f;
                 lobbyPollTimer = lobbyPollTimerMax;
 
@@ -82,11 +89,15 @@ public class TestLobby : MonoBehaviour
                 //     joinedLobby = null;
                 // }
 
-                    if( hostLobby.Data["Key_Start_Game"].Value != "0")
+                    if( hostLobby.Data["Key_Start_Game"].Value != "0" && isAlreadyInRelay)
                     {
+                        Debug.Log("SceneManager.LoadScene(\"Start 1\")     ||     " + IsLobbyHost());
                         if(!IsLobbyHost() )
                         {
+                            Debug.Log("Load Scene");
+                            SceneManager.LoadScene("Start 1");
                             TestRelay._instance.JoinRelay(hostLobby.Data["Key_Start_Game"].Value);
+                            isAlreadyInRelay = true;
                         }
                     }
             }
@@ -230,6 +241,8 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Joined Lobby with code:" + code);
 
             PrintPlayers(joinedLobby);
+
+            hostLobby = joinedLobby;
         }
         catch (LobbyServiceException e)
         {
