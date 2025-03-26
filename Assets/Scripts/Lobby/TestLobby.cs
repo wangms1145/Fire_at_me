@@ -89,7 +89,7 @@ public class TestLobby : MonoBehaviour
                 //     joinedLobby = null;
                 // }
 
-                    if( hostLobby.Data["Key_Start_Game"].Value != "0" && isAlreadyInRelay)
+                    if( hostLobby.Data["Key_Start_Game"].Value != "0" && !isAlreadyInRelay)
                     {
                         Debug.Log("SceneManager.LoadScene(\"Start 1\")     ||     " + IsLobbyHost());
                         if(!IsLobbyHost() )
