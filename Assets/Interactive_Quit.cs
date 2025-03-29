@@ -7,6 +7,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public void loadLobby()
     {
+        Debug.Log("Successful click");
         SceneManager.LoadScene(lobbySceneName);
     }
 }
