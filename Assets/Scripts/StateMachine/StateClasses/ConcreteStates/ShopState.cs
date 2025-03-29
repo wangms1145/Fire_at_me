@@ -14,6 +14,9 @@ public class ShopState : GameBaseState
 
     }
     public override string getName(GameStateManager game){
-        return "";
+        return "Menu";
+    }
+    public override string getStateName(GameStateManager game){
+        return "ShopState";
     }
 }

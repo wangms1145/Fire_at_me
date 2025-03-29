@@ -16,4 +16,7 @@ public class CombatState : GameBaseState
     public override string getName(GameStateManager game){
         return "";
     }
+    public override string getStateName(GameStateManager game){
+        return "CombatState";
+    }
 }

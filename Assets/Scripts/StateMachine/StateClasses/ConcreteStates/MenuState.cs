@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuState : GameBaseState
 {
     public override void EnterState(GameStateManager game){
-
+        Debug.Log("EnterMenu");
     }
     public override void ExitState(GameStateManager game){
 
@@ -14,6 +14,9 @@ public class MenuState : GameBaseState
 
     }
     public override string getName(GameStateManager game){
-        return "";
+        return "Menu";
+    }
+    public override string getStateName(GameStateManager game){
+        return "MenuState";
     }
 }
