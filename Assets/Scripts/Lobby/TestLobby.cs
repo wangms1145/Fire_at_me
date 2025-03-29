@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using Unity.Services.Core;
 
@@ -34,7 +33,8 @@ public class TestLobby : MonoBehaviour
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
     public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
     public event EventHandler<LobbyEventArgs> OnLobbyGameModeChanged;
-        public class LobbyEventArgs : EventArgs {
+    public class LobbyEventArgs : EventArgs
+    {
         public Lobby lobby;
     }
 
@@ -105,7 +105,8 @@ public class TestLobby : MonoBehaviour
     }
 
 
-    public bool IsLobbyHost() {
+    public bool IsLobbyHost()
+    {
         return hostLobby != null && hostLobby.HostId == AuthenticationService.Instance.PlayerId;
     }
 
@@ -272,7 +273,7 @@ public class TestLobby : MonoBehaviour
 
 
 
-    public  void PrintPlayers( Lobby lobby)
+    public  void PrintPlayers( Lobby lobby )
     {
         Debug.Log("Player in lobby" + lobby);
         foreach (Player player in lobby.Players)
