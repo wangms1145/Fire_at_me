@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     private static GameStateManager _instance;
-    GameBaseState currentState;
+    public static GameBaseState currentState;
     public MenuState menuState = new MenuState();
     public StartState startState = new StartState();
     public LobbyState lobbyState= new LobbyState();
@@ -43,5 +43,12 @@ public class GameStateManager : MonoBehaviour
         if(currentState.getName(this).Equals(name) == false){
             SceneManager.LoadScene(currentState.getName(this));
         }
+    }
+    [ContextMenu("logState")]
+    public void logCurrentState(){
+        if(currentState != null)
+            Debug.Log(currentState.getStateName(this));
+        else
+            Debug.Log("null");
     }
 }

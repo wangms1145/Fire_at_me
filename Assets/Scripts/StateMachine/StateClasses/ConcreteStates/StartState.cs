@@ -14,6 +14,9 @@ public class StartState : GameBaseState
 
     }
     public override string getName(GameStateManager game){
-        return "";
+        return "Start 1";
+    }
+    public override string getStateName(GameStateManager game){
+        return "StartState";
     }
 }
