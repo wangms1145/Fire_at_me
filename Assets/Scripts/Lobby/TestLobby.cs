@@ -66,7 +66,7 @@ public class TestLobby : MonoBehaviour
 
     private async void HandleLobbyPolling() {
 
-        Debug.Log("HandleLobbyPolling");
+        //Debug.Log("HandleLobbyPolling");
 
         if (hostLobby != null) {
             Debug.Log("Hostlobby != null");

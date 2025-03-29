@@ -5,7 +5,7 @@ using UnityEngine;
 public class LobbyState : GameBaseState
 {
     public override void EnterState(GameStateManager game){
-
+        Debug.Log("EnterLobby");
     }
     public override void ExitState(GameStateManager game){
 
@@ -14,6 +14,9 @@ public class LobbyState : GameBaseState
 
     }
     public override string getName(GameStateManager game){
-        return "";
+        return "Lobby";
+    }
+    public override string getStateName(GameStateManager game){
+        return "LobbyState";
     }
 }
