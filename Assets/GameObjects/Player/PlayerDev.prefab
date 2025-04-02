@@ -2329,12 +2329,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ce0f2a12c11c0fa45bdb1eef1e33d10e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4ab413b43b964b868550f8d8036cbab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.4, y: 1.5}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2857,6 +2857,38 @@ MonoBehaviour:
     ang_offset: 0
     ang_rec: 0
     rec_acc: 0
+    delay_fire: 0
+    time: 5
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 0
+  - f: 0
+    spr: {fileID: 21300000, guid: e4ab413b43b964b868550f8d8036cbab, type: 3}
+    recoil: 0.5
+    bulletSpd: 50
+    type: 0
+    firePos: {x: 1.79, y: 0.53}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 150
+    damageType: 0
+    firing_time: 0.07
+    reloading_time: 0.7
+    infinite: 1
+    bullet_count: 4
+    automatic: 0
+    arm_time: 0.05
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
+    spd_offset: 1
+    ang_offset: 1
+    ang_rec: 0.08333334
+    rec_acc: 0.5
     delay_fire: 0
     time: 5
     hold_to_fire: 0
@@ -14455,7 +14487,7 @@ Transform:
   m_GameObject: {fileID: 8228767651227639508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.234, y: 0.583, z: 0}
+  m_LocalPosition: {x: 3.441, y: 0.453, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
