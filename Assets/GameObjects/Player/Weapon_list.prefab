@@ -222,7 +222,7 @@ MonoBehaviour:
     bullet_count: 100
     automatic: 1
     arm_time: 0.23
-    mag_c: 57
+    mag_c: 100
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 34582dc685e846a4aadabc26a2a680a3, type: 3}
     spd_offset: 3
@@ -363,7 +363,7 @@ MonoBehaviour:
     auto_release: 0
     start_damage: 0
     strat_recoil: 0
-    hold_time: 0.073160104
+    hold_time: 1
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
     spawn_probablity: 1
@@ -523,7 +523,7 @@ MonoBehaviour:
     auto_release: 1
     start_damage: 9999
     strat_recoil: 0
-    hold_time: 0.0101506
+    hold_time: 0.28286332
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
     spawn_probablity: 1
@@ -559,10 +559,75 @@ MonoBehaviour:
     duo_hold: 0
     Sec_pos: {x: 0, y: 0}
     spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 239a73a3635bb45958ba0996c2afd6a1, type: 3}
+    recoil: 5
+    bulletSpd: 500
+    type: 0
+    firePos: {x: 4.19, y: 0.55}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 910
+    damageType: 0
+    firing_time: 0.5
+    reloading_time: 3
+    infinite: 0
+    bullet_count: 6
+    automatic: 0
+    arm_time: 3
+    mag_c: 6
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 5
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: e4ab413b43b964b868550f8d8036cbab, type: 3}
+    recoil: 0.1
+    bulletSpd: 120
+    type: 0
+    firePos: {x: 3.441, y: 0.453}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 120
+    damageType: 0
+    firing_time: 0.07
+    reloading_time: 0.5
+    infinite: 0
+    bullet_count: 19
+    automatic: 0
+    arm_time: 3
+    mag_c: 0
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 5
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
   mySprite: {fileID: 0}
   recoil_ani: 0
   bullet: {fileID: 0}
   audSource: {fileID: 0}
   jsName: WeaponData.json
   rotateTick: 0
+  hold_bar: {fileID: 0}
   myRigidbody: {fileID: 0}
