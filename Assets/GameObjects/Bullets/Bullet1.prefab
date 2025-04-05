@@ -157,7 +157,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2752
   damage: 0
-  bullet_hole: {fileID: 8529851836600150010, guid: 3253c0896d6b5174493145afdb8ee80c, type: 3}
+  bullet_hole: {fileID: 3558420274296164238, guid: a53c1a76402164aee8da8912bf126de4, type: 3}
 --- !u!96 &2720910043906033610
 TrailRenderer:
   serializedVersion: 3

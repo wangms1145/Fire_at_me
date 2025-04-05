@@ -39,6 +39,23 @@ public class TestLobby : MonoBehaviour
     }
 
 
+
+    public static TestLobby Instance;
+    void Awake()
+    {
+        ManageSingleton();
+    }
+    void ManageSingleton(){
+        if(Instance != null){
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else{
+            Instance = GetComponent<TestLobby>();
+        }
+    }
+
+
     public string joinLobbyCode{ get; set;}
 
     private void Update()
@@ -95,7 +112,24 @@ public class TestLobby : MonoBehaviour
                         if(!IsLobbyHost() )
                         {
                             Debug.Log("Load Scene");
+
+                            /*
+
+
+
+
+
+*/
                             SceneManager.LoadScene("Start 1");
+
+
+                            /*
+
+
+
+
+
+*/
                             TestRelay._instance.JoinRelay(hostLobby.Data["Key_Start_Game"].Value);
                             isAlreadyInRelay = true;
                         }
@@ -157,8 +191,20 @@ public class TestLobby : MonoBehaviour
             Debug.LogError("Loby Creation error:" + e);
         }
 
-        SceneManager.LoadScene("Start 1");
 
+        /*
+
+
+
+        */
+        SceneManager.LoadScene("Start 1");
+/*
+
+
+
+
+
+*/
 
         try{
         string relayCode = await TestRelay._instance.CreateRelay();
