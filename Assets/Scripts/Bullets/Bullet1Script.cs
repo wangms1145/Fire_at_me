@@ -16,6 +16,7 @@ public class Bullet1Script : NetworkBehaviour
     public LayerMask groundLayer;
     public float damage;
     public GameObject bullet_hole;
+    public GameObject particle;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
     private bool waitDes = false;
@@ -75,6 +76,9 @@ public class Bullet1Script : NetworkBehaviour
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
+            GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
+            ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
+            part.startColor = Color_Identifier.DetectSpriteColor(hit);
             myRigidbody.simulated = false;
             GetComponent<SpriteRenderer>().enabled = false;
             waitDes = true;
