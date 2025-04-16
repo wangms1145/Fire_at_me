@@ -26,6 +26,6 @@ public class pickMap : MonoBehaviour
         state = manager.combatState;
     }
     public void astroid(){
-        state = manager.combatState;
+        state = manager.combatState1;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Color;
 
 public class Color_Identifier : MonoBehaviour
 {
@@ -86,8 +87,13 @@ public class Color_Identifier : MonoBehaviour
                     atlasX,
                     atlasY
                 ));
+                Color ans = texture.GetPixel(atlasX, atlasY);
+                if(ans.a == 0){
+                    ans.a = 1;
+                }
+                Debug.Log(ans.ToString());
 
-                return texture.GetPixel(atlasX, atlasY);
+                return ans;
             }
         }
         return Color.clear;

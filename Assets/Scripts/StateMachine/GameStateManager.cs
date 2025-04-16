@@ -11,6 +11,7 @@ public class GameStateManager : MonoBehaviour
     public StartState startState = new StartState();
     public LobbyState lobbyState= new LobbyState();
     public CombatState combatState = new CombatState();
+    public CombatState1 combatState1 = new CombatState1();
     public ShopState shopState = new ShopState();
 
     void Awake()
