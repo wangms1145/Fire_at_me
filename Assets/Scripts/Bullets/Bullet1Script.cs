@@ -75,6 +75,9 @@ public class Bullet1Script : NetworkBehaviour
                 Vector2 diff = hit.point - (Vector2)transform.position;
                 hit.rigidbody.velocity += angToSpd(impact * vel.magnitude / 100, spdToAng(diff));
             }
+            if(hit.collider.GetComponent<ShotButton>() != null){
+                hit.collider.GetComponent<ShotButton>().OnHitFunc();
+            }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
             GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
             ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
