@@ -149,7 +149,7 @@ MonoBehaviour:
   damage: 1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8144
   hit_p: {fileID: 8529851836600150010, guid: 3253c0896d6b5174493145afdb8ee80c, type: 3}
   explode_aud: {fileID: 8300000, guid: 693b707bcaa6eb945a8883308f2ee0f2, type: 3}
   source: {fileID: -1159108738268050131}
