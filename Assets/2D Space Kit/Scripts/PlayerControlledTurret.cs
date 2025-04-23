@@ -24,7 +24,7 @@ public class PlayerControlledTurret : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown(0) && barrel_hardpoints != null) {
 			GameObject bullet = (GameObject) Instantiate(weapon_prefab, barrel_hardpoints[barrel_index].transform.position, transform.rotation);
-			bullet.rigidbody2D.AddForce(bullet.transform.up * shot_speed);
+			bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * shot_speed);
 			bullet.GetComponent<Projectile>().firing_ship = transform.parent.gameObject;
 			barrel_index++; //This will cycle sequentially through the barrels in the barrel_hardpoints array
 			

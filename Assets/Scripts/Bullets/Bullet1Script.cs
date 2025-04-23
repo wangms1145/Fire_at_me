@@ -17,6 +17,7 @@ public class Bullet1Script : NetworkBehaviour
     public float damage;
     public GameObject bullet_hole;
     public GameObject particle;
+    public Color bloodColor;
     private float timed = 0;
     private Rigidbody2D myRigidbody;
     private bool waitDes = false;
@@ -58,18 +59,25 @@ public class Bullet1Script : NetworkBehaviour
         hit = collide_check();
         if(hit){
             Vector2 a = hit.point;
-
+            
             if(hit.collider.GetComponent<BotScript>() != null){
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= myRigidbody.velocity.magnitude/1 * damage;
+                GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
+                ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
+                part.startColor = bloodColor;
             }
             if(hit.collider.GetComponent<playerLogic>() != null){
                 playerLogic aim = hit.collider.GetComponent<playerLogic>();
                 aim.damage(myRigidbody.velocity.magnitude/1 * damage);
+                GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
+                ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
+                part.startColor = bloodColor;
             }
             if(hit.collider.GetComponent<HealthForObject>() != null){
                 HealthForObject aim = hit.collider.GetComponent<HealthForObject>();
                 aim.damageRPC(myRigidbody.velocity.magnitude/1 * damage);
+                
             }
             if(hit.rigidbody != null){
                 Vector2 diff = hit.point - (Vector2)transform.position;
@@ -79,9 +87,7 @@ public class Bullet1Script : NetworkBehaviour
                 hit.collider.GetComponent<ShotButton>().OnHitFunc();
             }
             Instantiate(bullet_hole,a,quaternion.RotateZ(0));
-            GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
-            ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
-            part.startColor = Color_Identifier.DetectSpriteColor(hit);
+            
             myRigidbody.simulated = false;
             GetComponent<SpriteRenderer>().enabled = false;
             waitDes = true;

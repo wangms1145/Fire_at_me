@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3635541194
+  GlobalObjectIdHash: 1575161161
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -159,6 +159,7 @@ MonoBehaviour:
   damage: 0
   bullet_hole: {fileID: 8529851836600150010, guid: 3253c0896d6b5174493145afdb8ee80c, type: 3}
   particle: {fileID: 3558420274296164238, guid: a53c1a76402164aee8da8912bf126de4, type: 3}
+  bloodColor: {r: 0.66666657, g: 0.10691812, b: 0.15793988, a: 0}
 --- !u!96 &2720910043906033610
 TrailRenderer:
   serializedVersion: 3

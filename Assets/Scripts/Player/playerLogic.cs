@@ -57,6 +57,8 @@ public class playerLogic : NetworkBehaviour
     [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     private SlidebarForImage slideBar;
+    [SerializeField] private List<GameObject> spawns = new List<GameObject>();
+    [SerializeField] private GameObject lowSpawn;
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind){
@@ -79,6 +81,7 @@ public class playerLogic : NetworkBehaviour
         health = max_health;
         heavy_time = heavy_time_max;
         slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
+        respawnRigidbodyRPC();
     }
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
@@ -181,6 +184,10 @@ public class playerLogic : NetworkBehaviour
         myRigidbody.velocity = Vector2.zero;
         myRigidbody.position = Vector2.zero;
         myRigidbody.rotation = 0;
+        updateSpawn();
+        if(lowSpawn != null)
+            myRigidbody.position = lowSpawn.transform.position;
+        
     }
     [Rpc(SendTo.Server)]
     private void disablePhysicsRPC(){
@@ -213,5 +220,16 @@ public class playerLogic : NetworkBehaviour
         if(!IsOwner) return;
         health -= damage;
     }
-
+    private void updateSpawn(){
+        spawns.Clear();
+        foreach(GameObject spawn in GameObject.FindGameObjectsWithTag("SpawnPoint")){
+            spawns.Add(spawn);
+            if(lowSpawn == null){
+                lowSpawn = spawn;
+            }
+            else if(lowSpawn.transform.position.y > spawn.transform.position.y){
+                lowSpawn = spawn;
+            }
+        }
+    }
 }
