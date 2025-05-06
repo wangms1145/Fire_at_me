@@ -29,13 +29,13 @@ public class arrowControlScript : MonoBehaviour
     {
         updatePlayers();
         tempPlayer.Clear();
-        foreach(GameObject player in tempPlayer){
+        foreach(GameObject player in players){
             tempPlayer.Add(player);
         }
         foreach(GameObject arrow in arrows){
             if(players.Contains(arrow.GetComponent<arrowScript>().player) == false){
                 arrow.SetActive(false);
-                
+                arrows.Remove(arrow);
                 Destroy(arrow);
             }
             else{

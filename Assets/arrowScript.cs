@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class arrowScript : MonoBehaviour
@@ -19,8 +20,10 @@ public class arrowScript : MonoBehaviour
     {
         diffdir = player.transform.position - cam.transform.position;
         diffdir = diffdir.normalized;
+        float ang = (float)Math.Atan2(diffdir.y,diffdir.x);
         diffdir = calcPos(diffdir);
         transform.localPosition = diffdir;
+        transform.rotation = quaternion.RotateZ(ang);
         
     }
     private Vector2 calcPos(Vector2 dir){
