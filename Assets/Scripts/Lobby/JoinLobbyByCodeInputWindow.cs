@@ -11,7 +11,7 @@ public class JoinLobbyByCodeInputWindow : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private Image backgroundImage;
-    [SerializeField] private TMP_InputField tMP_InputField;
+    [SerializeField] public TMP_InputField tMP_InputField;
     [SerializeField] private Button cancelButton;
     [SerializeField] private Button okButton;
     [SerializeField] private TestLobby testlobby;
@@ -63,13 +63,6 @@ public class JoinLobbyByCodeInputWindow : MonoBehaviour
         gameObject.SetActive(false);   
         avoidNextClose = false;         
         }
-        else
-        {
-            tMP_InputField.text = "Code doen't exsit";
-        }
-
-
-
 
     }
 

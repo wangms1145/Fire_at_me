@@ -295,6 +295,7 @@ public class TestLobby : MonoBehaviour
         {
             Debug.Log("Join Lobby By Code Error in Input Window" + e);
             inputWindow.avoidNextClose = true;
+            inputWindow.tMP_InputField.text = e.Message;
         }
  
      }
