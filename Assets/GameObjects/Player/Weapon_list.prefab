@@ -94,7 +94,7 @@ MonoBehaviour:
     bullet_count: 7
     automatic: 0
     arm_time: 0.53
-    mag_c: 7
+    mag_c: 1
     reload_type: 1
     fire_audio: {fileID: 8300000, guid: 770fcc03bd26bbc43865f40ef1267b0e, type: 3}
     spd_offset: 2
@@ -606,7 +606,39 @@ MonoBehaviour:
     bullet_count: 19
     automatic: 0
     arm_time: 3
-    mag_c: 0
+    mag_c: 19
+    reload_type: 0
+    fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
+    spd_offset: 0
+    ang_offset: 0
+    ang_rec: 0
+    rec_acc: 0
+    delay_fire: 0
+    time: 5
+    hold_to_fire: 0
+    auto_release: 0
+    start_damage: 9999
+    strat_recoil: 0
+    hold_time: 0
+    duo_hold: 0
+    Sec_pos: {x: 0, y: 0}
+    spawn_probablity: 1
+  - f: 0
+    spr: {fileID: 21300000, guid: 258e8350cab60f94ca82273f6da58f8f, type: 3}
+    recoil: 0
+    bulletSpd: 10
+    type: 10
+    firePos: {x: 3.441, y: 0.453}
+    fireEff: {fileID: 2376451403420368356, guid: 944547f82b86730408b812546ee00657, type: 3}
+    damage: 9999
+    damageType: 0
+    firing_time: 0.07
+    reloading_time: 0.5
+    infinite: 0
+    bullet_count: 19
+    automatic: 0
+    arm_time: 3
+    mag_c: 19
     reload_type: 0
     fire_audio: {fileID: 8300000, guid: 328f72989abbb4448883b7a7a2a6696e, type: 3}
     spd_offset: 0
