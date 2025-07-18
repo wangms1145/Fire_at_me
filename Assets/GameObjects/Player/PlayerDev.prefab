@@ -14572,6 +14572,7 @@ MonoBehaviour:
   - {fileID: 3661799797300261522, guid: 6f457dde214424428b4272f3d2bb4dfe, type: 3}
   - {fileID: 4908864704082370889, guid: 1f4630e579aa4fd4282f314e655028fc, type: 3}
   - {fileID: 7865664380318844199, guid: 36401cf8ff076eb49af594637e5ad7b9, type: 3}
+  - {fileID: 7865664380318844199, guid: b354c01dbd6fbfb4e82e059c91265393, type: 3}
   rpc: {fileID: 0}
 --- !u!212 &6316822139269174104
 SpriteRenderer:

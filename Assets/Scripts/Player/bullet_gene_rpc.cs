@@ -4,10 +4,12 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.Mathematics;
 using System;
+using Unity.VisualScripting;
 
 public class bullet_gene_rpc : NetworkBehaviour
 {
     [SerializeField] private NetworkPrefabsList list;
+    private GameObject claw_cache = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,10 +84,24 @@ public class bullet_gene_rpc : NetworkBehaviour
                 spawed.GetComponent<Grenade_script>().hold_time = hold_time;
                 break;
             case 10:
-                Debug.Log(hold_time);
                 GameObject exp_sp = def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos);
                 exp_sp.GetComponent<Bullet7Script>().damage = damage/1440;
                 exp_sp.GetComponent<Bullet7Script>().exp_time = 6;
+                break;
+            case 11:
+                GameObject claw = def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos);
+                claw.GetComponent<Bullet8Script>().player = gameObject;
+                if (claw_cache == null || claw_cache.IsDestroyed())
+                {
+                    claw.GetComponent<Bullet8Script>().connected_to = gameObject;
+                    claw_cache = claw;
+                }
+                else
+                {
+                    claw_cache.GetComponent<Bullet8Script>().connected_to = claw;
+                    claw.GetComponent<Bullet8Script>().connected_to = claw_cache;
+                    claw_cache = null;
+                }
                 break;
             default:
                 def_spawn(ang_offset,spd_offset,bulletSpd,rotate,bullet,ply_vel,pos);
