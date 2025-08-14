@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7569594249382992565}
   - component: {fileID: -8304786249060167285}
   - component: {fileID: -7922214575583608606}
+  - component: {fileID: 7101573732658867409}
   m_Layer: 13
   m_Name: Bullet8
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 850925193
+  GlobalObjectIdHash: 1149395191
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -440,3 +441,25 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &7101573732658867409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865664380318844199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e404a5fce65b141b25ea3f2769db03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 50
+  decay_dis: 0
+  source: {fileID: 0}
+  hang: {fileID: 0}
+  player: {fileID: 0}
+  connected_to: {fileID: 0}
+  hang_to: {fileID: 0}
+  other_rigid: {fileID: 0}
+  dir: {x: 0, y: 0}
+  ext_time: 0
