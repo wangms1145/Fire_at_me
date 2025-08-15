@@ -267,7 +267,7 @@ private async void HandleLobbyPolling()
                 Data = new Dictionary<string, DataObject>
             {
                 { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)},
-                { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)}
+                { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member, "Start 1")}
             }
             });
 
