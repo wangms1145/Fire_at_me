@@ -386,7 +386,13 @@ private async void HandleLobbyPolling()
             {
                 Player = GetPlayer()
             };
-            await LobbyService.Instance.QuickJoinLobbyAsync(quickJoinLobbyOptions);
+            Lobby joinedLobby = await LobbyService.Instance.QuickJoinLobbyAsync(quickJoinLobbyOptions);
+
+            PrintPlayers(joinedLobby);
+
+            hostLobby = joinedLobby;
+
+
         }
         catch (LobbyServiceException e)
         {
