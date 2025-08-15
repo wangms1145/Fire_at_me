@@ -17,7 +17,7 @@ public class TestRelay : MonoBehaviour
 
     private TestLobby testLobby;
 
-    
+
 
     //Singleton
     public static TestRelay _instance;
@@ -25,12 +25,15 @@ public class TestRelay : MonoBehaviour
     {
         ManageSingleton();
     }
-    void ManageSingleton(){
-        if(_instance != null){
+    void ManageSingleton()
+    {
+        if (_instance != null)
+        {
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
-        else{
+        else
+        {
             _instance = GetComponent<TestRelay>();
         }
     }
@@ -59,14 +62,15 @@ public class TestRelay : MonoBehaviour
     [ContextMenu("CreateRelay")]
     public async Task<string> CreateRelay()
     {
-        try{
-            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(testLobby.maxPlayer-1);
+        try
+        {
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(testLobby.maxPlayer - 1);
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
             Debug.Log("joincode: " + joinCode);
 
-            RelayServerData relayServerData = new RelayServerData(allocation,"dtls");
+            RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
 
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
@@ -74,33 +78,72 @@ public class TestRelay : MonoBehaviour
 
             return joinCode;
         }
-        catch(RelayServiceException e)
+        catch (RelayServiceException e)
         {
             Debug.Log("RelayServiceException" + e);
-            return  null;
+            return null;
         }
 
-        
+
     }
 
 
     [ContextMenu("JoinRelay")]
     public async void JoinRelay(string joinCode)
     {
-        try{
+        try
+        {
             Debug.Log("Join realy with join code:" + joinCode);
-        JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
+            JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-                    RelayServerData relayServerData = new RelayServerData(joinAllocation,"dtls");
+            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
 
 
             NetworkManager.Singleton.StartClient();
         }
-        catch(RelayServiceException e){
+        catch (RelayServiceException e)
+        {
             Debug.Log("RelayServiceException" + e);
         }
     }
+    
+    public async void SwitchMap(string scene_name)
+    {
+        // 1. Close old Relay/network
+        if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost)
+        {
+            NetworkManager.Singleton.Shutdown();
+        }
+
+        // (Optional) Load new map before creating Relay
+        UnityEngine.SceneManagement.SceneManager.LoadScene(scene_name);
+
+        // 2. Create new Relay allocation
+        try
+        {
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections: 10);
+            string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+            Debug.Log("New Relay Join Code: " + joinCode);
+
+            // 3. Configure transport with new Relay data
+            var relayData = allocation;
+            NetworkManager.Singleton.GetComponent<Unity.Netcode.Transports.UTP.UnityTransport>()
+                .SetRelayServerData(relayData.RelayServer.IpV4,
+                                    (ushort)relayData.RelayServer.Port,
+                                    relayData.AllocationIdBytes,
+                                    relayData.Key,
+                                    relayData.ConnectionData);
+
+            // 4. Start hosting again
+            NetworkManager.Singleton.StartHost();
+        }
+        catch (RelayServiceException e)
+        {
+            Debug.LogError(e);
+        }
+    }
+
 
 }

@@ -23,8 +23,8 @@ public class TestLobby : MonoBehaviour
     public int maxPlayer = 2;
     public bool isCreatedLobbyPrivate = false;
 
-    private float heartBeatTimer =1.1f;
-    private float lobbyPollTimer= 1.1f;
+    private float heartBeatTimer = 1.1f;
+    private float lobbyPollTimer = 1.1f;
 
     //JoinLobby by code
 
@@ -45,18 +45,18 @@ public class TestLobby : MonoBehaviour
     {
         ManageSingleton();
     }
-    void ManageSingleton(){
-        if(Instance != null){
+    void ManageSingleton() {
+        if (Instance != null) {
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
-        else{
+        else {
             Instance = GetComponent<TestLobby>();
         }
     }
 
 
-    public string joinLobbyCode{ get; set;}
+    public string joinLobbyCode { get; set; }
 
     private void Update()
     {
@@ -70,7 +70,7 @@ public class TestLobby : MonoBehaviour
         if (hostLobby != null)
         {
             heartBeatTimer -= Time.deltaTime;
-            if(heartBeatTimer <= 0)
+            if (heartBeatTimer <= 0)
             {
                 float heartBeatTimerMax = 15;
                 heartBeatTimer = heartBeatTimerMax;
@@ -106,34 +106,34 @@ public class TestLobby : MonoBehaviour
                 //     joinedLobby = null;
                 // }
 
-                    if( hostLobby.Data["Key_Start_Game"].Value != "0" && !isAlreadyInRelay)
+                if (hostLobby.Data["Key_Start_Game"].Value != "0" && !isAlreadyInRelay)
+                {
+                    Debug.Log("SceneManager.LoadScene(\"Start 1\")     ||     " + IsLobbyHost());
+                    if (!IsLobbyHost())
                     {
-                        Debug.Log("SceneManager.LoadScene(\"Start 1\")     ||     " + IsLobbyHost());
-                        if(!IsLobbyHost() )
-                        {
-                            Debug.Log("Load Scene");
+                        Debug.Log("Load Scene");
 
-                            /*
+                        /*
 
 
 
 
 
 */
-                            SceneManager.LoadScene("Start 1");
+                        SceneManager.LoadScene("Start 1");
 
 
-                            /*
+                        /*
 
 
 
 
 
 */
-                            TestRelay._instance.JoinRelay(hostLobby.Data["Key_Start_Game"].Value);
-                            isAlreadyInRelay = true;
-                        }
+                        TestRelay._instance.JoinRelay(hostLobby.Data["Key_Start_Game"].Value);
+                        isAlreadyInRelay = true;
                     }
+                }
             }
         }
     }
@@ -147,11 +147,11 @@ public class TestLobby : MonoBehaviour
     private async void Start()
     {
 
-        playerName = "someplayer" + UnityEngine.Random.Range(0,114514);
+        playerName = "someplayer" + UnityEngine.Random.Range(0, 114514);
         Debug.Log(playerName);
 
         await UnityServices.InitializeAsync();
-        AuthenticationService.Instance.SignedIn += () =>{
+        AuthenticationService.Instance.SignedIn += () => {
             Debug.Log("Signed in: " + AuthenticationService.Instance.PlayerId);
 
         };
@@ -167,26 +167,27 @@ public class TestLobby : MonoBehaviour
     [ContextMenu("CreateLobby")]
     public async void CreateLobby()
     {
-        try{
+        try {
 
-            CreateLobbyOptions createLobbyOptions= new CreateLobbyOptions
+            CreateLobbyOptions createLobbyOptions = new CreateLobbyOptions
             {
                 IsPrivate = isCreatedLobbyPrivate,
                 Player = GetPlayer(),
                 Data = new Dictionary<string, DataObject>{
-                    { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member,"0")}
+                    { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member,"0")},
+                    { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member,"0")}
                 }
             };
-            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(createLobbyName, maxPlayer,createLobbyOptions);
+            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(createLobbyName, maxPlayer, createLobbyOptions);
 
-            hostLobby = lobby; 
+            hostLobby = lobby;
 
-            Debug.Log("createdLobby!  Lobby_Name:"+ lobby.Name+"  Max_Player:"+lobby.MaxPlayers + "  ID:"+lobby.Id + "  Code:" + lobby.LobbyCode);
+            Debug.Log("createdLobby!  Lobby_Name:" + lobby.Name + "  Max_Player:" + lobby.MaxPlayers + "  ID:" + lobby.Id + "  Code:" + lobby.LobbyCode);
 
             PrintPlayers(hostLobby);
 
         }
-        catch(LobbyServiceException e)
+        catch (LobbyServiceException e)
         {
             Debug.LogError("Loby Creation error:" + e);
         }
@@ -198,27 +199,27 @@ public class TestLobby : MonoBehaviour
 
         */
         SceneManager.LoadScene("Start 1");
-/*
+        /*
 
 
 
 
 
-*/
+        */
 
-        try{
-        string relayCode = await TestRelay._instance.CreateRelay();
-        
-        hostLobby = await Lobbies.Instance.UpdateLobbyAsync(hostLobby.Id, new UpdateLobbyOptions{
-            Data = new Dictionary<string, DataObject>
+        try {
+            string relayCode = await TestRelay._instance.CreateRelay();
+
+            hostLobby = await Lobbies.Instance.UpdateLobbyAsync(hostLobby.Id, new UpdateLobbyOptions {
+                Data = new Dictionary<string, DataObject>
             {
                 { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)}
             }
-        });
+            });
 
-        Debug.Log ("relay code: "+ relayCode);
+            Debug.Log("relay code: " + relayCode);
         }
-        catch(LobbyServiceException e)
+        catch (LobbyServiceException e)
         {
             Debug.LogError("LobbyServiceException: testlobby->createlobby()\n" + e);
         }
@@ -227,10 +228,10 @@ public class TestLobby : MonoBehaviour
 
 
     [ContextMenu("ListLobbies")]
-    public async void ListLobbies(){
+    public async void ListLobbies() {
         try
         {
-            QueryLobbiesOptions queryLobbiesOptions = new QueryLobbiesOptions(){
+            QueryLobbiesOptions queryLobbiesOptions = new QueryLobbiesOptions() {
                 Count = 25,
                 Filters = new List<QueryFilter>{
                     new QueryFilter(QueryFilter.FieldOptions.AvailableSlots,"0",QueryFilter.OpOptions.GT)
@@ -238,28 +239,28 @@ public class TestLobby : MonoBehaviour
                 Order = new List<QueryOrder>(){
                     new QueryOrder(false,QueryOrder.FieldOptions.Created)
                 }
-                
+
             };
 
             QueryResponse queryResponse = await Lobbies.Instance.QueryLobbiesAsync();
 
-            Debug.Log("Lobbies Found:"+ queryResponse.Results.Count);
-            foreach(Lobby lobby in queryResponse.Results)
+            Debug.Log("Lobbies Found:" + queryResponse.Results.Count);
+            foreach (Lobby lobby in queryResponse.Results)
             {
-                Debug.Log("Lobby name: "+lobby.Name+"   Max_Players:"+ lobby.MaxPlayers);
+                Debug.Log("Lobby name: " + lobby.Name + "   Max_Players:" + lobby.MaxPlayers);
 
             }
         }
-        catch(LobbyServiceException e)
+        catch (LobbyServiceException e)
         {
-            Debug.LogError("ListLobbyError" +e);
+            Debug.LogError("ListLobbyError" + e);
         }
     }
 
 
 
 
-    [ContextMenu("JoinLobby")] 
+    [ContextMenu("JoinLobby")]
     public async void JoinLobby()
     {
         try
@@ -268,23 +269,23 @@ public class TestLobby : MonoBehaviour
             await Lobbies.Instance.JoinLobbyByIdAsync(queryResponse.Results[0].Id);
         }
 
-        catch(LobbyServiceException e)
+        catch (LobbyServiceException e)
         {
-            Debug.LogError("ListLobbyError" +e);
+            Debug.LogError("ListLobbyError" + e);
         }
     }
-     
+
 
 
     [ContextMenu("JoinLobbyByCode")]
-     public async Task JoinLobbyByCode( string code , JoinLobbyByCodeInputWindow inputWindow)
-     {
-        try{
-            JoinLobbyByCodeOptions joinLobbyByCodeOptions= new JoinLobbyByCodeOptions(){
+    public async Task JoinLobbyByCode(string code, JoinLobbyByCodeInputWindow inputWindow)
+    {
+        try {
+            JoinLobbyByCodeOptions joinLobbyByCodeOptions = new JoinLobbyByCodeOptions() {
                 Player = GetPlayer()
             };
 
-            Lobby joinedLobby = await Lobbies.Instance.JoinLobbyByCodeAsync(code,joinLobbyByCodeOptions);
+            Lobby joinedLobby = await Lobbies.Instance.JoinLobbyByCodeAsync(code, joinLobbyByCodeOptions);
             Debug.Log("Joined Lobby with code:" + code);
 
             PrintPlayers(joinedLobby);
@@ -297,30 +298,30 @@ public class TestLobby : MonoBehaviour
             inputWindow.avoidNextClose = true;
             inputWindow.tMP_InputField.text = e.Message;
         }
- 
-     }
+
+    }
 
 
 
     [ContextMenu("QuickJoinLobby")]
-     public async void QuickJoinLobby()
-     {
-        try 
+    public async void QuickJoinLobby()
+    {
+        try
         {
-            QuickJoinLobbyOptions quickJoinLobbyOptions= new QuickJoinLobbyOptions(){
+            QuickJoinLobbyOptions quickJoinLobbyOptions = new QuickJoinLobbyOptions() {
                 Player = GetPlayer()
             };
             await LobbyService.Instance.QuickJoinLobbyAsync(quickJoinLobbyOptions);
         }
-        catch(LobbyServiceException e)
-        { 
-            Debug.Log("Quick join error: "+ e);
+        catch (LobbyServiceException e)
+        {
+            Debug.Log("Quick join error: " + e);
         }
-     }
+    }
 
 
 
-    public  void PrintPlayers( Lobby lobby )
+    public void PrintPlayers(Lobby lobby)
     {
         Debug.Log("Player in lobby" + lobby);
         foreach (Player player in lobby.Players)
@@ -331,17 +332,20 @@ public class TestLobby : MonoBehaviour
 
     private Player GetPlayer()
     {
-        Player  player = new Player
-                    {
-                        Data = new Dictionary<string,PlayerDataObject>
+        Player player = new Player
+        {
+            Data = new Dictionary<string, PlayerDataObject>
                             {
                             {"playerName" , new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, playerName)}
                             }
-                    };
+        };
         return player;
     }
 
 
+
+
+    
 
 
 
