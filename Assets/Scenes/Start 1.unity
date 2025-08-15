@@ -91139,7 +91139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myButton: {fileID: 0}
   relayInstance: {fileID: 0}
-  mapName: assteroid
+  mapName: Start 2
 --- !u!114 &1505620864
 MonoBehaviour:
   m_ObjectHideFlags: 0

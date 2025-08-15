@@ -113,18 +113,22 @@ public class TestRelay : MonoBehaviour
     
 
 
+public bool IsRelayRunning()
+{
+    return NetworkManager.Singleton != null && 
+           (NetworkManager.Singleton.IsHost || NetworkManager.Singleton.IsClient);
+}
+
 public void ShutdownRelay()
 {
-    if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost)
+    if (NetworkManager.Singleton != null && 
+        (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost))
     {
         NetworkManager.Singleton.Shutdown();
     }
 }
 
-public bool IsRelayRunning()
-{
-    return NetworkManager.Singleton.IsHost || NetworkManager.Singleton.IsClient;
-}
+
 
 
 public async Task<string> SwitchMapAsHost(string sceneName)

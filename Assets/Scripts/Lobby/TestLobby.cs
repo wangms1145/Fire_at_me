@@ -158,7 +158,7 @@ private async void HandleLobbyPolling()
         hostLobby = await LobbyService.Instance.GetLobbyAsync(hostLobby.Id);
         OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = hostLobby });
 
-        string relayCode = hostLobby.Data["Key_Relay_Code"]?.Value;
+        string relayCode = hostLobby.Data["Key_Start_Game"]?.Value;
         string mapName = hostLobby.Data["Key_Map_Chosen"]?.Value;
 
         if (!string.IsNullOrEmpty(relayCode) && relayCode != lastRelayCode)
@@ -226,7 +226,7 @@ private async void HandleLobbyPolling()
                 Player = GetPlayer(),
                 Data = new Dictionary<string, DataObject>{
                     { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member,"0")},
-                    { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member,"0")}
+                    { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member,"Start 1")}
                 }
             };
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(createLobbyName, maxPlayer, createLobbyOptions);
@@ -266,7 +266,8 @@ private async void HandleLobbyPolling()
             {
                 Data = new Dictionary<string, DataObject>
             {
-                { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)}
+                { "Key_Start_Game" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)},
+                { "Key_Map_Chosen" , new DataObject(DataObject.VisibilityOptions.Member, relayCode)}
             }
             });
 
