@@ -164,7 +164,7 @@ public async Task<string> SwitchMapAsHost(string sceneName)
             Data = new Dictionary<string, DataObject>
             {
                 { "Key_Map_Chosen", new DataObject(DataObject.VisibilityOptions.Member, sceneName) }, // map name
-                { "Key_Relay_Code", new DataObject(DataObject.VisibilityOptions.Member, joinCode) }   // relay code
+                { "Key_Start_Game", new DataObject(DataObject.VisibilityOptions.Member, joinCode) }   // relay code
             }
         });
 

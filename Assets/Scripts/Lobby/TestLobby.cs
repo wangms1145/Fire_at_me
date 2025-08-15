@@ -10,6 +10,7 @@ using System;
 using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 using System.Transactions;
+using UnityEditor;
 
 public class TestLobby : MonoBehaviour
 {
@@ -149,11 +150,13 @@ private string lastMapName = "";
 
 private async void HandleLobbyPolling()
 {
+
     if (hostLobby == null) return;
 
     lobbyPollTimer -= Time.deltaTime;
     if (lobbyPollTimer <= 0f)
     {
+        Debug.Log("lobby pul timer<0");
         lobbyPollTimer = 1.1f;
         hostLobby = await LobbyService.Instance.GetLobbyAsync(hostLobby.Id);
         OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = hostLobby });
@@ -161,28 +164,41 @@ private async void HandleLobbyPolling()
         string relayCode = hostLobby.Data["Key_Start_Game"]?.Value;
         string mapName = hostLobby.Data["Key_Map_Chosen"]?.Value;
 
+
+
+        Debug.Log(" Testing: if (!string.IsNullOrEmpty(relayCode) && relayCode != lastRelayCode)");
+        Debug.LogWarning("relay code" + relayCode + " last relay code" + lastRelayCode);
+        
         if (!string.IsNullOrEmpty(relayCode) && relayCode != lastRelayCode)
-        {
-            lastRelayCode = relayCode;
-
-            if (!IsLobbyHost())
             {
-                // 1. Shutdown old Relay
-                if (TestRelay._instance != null && TestRelay._instance.IsRelayRunning())
-                    TestRelay._instance.ShutdownRelay();
+                Debug.Log(" Testing Success: if (!string.IsNullOrEmpty(relayCode) && relayCode != lastRelayCode)");
+                lastRelayCode = relayCode;
 
-                // 2. Join new Relay
-                await Task.Delay(100); // short delay for shutdown
-                TestRelay._instance.JoinRelay(relayCode);
-
-                // 3. Load new scene if it changed
-                if (!string.IsNullOrEmpty(mapName) && mapName != lastMapName)
+                if (!IsLobbyHost())
                 {
-                    lastMapName = mapName;
-                    SceneManager.LoadScene(mapName);
+                    // 1. Shutdown old Relay
+
+                    if (TestRelay._instance != null && TestRelay._instance.IsRelayRunning())
+                        TestRelay._instance.ShutdownRelay();
+                    Debug.Log("Relay shut down");
+
+                    await Task.Delay(100); // short delay for shutdown
+
+                    // 3. Load new scene if it changed
+                    if (!string.IsNullOrEmpty(mapName) && mapName != lastMapName)
+                    {
+                        lastMapName = mapName;
+                        SceneManager.LoadScene(mapName);
+                    }
+                    Debug.Log("map change");
+
+
+                    // 2. Join new Relay
+                    TestRelay._instance.JoinRelay(relayCode);
+                    Debug.Log("Relay connected");
+
                 }
             }
-        }
     }
 }
 
