@@ -76,7 +76,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
     y: 0
     width: 392.8
     height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1afaffff
+      m_SelectedIDs: 96b80100
       m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff
+      m_ExpandedIDs: d657feff72b0feff02bafefffafaffff46260100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -672,14 +672,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 15.494145, y: -1.5006287, z: -3.1910126}
+    m_Target: {x: -24.79745, y: 23.572443, z: 101.57322}
     speed: 2
-    m_Value: {x: 15.494145, y: -1.5006287, z: -3.1910126}
+    m_Value: {x: -24.79745, y: 23.572443, z: 101.57322}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -707,17 +707,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -725,17 +725,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.112743154, y: 0.05016001, z: -0.004920925, w: 0.99236435}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.112741, y: 0.050159052, z: -0.004920831, w: 0.9923454}
   m_Size:
-    m_Target: 5.40251
+    m_Target: 178.03299
     speed: 2
-    m_Value: 5.40251
+    m_Value: 178.03299
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 2
     m_SpeedNormalized: 1
@@ -933,7 +933,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/GameObjects
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -941,16 +941,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 61
   m_LastFolders:
-  - Assets/GameObjects
+  - Assets/Scenes
   m_LastFoldersGridSize: 61
   m_LastProjectPath: C:\Unity\Fire_at_me
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 14.199951}
-    m_SelectedIDs: a6ae0000
-    m_LastClickedID: 44710
-    m_ExpandedIDs: 000000006eae000000ca9a3bffffff7f
+    m_SelectedIDs: ae880000
+    m_LastClickedID: 34990
+    m_ExpandedIDs: 000000007488000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -978,7 +978,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006eae0000
+    m_ExpandedIDs: 000000007488000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1003,8 +1003,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 1afaffff
-    m_LastClickedInstanceID: -1510
+    m_SelectedInstanceIDs: 96b80100
+    m_LastClickedInstanceID: 112790
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000569d00005c9d00008c4300006e8000000a860000f487000000000000
     m_RenameOverlay:
