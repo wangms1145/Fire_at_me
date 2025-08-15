@@ -67,9 +67,11 @@ public class playerMove : NetworkBehaviour
         myRigidbody.velocity += Vector2.right * (float)spdc;
     }
     [Rpc(SendTo.NotServer)]
-    public void setSpdRPC(Vector2 spd){
+    public void setSpdRPC(Vector2 spd)
+    {
         varibles.spdx = spd.x;
         varibles.spdy = spd.y;
+        myRigidbody.velocity = spd;
     }
     [Rpc(SendTo.Server)]
     public void addSpdRPC(Vector2 spd){

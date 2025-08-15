@@ -45,10 +45,10 @@ public class Bullet8Script : NetworkBehaviour
             {
 
                 calcDir(player);
-                player.GetComponent<Rigidbody2D>().AddForce(dir * strength);
+                player.GetComponent<Rigidbody2D>().AddForce(dir * strength * 570 * Time.deltaTime);
                 if (other_rigid != null)
                 {
-                    other_rigid.AddForceAtPosition(-dir, transform.position);
+                    other_rigid.AddForceAtPosition(-dir * strength * 570 * Time.deltaTime, transform.position);
                 }
             }
         }
@@ -60,7 +60,7 @@ public class Bullet8Script : NetworkBehaviour
                 if (other_rigid != null)
                 {
                     calcDir(connected_to);
-                    other_rigid.GetComponent<Rigidbody2D>().AddForceAtPosition(-dir * strength, transform.position);
+                    other_rigid.GetComponent<Rigidbody2D>().AddForceAtPosition(-dir * strength  * 570 * Time.deltaTime, transform.position);
                 }
             }
             if (timer >= ext_time)
@@ -106,5 +106,6 @@ public class Bullet8Script : NetworkBehaviour
         {
             dir = dir.normalized;
         }
+        
     }
 }

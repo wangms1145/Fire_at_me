@@ -21,7 +21,7 @@ public class playerRotation : NetworkBehaviour
     void Update()
     {
         if(!IsHost)return;
-        myRigidbody.angularVelocity = (targetAngle.Value-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
+        if(varibles.isAlive)myRigidbody.angularVelocity = (targetAngle.Value-myRigidbody.rotation)*Math.Clamp(aacc*Time.deltaTime*100,-0.7f,0.7f)/Time.deltaTime;
     }
     public void updateAng(float ang){
         angRPC(ang);
