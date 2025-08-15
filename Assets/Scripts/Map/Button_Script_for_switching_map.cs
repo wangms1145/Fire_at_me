@@ -16,7 +16,7 @@ public class ButtonBinder : MonoBehaviour
         relayInstance = FindObjectOfType<TestRelay>();
         if (relayInstance != null)
         {
-            myButton.onClick.AddListener(() => relayInstance.SwitchMap(mapName));
+            myButton.onClick.AddListener(() => relayInstance.SwitchMapAsHost(mapName));
         }
         
     }

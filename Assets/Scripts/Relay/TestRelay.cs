@@ -10,6 +10,8 @@ using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
 using System;
 using System.Threading.Tasks;
+using Unity.Services.Lobbies;
+using Unity.Services.Lobbies.Models;
 
 
 public class TestRelay : MonoBehaviour
@@ -109,41 +111,103 @@ public class TestRelay : MonoBehaviour
         }
     }
     
-    public async void SwitchMap(string scene_name)
+
+
+public void ShutdownRelay()
+{
+    if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost)
     {
-        // 1. Close old Relay/network
-        if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost)
-        {
-            NetworkManager.Singleton.Shutdown();
-        }
-
-        // (Optional) Load new map before creating Relay
-        UnityEngine.SceneManagement.SceneManager.LoadScene(scene_name);
-
-        // 2. Create new Relay allocation
-        try
-        {
-            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections: 10);
-            string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
-            Debug.Log("New Relay Join Code: " + joinCode);
-
-            // 3. Configure transport with new Relay data
-            var relayData = allocation;
-            NetworkManager.Singleton.GetComponent<Unity.Netcode.Transports.UTP.UnityTransport>()
-                .SetRelayServerData(relayData.RelayServer.IpV4,
-                                    (ushort)relayData.RelayServer.Port,
-                                    relayData.AllocationIdBytes,
-                                    relayData.Key,
-                                    relayData.ConnectionData);
-
-            // 4. Start hosting again
-            NetworkManager.Singleton.StartHost();
-        }
-        catch (RelayServiceException e)
-        {
-            Debug.LogError(e);
-        }
+        NetworkManager.Singleton.Shutdown();
     }
+}
+
+public bool IsRelayRunning()
+{
+    return NetworkManager.Singleton.IsHost || NetworkManager.Singleton.IsClient;
+}
+
+
+public async Task<string> SwitchMapAsHost(string sceneName)
+{
+    if (testLobby == null || !testLobby.IsLobbyHost())
+    {
+        Debug.LogWarning("Only the host can switch maps/Relay.");
+        return null;
+    }
+
+    // 1. Close old Relay
+    if (IsRelayRunning())
+        ShutdownRelay();
+
+    // 2. Load new scene locally
+    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+
+    try
+    {
+        // 3. Create new Relay
+        Allocation allocation = await RelayService.Instance.CreateAllocationAsync(testLobby.maxPlayer - 1);
+        string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+        Debug.Log("New Relay Join Code: " + joinCode);
+
+        // 4. Configure transport & start hosting
+        NetworkManager.Singleton.GetComponent<UnityTransport>()
+            .SetRelayServerData(new RelayServerData(allocation, "dtls"));
+        NetworkManager.Singleton.StartHost();
+
+        // 5. Update lobby keys for clients
+        testLobby.hostLobby = await Lobbies.Instance.UpdateLobbyAsync(testLobby.hostLobby.Id, new UpdateLobbyOptions
+        {
+            Data = new Dictionary<string, DataObject>
+            {
+                { "Key_Map_Chosen", new DataObject(DataObject.VisibilityOptions.Member, sceneName) }, // map name
+                { "Key_Relay_Code", new DataObject(DataObject.VisibilityOptions.Member, joinCode) }   // relay code
+            }
+        });
+
+        return joinCode;
+    }
+    catch (RelayServiceException e)
+    {
+        Debug.LogError(e);
+        return null;
+    }
+}
+
+    // public async void SwitchMap(string scene_name)
+    // {
+    //     // 1. Close old Relay/network
+    //     if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsHost)
+    //     {
+    //         NetworkManager.Singleton.Shutdown();
+    //     }
+
+    //     // (Optional) Load new map before creating Relay
+    //     UnityEngine.SceneManagement.SceneManager.LoadScene(scene_name);
+
+    //     // 2. Create new Relay allocation
+    //     try
+    //     {
+    //         Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections: 10);
+    //         string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+    //         Debug.Log("New Relay Join Code: " + joinCode);
+
+    //         // 3. Configure transport with new Relay data
+    //         var relayData = allocation;
+    //         NetworkManager.Singleton.GetComponent<Unity.Netcode.Transports.UTP.UnityTransport>()
+    //             .SetRelayServerData(relayData.RelayServer.IpV4,
+    //                                 (ushort)relayData.RelayServer.Port,
+    //                                 relayData.AllocationIdBytes,
+    //                                 relayData.Key,
+    //                                 relayData.ConnectionData);
+
+    //         // 4. Start hosting again
+    //         NetworkManager.Singleton.StartHost();
+    //     }
+    //     catch (RelayServiceException e)
+    //     {
+    //         Debug.LogError(e);
+    //     }
+    // }
 
 
 }
