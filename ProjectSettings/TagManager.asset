@@ -15,6 +15,7 @@ TagManager:
   - TestLobby
   - GameManager
   - SpawnPoint
+  - DeathPanal
   layers:
   - Default
   - TransparentFX
