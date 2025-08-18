@@ -38,12 +38,23 @@ public class PlayerUI : MonoBehaviour
     void Update()
     {
         // Check if player is dead and the panel hasn't been activated yet
-        if (!ply.isAlive && !deathPanelActivated)
+        if (!deathPanelActivated)
         {
-            ActivateDeathPanel();
+            if (!ply.isAlive)
+            {
+                ActivateDeathPanel();
+            }
+        }
+        else
+        {
+            if (ply.isAlive)
+            {
+                // If player is alive and the death panel is active, deactivate it
+                deathPanel.SetActive(false);
+                deathPanelActivated = false;
+            }
         }
     }
-
     void ActivateDeathPanel()
     {
         if (deathPanel != null)
