@@ -12,7 +12,7 @@ public class ScoreData
     public GameObject Player;
     public GameObject ScoreBoard;
     public int Score;
-    public bool blue;
+    public bool blue = false;
 
     public ScoreData(GameObject player, GameObject scoreBoard, int score)
     {
@@ -33,8 +33,8 @@ public class CmpScore : Comparer<ScoreData>
 public class ScoreController : MonoBehaviour
 {
     public GameObject Score;
-    private static Color colorBlue = new Color(0,191,255);
-    private static Color colorRed  = new Color(174,18,18);
+    private static Color colorBlue = new Color(0f,191f/255,255f/255);
+    private static Color colorRed  = new Color(174f/255,18f/255,18f/255);
     public List<ScoreData> scoreDatas = new List<ScoreData>();
     public bool changed = false;
     private bool player_changed = false;

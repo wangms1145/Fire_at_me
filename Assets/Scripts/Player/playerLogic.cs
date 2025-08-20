@@ -62,6 +62,7 @@ public class playerLogic : NetworkBehaviour
     [SerializeField] private List<GameObject> spawns = new List<GameObject>();
     [SerializeField] private GameObject lowSpawn;
     public GameObject dmgPlayer;
+    private float colorTimer = 0.2f;
 
     [Rpc(SendTo.ClientsAndHost)]
     public void ChangeWeaponClientRpc(int ind)
@@ -89,7 +90,7 @@ public class playerLogic : NetworkBehaviour
         heavy_time = heavy_time_max;
         slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
         respawnRigidbodyRPC();
-        if(IsOwner)updateColorToBoard();
+        
     }
     public bool isGrounded()
     {
@@ -117,6 +118,12 @@ public class playerLogic : NetworkBehaviour
             }
         }
         if (!IsOwner) return;
+        colorTimer-= Time.deltaTime;
+        if (colorTimer < 0)
+        {
+            updateColorToBoard();
+            colorTimer = 1.2f;
+        }
         death_flag = false;
         if (heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1))
         {
