@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -2941706005942047583}
   - component: {fileID: 8890380658558953065}
   - component: {fileID: 2987042435331332352}
+  - component: {fileID: 2062841509214400659}
   m_Layer: 9
   m_Name: eat_people_tree
   m_TagString: Untagged
@@ -258,3 +259,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health_max: 800
+--- !u!114 &2062841509214400659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908864704082370889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d28e3af5e6ac2f4a864f2a81c83e1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}

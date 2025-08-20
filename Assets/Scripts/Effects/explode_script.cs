@@ -19,6 +19,7 @@ public class explode_script : NetworkBehaviour
     public AudioClip explode_aud;
     public AudioSource source;
     public float aud_time;
+    public GameObject sourcePlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,9 +56,11 @@ public class explode_script : NetworkBehaviour
                         BotScript aim = hit.collider.GetComponent<BotScript>();
                         aim.health -= damage;
                     }
-                    if(hit.collider.GetComponent<playerLogic>() != null){
+                    if (hit.collider.GetComponent<playerLogic>() != null)
+                    {
                         playerLogic aim = hit.collider.GetComponent<playerLogic>();
                         aim.damage(damage);
+                        aim.dmgPlayer = sourcePlayer;
                     }
                     if(hit.collider.GetComponent<HealthForObject>() != null){
                         HealthForObject aim = hit.collider.GetComponent<HealthForObject>();

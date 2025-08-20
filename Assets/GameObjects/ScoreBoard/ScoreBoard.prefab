@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4012827464300302755}
   m_Layer: 5
   m_Name: ScoreBoarCanvas
-  m_TagString: Untagged
+  m_TagString: ScoreBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,4 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: {fileID: 1152308478369243065, guid: ee50ec00cc05ee942bf20c138eee4728, type: 3}
+  scoreDatas: []
   changed: 0

@@ -48,32 +48,39 @@ public class playerLogic : NetworkBehaviour
     public float heavy_time;
     public float heavy_time_cost_start;
     public float heavy_time_rate;
+    public int kill_score;
     private int i;
     private float timer = 0;
-
+    private bool death_flag = false;
     [SerializeField] private GameObject thisWeaponWheel;
-    [SerializeField] private NetworkVariable<float> weapon_turn = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    [SerializeField] private NetworkVariable<float> healthNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0,0),NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> weapon_turn = new(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> healthNet = new(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0, 0), NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    private NetworkVariable<int> score = new(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private SlidebarForImage slideBar;
     [SerializeField] private List<GameObject> spawns = new List<GameObject>();
     [SerializeField] private GameObject lowSpawn;
+    public GameObject dmgPlayer;
 
     [Rpc(SendTo.ClientsAndHost)]
-    public void ChangeWeaponClientRpc(int ind){
+    public void ChangeWeaponClientRpc(int ind)
+    {
         //if(GetComponentInParent<PlayerScript>().IsOwner){return;}
         GetComponentInChildren<Weapon_Script>().ChangeWeapon(ind);
 
     }
-    public void RotateWeapon(float ang){
+    public void RotateWeapon(float ang)
+    {
         weapon_turn.Value = ang;
     }
-    public float GetWeaponAng(){
+    public float GetWeaponAng()
+    {
         return weapon_turn.Value;
     }
-    void Start(){
-        if(SceneManager.GetActiveScene().name.Contains("Start")) GetComponent<Light2D>().enabled = false;
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name.Contains("Start")) GetComponent<Light2D>().enabled = false;
         varibles = GetComponent<PlayerScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.sharedMaterial = inGame_material;
@@ -83,18 +90,24 @@ public class playerLogic : NetworkBehaviour
         slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
         respawnRigidbodyRPC();
     }
-    public bool isGrounded(){
-        if(Physics2D.BoxCast(transform.position,boxSize,0,Vector2.down,castDistance,groundLayer)){
+    public bool isGrounded()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, Vector2.down, castDistance, groundLayer))
+        {
             return true;
         }
-        else{
+        else
+        {
             return false;
         }
     }
-    public void logic(){
-        if(IsHost){
+    public void logic()
+    {
+        if (IsHost)
+        {
             timer += Time.deltaTime;
-            if(timer > 1f/health_tick){
+            if (timer > 1f / health_tick)
+            {
                 //Debug.Log(IsOwner);
                 healthNet.Value = health;
                 healthMaxNet.Value = max_health;
@@ -102,134 +115,217 @@ public class playerLogic : NetworkBehaviour
                 //Velocity.Value = myRigidbody.velocity;
             }
         }
-        if(!IsOwner) return;
-        if(heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1)){
+        if (!IsOwner) return;
+        death_flag = false;
+        if (heavy_time < heavy_time_max && !Input.GetKey(KeyCode.Mouse1))
+        {
             myRigidbody.mass = weight;
             heavy = false;
             heavy_time += heavy_time_rate * Time.deltaTime;
-            
+
         }
-        else if(Input.GetKey(KeyCode.Mouse1) && heavy_time > 0f){
+        else if (Input.GetKey(KeyCode.Mouse1) && heavy_time > 0f)
+        {
             myRigidbody.mass = weight * 10;
             heavy = true;
-            if(Input.GetKeyDown(KeyCode.Mouse1))heavy_time -= heavy_time_cost_start;
+            if (Input.GetKeyDown(KeyCode.Mouse1)) heavy_time -= heavy_time_cost_start;
             heavy_time -= Time.deltaTime;
         }
-        else{
+        else
+        {
             myRigidbody.mass = weight;
             heavy = false;
         }
-        heavy_time = Mathf.Clamp(heavy_time,0f,heavy_time_max);
-        slideBar.setAmount(heavy_time/heavy_time_max);
-        if(myRigidbody.sharedMaterial.Equals(inGame_material) == false)myRigidbody.sharedMaterial = inGame_material;
+        heavy_time = Mathf.Clamp(heavy_time, 0f, heavy_time_max);
+        slideBar.setAmount(heavy_time / heavy_time_max);
+        if (myRigidbody.sharedMaterial.Equals(inGame_material) == false) myRigidbody.sharedMaterial = inGame_material;
         Color col = Color.white;
-        col.a = Mathf.InverseLerp(min_eff_spd,max_eff_spd,myRigidbody.velocity.magnitude);
+        col.a = Mathf.InverseLerp(min_eff_spd, max_eff_spd, myRigidbody.velocity.magnitude);
         transform.GetChild(0).rotation = quaternion.RotateZ(varibles.angSpd);
         TrailModule a = transform.GetChild(0).GetComponent<ParticleSystem>().trails;
         a.colorOverTrail = col;
         transform.GetChild(1).rotation = quaternion.RotateZ(varibles.angSpd);
         a = transform.GetChild(1).GetComponent<ParticleSystem>().trails;
         a.colorOverTrail = col;
-        if(myRigidbody.velocity.magnitude > 0.1){
-            if(GetComponentInChildren<Weapon_Script>().firing()){
+        if (myRigidbody.velocity.magnitude > 0.1)
+        {
+            if (GetComponentInChildren<Weapon_Script>().firing())
+            {
                 GetComponent<SpriteRenderer>().flipX = GetComponentInChildren<Weapon_Script>().flip();
             }
-            else if(myRigidbody.velocity.x < 0){
+            else if (myRigidbody.velocity.x < 0)
+            {
                 GetComponent<SpriteRenderer>().flipX = true;
             }
-            else{
+            else
+            {
                 GetComponent<SpriteRenderer>().flipX = false;
             }
         }
-        if(transform.position.y < varibles.diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0){
+        if (transform.position.y < varibles.diedYpos || Input.GetKeyDown(KeyCode.G) || health < 0)
+        {
             varibles.isAlive = false;
             float ang = UnityEngine.Random.Range(-180, 180);
-            myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang)*5 + Vector2.right * (float)Math.Cos(ang)*5;
-            myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15)/3.0);
+            myRigidbody.velocity += Vector2.up * (float)Math.Sin(ang) * 5 + Vector2.right * (float)Math.Cos(ang) * 5;
+            myRigidbody.angularVelocity = (float)(UnityEngine.Random.Range(-15, 15) / 3.0);
             myRigidbody.sharedMaterial = died_material;
             GetComponent<playerSound>().onStartDeath();//死亡音效
         }
 
-        if(i >= 5){ys = myRigidbody.velocity.y;i = 0;}
+        if (i >= 5) { ys = myRigidbody.velocity.y; i = 0; }
         i++;
-        if(isGrounded() && !groundFlag){
+        if (isGrounded() && !groundFlag)
+        {
             GetComponent<playerSound>().fallsound();//摔落音效
         }
         groundFlag = isGrounded();
 
-        if(Input.GetKey(KeyCode.T))
+        if (Input.GetKey(KeyCode.T))
         {
             thisWeaponWheel.SetActive(true);
         }
 
     }
-    public void ifNotOwner(){
-        if(IsOwner)return;
+    public void ifNotOwner()
+    {
+        if (IsOwner) return;
         //GetComponent<Rigidbody2D>().velocity = Velocity.Value;
     }
-    public void onDeath(){
-        if(transform.position.y < varibles.diedYpos-30){
+    public void ifServer()
+    {
+        
+    }
+    public void onDeathStart()
+    {
+        if (health <= 0)
+        {
+            deathScoreRPC();
+        }
+    }
+    public void onDeath()
+    {
+        if (death_flag == false)
+        {
+            onDeathStart();
+            death_flag = true;
+        }
+        if (transform.position.y < varibles.diedYpos - 30)
+        {
             disablePhysicsRPC();
         }
-        if(Input.GetKey(KeyCode.R)){
+        if (Input.GetKey(KeyCode.R))
+        {
             respawnRigidbodyRPC();
             health = max_health;
             heavy_time = heavy_time_max;
             varibles.isAlive = true;
+            death_flag = false;
         }
     }
     [Rpc(SendTo.Server)]
-    private void respawnRigidbodyRPC(){
+    private void respawnRigidbodyRPC()
+    {
         myRigidbody.simulated = true;
         myRigidbody.velocity = Vector2.zero;
         myRigidbody.position = Vector2.zero;
         myRigidbody.rotation = 0;
         updateSpawn();
-        if(lowSpawn != null)
+        if (lowSpawn != null)
             myRigidbody.position = lowSpawn.transform.position;
-        
+
     }
     [Rpc(SendTo.Server)]
-    private void disablePhysicsRPC(){
+    private void disablePhysicsRPC()
+    {
         myRigidbody.simulated = false;
     }
-    private void OnDrawGizmos(){
-        Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance,boxSize);
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position - Vector3.up * castDistance, boxSize);
     }
-    public float GetHealth(){
+    public float GetHealth()
+    {
         return health;
     }
-    public float GetMaxHealth(){
+    public float GetMaxHealth()
+    {
         return max_health;
     }
-    public float GetHealthNet(){
+    public float GetHealthNet()
+    {
         return healthNet.Value;
     }
-    public float GetMaxHealthNet(){
+    public float GetMaxHealthNet()
+    {
         return healthMaxNet.Value;
     }
 
-    public void SetHealth(float health){
-        if(varibles.IsOwner)this.health = health;
+    public void SetHealth(float health)
+    {
+        if (varibles.IsOwner) this.health = health;
     }
-    public void damage(float damage){
+    public void damage(float damage)
+    {
         damageRpc(damage);
     }
-    [Rpc(SendTo.ClientsAndHost,RequireOwnership = false)]
-    private void damageRpc(float damage){
-        if(!IsOwner) return;
+    [Rpc(SendTo.ClientsAndHost, RequireOwnership = false)]
+    private void damageRpc(float damage)
+    {
+        if (!IsOwner) return;
         health -= damage;
     }
-    private void updateSpawn(){
+    private void updateSpawn()
+    {
         spawns.Clear();
-        foreach(GameObject spawn in GameObject.FindGameObjectsWithTag("SpawnPoint")){
+        foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+        {
             spawns.Add(spawn);
-            if(lowSpawn == null){
+            if (lowSpawn == null)
+            {
                 lowSpawn = spawn;
             }
-            else if(lowSpawn.transform.position.y > spawn.transform.position.y){
+            else if (lowSpawn.transform.position.y > spawn.transform.position.y)
+            {
                 lowSpawn = spawn;
             }
         }
+    }
+    [Rpc(SendTo.Server)]
+    private void deathScoreRPC()
+    {
+        Debug.LogError("rpc score");
+        dmgPlayer.GetComponent<playerLogic>().addScore(kill_score);
+    }
+    public void addScore(int amount)
+    {
+        score.Value += amount;
+        updateScoreToBoard();
+    }
+    public void subScore(int amount)
+    {
+        score.Value -= amount;
+        updateScoreToBoard();
+    }
+    public void setScore(int amount)
+    {
+        score.Value = amount;
+        updateScoreToBoard();
+    }
+    public int getScore()
+    {
+        return score.Value;
+    }
+    private void updateScoreToBoard()
+    {
+        GameObject board = GameObject.FindGameObjectWithTag("ScoreBoard");
+        List<ScoreData> scoreDatas = board.GetComponent<ScoreController>().scoreDatas;
+        foreach (ScoreData scoreData in scoreDatas)
+        {
+            if (scoreData.Player.Equals(gameObject))
+            {
+                scoreData.Score = score.Value;
+            }
+        }
+        board.GetComponent<ScoreController>().changed = true;
     }
 }

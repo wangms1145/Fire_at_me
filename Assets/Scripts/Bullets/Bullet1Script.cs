@@ -67,12 +67,14 @@ public class Bullet1Script : NetworkBehaviour
                 ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
                 part.startColor = bloodColor;
             }
-            if(hit.collider.GetComponent<playerLogic>() != null){
+            if (hit.collider.GetComponent<playerLogic>() != null)
+            {
                 playerLogic aim = hit.collider.GetComponent<playerLogic>();
-                aim.damage(myRigidbody.velocity.magnitude/1 * damage);
-                GameObject particle_ins = Instantiate(particle,a,quaternion.RotateZ(0));
-                ParticleSystem.MainModule part =  particle_ins.GetComponent<ParticleSystem>().main;
+                aim.damage(myRigidbody.velocity.magnitude / 1 * damage);
+                GameObject particle_ins = Instantiate(particle, a, quaternion.RotateZ(0));
+                ParticleSystem.MainModule part = particle_ins.GetComponent<ParticleSystem>().main;
                 part.startColor = bloodColor;
+                aim.dmgPlayer = GetComponent<playerIdentityScript>().player;
             }
             if(hit.collider.GetComponent<HealthForObject>() != null){
                 HealthForObject aim = hit.collider.GetComponent<HealthForObject>();

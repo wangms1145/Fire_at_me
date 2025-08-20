@@ -78,9 +78,11 @@ public class Bullet6Script : NetworkBehaviour
                     BotScript aim = hit.collider.GetComponent<BotScript>();
                     aim.health -= damage;
                 }
-                if(hit.collider.GetComponent<playerLogic>() != null){
+                if (hit.collider.GetComponent<playerLogic>() != null)
+                {
                     playerLogic aim = hit.collider.GetComponent<playerLogic>();
                     aim.damage(damage);
+                    aim.dmgPlayer = GetComponent<playerIdentityScript>().player;
                 }
                 Instantiate(bullet_hole,a,quaternion.RotateZ(0));
                 last_hit = hit;

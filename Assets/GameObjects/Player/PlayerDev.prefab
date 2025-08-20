@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 1009878700
   InScenePlacedSourceGlobalObjectIdHash: 1009878700
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -582,6 +582,7 @@ MonoBehaviour:
   heavy_time: 0
   heavy_time_cost_start: 1.5
   heavy_time_rate: 1
+  kill_score: 100
   thisWeaponWheel: {fileID: 0}
   weapon_turn:
     m_InternalValue: 0
@@ -593,6 +594,7 @@ MonoBehaviour:
     m_InternalValue: {x: 0, y: 0}
   spawns: []
   lowSpawn: {fileID: 0}
+  dmgPlayer: {fileID: 0}
 --- !u!114 &5279438165096562582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3946,7 +3948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1468091284
+  GlobalObjectIdHash: 536359794
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

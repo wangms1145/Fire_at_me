@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 359580801907271576}
   - component: {fileID: 6297504895972515164}
   - component: {fileID: -8662457146881496436}
+  - component: {fileID: 3783025537753493847}
   m_Layer: 8
   m_Name: TNT
   m_TagString: Untagged
@@ -378,3 +379,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionStateInfoList: []
   m_Animator: {fileID: 124955891862376741}
+--- !u!114 &3783025537753493847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5203371177037641957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d28e3af5e6ac2f4a864f2a81c83e1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}

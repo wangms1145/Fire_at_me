@@ -115,6 +115,7 @@ public class bullet_gene_rpc : NetworkBehaviour
         bullet_spawned.GetComponent<Rigidbody2D>().velocity = ply_vel;
         bullet_spawned.GetComponent<Rigidbody2D>().velocity += (float)(Math.Cos(ang+angp) * (bulletSpd+spdp)) * Vector2.right + (float)(Math.Sin(ang+angp) * (bulletSpd+spdp)) * Vector2.up;
         bullet_spawned.GetComponent<NetworkObject>().Spawn();
+        bullet_spawned.GetComponent<playerIdentityScript>().player = gameObject;
         return bullet_spawned;
     }
 }

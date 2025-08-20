@@ -43,9 +43,11 @@ public class Fish_script : NetworkBehaviour
                 BotScript aim = hit.collider.GetComponent<BotScript>();
                 aim.health -= myRigidbody.velocity.magnitude/1 * damage;
             }
-            if(hit.collider.GetComponent<playerLogic>() != null){
+            if (hit.collider.GetComponent<playerLogic>() != null)
+            {
                 playerLogic aim = hit.collider.GetComponent<playerLogic>();
-                aim.damage(myRigidbody.velocity.magnitude/1 * damage);
+                aim.damage(myRigidbody.velocity.magnitude / 1 * damage);
+                aim.dmgPlayer = GetComponent<playerIdentityScript>().player;
             }
             if(hit.collider.GetComponent<HealthForObject>() != null){
                 HealthForObject aim = hit.collider.GetComponent<HealthForObject>();

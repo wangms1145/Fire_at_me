@@ -33,6 +33,7 @@ public class Bullet7Script : NetworkBehaviour
         {
             GameObject exp = Instantiate(explode, transform.position, transform.rotation);
             exp.GetComponent<explode_script>().damage = damage;
+            exp.GetComponent<explode_script>().sourcePlayer = GetComponent<playerIdentityScript>().player;
             exp.GetComponent<NetworkObject>().Spawn();
             net.Despawn();
             Destroy(gameObject);

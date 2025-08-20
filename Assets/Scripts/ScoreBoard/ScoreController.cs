@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 //using Unity.VisualScripting;
 using UnityEngine;
+[System.Serializable]
 public class ScoreData
 {
     public GameObject Player;
@@ -21,7 +22,7 @@ public class CmpScore : Comparer<ScoreData>
     // Compares by Length, Height, and Width.
     public override int Compare(ScoreData x, ScoreData y)
     {
-        return x.Score - y.Score;
+        return y.Score - x.Score;
     }
 }
 public class ScoreController : MonoBehaviour
@@ -55,13 +56,22 @@ public class ScoreController : MonoBehaviour
             timer = 0.5f - timer;
             updatePlayer();
             if (player_changed)
+            {
+                scoreDatas.Sort(new CmpScore());
+                for (int i = 0; i < scoreDatas.Count; i++)
+                {
+                    scoreDatas[i].ScoreBoard.GetComponent<ScoreAnim>().changeTo(i + 1);
+                }
+            }
+        }
+        if (changed)
         {
             scoreDatas.Sort(new CmpScore());
             for (int i = 0; i < scoreDatas.Count; i++)
             {
-                scoreDatas[i].ScoreBoard.GetComponent<ScoreAnim>().changeTo(i+1);
+                scoreDatas[i].ScoreBoard.GetComponent<ScoreAnim>().changeTo(i + 1);
+                scoreDatas[i].ScoreBoard.transform.GetChild(3).GetChild(0).GetComponent<scoreBarScript>().score = scoreDatas[i].Score;
             }
-        }
         }
 
     }

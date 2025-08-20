@@ -16,6 +16,7 @@ TagManager:
   - GameManager
   - SpawnPoint
   - DeathPanal
+  - ScoreBoard
   layers:
   - Default
   - TransparentFX

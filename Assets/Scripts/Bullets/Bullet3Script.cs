@@ -25,9 +25,11 @@ public class Bullet3Script : NetworkBehaviour
             BotScript aim = other.collider.GetComponent<BotScript>();
             aim.health -= damage;
         }
-        if(other.collider.GetComponent<playerLogic>() != null){
+        if (other.collider.GetComponent<playerLogic>() != null)
+        {
             playerLogic aim = other.collider.GetComponent<playerLogic>();
             aim.damage(damage);
+            aim.dmgPlayer = GetComponent<playerIdentityScript>().player;
         }
         if(other.collider.GetComponent<HealthForObject>() != null){
             HealthForObject aim = other.collider.GetComponent<HealthForObject>();
