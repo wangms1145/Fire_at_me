@@ -301,8 +301,14 @@ public class playerLogic : NetworkBehaviour
     [Rpc(SendTo.Server)]
     private void deathScoreRPC()
     {
-        Debug.LogError("rpc score");
+        //Debug.LogError("rpc score");
         dmgPlayer.GetComponent<playerLogic>().addScore(kill_score);
+        clientScoreRpc();
+    }
+    [Rpc(SendTo.NotServer)]
+    private void clientScoreRpc()
+    {
+        updateScoreToBoard();
     }
     public void addScore(int amount)
     {
