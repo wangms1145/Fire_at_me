@@ -89,6 +89,7 @@ public class playerLogic : NetworkBehaviour
         heavy_time = heavy_time_max;
         slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
         respawnRigidbodyRPC();
+        if(IsOwner)updateColorToBoard();
     }
     public bool isGrounded()
     {
@@ -193,7 +194,7 @@ public class playerLogic : NetworkBehaviour
     }
     public void ifServer()
     {
-        
+
     }
     public void onDeathStart()
     {
@@ -324,6 +325,19 @@ public class playerLogic : NetworkBehaviour
             if (scoreData.Player.Equals(gameObject))
             {
                 scoreData.Score = score.Value;
+            }
+        }
+        board.GetComponent<ScoreController>().changed = true;
+    }
+    private void updateColorToBoard()
+    {
+        GameObject board = GameObject.FindGameObjectWithTag("ScoreBoard");
+        List<ScoreData> scoreDatas = board.GetComponent<ScoreController>().scoreDatas;
+        foreach (ScoreData scoreData in scoreDatas)
+        {
+            if (scoreData.Player.Equals(gameObject))
+            {
+                scoreData.blue = true;
             }
         }
         board.GetComponent<ScoreController>().changed = true;
