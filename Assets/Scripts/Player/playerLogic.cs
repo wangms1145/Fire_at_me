@@ -57,7 +57,7 @@ public class playerLogic : NetworkBehaviour
     [SerializeField] private NetworkVariable<float> healthNet = new(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     [SerializeField] private NetworkVariable<float> healthMaxNet = new(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     [SerializeField] private NetworkVariable<Vector2> Velocity = new(new Vector2(0, 0), NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
-    private NetworkVariable<int> score = new(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    [SerializeField] private NetworkVariable<int> score = new(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private SlidebarForImage slideBar;
     [SerializeField] private List<GameObject> spawns = new List<GameObject>();
     [SerializeField] private GameObject lowSpawn;
@@ -90,8 +90,10 @@ public class playerLogic : NetworkBehaviour
         heavy_time = heavy_time_max;
         slideBar = GetComponentInChildren<PlayerUI>().GetComponentInChildren<SlidebarForImage>();
         respawnRigidbodyRPC();
-        
+        score.OnValueChanged += clientScore;
     }
+
+
     public bool isGrounded()
     {
         if (Physics2D.BoxCast(transform.position, boxSize, 0, Vector2.down, castDistance, groundLayer))
@@ -107,18 +109,19 @@ public class playerLogic : NetworkBehaviour
     {
         if (IsHost)
         {
-            timer += Time.deltaTime;
-            if (timer > 1f / health_tick)
-            {
-                //Debug.Log(IsOwner);
-                healthNet.Value = health;
-                healthMaxNet.Value = max_health;
-                timer = 0;
-                //Velocity.Value = myRigidbody.velocity;
-            }
+            
         }
         if (!IsOwner) return;
-        colorTimer-= Time.deltaTime;
+        timer += Time.deltaTime;
+        if (timer > 1f / health_tick)
+        {
+            //Debug.Log(IsOwner);
+            healthNet.Value = health;
+            healthMaxNet.Value = max_health;
+            timer = 0;
+            //Velocity.Value = myRigidbody.velocity;
+        }
+        colorTimer -= Time.deltaTime;
         if (colorTimer < 0)
         {
             updateColorToBoard();
@@ -212,6 +215,7 @@ public class playerLogic : NetworkBehaviour
     }
     public void onDeath()
     {
+        healthNet.Value = 0;
         if (death_flag == false)
         {
             onDeathStart();
@@ -303,9 +307,13 @@ public class playerLogic : NetworkBehaviour
     {
         //Debug.LogError("rpc score");
         dmgPlayer.GetComponent<playerLogic>().addScore(kill_score);
+    }
+    private void clientScore(int previousValue, int newValue)
+    {
         clientScoreRpc();
     }
     [Rpc(SendTo.NotServer)]
+    [ContextMenu("ClientUpdate")]
     private void clientScoreRpc()
     {
         updateScoreToBoard();
@@ -314,16 +322,19 @@ public class playerLogic : NetworkBehaviour
     {
         score.Value += amount;
         updateScoreToBoard();
+        //clientScoreRpc();
     }
     public void subScore(int amount)
     {
         score.Value -= amount;
         updateScoreToBoard();
+        //clientScoreRpc();
     }
     public void setScore(int amount)
     {
         score.Value = amount;
         updateScoreToBoard();
+        //clientScoreRpc();
     }
     public int getScore()
     {
