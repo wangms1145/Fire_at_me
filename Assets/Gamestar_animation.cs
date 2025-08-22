@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gamestar_animation : MonoBehaviour 
 {
     public float duration = 2f;
-    private CanvasGroup cg;
+    private Text cg;
+    private Color color;
     private float timer = 0f;
 
     void Start()
     {
-        cg = GetComponent<CanvasGroup>();
-        cg.alpha = 0f; // start invisible
+        cg = GetComponent<Text>();
+        color= cg.color;
+        color.a = 0f;
+        cg.color = color; // start invisible
     }
 
     void Update()
@@ -19,7 +23,8 @@ public class Gamestar_animation : MonoBehaviour
         if (timer < duration)
         {
             timer += Time.deltaTime;
-            cg.alpha = Mathf.Clamp01(timer / duration); // fade in
+            color.a = Mathf.Clamp01(timer / duration); // fade in
+            cg.color = color;
         }
     }
 }
