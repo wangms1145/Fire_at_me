@@ -5,6 +5,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
+//One instance of this class represents logic for player movement
 public class playerMove : NetworkBehaviour
 {
     public PlayerScript varibles;
