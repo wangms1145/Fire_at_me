@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class Gamestar_animation : MonoBehaviour 
 {
     public float duration = 2f;
-    private Text cg;
+    public Text cg;
     private Color color;
     private float timer = 0f;
 
     void Start()
     {
-        cg = GetComponent<Text>();
+        //cg = GetComponent<Text>();
         color= cg.color;
         color.a = 0f;
         cg.color = color; // start invisible

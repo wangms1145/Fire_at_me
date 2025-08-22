@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
+  cg: {fileID: 395198828}
 --- !u!114 &847548303 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 364377376481987463, guid: 4f6fd6bcffe835d40af378f0f4451d44, type: 3}
@@ -595,7 +596,6 @@ GameObject:
   - component: {fileID: 7251764824605781708}
   - component: {fileID: 4075331097850218505}
   - component: {fileID: 8532429910307282914}
-  - component: {fileID: 8659862751111905306}
   - component: {fileID: 8659862751111905307}
   m_Layer: 0
   m_Name: Button
@@ -795,19 +795,6 @@ RectTransform:
   m_AnchoredPosition: {x: 21, y: 80}
   m_SizeDelta: {x: 369.1562, y: 469.7187}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8659862751111905306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3103666621208291510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e87b9d98d7cd4d7885b4aa26a16e5f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 2
 --- !u!225 &8659862751111905307
 CanvasGroup:
   m_ObjectHideFlags: 0
