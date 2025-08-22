@@ -1,9 +1,10 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
-public class FadeInOutText : MonoBehaviour
+public class TMPStartMod : MonoBehaviour
 {
-    public TextMeshProUGUI tmpText;
+    public Text tmpText;
     public float waitBeforeAppear = 1f;   // 前摇等待
     public float fadeInDuration = 2f;     // 淡入时间
     public float fadeOutDuration = 2f;    // 淡出时间

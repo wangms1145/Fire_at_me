@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Gamestar_animation : MonoBehaviour 
 {
     public float duration = 2f;
-    public Text cg;
+    public Image cg;
     private Color color;
     private float timer = 0f;
 
